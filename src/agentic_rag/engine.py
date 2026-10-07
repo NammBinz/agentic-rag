@@ -5,6 +5,8 @@ import time
 from .catalog import Catalog, course_codes
 from .provider import OpenAIProvider, Settings
 from .retrieval import Retriever
+from .planner import plan, missing_evidence
+from .tools import AcademicTools, validate_profile
 
 
 def validate_generation(output, chunks):
@@ -32,6 +34,7 @@ class Engine:
         self.settings = settings or Settings()
         self.provider = provider or (OpenAIProvider(self.settings) if self.settings.provider == "openai" else None)
         self.retriever = Retriever(self.catalog, self.settings, self.provider, cache_dir)
+        self.tools = AcademicTools(self.catalog)
 
     def answer(self, question, mode="rag", cohort=None, profile=None, **options):
         started = time.perf_counter()
@@ -39,6 +42,12 @@ class Engine:
             raise ValueError("Câu hỏi phải có 1–3000 ký tự")
         if mode not in ("rag", "agent", "llm"):
             raise ValueError("mode phải là rag, agent hoặc llm")
+        profile = validate_profile(profile)
+        if set(options) - {"intent", "target_course", "history", "enable_tools", "enable_extra_retrieval"}:
+            raise ValueError("Tùy chọn không được hỗ trợ")
+        for flag in ("enable_tools", "enable_extra_retrieval"):
+            if flag in options and not isinstance(options[flag], bool):
+                raise ValueError(flag + " phải là boolean")
         metrics = {"retrieval_rounds": 0, "extra_retrieval_rounds": 0, "tool_calls": 0,
                    "prompt_tokens": 0, "completion_tokens": 0, "embedding_tokens": 0,
                    "index_embedding_tokens": 0, "estimated_cost_usd": None}
@@ -80,11 +89,67 @@ class Engine:
             result["notice"] += " Đối chứng không truy xuất; câu trả lời chưa được đối chiếu nguồn."
             return finish(output.get("status", "insufficient_data"), text.strip())
 
-        chunks, usage = self.retriever.search(question, cohort)
+        route = plan(question, self.catalog, intent=options.get("intent"),
+                     target_course=options.get("target_course"), history=options.get("history"))
+        if mode == "agent":
+            result["actions"].append({"action": "route", **route})
+            if route["needs_target"] or len(route["targets"]) > 4:
+                return finish("needs_input", "Hãy chọn 1–4 mã học phần cần tra/kiểm tra.")
+            question = route["resolved_question"]
+        chunks, usage = self.retriever.search(question, cohort,
+                                              source_ids=route["source_ids"] if mode == "agent" else None)
         self._usage(metrics, usage)
         metrics["retrieval_rounds"] = 1
         result["actions"].append({"action": "retrieve", "round": 1, "query": question,
                                   "chunk_ids": [c["id"] for c in chunks]})
+        if mode == "agent":
+            if options.get("enable_tools", True) and route["intent"] in ("lookup", "prerequisites"):
+                for target in route["targets"]:
+                    tool = (self.tools.prerequisites(target, cohort, profile) if route["intent"] == "prerequisites"
+                            else self.tools.lookup(target, cohort))
+                    metrics["tool_calls"] += 1
+                    result["tool_results"].append(tool)
+                    result["actions"].append({"action": tool["tool"], "target": target, "status": tool["status"]})
+                    present = {c["id"] for c in chunks}
+                    chunks += [c for c in tool["citations"] if c["id"] not in present]
+            missing = missing_evidence(question, route["targets"], chunks, self.catalog)
+            result["actions"].append({"action": "check_evidence", "missing_course_records": missing,
+                                      "missing_topic": route["missing_topic"]})
+            if missing and options.get("enable_extra_retrieval", True):
+                followup = " ".join(missing)
+                extra, usage = self.retriever.search(followup, cohort, kinds=["course"])
+                self._usage(metrics, usage)
+                metrics.update(retrieval_rounds=2, extra_retrieval_rounds=1)
+                result["actions"].append({"action": "retrieve", "round": 2, "query": followup,
+                                          "reason": "Thiếu bản ghi môn được hỏi hoặc môn tiên quyết trực tiếp.",
+                                          "chunk_ids": [c["id"] for c in extra]})
+                present = {c["id"] for c in chunks}
+                chunks += [c for c in extra if c["id"] not in present]
+            result["actions"].append({"action": "stop", "reason": "Đã kiểm tra công cụ/chứng cứ; giới hạn tối đa 2 lượt truy xuất."})
+            if route["missing_topic"]:
+                gaps = [c for c in chunks if c["kind"] in ("gap", "scope")]
+                return finish("insufficient_data", route["missing_topic"] + " Cần bổ sung văn bản đúng khóa và còn hiệu lực.", gaps)
+            if route["intent"] == "prerequisites" and result["tool_results"]:
+                statuses = [t["status"] for t in result["tool_results"]]
+                status = statuses[0] if len(set(statuses)) == 1 else "mixed_results"
+                parts = []
+                citations = []
+                seen = set()
+                for tool in result["tool_results"]:
+                    part = f'{tool["course_code"]}: {tool["message"]}'
+                    for check in tool["checks"]:
+                        part += f'\n• {check.get("quote", "")}: {check["status"]} — {check["reason"]}'
+                    part += "\n" + tool["scope"]
+                    for citation in tool["citations"]:
+                        part += f' [{citation["id"]}]'
+                        if citation["id"] not in seen:
+                            seen.add(citation["id"]); citations.append(citation)
+                    parts.append(part)
+                return finish(status, "\n\n".join(parts), citations)
+        # This data-availability gate also applies to the one-pass baseline.
+        if route["missing_topic"]:
+            return finish("insufficient_data", route["missing_topic"] + " Cần bổ sung nguồn đúng phạm vi.",
+                          [c for c in chunks if c["kind"] in ("gap", "scope")])
         status, answer, used = self._compose(question, chunks, cohort, metrics)
         return finish(status, answer, used)
 
