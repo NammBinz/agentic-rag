@@ -4,7 +4,7 @@ Ngày kiểm tra: 07/10/2026. Python 3.12.14; chế độ offline.
 
 | Kiểm tra | Kết quả |
 |---|---|
-| Unit/integration tests `python test.py` | 25/25 đạt |
+| Unit/integration tests `python test.py` | 26/26 đạt |
 | Tình huống mẫu `python scripts/run_smoke.py` | 14/14 đạt |
 | HTTP local | Chat, tra môn, tiên quyết, đoạn nguồn và trang HTML trả kết quả đúng |
 | RAG một lượt | Ghi nhận 1 lượt, 0 tool; nguồn COURSE-IT320 |

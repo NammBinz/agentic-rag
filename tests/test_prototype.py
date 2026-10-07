@@ -123,9 +123,18 @@ class AgentTests(unittest.TestCase):
     def test_course_name_and_followup_resolution(self):
         e = Engine()
         r = e.answer("Phát triển ứng dụng với Python có tiên quyết gì?", mode="agent", cohort="K37", profile={})
-        self.assertEqual(r["tool_results"][0]["course_code"], "IT320")
+        self.assertEqual(r["tool_results"][0]["courses"][0]["code"], "IT320")
         r = e.answer("Kiểm tra tiên quyết môn đó", mode="agent", cohort="K37", profile={}, history=[{"question": "IT320 có bao nhiêu tín chỉ?"}])
         self.assertEqual(r["tool_results"][0]["course_code"], "IT320")
+
+    def test_information_lookup_does_not_require_profile_or_expand_unneeded_sources(self):
+        e = Engine()
+        for q in ("IT320 có bao nhiêu tín chỉ?", "IT320 có tiên quyết gì?"):
+            r = e.answer(q, mode="agent", cohort="K37")
+            self.assertEqual(r["status"], "evidence_found")
+            self.assertEqual(r["metrics"]["retrieval_rounds"], 1)
+            self.assertEqual(r["tool_results"][0]["tool"], "lookup_course")
+            self.assertIn("CS122", r["answer"])
 
     def test_missing_cohort_and_wrong_scope_use_no_retrieval(self):
         e = Engine()
@@ -205,7 +214,7 @@ class APITests(unittest.TestCase):
             return r.code, r.read()
 
     def test_chat_and_direct_tools_end_to_end(self):
-        status, body = self.request("/api/chat", {"question": "PY201 có tiên quyết gì?", "mode": "agent", "cohort": "K37", "dataset": "sample", "profile": {"completed": ["PY101"], "credits": 12}})
+        status, body = self.request("/api/chat", {"question": "Kiểm tra tiên quyết PY201", "mode": "agent", "cohort": "K37", "dataset": "sample", "profile": {"completed": ["PY101"], "credits": 12}})
         self.assertEqual(status, 200); self.assertEqual(json.loads(body)["status"], "satisfied_in_snapshot")
         status, body = self.request("/api/courses?q=IT320&cohort=K37")
         self.assertEqual(json.loads(body)["courses"][0]["credits"], 3)

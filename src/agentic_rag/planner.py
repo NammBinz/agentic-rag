@@ -19,7 +19,7 @@ def plan(question, catalog, intent=None, target_course=None, history=None):
         targets = [c["code"] for c in catalog.courses.values() if normalize(c["name"]) in normalized]
     text = normalize(resolved)
     needs_check = intent == "prerequisites" or (bool(targets) and any(w in text for w in
-                  ("tien quyet", "dang ky", "du dieu kien", "co the hoc", "da dat", "da hoc")))
+                  ("kiem tra tien quyet", "dang ky", "du dieu kien", "co the hoc", "da dat", "da hoc")))
     selected_intent = "prerequisites" if needs_check else ("lookup" if targets or intent == "lookup" else "qa")
     # "Can I take X after Y?" has one target; other IDs remain evidence requirements.
     if needs_check and not target_course and len(targets) > 1:
@@ -62,12 +62,12 @@ def plan(question, catalog, intent=None, target_course=None, history=None):
             "router": "deterministic-v1"}
 
 
-def missing_evidence(question, targets, chunks, catalog):
+def missing_evidence(question, targets, chunks, catalog, include_dependencies=False):
     """One bounded expansion: requested records + immediate prerequisite references."""
     present = {c["id"] for c in chunks}
     requested = list(dict.fromkeys(course_codes(question) + targets))
     missing = [code for code in requested if code in catalog.courses and "COURSE-" + code not in present]
-    for target in targets:
+    for target in targets if include_dependencies else []:
         course = catalog.courses.get(target)
         if not course:
             continue

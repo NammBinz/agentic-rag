@@ -112,7 +112,8 @@ class Engine:
                     result["actions"].append({"action": tool["tool"], "target": target, "status": tool["status"]})
                     present = {c["id"] for c in chunks}
                     chunks += [c for c in tool["citations"] if c["id"] not in present]
-            missing = missing_evidence(question, route["targets"], chunks, self.catalog)
+            missing = missing_evidence(question, route["targets"], chunks, self.catalog,
+                                       include_dependencies=route["intent"] == "prerequisites")
             result["actions"].append({"action": "check_evidence", "missing_course_records": missing,
                                       "missing_topic": route["missing_topic"]})
             if missing and options.get("enable_extra_retrieval", True):
