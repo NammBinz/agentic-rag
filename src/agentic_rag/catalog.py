@@ -36,7 +36,7 @@ class Catalog:
         ids = [c["id"] for c in self.chunks]
         if len(ids) != len(set(ids)):
             raise ValueError("Mã đoạn nguồn trùng")
-        serialized = json.dumps([self.manifest, self.chunks, self.conditions], sort_keys=True, ensure_ascii=False)
+        serialized = json.dumps([self.manifest, self.sources, self.chunks, self.conditions], sort_keys=True, ensure_ascii=False)
         self.fingerprint = hashlib.sha256(serialized.encode()).hexdigest()
 
     def _chunks(self):

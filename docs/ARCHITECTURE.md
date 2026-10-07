@@ -13,6 +13,18 @@ Phạm vi: CNTT, K37; 11/2026–02/2027. Không lấy thông tin cá nhân từ 
 4. **Demo web**: hội thoại, hồ sơ giả lập, đổi cấu hình đối chứng, lịch sử ở trình
    duyệt, mở đoạn nguồn và liên kết văn bản, nhật ký hành động công khai.
 
+```mermaid
+flowchart TD
+    Q["Câu hỏi và khóa"] --> S{"Đủ phạm vi?"}
+    S -->|Không| U["Yêu cầu bổ sung"]
+    S -->|Có| R["Truy xuất lần 1"]
+    R --> T["Gọi công cụ khi cần"]
+    T --> C{"Thiếu bản ghi?"}
+    C -->|Có| X["Truy xuất bổ sung một lần"]
+    C -->|Không| A["Trả lời và trích dẫn"]
+    X --> A
+```
+
 ## Quyết định triển khai
 
 | Thành phần | Quyết định | Lý do/giới hạn |

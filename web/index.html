@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#132b36">
+  <title>Trợ lý học vụ · Agentic RAG</title>
+  <link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="/" aria-label="Trang đầu"><span class="brand-mark">a<span>r</span></span><span>Học vụ<span class="brand-sub">AGENTIC RAG LAB</span></span></a>
+      <div class="sidebar-heading">KHÔNG GIAN THỬ NGHIỆM</div>
+      <label class="field-label" for="dataset">Kho dữ liệu</label>
+      <select id="dataset"><option value="project">CNTT K37 · Có nguồn</option><option value="sample">Dữ liệu giả lập · Kiểm thử</option></select>
+      <label class="field-label" for="cohort">Khóa áp dụng</label>
+      <select id="cohort"><option value="K37">K37</option><option value="">Chưa cung cấp</option><option value="K38">K38 · Chưa có dữ liệu</option></select>
+      <fieldset class="modes"><legend>Cách xử lý</legend>
+        <label class="mode-option"><input type="radio" name="mode" value="agent" checked><span><strong>Agentic RAG</strong><small>Tra nguồn + công cụ + bổ sung</small></span><span class="mode-dot"></span></label>
+        <label class="mode-option"><input type="radio" name="mode" value="rag"><span><strong>RAG một lượt</strong><small>Tra nguồn và dẫn chứng</small></span><span class="mode-dot"></span></label>
+        <label class="mode-option"><input type="radio" name="mode" value="llm"><span><strong>LLM không RAG</strong><small>Đối chứng · Cần API</small></span><span class="mode-dot"></span></label>
+      </fieldset>
+      <details class="profile-panel" open><summary>Hồ sơ giả lập <span>＋</span></summary>
+        <p>Nhập dữ liệu mẫu để kiểm tra tiên quyết.</p>
+        <label class="field-label" for="completed">Môn đã đạt</label><input id="completed" placeholder="CS122, IS224">
+        <label class="check-line"><input type="checkbox" id="completed-known" checked> Đã cung cấp đủ danh sách</label>
+        <label class="field-label" for="grades">Điểm từng môn (thang 10)</label><input id="grades" placeholder="GE111: 6.5, IP406: 7">
+        <div class="profile-grid"><div><label class="field-label" for="credits">Tín chỉ tích lũy</label><input type="number" id="credits" min="0" max="1000" placeholder="Chưa biết"></div><div><label class="field-label" for="average">Điểm TBTL</label><input type="number" id="average" min="0" max="10" step="0.1" placeholder="Chưa biết"></div></div>
+        <button id="sample-profile" class="subtle-button" type="button">Điền hồ sơ mẫu</button>
+      </details>
+      <div class="sidebar-bottom"><span class="live-dot"></span><span id="engine-status">Đang kết nối…</span><small>Prototype nghiên cứu · v0.1</small></div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar"><div><span class="eyebrow">TRƯỜNG ĐẠI HỌC THĂNG LONG</span><h1>Trợ lý thông tin đào tạo</h1></div><span class="scope-badge">CNTT <b>·</b> K37</span></header>
+      <div id="data-notice" class="data-notice"><span class="notice-icon">i</span><span>Khung gốc 2024; chưa xác minh đầy đủ sửa đổi. Chỉ tư vấn tham khảo.</span></div>
+      <section id="conversation" class="conversation" aria-live="polite" aria-label="Hội thoại">
+        <div id="welcome" class="welcome"><div class="welcome-mark">↗</div><span class="eyebrow">TỪ CÂU HỎI ĐẾN BẰNG CHỨNG</span><h2>Hiểu chương trình.<br>Lập kế hoạch học tập.</h2><p>Tra học phần, xem nguồn và kiểm tra điều kiện với hồ sơ bạn cung cấp.</p><div id="examples" class="examples"></div></div>
+        <div id="messages"></div>
+      </section>
+      <footer class="composer-area"><div class="composer-meta"><span id="history-label">Lịch sử lưu trên trình duyệt này</span><button id="clear" type="button">Xóa hội thoại</button></div>
+        <form id="chat-form" class="composer"><label class="sr-only" for="question">Câu hỏi học vụ</label><textarea id="question" maxlength="3000" rows="2" placeholder="Ví dụ: IT320 có bao nhiêu tín chỉ và tiên quyết gì?" required></textarea><button id="send" type="submit" aria-label="Gửi câu hỏi"><span>↑</span></button></form>
+        <div id="error" class="error" role="alert"></div><p class="composer-note">Chỉ dùng hồ sơ giả lập. Kết quả không thay thế xác nhận của Phòng Đào tạo.</p>
+      </footer>
+    </main>
+
+    <aside class="evidence-panel" aria-label="Bằng chứng và hành động">
+      <div class="evidence-heading"><span class="eyebrow">MINH BẠCH TỪNG BƯỚC</span><h2>Nguồn & hành động</h2></div>
+      <div class="metrics-grid"><div><span id="stat-rounds">—</span><small>Lượt truy xuất</small></div><div><span id="stat-tools">—</span><small>Lần gọi công cụ</small></div><div><span id="stat-time">—</span><small>Thời gian</small></div><div><span id="stat-tokens">—</span><small>Token sinh</small></div></div>
+      <div class="evidence-tabs" role="tablist"><button id="sources-tab" role="tab" aria-selected="true">Dẫn chứng <span id="source-count">0</span></button><button id="actions-tab" role="tab" aria-selected="false">Hành động</button></div>
+      <div id="sources-view"><div class="empty-evidence"><span>⌁</span><p>Mỗi câu trả lời có căn cứ sẽ hiển thị đoạn nguồn tại đây.</p></div></div>
+      <div id="actions-view" hidden></div>
+      <button id="catalog-button" class="catalog-button" type="button">Xem danh mục học phần <span>↗</span></button>
+      <p class="evidence-foot">Nguồn có phiên bản, phạm vi và vị trí để đối chiếu. Dữ liệu còn thiếu sẽ được nêu rõ.</p>
+    </aside>
+  </div>
+  <dialog id="source-dialog"><div class="dialog-head"><h2 id="dialog-title">Dẫn chứng</h2><button id="close-dialog" aria-label="Đóng">×</button></div><div id="dialog-content"></div></dialog>
+  <dialog id="catalog-dialog"><div class="dialog-head"><h2>Danh mục học phần</h2><button id="close-catalog" aria-label="Đóng">×</button></div><label class="sr-only" for="catalog-search">Tìm mã hoặc tên môn</label><input id="catalog-search" placeholder="Tìm mã hoặc tên môn…"><div id="catalog-content"></div></dialog>
+</body></html>

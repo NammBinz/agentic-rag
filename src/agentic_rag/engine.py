@@ -132,6 +132,8 @@ class Engine:
             if route["intent"] == "prerequisites" and result["tool_results"]:
                 statuses = [t["status"] for t in result["tool_results"]]
                 status = statuses[0] if len(set(statuses)) == 1 else "mixed_results"
+                if status == "not_found":
+                    status = "insufficient_data"
                 parts = []
                 citations = []
                 seen = set()

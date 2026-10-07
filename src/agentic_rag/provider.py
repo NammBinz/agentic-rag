@@ -67,7 +67,7 @@ class OpenAIProvider:
             raise ProviderError("Phản hồi embedding không đúng cấu trúc.") from None
 
     def generate(self, question, chunks, cohort, mode="rag"):
-        evidence = [{"id": c["id"], "text": c["text"], "verification": c["verification"],
+        evidence = [{"id": c["id"], "text": c["text"], "kind": c["kind"], "verification": c["verification"],
                      "content_level": c["content_level"]} for c in chunks]
         if mode == "llm":
             system = "Bạn là đối chứng LLM không RAG. Trả lời bằng tiếng Việt. Nêu rõ khi không chắc. Không bịa trích dẫn."

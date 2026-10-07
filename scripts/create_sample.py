@@ -19,7 +19,10 @@ def create(folder):
                   "verification": "SYNTHETIC_VERIFIED", "current_amendments_verified": True, "limitations": None}
         if code in rules:
             op, ids = rules[code]
-            course.update(prerequisite_raw="Giả lập: " + ", ".join(ids), prerequisite_status="SYNTHETIC_VERIFIED",
+            raw = {"PY201": "Đã đạt PY101 VÀ tích lũy ít nhất 12 tín chỉ",
+                   "PY202": "Đã đạt PY101 HOẶC CS101 >= 7",
+                   "PY203": "PY101 >= 5 VÀ TBTL >= 6"}[code]
+            course.update(prerequisite_raw=raw, prerequisite_status="SYNTHETIC_VERIFIED",
                           rule={"op": op, "children": [{"condition": x} for x in ids]})
         courses.append(course)
     conditions = []
