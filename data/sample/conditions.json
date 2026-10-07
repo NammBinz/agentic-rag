@@ -1,0 +1,74 @@
+[
+  {
+    "id": "T01",
+    "course": "PY201",
+    "kind": "COURSE_COMPLETED",
+    "reference": "PY101",
+    "threshold": null,
+    "operator": "completed",
+    "quote": "Đã đạt PY101",
+    "status": "SYNTHETIC_VERIFIED",
+    "page": 1,
+    "limitations": "Dữ liệu giả lập"
+  },
+  {
+    "id": "T02",
+    "course": "PY201",
+    "kind": "ACCUMULATED_CREDITS_MIN",
+    "reference": null,
+    "threshold": 12,
+    "operator": ">=",
+    "quote": "Tích lũy ít nhất 12 tín chỉ",
+    "status": "SYNTHETIC_VERIFIED",
+    "page": 1,
+    "limitations": "Dữ liệu giả lập"
+  },
+  {
+    "id": "T03",
+    "course": "PY202",
+    "kind": "COURSE_COMPLETED",
+    "reference": "PY101",
+    "threshold": null,
+    "operator": "completed",
+    "quote": "Đã đạt PY101",
+    "status": "SYNTHETIC_VERIFIED",
+    "page": 1,
+    "limitations": "Dữ liệu giả lập"
+  },
+  {
+    "id": "T04",
+    "course": "PY202",
+    "kind": "COURSE_SCORE_MIN",
+    "reference": "CS101",
+    "threshold": 7,
+    "operator": ">=",
+    "quote": "CS101 >= 7",
+    "status": "SYNTHETIC_VERIFIED",
+    "page": 1,
+    "limitations": "Dữ liệu giả lập"
+  },
+  {
+    "id": "T05",
+    "course": "PY203",
+    "kind": "COURSE_SCORE_MIN",
+    "reference": "PY101",
+    "threshold": 5,
+    "operator": ">=",
+    "quote": "PY101 >= 5",
+    "status": "SYNTHETIC_VERIFIED",
+    "page": 1,
+    "limitations": "Dữ liệu giả lập"
+  },
+  {
+    "id": "T06",
+    "course": "PY203",
+    "kind": "ACCUMULATED_AVERAGE_MIN",
+    "reference": null,
+    "threshold": 6,
+    "operator": ">=",
+    "quote": "TBTL >= 6",
+    "status": "SYNTHETIC_VERIFIED",
+    "page": 1,
+    "limitations": "Dữ liệu giả lập"
+  }
+]

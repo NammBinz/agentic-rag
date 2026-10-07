@@ -1,0 +1,19 @@
+[
+  {
+    "id": "TEST",
+    "title": "Tài liệu giả lập kiểm thử v1",
+    "issued_at": "2026-10-07",
+    "effective_at": "2026-10-07",
+    "published_at": "2026-10-07",
+    "scope_text": "Môi trường kiểm thử giả lập, không phải TLU",
+    "usability": "SYNTHETIC_ONLY",
+    "locator": "Mục kiểm thử",
+    "url": null,
+    "file_url": null,
+    "limitations": "Chỉ dùng kiểm thử phần mềm",
+    "applicable": true,
+    "cohorts": [
+      "K37"
+    ]
+  }
+]
