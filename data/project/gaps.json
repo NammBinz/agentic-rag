@@ -1,0 +1,86 @@
+[
+  {
+    "id": "G01",
+    "topic": "Sửa đổi khung K37 sau năm 2024",
+    "status": "CHƯA XÁC MINH",
+    "details": "Chưa có chuỗi đầy đủ các quyết định sửa đổi/bảng quy đổi áp cho K37. Không hiểu là không tồn tại.",
+    "needed_evidence": "Xin Phòng Đào tạo bản hiện hành gắn với K37 và lịch sử sửa đổi."
+  },
+  {
+    "id": "G02",
+    "topic": "Đề cương chi tiết đúng phiên bản K37",
+    "status": "CHƯA TÌM ĐỦ",
+    "details": "Thư mục 2022 chưa xác minh K37; quyết định đề cương 2025 ghi áp dụng từ K38. Chưa tìm đủ đề cương từng học phần K37.",
+    "needed_evidence": "Thu thập đề cương đúng khóa; đối chiếu học trước, song hành và tiên quyết."
+  },
+  {
+    "id": "G03",
+    "topic": "AD213 – mã tiên quyết của AD219",
+    "status": "CHƯA XÁC MINH",
+    "details": "Nguồn trang 49 ghi AD213; chưa tìm bản ghi phù hợp. Không đổi sang mã khác.",
+    "needed_evidence": "Xác nhận với trường tên, tín chỉ, điều kiện và khả năng còn mở AD213."
+  },
+  {
+    "id": "G04",
+    "topic": "IT334 ghi hai lần",
+    "status": "TRÙNG TRONG NGUỒN",
+    "details": "Trang 21 mục 2.3 ghi 2 dòng cùng mã/tên/tín chỉ/tiên quyết. Bảng raw giữ cả 2; bảng chuẩn hóa giữ 1 mã.",
+    "needed_evidence": "Xác nhận lỗi biên tập nếu cần hồ sơ chính thức."
+  },
+  {
+    "id": "G05",
+    "topic": "Ô tiên quyết trống",
+    "status": "TRỐNG TRONG NGUỒN",
+    "details": "Giữ null và SOURCE_BLANK; không chuyển thành “không có tiên quyết”.",
+    "needed_evidence": "Đọc đề cương đúng phiên bản hoặc xác nhận dữ liệu quản lý đào tạo."
+  },
+  {
+    "id": "G06",
+    "topic": "PG100/PG121 và mã học thực tế",
+    "status": "CHƯA XÁC MINH",
+    "details": "Khung ghi PG100/PG121; thông báo đầu khóa có PG118. Chưa có bảng phân rã/đối chiếu đầy đủ.",
+    "needed_evidence": "Thu thập danh mục GDTC/GDQP và quy tắc tích lũy áp dụng K37."
+  },
+  {
+    "id": "G07",
+    "topic": "Các lớp mở, hạn đăng ký, học phí, sĩ số",
+    "status": "CHƯA THU THẬP",
+    "details": "Không có trong khung chương trình; không suy ra tình trạng đăng ký từ bảng này.",
+    "needed_evidence": "Bổ sung thông báo học kỳ và nguồn chính thức theo thời điểm."
+  },
+  {
+    "id": "G08",
+    "topic": "Quy đổi/miễn học ngoại ngữ cho K37",
+    "status": "CHƯA TÌM ĐỦ",
+    "details": "S04 xác minh chuẩn đầu ra TOEIC; không đồng nghĩa miễn học hoặc quy đổi điểm GE.",
+    "needed_evidence": "Thu thập quyết định quy đổi chứng chỉ riêng cho khóa K37."
+  },
+  {
+    "id": "G09",
+    "topic": "Ngày hiệu lực S08–S11",
+    "status": "CHƯA XÁC MINH",
+    "details": "Ngày đăng website và tên phiên bản không chứng minh ngày hiệu lực.",
+    "needed_evidence": "Đọc điều khoản trong văn bản gốc."
+  },
+  {
+    "id": "G10",
+    "topic": "Tổng tín chỉ và điều kiện xét tốt nghiệp đầy đủ",
+    "status": "CHƯA XÁC MINH ĐẦY ĐỦ",
+    "details": "Khung có nhiều lựa chọn/nhánh; không cộng toàn bộ danh mục thành số tín chỉ phải học.",
+    "needed_evidence": "Kiểm tra quy chế, chuẩn đầu ra, khối GDTC/GDQP và hồ sơ chương trình."
+  },
+  {
+    "id": "G11",
+    "topic": "Tên tệp quy chế 2026 khác số văn bản",
+    "status": "MÂU THUẪN TÊN TỆP",
+    "details": "Tệp Drive ghi 26062003; văn bản và phụ lục ghi 26082003. Chuẩn hóa theo văn bản.",
+    "needed_evidence": "Giữ dấu vết này khi lưu nguồn; không áp quy chế 2026 cho K37."
+  },
+  {
+    "id": "G12",
+    "topic": "Điều kiện cụ thể của người học",
+    "status": "CHƯA CÓ DỮ LIỆU",
+    "details": "Chưa có bảng điểm, tín chỉ tích lũy, tình trạng dự thi và quyết định chuyển chương trình.",
+    "needed_evidence": "Không kết luận người học đủ điều kiện đăng ký chỉ từ khung."
+  }
+]

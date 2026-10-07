@@ -1,0 +1,14 @@
+{
+  "dataset": "project",
+  "cohort": "K37",
+  "program": "CNTT",
+  "snapshot_date": "2026-10-07",
+  "workbook": "Danh_muc_nguon_va_hoc_phan_CNTT_K37.xlsx",
+  "workbook_sha256": "0a8d80f0d04634f1335fd80aa29b6a3756a914b10cb5a195b681e0ee19a5db5c",
+  "source_library_id": "libfile_f0edc7d8338c81919eebfb0454ec4a08",
+  "course_count": 99,
+  "raw_row_count": 100,
+  "condition_count": 76,
+  "original_documents_ingested": false,
+  "amendments_verified": false
+}
