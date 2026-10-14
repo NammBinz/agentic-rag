@@ -15,7 +15,17 @@
     "cohorts": [
       "K37"
     ],
-    "content_level": "inventory_summary"
+    "content_level": "inventory_summary",
+    "programs": [
+      "CNTT"
+    ],
+    "scope_verified": true,
+    "document_version": "S01:2024-08-19",
+    "effective_from": "2024-08-19",
+    "effective_to": null,
+    "curriculum_ids": [
+      "CNTT-2024"
+    ]
   },
   {
     "id": "S02",
@@ -33,7 +43,15 @@
     "cohorts": [
       "K37"
     ],
-    "content_level": "inventory_summary"
+    "content_level": "inventory_summary",
+    "programs": [
+      "CNTT"
+    ],
+    "scope_verified": true,
+    "document_version": "S02:2024-09-11",
+    "effective_from": null,
+    "effective_to": null,
+    "curriculum_ids": []
   },
   {
     "id": "S03",
@@ -51,7 +69,15 @@
     "cohorts": [
       "K37"
     ],
-    "content_level": "inventory_summary"
+    "content_level": "inventory_summary",
+    "programs": [
+      "CNTT"
+    ],
+    "scope_verified": true,
+    "document_version": "S03:2024-08-19",
+    "effective_from": "2024-08-19",
+    "effective_to": null,
+    "curriculum_ids": []
   },
   {
     "id": "S04",
@@ -67,9 +93,18 @@
     "limitations": "Ngày đăng 10/09/2026 khác ngày hiệu lực 28/07/2026. Đây là chuẩn đầu ra, không phải điều kiện tiên quyết học phần.",
     "applicable": true,
     "cohorts": [
+      "K36",
       "K37"
     ],
-    "content_level": "inventory_summary"
+    "content_level": "inventory_summary",
+    "programs": [
+      "CNTT"
+    ],
+    "scope_verified": true,
+    "document_version": "S04:2026-07-28",
+    "effective_from": "2026-07-28",
+    "effective_to": null,
+    "curriculum_ids": []
   },
   {
     "id": "S05",
@@ -85,7 +120,15 @@
     "limitations": "Điều 1 thay thế QĐ 25081504 ngày 15/08/2025. Không suy ra thay thế quy chế dành cho K37.",
     "applicable": false,
     "cohorts": [],
-    "content_level": "inventory_summary"
+    "content_level": "inventory_summary",
+    "programs": [
+      "CNTT"
+    ],
+    "scope_verified": false,
+    "document_version": "S05:2025-09-11",
+    "effective_from": "2025-09-11",
+    "effective_to": null,
+    "curriculum_ids": []
   },
   {
     "id": "S06",
@@ -101,7 +144,15 @@
     "limitations": "Tên tệp Drive ghi 26062003 nhưng số trên văn bản và phụ lục ghi 26082003. Lấy số trong văn bản; lưu mâu thuẫn tên tệp.",
     "applicable": false,
     "cohorts": [],
-    "content_level": "inventory_summary"
+    "content_level": "inventory_summary",
+    "programs": [
+      "CNTT"
+    ],
+    "scope_verified": false,
+    "document_version": "S06:2026-08-20",
+    "effective_from": "2026-08-20",
+    "effective_to": null,
+    "curriculum_ids": []
   },
   {
     "id": "S07",
@@ -117,7 +168,15 @@
     "limitations": "Đã kiểm tra danh mục và liên hệ với QĐ. Không dùng bảng quy đổi/đăng ký của phụ lục này thay dữ liệu K37.",
     "applicable": false,
     "cohorts": [],
-    "content_level": "inventory_summary"
+    "content_level": "inventory_summary",
+    "programs": [
+      "CNTT"
+    ],
+    "scope_verified": false,
+    "document_version": "S07:2026-08-20",
+    "effective_from": "2026-08-20",
+    "effective_to": null,
+    "curriculum_ids": []
   },
   {
     "id": "S08",
@@ -133,7 +192,15 @@
     "limitations": "Chỉ kiểm tra trang/link; chưa đọc tệp. Không dùng để tự bổ sung mã/tín chỉ/tiên quyết vào khung K37.",
     "applicable": false,
     "cohorts": [],
-    "content_level": "inventory_summary"
+    "content_level": "inventory_summary",
+    "programs": [
+      "CNTT"
+    ],
+    "scope_verified": false,
+    "document_version": "S08:Chưa xác minh",
+    "effective_from": null,
+    "effective_to": null,
+    "curriculum_ids": []
   },
   {
     "id": "S09",
@@ -149,7 +216,15 @@
     "limitations": "Chưa đọc từng đề cương. Chính thức về chuỗi liên kết, chưa đủ căn cứ áp dụng K37.",
     "applicable": false,
     "cohorts": [],
-    "content_level": "inventory_summary"
+    "content_level": "inventory_summary",
+    "programs": [
+      "CNTT"
+    ],
+    "scope_verified": false,
+    "document_version": "S09:Chưa xác minh",
+    "effective_from": null,
+    "effective_to": null,
+    "curriculum_ids": []
   },
   {
     "id": "S10",
@@ -165,7 +240,15 @@
     "limitations": "Có các môn như ứng dụng AI tạo sinh, UI/UX; không ghi mã/tín chỉ/tiên quyết. Phần mục tiêu còn ghi “Khoa học máy tính”. Không trộn vào khung K37.",
     "applicable": false,
     "cohorts": [],
-    "content_level": "inventory_summary"
+    "content_level": "inventory_summary",
+    "programs": [
+      "CNTT"
+    ],
+    "scope_verified": false,
+    "document_version": "S10:Chưa xác minh",
+    "effective_from": null,
+    "effective_to": null,
+    "curriculum_ids": []
   },
   {
     "id": "S11",
@@ -181,7 +264,15 @@
     "limitations": "Đã tìm URL, chưa đọc tệp. Không đồng nhất với Sổ tay K37.",
     "applicable": false,
     "cohorts": [],
-    "content_level": "inventory_summary"
+    "content_level": "inventory_summary",
+    "programs": [
+      "CNTT"
+    ],
+    "scope_verified": false,
+    "document_version": "S11:Chưa xác minh",
+    "effective_from": null,
+    "effective_to": null,
+    "curriculum_ids": []
   },
   {
     "id": "S12",
@@ -196,7 +287,17 @@
     "file_url": "https://drive.google.com/file/d/1gIfh3_bnI6_Cu-IIIo9-ugDp5v-K3CsM/view",
     "limitations": "Đã đọc toàn bộ quyết định 2 trang. Điều 2 ghi rõ từ K38. Chưa đọc các đề cương kèm theo; không dùng để bù dữ liệu học phần K37.",
     "applicable": false,
-    "cohorts": [],
-    "content_level": "inventory_summary"
+    "cohorts": [
+      "K38"
+    ],
+    "content_level": "inventory_summary",
+    "programs": [
+      "CNTT"
+    ],
+    "scope_verified": true,
+    "document_version": "S12:2025-09-05",
+    "effective_from": "2025-09-05",
+    "effective_to": null,
+    "curriculum_ids": []
   }
 ]

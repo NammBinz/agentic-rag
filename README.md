@@ -1,6 +1,7 @@
-# Trợ lý Agentic RAG · CNTT K37
+# Trợ lý Agentic RAG · CNTT K35–K39
 
-Prototype dựa trên đề cương chốt và danh mục nguồn project ngày 07/10/2026.
+Prototype v0.2 theo phạm vi CNTT toàn khóa; triển khai lựa chọn K35–K39.
+Giữ dữ liệu K37 có nguồn từ danh mục ngày 07/10/2026.
 Một repository chứa RAG một lượt có dẫn nguồn, công cụ học phần/tiên quyết,
 Agent bổ sung tối đa một lượt, API và giao diện demo.
 
@@ -26,6 +27,27 @@ python scripts/run_smoke.py
 Các kịch bản nhập trên UI, đầu vào/kết quả và endpoint được ghi trong
 [docs/TESTING.md](docs/TESTING.md). Mô tả thiết kế và quyết định dữ liệu nằm ở
 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+
+## Chọn khóa và phiên bản
+
+Mở web, chọn **K35–K39** trước khi hỏi. Mặc định chưa chọn khóa để tránh áp dụng nhầm.
+Retrieval, API tra môn, kiểm tra tiên quyết và xem trích dẫn cùng dùng phạm vi đã chọn.
+Đổi khóa sẽ chuyển lịch sử, xóa hồ sơ đang nhập và danh mục đang xem.
+
+| Kho | Khóa | Trạng thái |
+|---|---|---|
+| Project | K37 | 99 mã môn / 76 điều kiện của khung gốc 2024; chưa đủ sửa đổi và toàn văn |
+| Project | K36 | Có phạm vi nguồn chung S04 (TOEIC K36–K37); chưa có danh mục môn |
+| Project | K38 | Có danh mục nguồn S12 ghi từ K38; chưa nhập đề cương chi tiết và ánh xạ chương trình |
+| Project | K35, K39 | Chưa đủ ánh xạ chương trình và dữ liệu môn; không lấy K37 thay thế |
+| Sample | K35–K37 | Chương trình giả lập sample-v1, PY201=3 TC, tối thiểu 12 TC |
+| Sample | K38 | sample-v2, PY201=4 TC, tối thiểu 24 TC |
+| Sample | K39 | Thiếu chương trình; vẫn tra được quy định giả lập dùng chung |
+
+Văn bản dùng chung lưu **một bản**, khai báo danh sách khóa áp dụng. Trích dẫn có
+khóa được chọn, mã chương trình, phiên bản chương trình, phiên bản văn bản và các
+khóa áp dụng. Nguồn chưa xác minh phạm vi, hết hiệu lực hoặc không khớp chương
+trình bị loại trước truy xuất. Chi tiết thêm dữ liệu: [docs/DATA_SCHEMA.md](docs/DATA_SCHEMA.md).
 
 ## Bật LLM và embedding
 
@@ -61,16 +83,16 @@ minh kết luận của LLM được nguồn hỗ trợ; phần đó cần chấ
 
 - `data/project`: 99 mã học phần, 100 dòng nguồn, 76 điều kiện; giữ nguồn/trang,
   phiên bản, khóa, hiệu lực và phần thiếu. IT334 trùng vẫn có hai dòng raw.
-- `data/sample`: 6 học phần + một quy định **hoàn toàn giả lập**; có AND/OR,
+- `data/sample`: 12 bản ghi thuộc 2 phiên bản chương trình + một quy định chung **hoàn toàn giả lập**; có AND/OR,
   điểm/tín chỉ/TBTL và trường hợp thiếu dữ liệu để kiểm tra.
 - Hiện trích dẫn tới bản chép/bảng chuẩn hóa và danh mục, kèm liên kết PDF gốc;
   **chưa nhập toàn văn** các quy chế, thông báo và quyết định.
 - Ô tiên quyết trống giữ null; mã môn đơn thuần không được tự diễn giải thành
   đạt môn/điểm >=4. Trả “chưa đủ căn cứ” nếu chưa xác minh quy tắc.
-- Kiểm tra chỉ áp dụng snapshot khung gốc K37; chưa xác minh đầy đủ sửa đổi sau
+- Dữ liệu thật hiện chỉ đủ danh mục học phần snapshot khung gốc K37; chưa xác minh đầy đủ sửa đổi sau
   2024. Không xác nhận quyền đăng ký, miễn học hoặc đủ điều kiện tốt nghiệp.
 - Không nối tài khoản, đăng ký học hay bảng điểm thật. Lịch sử lưu ở trình duyệt;
-  chỉ dùng hồ sơ giả lập. Có nút xóa và hai lịch sử riêng theo kho dữ liệu.
+  chỉ dùng hồ sơ giả lập. Có nút xóa; lịch sử tách theo kho dữ liệu và khóa.
 
 Để tái nhập bảng nguồn (chỉ bước này cần `openpyxl`):
 

@@ -10,5 +10,16 @@
   "raw_row_count": 100,
   "condition_count": 76,
   "original_documents_ingested": false,
-  "amendments_verified": false
+  "amendments_verified": false,
+  "schema_version": 2,
+  "supported_cohorts": [
+    "K35",
+    "K36",
+    "K37",
+    "K38",
+    "K39"
+  ],
+  "verified_course_cohorts": [
+    "K37"
+  ]
 }

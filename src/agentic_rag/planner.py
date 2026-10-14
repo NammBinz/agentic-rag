@@ -48,7 +48,7 @@ def plan(question, catalog, intent=None, target_course=None, history=None):
                   ("lich hoc", "Chưa có dữ liệu lịch học hiện thời."),
                   ("thoi khoa bieu", "Chưa có dữ liệu thời khóa biểu hiện thời."),
                   ("han dang ky", "Chưa có thông báo hạn đăng ký theo học kỳ."),
-                  ("mien hoc", "Chưa có quy định miễn học đúng phiên bản K37."),
+                  ("mien hoc", "Chưa có quy định miễn học đúng phiên bản đúng khóa."),
                   ("tot nghiep", "Chưa có bộ điều kiện xét tốt nghiệp đầy đủ."))
         for marker, message in checks:
             if marker in text:
@@ -66,12 +66,12 @@ def missing_evidence(question, targets, chunks, catalog, include_dependencies=Fa
     """One bounded expansion: requested records + immediate prerequisite references."""
     present = {c["id"] for c in chunks}
     requested = list(dict.fromkeys(course_codes(question) + targets))
-    missing = [code for code in requested if code in catalog.courses and "COURSE-" + code not in present]
+    missing = [code for code in requested if code in catalog.courses and catalog.course_chunk_id(catalog.courses[code]) not in present]
     for target in targets if include_dependencies else []:
         course = catalog.courses.get(target)
         if not course:
             continue
         for code in course_codes(course["prerequisite_raw"] or ""):
-            if code in catalog.courses and "COURSE-" + code not in present and code not in missing:
+            if code in catalog.courses and catalog.course_chunk_id(catalog.courses[code]) not in present and code not in missing:
                 missing.append(code)
     return missing

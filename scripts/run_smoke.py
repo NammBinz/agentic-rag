@@ -22,7 +22,13 @@ CASES = [
     {"id": "project-bare-code", "dataset": "project", "question": "Kiểm tra tiên quyết IT320", "mode": "agent", "cohort": "K37", "profile": {"completed": ["CS122"]}, "expect": "insufficient_data"},
     {"id": "project-source-blank", "dataset": "project", "question": "Kiểm tra tiên quyết CS121", "mode": "agent", "cohort": "K37", "profile": {}, "expect": "insufficient_data"},
     {"id": "project-unknown-tuition", "dataset": "project", "question": "Học phí kỳ này là bao nhiêu?", "mode": "agent", "cohort": "K37", "expect": "insufficient_data"},
-    {"id": "wrong-cohort", "dataset": "project", "question": "IT320", "mode": "agent", "cohort": "K38", "expect": "out_of_scope", "rounds": 0},
+    {"id": "unverified-cohort", "dataset": "project", "question": "IT320", "mode": "agent", "cohort": "K38", "expect": "insufficient_data", "rounds": 0},
+    {"id": "k35-shared-curriculum", "dataset": "sample", "question": "PY201", "mode": "rag", "cohort": "K35", "expect": "evidence_found", "citation": "COURSE-PY201", "rounds": 1},
+    {"id": "k38-new-version", "dataset": "sample", "question": "PY201", "mode": "rag", "cohort": "K38", "expect": "evidence_found", "citation": "COURSE-PY201-V2", "rounds": 1},
+    {"id": "k38-new-prerequisite", "dataset": "sample", "question": "Kiểm tra tiên quyết PY201", "mode": "agent", "cohort": "K38", "profile": {"completed": ["PY101"], "credits": 12}, "expect": "not_met_in_snapshot"},
+    {"id": "k39-missing-curriculum", "dataset": "sample", "question": "PY201", "mode": "agent", "cohort": "K39", "expect": "insufficient_data", "rounds": 0},
+    {"id": "k39-shared-policy", "dataset": "sample", "question": "Đăng ký tối đa bao nhiêu tín chỉ mỗi kỳ?", "mode": "rag", "cohort": "K39", "expect": "evidence_found", "citation": "TEST-REGISTRATION"},
+    {"id": "question-cohort-conflict", "dataset": "sample", "question": "PY201 của K37", "mode": "agent", "cohort": "K38", "expect": "needs_input", "rounds": 0},
 ]
 
 

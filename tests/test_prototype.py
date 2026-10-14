@@ -138,7 +138,7 @@ class AgentTests(unittest.TestCase):
 
     def test_missing_cohort_and_wrong_scope_use_no_retrieval(self):
         e = Engine()
-        for cohort, status in ((None, "needs_input"), ("K38", "out_of_scope")):
+        for cohort, status in ((None, "needs_input"), ("K38", "insufficient_data"), ("K40", "out_of_scope")):
             r = e.answer("IT320", mode="agent", cohort=cohort)
             self.assertEqual(r["status"], status)
             self.assertEqual(r["metrics"]["retrieval_rounds"], 0)
@@ -222,7 +222,7 @@ class APITests(unittest.TestCase):
         self.assertEqual(status, 200); self.assertEqual(json.loads(body)["status"], "not_met_in_snapshot")
 
     def test_sources_and_static_security(self):
-        status, body = self.request("/api/chunks/COURSE-IT320")
+        status, body = self.request("/api/chunks/COURSE-IT320?cohort=K37")
         self.assertEqual(status, 200); self.assertEqual(json.loads(body)["page"], 21)
         self.assertEqual(self.request("/")[0], 200)
         for path in ("/../.env", "/%2e%2e/.env", "/api/unknown"):

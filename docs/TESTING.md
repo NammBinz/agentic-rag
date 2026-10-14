@@ -1,13 +1,13 @@
 # Kiểm tra từng chức năng
 
 `python test.py` chạy kiểm tra catalog, tiên quyết, Agent, adapter API giả lập và
-HTTP server. `python scripts/run_smoke.py` chạy 14 tình huống có kỳ vọng cụ thể,
+HTTP server. `python scripts/run_smoke.py` chạy 20 tình huống có kỳ vọng cụ thể,
 lưu cả trích dẫn, trace, metrics vào `.runtime/smoke_results.jsonl`. Không gọi API.
 
 ## Demo thủ công
 
 Chạy `python run.py`, mở http://127.0.0.1:8765. Chọn dữ liệu **giả lập** trước
-khi dùng các môn PY/CS trong bảng dưới. Bấm “Điền hồ sơ mẫu” để có PY101 đã đạt,
+và chọn K37 khi dùng các môn PY/CS trong bảng dưới. Bấm “Điền hồ sơ mẫu” để có PY101 đã đạt,
 12 tín chỉ, PY101=6, CS101=7, TBTL=7. Nhấn một mã trích dẫn hoặc thẻ nguồn để
 xem excerpt, trang, phiên bản. Tab Hành động hiển thị thao tác, không phải suy luận nội bộ.
 
@@ -21,7 +21,8 @@ xem excerpt, trang, phiên bản. Tab Hành động hiển thị thao tác, khô
 | OR đạt | `Kiểm tra tiên quyết PY202`; completed=[]; CS101:7 | satisfied_in_snapshot; không bắt buộc cả hai nhánh |
 | Điểm/TBTL | `Kiểm tra tiên quyết PY203`; PY101:5, TBTL=6 | đạt đúng ngưỡng; 4.9 không đạt |
 | Thiếu khóa | Khóa “chưa cung cấp”; hỏi PY201 | needs_input; không truy xuất |
-| Ngoài phạm vi | K38 | out_of_scope; không mượn dữ liệu K37 |
+| Thiếu dữ liệu | K38, kho project | insufficient_data; không mượn dữ liệu K37 |
+| Ngoài phạm vi triển khai | K40 | out_of_scope |
 | Truy xuất bổ sung | `python scripts/run_smoke.py` → extra-retrieval | top_k=1, tắt tools; thiếu CS101 → tổng 2 lượt |
 | Giới hạn vòng | extra-disabled trong smoke; các test Agent | tắt bổ sung → 1; không có trường hợp >2 |
 | Lịch sử | Hỏi, tải lại trang; chọn lại cùng dataset | lịch sử còn; “Xóa hội thoại” xóa kho đang xem |
@@ -30,7 +31,7 @@ xem excerpt, trang, phiên bản. Tab Hành động hiển thị thao tác, khô
 
 ## Các rào chắn dữ liệu project
 
-Đổi về “CNTT K37 · Có nguồn”. IT320=3 TC, tiên quyết nguồn CS122. Kể cả đã nhập
+Đổi về “CNTT K35–K39 · Nguồn dự án; chọn K37”. IT320=3 TC, tiên quyết nguồn CS122. Kể cả đã nhập
 CS122 đạt 10 điểm, tool vẫn chưa xác nhận đủ điều kiện: nguồn chưa xác minh nghĩa
 của mã đơn thuần. CS121 có ô tiên quyết trống: trả unknown, không chuyển thành
 “không có tiên quyết”. IT499 với 100 TC, IP406=4, TBTL=7 thỏa điều kiện **trong
@@ -44,9 +45,9 @@ thiếu nguồn. S05–S07/S12 không được đưa vào truy xuất áp dụng
 | Endpoint | Dữ liệu |
 |---|---|
 | GET `/api/health` | provider, retriever, model đang chạy |
-| GET `/api/catalog?dataset=project` | manifest, học phần, nguồn, phần cần xác minh |
+| GET `/api/catalog?dataset=project&cohort=K37` | manifest, học phần, nguồn, phần cần xác minh |
 | GET `/api/courses?q=IT320&cohort=K37&dataset=project` | lookup theo mã/tên |
-| GET `/api/chunks/COURSE-IT320?dataset=project` | excerpt và metadata |
+| GET `/api/chunks/COURSE-IT320?dataset=project&cohort=K37` | excerpt và metadata |
 | POST `/api/chat` | question, mode, dataset, cohort, profile |
 | POST `/api/prerequisites` | course_code, dataset, cohort, profile |
 
@@ -82,3 +83,19 @@ Tập kiểm tra cuối cần được kiểm tra nguồn/đáp án và đóng b
 có gold_status, ý bắt buộc và nguồn. Hai thành viên chấm chéo theo đề cương,
 báo độ đúng/trích dẫn/từ chối, Cohen's kappa và CI ghép cặp. Repo hiện chưa tạo
 giả bộ câu hỏi nghiên cứu hoặc số liệu này.
+
+## Kiểm tra nhiều khóa (v0.2)
+
+1. Chưa chọn khóa, hỏi `PY201`: yêu cầu chọn K35–K39, không truy xuất.
+2. Chọn kho Sample, K37; hỏi `PY201 có bao nhiêu tín chỉ?`: 3 TC, sample-v1.
+3. Chọn K38; hỏi lại: 4 TC, sample-v2, dẫn chứng COURSE-PY201-V2.
+4. Nhập đã đạt PY101, 12 TC; kiểm tra tiên quyết PY201: K37 thỏa, K38 chưa thỏa.
+5. Chọn K39: tra PY201 báo thiếu chương trình; hỏi tối đa tín chỉ/kỳ vẫn thấy quy
+   định giả lập chung 18 TC và TEST-REGISTRATION. Không dùng đây làm quy định TLU.
+6. Kho Project, K35/K36/K38/K39; hỏi IT320: thiếu dữ liệu, không xuất hiện môn K37.
+7. Chọn K38 nhưng hỏi PY201 của K37: yêu cầu làm rõ khóa, chưa truy xuất.
+8. Đổi khóa: lịch sử không lẫn; hồ sơ và danh mục làm mới. Mở nguồn: xem phiên bản,
+   khóa áp dụng, ngày hiệu lực. API lấy chunk phải truyền cohort, không mặc định K37.
+
+Tái tạo mẫu: `python scripts/create_sample.py`. Tái nhập workbook K37 sẽ tự chạy
+migrate_scope để xuất schema v2. Không dùng script này nhập workbook khóa khác.

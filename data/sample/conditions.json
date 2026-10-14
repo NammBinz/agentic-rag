@@ -9,7 +9,11 @@
     "quote": "Đã đạt PY101",
     "status": "SYNTHETIC_VERIFIED",
     "page": 1,
-    "limitations": "Dữ liệu giả lập"
+    "limitations": "Dữ liệu giả lập",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v1",
+    "version": "sample-v1",
+    "source_id": "TEST"
   },
   {
     "id": "T02",
@@ -21,7 +25,11 @@
     "quote": "Tích lũy ít nhất 12 tín chỉ",
     "status": "SYNTHETIC_VERIFIED",
     "page": 1,
-    "limitations": "Dữ liệu giả lập"
+    "limitations": "Dữ liệu giả lập",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v1",
+    "version": "sample-v1",
+    "source_id": "TEST"
   },
   {
     "id": "T03",
@@ -33,7 +41,11 @@
     "quote": "Đã đạt PY101",
     "status": "SYNTHETIC_VERIFIED",
     "page": 1,
-    "limitations": "Dữ liệu giả lập"
+    "limitations": "Dữ liệu giả lập",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v1",
+    "version": "sample-v1",
+    "source_id": "TEST"
   },
   {
     "id": "T04",
@@ -45,7 +57,11 @@
     "quote": "CS101 >= 7",
     "status": "SYNTHETIC_VERIFIED",
     "page": 1,
-    "limitations": "Dữ liệu giả lập"
+    "limitations": "Dữ liệu giả lập",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v1",
+    "version": "sample-v1",
+    "source_id": "TEST"
   },
   {
     "id": "T05",
@@ -57,7 +73,11 @@
     "quote": "PY101 >= 5",
     "status": "SYNTHETIC_VERIFIED",
     "page": 1,
-    "limitations": "Dữ liệu giả lập"
+    "limitations": "Dữ liệu giả lập",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v1",
+    "version": "sample-v1",
+    "source_id": "TEST"
   },
   {
     "id": "T06",
@@ -69,6 +89,106 @@
     "quote": "TBTL >= 6",
     "status": "SYNTHETIC_VERIFIED",
     "page": 1,
-    "limitations": "Dữ liệu giả lập"
+    "limitations": "Dữ liệu giả lập",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v1",
+    "version": "sample-v1",
+    "source_id": "TEST"
+  },
+  {
+    "id": "T01",
+    "course": "PY201",
+    "kind": "COURSE_COMPLETED",
+    "reference": "PY101",
+    "threshold": null,
+    "operator": "completed",
+    "quote": "Đã đạt PY101",
+    "status": "SYNTHETIC_VERIFIED",
+    "page": 1,
+    "limitations": "Dữ liệu giả lập",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v2",
+    "version": "sample-v2",
+    "source_id": "TEST-V2"
+  },
+  {
+    "id": "T02",
+    "course": "PY201",
+    "kind": "ACCUMULATED_CREDITS_MIN",
+    "reference": null,
+    "threshold": 24,
+    "operator": ">=",
+    "quote": "Tích lũy ít nhất 24 tín chỉ",
+    "status": "SYNTHETIC_VERIFIED",
+    "page": 1,
+    "limitations": "Dữ liệu giả lập",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v2",
+    "version": "sample-v2",
+    "source_id": "TEST-V2"
+  },
+  {
+    "id": "T03",
+    "course": "PY202",
+    "kind": "COURSE_COMPLETED",
+    "reference": "PY101",
+    "threshold": null,
+    "operator": "completed",
+    "quote": "Đã đạt PY101",
+    "status": "SYNTHETIC_VERIFIED",
+    "page": 1,
+    "limitations": "Dữ liệu giả lập",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v2",
+    "version": "sample-v2",
+    "source_id": "TEST-V2"
+  },
+  {
+    "id": "T04",
+    "course": "PY202",
+    "kind": "COURSE_SCORE_MIN",
+    "reference": "CS101",
+    "threshold": 7,
+    "operator": ">=",
+    "quote": "CS101 >= 7",
+    "status": "SYNTHETIC_VERIFIED",
+    "page": 1,
+    "limitations": "Dữ liệu giả lập",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v2",
+    "version": "sample-v2",
+    "source_id": "TEST-V2"
+  },
+  {
+    "id": "T05",
+    "course": "PY203",
+    "kind": "COURSE_SCORE_MIN",
+    "reference": "PY101",
+    "threshold": 5,
+    "operator": ">=",
+    "quote": "PY101 >= 5",
+    "status": "SYNTHETIC_VERIFIED",
+    "page": 1,
+    "limitations": "Dữ liệu giả lập",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v2",
+    "version": "sample-v2",
+    "source_id": "TEST-V2"
+  },
+  {
+    "id": "T06",
+    "course": "PY203",
+    "kind": "ACCUMULATED_AVERAGE_MIN",
+    "reference": null,
+    "threshold": 6,
+    "operator": ">=",
+    "quote": "TBTL >= 6",
+    "status": "SYNTHETIC_VERIFIED",
+    "page": 1,
+    "limitations": "Dữ liệu giả lập",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v2",
+    "version": "sample-v2",
+    "source_id": "TEST-V2"
   }
 ]

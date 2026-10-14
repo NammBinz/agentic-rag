@@ -1,20 +1,33 @@
 {
+  "schema_version": 2,
   "dataset": "sample",
-  "cohort": "K37",
-  "course_count": 6,
-  "snapshot_date": "2026-10-07",
+  "supported_cohorts": [
+    "K35",
+    "K36",
+    "K37",
+    "K38",
+    "K39"
+  ],
+  "verified_course_cohorts": [
+    "K35",
+    "K36",
+    "K37",
+    "K38"
+  ],
+  "course_count": 12,
+  "snapshot_date": "2026-10-14",
   "amendments_verified": true,
   "original_documents_ingested": false,
   "paragraphs": [
     {
       "id": "TEST-REGISTRATION",
-      "source_id": "TEST",
+      "source_id": "TEST-COMMON",
       "kind": "policy",
       "text": "Quy định GIẢ LẬP: đăng ký tối đa 18 tín chỉ mỗi kỳ; cần kiểm tra tiên quyết từng môn.",
       "page": 7,
       "section": "Điều giả lập 1",
       "cohort": "K37",
-      "version": "sample-v1",
+      "version": "common-v1",
       "verification": "SYNTHETIC_VERIFIED",
       "content_level": "synthetic_paragraph"
     }

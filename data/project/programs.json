@@ -1,0 +1,57 @@
+[
+  {
+    "cohort": "K35",
+    "program_id": "CNTT",
+    "curriculum_id": null,
+    "version": null,
+    "status": "UNVERIFIED",
+    "source_id": null,
+    "effective_from": null,
+    "effective_to": null,
+    "limitations": "Chưa thu thập/xác minh ánh xạ chương trình, học phần và quy định đúng khóa."
+  },
+  {
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": null,
+    "version": null,
+    "status": "UNVERIFIED",
+    "source_id": null,
+    "effective_from": null,
+    "effective_to": null,
+    "limitations": "Chưa thu thập/xác minh ánh xạ chương trình, học phần và quy định đúng khóa."
+  },
+  {
+    "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "status": "VERIFIED_SNAPSHOT",
+    "source_id": "S01",
+    "effective_from": "2024-08-19",
+    "effective_to": null,
+    "limitations": "Khung gốc 2024; chưa xác minh đầy đủ sửa đổi sau 2024."
+  },
+  {
+    "cohort": "K38",
+    "program_id": "CNTT",
+    "curriculum_id": null,
+    "version": null,
+    "status": "UNVERIFIED",
+    "source_id": null,
+    "effective_from": null,
+    "effective_to": null,
+    "limitations": "Chưa thu thập/xác minh ánh xạ chương trình, học phần và quy định đúng khóa."
+  },
+  {
+    "cohort": "K39",
+    "program_id": "CNTT",
+    "curriculum_id": null,
+    "version": null,
+    "status": "UNVERIFIED",
+    "source_id": null,
+    "effective_from": null,
+    "effective_to": null,
+    "limitations": "Chưa thu thập/xác minh ánh xạ chương trình, học phần và quy định đúng khóa."
+  }
+]

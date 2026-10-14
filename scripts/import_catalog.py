@@ -61,7 +61,9 @@ def convert(workbook_path, destination):
                 "condition_count": len(conditions), "original_documents_ingested": False,
                 "amendments_verified": False}
     (out / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-    return manifest
+    from migrate_scope import upgrade
+    upgrade(out)
+    return json.loads((out / "manifest.json").read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

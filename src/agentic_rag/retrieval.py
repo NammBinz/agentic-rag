@@ -71,10 +71,12 @@ class Retriever:
         return usage
 
     def search(self, question, cohort, top_k=None, kinds=None, source_ids=None):
-        if cohort != "K37":
+        if cohort != self.catalog.cohort or not cohort:
             return [], {"embedding_tokens": 0, "index_embedding_tokens": 0}
         indices = [i for i, c in enumerate(self.chunks) if c["cohort"] == cohort
                    and (not kinds or c["kind"] in kinds) and (not source_ids or c["source_id"] in source_ids)]
+        if not indices:
+            return [], {"embedding_tokens": 0, "index_embedding_tokens": 0}
         lexical = self._lexical(question, indices)
         usage = {"embedding_tokens": 0, "index_embedding_tokens": 0}
         if self.settings.retriever == "hybrid":

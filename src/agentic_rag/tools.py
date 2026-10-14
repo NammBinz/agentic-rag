@@ -1,6 +1,6 @@
 """Deterministic academic tools with explicit unknowns and snapshot-only results."""
 import math
-from .catalog import normalize
+from .catalog import SUPPORTED_COHORTS
 
 
 def validate_profile(profile):
@@ -32,14 +32,20 @@ class AcademicTools:
         self.catalog = catalog
 
     def lookup(self, query, cohort):
-        if cohort != "K37":
+        if cohort != self.catalog.cohort:
+            return AcademicTools(self.catalog.for_cohort(cohort)).lookup(query, cohort)
+        if cohort not in SUPPORTED_COHORTS:
             return {"tool": "lookup_course", "status": "needs_input" if not cohort else "out_of_scope",
-                    "message": "Cần khóa K37; không suy rộng dữ liệu cho khóa khác.", "courses": [], "citations": []}
+                    "message": "Cần chọn khóa K35–K39; không suy rộng dữ liệu cho khóa khác.", "courses": [], "citations": []}
+        if self.catalog.context['status'] != 'verified_snapshot':
+            return {"tool": "lookup_course", "status": "insufficient_data", "courses": [], "citations": [],
+                    "context": self.catalog.context, "message": self.catalog.context['message']}
         found = self.catalog.select_courses(query)
         by_id = {c["id"]: c for c in self.catalog.chunks}
         return {"tool": "lookup_course", "status": "found" if found else "not_found",
                 "courses": found, "message": f"Tìm được {len(found)} học phần trong snapshot.",
-                "citations": [self.catalog.citation(by_id["COURSE-" + c["code"]]) for c in found]}
+                "context": self.catalog.context,
+                "citations": [self.catalog.citation(by_id[self.catalog.course_chunk_id(c)]) for c in found]}
 
     def _leaf(self, condition, profile):
         kind, reference = condition["kind"], condition["reference"]
@@ -89,11 +95,14 @@ class AcademicTools:
         return {"op": op, "status": state, "children": children}
 
     def prerequisites(self, code, cohort, profile=None):
+        if cohort != self.catalog.cohort:
+            return AcademicTools(self.catalog.for_cohort(cohort)).prerequisites(code, cohort, profile)
         profile = validate_profile(profile)
         lookup = self.lookup(code, cohort)
         result = {"tool": "check_prerequisites", "course_code": code.strip().upper(),
                   "status": "insufficient_data", "missing": [], "checks": [], "citations": lookup["citations"],
-                  "scope": "Chỉ đối chiếu điều kiện trong snapshot; không xác nhận quyền đăng ký thực tế."}
+                  "context": self.catalog.context,
+                  "scope": "Chỉ đối chiếu điều kiện trong snapshot đúng khóa/phiên bản; không xác nhận quyền đăng ký thực tế."}
         if lookup["status"] != "found":
             return {**result, "status": lookup["status"], "message": lookup["message"]}
         if len(lookup["courses"]) != 1:

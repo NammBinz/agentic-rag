@@ -1,8 +1,8 @@
-# Thiết kế prototype v0.1
+# Thiết kế prototype v0.2
 
 Căn cứ: đề cương chỉnh theo nhận xét 29/09/2026 và đề xuất đồng bộ; danh mục
 `Danh_muc_nguon_va_hoc_phan_CNTT_K37.xlsx` ngày 07/10/2026.
-Phạm vi: CNTT, K37; 11/2026–02/2027. Không lấy thông tin cá nhân từ đề cương vào dữ liệu demo.
+Phạm vi mục tiêu: CNTT toàn khóa; giai đoạn đầu K35–K39. Dữ liệu học phần thật hiện có K37. Không lấy thông tin cá nhân từ đề cương vào dữ liệu demo.
 
 1. **RAG một lượt**: nhận khóa → lọc scope → BM25 hoặc hybrid → top-k cố định
    → sinh/trích xuất câu trả lời → kiểm tra ID và quote → trả nguồn, trang/mục.
@@ -32,7 +32,7 @@ flowchart TD
 | Runtime | Python >=3.10, thư viện chuẩn; HTML/CSS/JS | Chạy offline trên Windows, không cần GPU/build frontend |
 | Offline | BM25 không dấu + trích đoạn | Kiểm thử wiring; không gọi đây là kết quả LLM RAG cuối |
 | API | GPT-4.1 mini + text-embedding-3-small cấu hình được | Cùng provider/model/retriever cho các đối chứng |
-| Vector | Cosine chính xác, RRF với BM25 | ~115 đoạn, chưa cần FAISS; thay index khi đủ toàn văn |
+| Vector | Cosine chính xác, RRF với BM25 | Chỉ mục riêng theo khóa/phiên bản, chưa cần FAISS; thay index khi đủ toàn văn |
 | Router | Quy tắc rõ ràng, trạng thái hữu hạn | Agent nguyên mẫu có tool use, không giả vờ planner học được |
 | Vòng truy xuất | RAG=1; Agent=1 hoặc 2 | Lượt 2 phải ghi query và lý do; không đệ quy |
 | Trích dẫn | ID đoạn, excerpt, trang, mục, URL, khóa, hiệu lực | Quote được kiểm tra tồn tại; entailment vẫn cần chấm tay |

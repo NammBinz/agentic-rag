@@ -74,7 +74,11 @@ def create_server(host="127.0.0.1", port=8765, settings=None):
             name = params.get("dataset", ["project"])[0]
             if name not in engines:
                 raise ValueError("dataset không hợp lệ")
-            return engines[name]
+            cohort = params.get('cohort', [None])[0]
+            if cohort is not None and (not isinstance(cohort, str) or len(cohort) > 20):
+                raise ValueError('cohort không hợp lệ')
+            with locks[name]:
+                return engines[name].for_cohort(cohort)
 
         def do_GET(self):
             parsed = urllib.parse.urlparse(self.path)
@@ -85,9 +89,10 @@ def create_server(host="127.0.0.1", port=8765, settings=None):
                     return self.send_json(200, {"ok": True, "provider": settings.provider, "retriever": settings.retriever,
                                                "model": settings.model if settings.provider == "openai" else None})
                 if parsed.path == "/api/catalog":
-                    return self.send_json(200, {"manifest": engine.catalog.manifest,
+                    return self.send_json(200, {"manifest": engine.catalog.manifest, "context": engine.catalog.context,
+                        "cohorts": engine.catalog.bindings,
                         "courses": list(engine.catalog.courses.values()), "gaps": engine.catalog.gaps,
-                        "sources": list(engine.catalog.sources.values())})
+                        "sources": [s for s in engine.catalog.sources.values() if engine.catalog.source_applies(s)]})
                 if parsed.path == "/api/courses":
                     return self.send_json(200, engine.tools.lookup(params.get("q", [""])[0], params.get("cohort", [None])[0]))
                 if parsed.path.startswith("/api/chunks/"):

@@ -44,12 +44,49 @@ def create(folder):
                  "text": "Quy định GIẢ LẬP: đăng ký tối đa 18 tín chỉ mỗi kỳ; cần kiểm tra tiên quyết từng môn.",
                  "page": 7, "section": "Điều giả lập 1", "cohort": "K37", "version": "sample-v1",
                  "verification": "SYNTHETIC_VERIFIED", "content_level": "synthetic_paragraph"}
-    for name, obj in {"courses": courses, "conditions": conditions, "sources": [source], "gaps": [],
-                      "raw_rows": [], "manifest": {"dataset": "sample", "cohort": "K37", "course_count": 6,
-                      "snapshot_date": "2026-10-07", "amendments_verified": True,
-                      "original_documents_ingested": False, "paragraphs": [paragraph]}}.items():
-        (folder / (name + ".json")).write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+    # K35–K37 share v1; K38 has a distinct curriculum; K39 intentionally lacks one.
+    import copy
+    cohorts = ['K35', 'K36', 'K37', 'K38', 'K39']
+    sources, bindings = [], []
+    for version, applies in [('sample-v1', cohorts[:3]), ('sample-v2', ['K38'])]:
+        sid = 'TEST' if version == 'sample-v1' else 'TEST-V2'
+        record = {**source, 'id': sid, 'cohorts': applies, 'programs': ['CNTT'],
+                  'scope_verified': True, 'document_version': version,
+                  'curriculum_ids': [version], 'effective_from': '2026-10-07', 'effective_to': None}
+        sources.append(record)
+        for cohort in applies:
+            bindings.append({'cohort': cohort, 'program_id': 'CNTT', 'curriculum_id': version,
+                             'version': version, 'status': 'VERIFIED_SNAPSHOT', 'source_id': sid,
+                             'effective_from': '2026-10-07', 'effective_to': None,
+                             'limitations': 'Chương trình giả lập, không phải dữ liệu TLU.'})
+    bindings.append({'cohort': 'K39', 'program_id': 'CNTT', 'status': 'UNVERIFIED'})
+    courses_v2, conditions_v2 = copy.deepcopy(courses), copy.deepcopy(conditions)
+    for rows, version, sid in [(courses, 'sample-v1', 'TEST'), (conditions, 'sample-v1', 'TEST'),
+                               (courses_v2, 'sample-v2', 'TEST-V2'), (conditions_v2, 'sample-v2', 'TEST-V2')]:
+        for row in rows:
+            row.update(program_id='CNTT', curriculum_id=version, version=version, source_id=sid)
+            if 'code' in row:
+                row['chunk_id'] = 'COURSE-' + row['code'] + ('-V2' if version == 'sample-v2' else '')
+                row.pop('cohort', None)
+    for row in courses_v2:
+        if row['code'] == 'PY201':
+            row.update(credits=4, prerequisite_raw='Đã đạt PY101 VÀ tích lũy ít nhất 24 tín chỉ')
+    for row in conditions_v2:
+        if row['id'] == 'T02':
+            row.update(threshold=24, quote='Tích lũy ít nhất 24 tín chỉ')
+    common = {**source, 'id': 'TEST-COMMON', 'cohorts': cohorts, 'programs': ['CNTT'],
+              'scope_verified': True, 'document_version': 'common-v1', 'curriculum_ids': [],
+              'effective_from': '2026-10-07', 'effective_to': None}
+    sources.append(common)
+    paragraph.update(source_id='TEST-COMMON', version='common-v1')
+    for name, obj in {'courses': courses + courses_v2, 'conditions': conditions + conditions_v2,
+                      'sources': sources, 'programs': bindings, 'gaps': [], 'raw_rows': [],
+                      'manifest': {'schema_version': 2, 'dataset': 'sample', 'supported_cohorts': cohorts,
+                      'verified_course_cohorts': cohorts[:4], 'course_count': 12,
+                      'snapshot_date': '2026-10-14', 'amendments_verified': True,
+                      'original_documents_ingested': False, 'paragraphs': [paragraph]}}.items():
+        (folder / (name + '.json')).write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding='utf-8')
 
 
-if __name__ == "__main__":
-    create(Path(__file__).resolve().parents[1] / "data" / "sample")
+if __name__ == '__main__':
+    create(Path(__file__).resolve().parents[1] / 'data' / 'sample')

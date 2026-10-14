@@ -11,11 +11,13 @@
     "source_rows": "TEST-1",
     "source_row_count": 1,
     "source_id": "TEST",
-    "cohort": "K37",
     "version": "sample-v1",
     "verification": "SYNTHETIC_VERIFIED",
     "current_amendments_verified": true,
-    "limitations": null
+    "limitations": null,
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v1",
+    "chunk_id": "COURSE-PY101"
   },
   {
     "code": "CS101",
@@ -29,11 +31,13 @@
     "source_rows": "TEST-2",
     "source_row_count": 1,
     "source_id": "TEST",
-    "cohort": "K37",
     "version": "sample-v1",
     "verification": "SYNTHETIC_VERIFIED",
     "current_amendments_verified": true,
-    "limitations": null
+    "limitations": null,
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v1",
+    "chunk_id": "COURSE-CS101"
   },
   {
     "code": "PY201",
@@ -47,7 +51,6 @@
     "source_rows": "TEST-3",
     "source_row_count": 1,
     "source_id": "TEST",
-    "cohort": "K37",
     "version": "sample-v1",
     "verification": "SYNTHETIC_VERIFIED",
     "current_amendments_verified": true,
@@ -62,7 +65,10 @@
           "condition": "T02"
         }
       ]
-    }
+    },
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v1",
+    "chunk_id": "COURSE-PY201"
   },
   {
     "code": "PY202",
@@ -76,7 +82,6 @@
     "source_rows": "TEST-4",
     "source_row_count": 1,
     "source_id": "TEST",
-    "cohort": "K37",
     "version": "sample-v1",
     "verification": "SYNTHETIC_VERIFIED",
     "current_amendments_verified": true,
@@ -91,7 +96,10 @@
           "condition": "T04"
         }
       ]
-    }
+    },
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v1",
+    "chunk_id": "COURSE-PY202"
   },
   {
     "code": "PY203",
@@ -105,7 +113,6 @@
     "source_rows": "TEST-5",
     "source_row_count": 1,
     "source_id": "TEST",
-    "cohort": "K37",
     "version": "sample-v1",
     "verification": "SYNTHETIC_VERIFIED",
     "current_amendments_verified": true,
@@ -120,7 +127,10 @@
           "condition": "T06"
         }
       ]
-    }
+    },
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v1",
+    "chunk_id": "COURSE-PY203"
   },
   {
     "code": "PY204",
@@ -134,10 +144,165 @@
     "source_rows": "TEST-6",
     "source_row_count": 1,
     "source_id": "TEST",
-    "cohort": "K37",
     "version": "sample-v1",
     "verification": "SYNTHETIC_VERIFIED",
     "current_amendments_verified": true,
-    "limitations": null
+    "limitations": null,
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v1",
+    "chunk_id": "COURSE-PY204"
+  },
+  {
+    "code": "PY101",
+    "name": "Python nhập môn",
+    "credits": 3,
+    "group": "Giả lập",
+    "selection_rule": "Chỉ dùng kiểm thử",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": 1,
+    "source_rows": "TEST-1",
+    "source_row_count": 1,
+    "source_id": "TEST-V2",
+    "version": "sample-v2",
+    "verification": "SYNTHETIC_VERIFIED",
+    "current_amendments_verified": true,
+    "limitations": null,
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v2",
+    "chunk_id": "COURSE-PY101-V2"
+  },
+  {
+    "code": "CS101",
+    "name": "Cơ sở lập trình",
+    "credits": 3,
+    "group": "Giả lập",
+    "selection_rule": "Chỉ dùng kiểm thử",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": 2,
+    "source_rows": "TEST-2",
+    "source_row_count": 1,
+    "source_id": "TEST-V2",
+    "version": "sample-v2",
+    "verification": "SYNTHETIC_VERIFIED",
+    "current_amendments_verified": true,
+    "limitations": null,
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v2",
+    "chunk_id": "COURSE-CS101-V2"
+  },
+  {
+    "code": "PY201",
+    "name": "Python ứng dụng",
+    "credits": 4,
+    "group": "Giả lập",
+    "selection_rule": "Chỉ dùng kiểm thử",
+    "prerequisite_raw": "Đã đạt PY101 VÀ tích lũy ít nhất 24 tín chỉ",
+    "prerequisite_status": "SYNTHETIC_VERIFIED",
+    "page": 3,
+    "source_rows": "TEST-3",
+    "source_row_count": 1,
+    "source_id": "TEST-V2",
+    "version": "sample-v2",
+    "verification": "SYNTHETIC_VERIFIED",
+    "current_amendments_verified": true,
+    "limitations": null,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "condition": "T01"
+        },
+        {
+          "condition": "T02"
+        }
+      ]
+    },
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v2",
+    "chunk_id": "COURSE-PY201-V2"
+  },
+  {
+    "code": "PY202",
+    "name": "Dự án Python",
+    "credits": 3,
+    "group": "Giả lập",
+    "selection_rule": "Chỉ dùng kiểm thử",
+    "prerequisite_raw": "Đã đạt PY101 HOẶC CS101 >= 7",
+    "prerequisite_status": "SYNTHETIC_VERIFIED",
+    "page": 4,
+    "source_rows": "TEST-4",
+    "source_row_count": 1,
+    "source_id": "TEST-V2",
+    "version": "sample-v2",
+    "verification": "SYNTHETIC_VERIFIED",
+    "current_amendments_verified": true,
+    "limitations": null,
+    "rule": {
+      "op": "any",
+      "children": [
+        {
+          "condition": "T03"
+        },
+        {
+          "condition": "T04"
+        }
+      ]
+    },
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v2",
+    "chunk_id": "COURSE-PY202-V2"
+  },
+  {
+    "code": "PY203",
+    "name": "Phân tích dữ liệu",
+    "credits": 3,
+    "group": "Giả lập",
+    "selection_rule": "Chỉ dùng kiểm thử",
+    "prerequisite_raw": "PY101 >= 5 VÀ TBTL >= 6",
+    "prerequisite_status": "SYNTHETIC_VERIFIED",
+    "page": 5,
+    "source_rows": "TEST-5",
+    "source_row_count": 1,
+    "source_id": "TEST-V2",
+    "version": "sample-v2",
+    "verification": "SYNTHETIC_VERIFIED",
+    "current_amendments_verified": true,
+    "limitations": null,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "condition": "T05"
+        },
+        {
+          "condition": "T06"
+        }
+      ]
+    },
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v2",
+    "chunk_id": "COURSE-PY203-V2"
+  },
+  {
+    "code": "PY204",
+    "name": "Thực hành chưa xác minh",
+    "credits": 3,
+    "group": "Giả lập",
+    "selection_rule": "Chỉ dùng kiểm thử",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": 6,
+    "source_rows": "TEST-6",
+    "source_row_count": 1,
+    "source_id": "TEST-V2",
+    "version": "sample-v2",
+    "verification": "SYNTHETIC_VERIFIED",
+    "current_amendments_verified": true,
+    "limitations": null,
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v2",
+    "chunk_id": "COURSE-PY204-V2"
   }
 ]

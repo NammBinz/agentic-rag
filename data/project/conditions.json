@@ -9,7 +9,11 @@
     "quote": "ML113",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C002",
@@ -21,7 +25,11 @@
     "quote": "ML114",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C003",
@@ -33,7 +41,11 @@
     "quote": "ML114",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C004",
@@ -45,7 +57,11 @@
     "quote": "ML114",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C005",
@@ -57,7 +73,11 @@
     "quote": "GE111",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C006",
@@ -69,7 +89,11 @@
     "quote": "GE112",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C007",
@@ -81,7 +105,11 @@
     "quote": "GE111≥4,0",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C008",
@@ -93,7 +121,11 @@
     "quote": "GE121",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C009",
@@ -105,7 +137,11 @@
     "quote": "GE112≥4,0",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C010",
@@ -117,7 +153,11 @@
     "quote": "GE222",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C011",
@@ -129,7 +169,11 @@
     "quote": "GE121≥4,0",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C012",
@@ -141,7 +185,11 @@
     "quote": "GE231",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C013",
@@ -153,7 +201,11 @@
     "quote": "GE222≥4,0",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C014",
@@ -165,7 +217,11 @@
     "quote": "GE232",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C015",
@@ -177,7 +233,11 @@
     "quote": "GE231≥4,0",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C016",
@@ -189,7 +249,11 @@
     "quote": "GF101",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C017",
@@ -201,7 +265,11 @@
     "quote": "GJ101",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C018",
@@ -213,7 +281,11 @@
     "quote": "GZ101",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C019",
@@ -225,7 +297,11 @@
     "quote": "GI101",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C020",
@@ -237,7 +313,11 @@
     "quote": "GK101",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C021",
@@ -249,7 +329,11 @@
     "quote": "MA101",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C022",
@@ -261,7 +345,11 @@
     "quote": "MA110",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C023",
@@ -273,7 +361,11 @@
     "quote": "MA120",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C024",
@@ -285,7 +377,11 @@
     "quote": "MA101",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C025",
@@ -297,7 +393,11 @@
     "quote": "MA110",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C026",
@@ -309,7 +409,11 @@
     "quote": "CS121",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C027",
@@ -321,7 +425,11 @@
     "quote": "CS121",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C028",
@@ -333,7 +441,11 @@
     "quote": "CS121",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C029",
@@ -345,7 +457,11 @@
     "quote": "CS121",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C030",
@@ -357,7 +473,11 @@
     "quote": "CS212",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C031",
@@ -369,7 +489,11 @@
     "quote": "CS100",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C032",
@@ -381,7 +505,11 @@
     "quote": "IS222",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C033",
@@ -393,7 +521,11 @@
     "quote": "IS222",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C034",
@@ -405,7 +537,11 @@
     "quote": "IS222",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C035",
@@ -417,7 +553,11 @@
     "quote": "IS222",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C036",
@@ -429,7 +569,11 @@
     "quote": "CS121",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C037",
@@ -441,7 +585,11 @@
     "quote": "CS100",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C038",
@@ -453,7 +601,11 @@
     "quote": "IS224",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C039",
@@ -465,7 +617,11 @@
     "quote": "CS122",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C040",
@@ -477,7 +633,11 @@
     "quote": "CS100",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C041",
@@ -489,7 +649,11 @@
     "quote": "CS122",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C042",
@@ -501,7 +665,11 @@
     "quote": "CS122",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C043",
@@ -513,7 +681,11 @@
     "quote": "IS222",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C044",
@@ -525,7 +697,11 @@
     "quote": "CS121",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C045",
@@ -537,7 +713,11 @@
     "quote": "CS122",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C046",
@@ -549,7 +729,11 @@
     "quote": "MA239",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C047",
@@ -561,7 +745,11 @@
     "quote": "CF231",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C048",
@@ -573,7 +761,11 @@
     "quote": "MA120",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C049",
@@ -585,7 +777,11 @@
     "quote": "IT333",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C050",
@@ -597,7 +793,11 @@
     "quote": "IS222",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C051",
@@ -609,7 +809,11 @@
     "quote": "CS122",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C052",
@@ -621,7 +825,11 @@
     "quote": "MA239",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C053",
@@ -633,7 +841,11 @@
     "quote": "IS222",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C054",
@@ -645,7 +857,11 @@
     "quote": "IS222",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C055",
@@ -657,7 +873,11 @@
     "quote": "IS222",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C056",
@@ -669,7 +889,11 @@
     "quote": "IS222",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C057",
@@ -681,7 +905,11 @@
     "quote": "IS224",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C058",
@@ -693,7 +921,11 @@
     "quote": "CS122",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C059",
@@ -705,7 +937,11 @@
     "quote": "IS222",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C060",
@@ -717,7 +953,11 @@
     "quote": "CS121",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C061",
@@ -729,7 +969,11 @@
     "quote": "NW212",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C062",
@@ -741,7 +985,11 @@
     "quote": "NW212",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C063",
@@ -753,7 +1001,11 @@
     "quote": "IS222",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C064",
@@ -765,7 +1017,11 @@
     "quote": "CS122",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C065",
@@ -777,7 +1033,11 @@
     "quote": "IS345",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C066",
@@ -789,7 +1049,11 @@
     "quote": "IS345",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C067",
@@ -801,7 +1065,11 @@
     "quote": "CS122",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C068",
@@ -813,7 +1081,11 @@
     "quote": "100 tín chỉ",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C069",
@@ -825,7 +1097,11 @@
     "quote": "IP406≥4,0",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C070",
@@ -837,7 +1113,11 @@
     "quote": "TBTL≥7,0",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C071",
@@ -849,7 +1129,11 @@
     "quote": "90 tín chỉ",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
-    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C072",
@@ -861,7 +1145,11 @@
     "quote": "36 tín chỉ",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 49,
-    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C073",
@@ -873,7 +1161,11 @@
     "quote": "36 tín chỉ",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 49,
-    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+    "limitations": "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C074",
@@ -885,7 +1177,11 @@
     "quote": "AD213",
     "status": "REFERENCE_UNVERIFIED",
     "page": 49,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C075",
@@ -897,7 +1193,11 @@
     "quote": "AD312",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 49,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   },
   {
     "id": "C076",
@@ -909,6 +1209,10 @@
     "quote": "AD314",
     "status": "VERIFIED_TRANSCRIPTION",
     "page": 49,
-    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+    "limitations": "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi.",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
+    "version": "24081902/2024",
+    "source_id": "S01"
   }
 ]

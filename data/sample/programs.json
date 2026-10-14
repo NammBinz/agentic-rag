@@ -1,0 +1,51 @@
+[
+  {
+    "cohort": "K35",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v1",
+    "version": "sample-v1",
+    "status": "VERIFIED_SNAPSHOT",
+    "source_id": "TEST",
+    "effective_from": "2026-10-07",
+    "effective_to": null,
+    "limitations": "Chương trình giả lập, không phải dữ liệu TLU."
+  },
+  {
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v1",
+    "version": "sample-v1",
+    "status": "VERIFIED_SNAPSHOT",
+    "source_id": "TEST",
+    "effective_from": "2026-10-07",
+    "effective_to": null,
+    "limitations": "Chương trình giả lập, không phải dữ liệu TLU."
+  },
+  {
+    "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v1",
+    "version": "sample-v1",
+    "status": "VERIFIED_SNAPSHOT",
+    "source_id": "TEST",
+    "effective_from": "2026-10-07",
+    "effective_to": null,
+    "limitations": "Chương trình giả lập, không phải dữ liệu TLU."
+  },
+  {
+    "cohort": "K38",
+    "program_id": "CNTT",
+    "curriculum_id": "sample-v2",
+    "version": "sample-v2",
+    "status": "VERIFIED_SNAPSHOT",
+    "source_id": "TEST-V2",
+    "effective_from": "2026-10-07",
+    "effective_to": null,
+    "limitations": "Chương trình giả lập, không phải dữ liệu TLU."
+  },
+  {
+    "cohort": "K39",
+    "program_id": "CNTT",
+    "status": "UNVERIFIED"
+  }
+]

@@ -68,7 +68,9 @@ class OpenAIProvider:
 
     def generate(self, question, chunks, cohort, mode="rag"):
         evidence = [{"id": c["id"], "text": c["text"], "kind": c["kind"], "verification": c["verification"],
-                     "content_level": c["content_level"]} for c in chunks]
+                     "content_level": c["content_level"], "program_id": c.get("program_id"),
+                     "curriculum_id": c.get("curriculum_id"), "curriculum_version": c.get("curriculum_version"),
+                     "document_version": c.get("document_version"), "applicable_cohorts": c.get("applicable_cohorts")} for c in chunks]
         if mode == "llm":
             system = "Bạn là đối chứng LLM không RAG. Trả lời bằng tiếng Việt. Nêu rõ khi không chắc. Không bịa trích dẫn."
         else:

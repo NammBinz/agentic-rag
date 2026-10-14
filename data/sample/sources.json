@@ -13,7 +13,75 @@
     "limitations": "Chỉ dùng kiểm thử phần mềm",
     "applicable": true,
     "cohorts": [
+      "K35",
+      "K36",
       "K37"
-    ]
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "scope_verified": true,
+    "document_version": "sample-v1",
+    "curriculum_ids": [
+      "sample-v1"
+    ],
+    "effective_from": "2026-10-07",
+    "effective_to": null
+  },
+  {
+    "id": "TEST-V2",
+    "title": "Tài liệu giả lập kiểm thử v1",
+    "issued_at": "2026-10-07",
+    "effective_at": "2026-10-07",
+    "published_at": "2026-10-07",
+    "scope_text": "Môi trường kiểm thử giả lập, không phải TLU",
+    "usability": "SYNTHETIC_ONLY",
+    "locator": "Mục kiểm thử",
+    "url": null,
+    "file_url": null,
+    "limitations": "Chỉ dùng kiểm thử phần mềm",
+    "applicable": true,
+    "cohorts": [
+      "K38"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "scope_verified": true,
+    "document_version": "sample-v2",
+    "curriculum_ids": [
+      "sample-v2"
+    ],
+    "effective_from": "2026-10-07",
+    "effective_to": null
+  },
+  {
+    "id": "TEST-COMMON",
+    "title": "Tài liệu giả lập kiểm thử v1",
+    "issued_at": "2026-10-07",
+    "effective_at": "2026-10-07",
+    "published_at": "2026-10-07",
+    "scope_text": "Môi trường kiểm thử giả lập, không phải TLU",
+    "usability": "SYNTHETIC_ONLY",
+    "locator": "Mục kiểm thử",
+    "url": null,
+    "file_url": null,
+    "limitations": "Chỉ dùng kiểm thử phần mềm",
+    "applicable": true,
+    "cohorts": [
+      "K35",
+      "K36",
+      "K37",
+      "K38",
+      "K39"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "scope_verified": true,
+    "document_version": "common-v1",
+    "curriculum_ids": [],
+    "effective_from": "2026-10-07",
+    "effective_to": null
   }
 ]

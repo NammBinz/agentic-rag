@@ -2,7 +2,8 @@
 import json
 import os
 import time
-from .catalog import Catalog, course_codes
+from .catalog import Catalog, course_codes, SUPPORTED_COHORTS
+import re
 from .provider import OpenAIProvider, Settings
 from .retrieval import Retriever
 from .planner import plan, missing_evidence
@@ -29,14 +30,28 @@ def validate_generation(output, chunks):
 
 
 class Engine:
-    def __init__(self, dataset="project", settings=None, provider=None, cache_dir=None):
-        self.catalog = Catalog(dataset)
+    def __init__(self, dataset="project", settings=None, provider=None, cache_dir=None, cohort="K37", data_root=None):
+        self.catalog = Catalog(dataset, data_root, cohort)
         self.settings = settings or Settings()
         self.provider = provider or (OpenAIProvider(self.settings) if self.settings.provider == "openai" else None)
         self.retriever = Retriever(self.catalog, self.settings, self.provider, cache_dir)
         self.tools = AcademicTools(self.catalog)
+        self.cache_dir = cache_dir
+        self.scoped_engines = {}
+
+    def for_cohort(self, cohort):
+        if cohort == self.catalog.cohort:
+            return self
+        if cohort not in self.scoped_engines:
+            self.scoped_engines[cohort] = Engine(self.catalog.dataset, self.settings, self.provider,
+                                               self.cache_dir, cohort, self.catalog.data_root)
+        return self.scoped_engines[cohort]
 
     def answer(self, question, mode="rag", cohort=None, profile=None, **options):
+        if cohort is not None and not isinstance(cohort, str):
+            raise ValueError("cohort phải là chuỗi hoặc null")
+        if cohort != self.catalog.cohort:
+            return self.for_cohort(cohort).answer(question, mode, cohort, profile, **options)
         started = time.perf_counter()
         if not isinstance(question, str) or not question.strip() or len(question) > 3000:
             raise ValueError("Câu hỏi phải có 1–3000 ký tự")
@@ -52,12 +67,13 @@ class Engine:
                    "prompt_tokens": 0, "completion_tokens": 0, "embedding_tokens": 0,
                    "index_embedding_tokens": 0, "estimated_cost_usd": None}
         result = {"question": question, "mode": mode, "dataset": self.catalog.dataset,
-                  "cohort": cohort, "citations": [], "actions": [], "tool_results": [], "metrics": metrics,
+                  "cohort": cohort, "context": self.catalog.context,
+                  "citations": [], "actions": [], "tool_results": [], "metrics": metrics,
                   "config": {"provider": self.settings.provider, "retriever": self.settings.retriever,
                              "model": self.settings.model if self.provider else None, "top_k": self.settings.top_k,
                              "catalog_fingerprint": self.catalog.fingerprint, "max_extra_retrievals": 1},
                   "notice": ("DỮ LIỆU GIẢ LẬP — chỉ dùng kiểm thử." if self.catalog.dataset == "sample" else
-                             "Ảnh chụp khung gốc 2024, K37; chưa xác minh đầy đủ sửa đổi. Chưa nhập toàn văn quy chế.")}
+                             self.catalog.context["message"] + " Chưa nhập toàn văn quy chế.")}
 
         def finish(status, answer, chunks=()):
             result.update(status=status, answer=answer,
@@ -76,10 +92,13 @@ class Engine:
                         pass
             return result
 
-        if cohort is None:
-            return finish("needs_input", "Bạn thuộc khóa nào? Prototype hiện có dữ liệu K37, ngành Công nghệ thông tin.")
-        if cohort != "K37":
-            return finish("out_of_scope", "Chưa có dữ liệu đã xác minh cho khóa này; không áp khung K37 sang khóa khác.")
+        if not cohort:
+            return finish("needs_input", "Bạn thuộc khóa nào? Chọn K35–K39, ngành Công nghệ thông tin.")
+        if cohort not in SUPPORTED_COHORTS:
+            return finish("out_of_scope", self.catalog.context["message"])
+        mentioned = set(re.findall(r"\bK(?:35|36|37|38|39)\b", question.upper()))
+        if mentioned and mentioned != {cohort}:
+            return finish("needs_input", f"Bạn đang chọn {cohort} nhưng câu hỏi nhắc khóa khác. Hãy chọn đúng khóa; so sánh nhiều khóa cần hỏi riêng từng khóa.")
         if mode == "llm":
             if not self.provider:
                 return finish("unavailable", "Đối chứng LLM không RAG cần RAG_PROVIDER=openai và khóa API ở máy chủ.")
@@ -91,6 +110,9 @@ class Engine:
 
         route = plan(question, self.catalog, intent=options.get("intent"),
                      target_course=options.get("target_course"), history=options.get("history"))
+        if self.catalog.context['status'] != 'verified_snapshot' and (
+                route['intent'] in ('lookup', 'prerequisites') or course_codes(question)):
+            return finish("insufficient_data", self.catalog.context['message'])
         if mode == "agent":
             result["actions"].append({"action": "route", **route})
             if route["needs_target"] or len(route["targets"]) > 4:
