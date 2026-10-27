@@ -2,9 +2,9 @@
 import json
 import os
 import time
-from .catalog import Catalog, course_codes, SUPPORTED_COHORTS
+from .catalog import Catalog, course_codes, SUPPORTED_COHORTS, normalize
 import re
-from .provider import OpenAIProvider, Settings
+from .provider import Settings, create_provider
 from .retrieval import Retriever
 from .planner import plan, missing_evidence
 from .tools import AcademicTools, validate_profile
@@ -33,7 +33,7 @@ class Engine:
     def __init__(self, dataset="project", settings=None, provider=None, cache_dir=None, cohort="K37", data_root=None):
         self.catalog = Catalog(dataset, data_root, cohort)
         self.settings = settings or Settings()
-        self.provider = provider or (OpenAIProvider(self.settings) if self.settings.provider == "openai" else None)
+        self.provider = provider if provider is not None else create_provider(self.settings)
         self.retriever = Retriever(self.catalog, self.settings, self.provider, cache_dir)
         self.tools = AcademicTools(self.catalog)
         self.cache_dir = cache_dir
@@ -111,8 +111,25 @@ class Engine:
         route = plan(question, self.catalog, intent=options.get("intent"),
                      target_course=options.get("target_course"), history=options.get("history"))
         if self.catalog.context['status'] != 'verified_snapshot' and (
-                route['intent'] in ('lookup', 'prerequisites', 'conditions') or course_codes(question)):
+                route['intent'] in ('lookup', 'prerequisites', 'conditions', 'catalog_summary') or course_codes(question)):
             return finish("insufficient_data", self.catalog.context['message'])
+        if route['intent'] == 'catalog_summary':
+            result['actions'].append({'action': 'route', **route})
+            query = route['catalog_query']
+            if not options.get('enable_tools', True):
+                return finish('insufficient_data', 'Câu hỏi này cần công cụ thống kê toàn bộ danh mục. Công cụ đang tắt; không thể đếm hoặc liệt kê đầy đủ bằng vài đoạn truy xuất.')
+            if query.get('needs_context'):
+                return finish('needs_input', 'Bạn muốn đếm hoặc liệt kê tất cả học phần K37, các môn bắt buộc hay một nhóm cụ thể? Hãy nêu nhóm cần tra.')
+            tool = self.tools.catalog_summary(cohort, query['subset'], query.get('group'))
+            result['tool_results'].append(tool)
+            metrics['tool_calls'] = 1
+            result['actions'].append({'action': 'catalog_summary', 'status': tool['status'],
+                                      'reason': f"Đọc toàn bộ danh mục {tool['catalog_count']} mã; kết quả {tool['count']} mã trong bộ lọc."})
+            result['actions'].append({'action': 'stop', 'reason': 'Kết quả được tính trực tiếp từ bảng học phần đúng phạm vi, không dùng LLM để đếm.'})
+            if tool['status'] != 'catalog_summary':
+                return finish(tool['status'], tool['message'])
+            answer = self._catalog_answer(tool, query['count_only'])
+            return finish('catalog_summary', answer, tool['citations'])
         if mode == "agent":
             result["actions"].append({"action": "route", **route})
             if (route["needs_target"] and not route["missing_topic"]) or len(route["targets"]) > 4:
@@ -190,11 +207,10 @@ class Engine:
                 if incomplete:
                     answer += '\nChưa truy xuất đủ chuỗi trong giới hạn một lượt bổ sung; cần thu hẹp câu hỏi.'
                 if self.provider and used:
-                    generated_status, generated, citations = self._compose(question, used, cohort, metrics)
+                    generated_status, generated, citations = self._compose(question, used, cohort, metrics, result["actions"])
                     if generated_status == 'insufficient_data':
                         status = 'insufficient_data'
                     answer = generated + '\n\n' + answer
-                    result['actions'].append({'action': 'generate', 'provider': self.settings.provider})
                 return finish(status, answer, list({c['id']: c for c in used}.values()))
             if route["intent"] == "prerequisites" and result["tool_results"]:
                 statuses = [t["status"] for t in result["tool_results"]]
@@ -216,23 +232,49 @@ class Engine:
                     parts.append(part)
                 answer = '\n\n'.join(parts)
                 if self.provider and citations:
-                    _, generated, _ = self._compose(question, citations, cohort, metrics)
+                    _, generated, _ = self._compose(question, citations, cohort, metrics, result["actions"])
                     answer = generated + '\n\nKết quả đối chiếu bằng công cụ (không xác nhận quyền đăng ký):\n' + answer
-                    result['actions'].append({'action': 'generate', 'provider': self.settings.provider})
                 return finish(status, answer, citations)
         # This data-availability gate also applies to the one-pass baseline.
         if route["missing_topic"]:
             return finish("insufficient_data", route["missing_topic"] + " Cần bổ sung nguồn đúng phạm vi.",
                           [c for c in chunks if c["kind"] in ("gap", "scope")])
-        status, answer, used = self._compose(question, chunks, cohort, metrics)
+        status, answer, used = self._compose(question, chunks, cohort, metrics, result["actions"])
         return finish(status, answer, used)
+
+    def _catalog_answer(self, tool, count_only):
+        context = tool['context']
+        scope = f"{context['cohort']} — {context['curriculum_id']}"
+        subset = tool['subset']
+        selection = ('được ghi “Bắt buộc theo mục khung”' if subset == 'mandatory' else
+                     'thuộc nhóm lựa chọn hoặc nhánh thay thế' if subset == 'choices' else 'trong danh mục')
+        group = f" thuộc nhóm {tool['group']}" if tool['group'] else ''
+        lines = [f"Theo bảng {scope}, có {tool['count']} mã học phần {selection}{group}.",
+                 f"Toàn bộ danh mục {context['cohort']} có {tool['catalog_count']} mã học phần phân biệt; đây không phải số môn mỗi sinh viên phải học."]
+        lines.append('Phân nhóm kết quả: ' + '; '.join(f"{g['group']}: {g['count']}" for g in tool['groups']) + '.')
+        if not count_only:
+            for g in tool['groups']:
+                lines.append('\n' + g['group'] + f" ({g['count']} môn):")
+                for c in tool['courses']:
+                    if c['group'] == g['group']:
+                        cid = self.catalog.course_chunk_id(c)
+                        rule = f"; {c['selection_rule']}" if subset != 'mandatory' else ''
+                        lines.append(f"• {c['code']} — {c['name']} ({c['credits']} tín chỉ){rule}. [{cid}]")
+        if subset == 'mandatory' and tool['choice_groups']:
+            lines.append('\nCác nhóm phải lựa chọn hoặc có nhánh thay thế được ghi riêng, không cộng tất cả thành môn bắt buộc:')
+            for g in tool['choice_groups']:
+                codes = ', '.join(g['codes']) if len(g['codes']) <= 2 else f"{g['count']} mã"
+                c = self.catalog.courses[g['codes'][0]]
+                lines.append(f"• {g['group']} ({codes}): {g['selection_rule']}. [{self.catalog.course_chunk_id(c)}]")
+        lines.append(f"\nChỉ phản ánh bảng {context['curriculum_id']}; {context['message']} Không suy ra tổng tín chỉ tốt nghiệp hoặc quyền đăng ký từ thống kê này.")
+        return '\n'.join(lines)
 
     @staticmethod
     def _usage(metrics, usage):
         for key in ("prompt_tokens", "completion_tokens", "embedding_tokens", "index_embedding_tokens"):
             metrics[key] += int(usage.get(key, 0))
 
-    def _compose(self, question, chunks, cohort, metrics):
+    def _compose(self, question, chunks, cohort, metrics, actions=None):
         requested = course_codes(question)
         found = {c.get("course_code") for c in chunks}
         if any(code not in self.catalog.courses for code in requested):
@@ -247,6 +289,8 @@ class Engine:
         if self.provider:
             output, usage = self.provider.generate(question, chunks, cohort)
             self._usage(metrics, usage)
+            if actions is not None:
+                actions.append({"action": "generate", "provider": self.settings.provider})
             if not validate_generation(output, chunks):
                 return "insufficient_data", "Không hiển thị kết luận: LLM trả trích dẫn hoặc trích đoạn không hợp lệ.", []
             claims = output["claims"]

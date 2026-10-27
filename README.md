@@ -24,6 +24,12 @@ Trên macOS/Linux: `python3 -m venv .venv`, `.venv/bin/python -m pip install -r 
 Mặc định **offline = trích đoạn + công cụ**, chưa sinh câu trả lời bằng LLM.
 Để chạy RAG + LLM, sao chép `.env.example` thành `.env` và điền khóa API:
 
+```powershell
+# Chỉ sao chép lần đầu, khi chưa có .env.
+Copy-Item .env.example .env
+notepad .env
+```
+
 ```dotenv
 RAG_PROVIDER=openai
 RAG_RETRIEVER=bm25
@@ -34,8 +40,62 @@ OPENAI_MODEL=gpt-4.1-mini
 Khởi động lại server. Model cấu hình được; BM25 không cần embedding/API embedding.
 Muốn hybrid thì đặt `RAG_RETRIEVER=hybrid` và `OPENAI_EMBEDDING_MODEL` trong `.env`.
 API key chỉ đọc ở backend, không commit. Cần quyền mô hình/quota tương ứng.
-Không có khóa API thật trong phiên xây dựng: chỉ kiểm tra adapter bằng mock.
+`python run.py` tự đọc `.env` ở gốc dự án; không cần cài `python-dotenv` hoặc OpenAI SDK.
+Biến môi trường có sẵn trong terminal được ưu tiên hơn `.env`. Nếu cấu hình không đổi,
+kiểm tra biến `RAG_PROVIDER`, `RAG_RETRIEVER`, `OPENAI_MODEL` và `OPENAI_API_KEY` của tiến trình.
+Không đặt chú thích ở cuối dòng giá trị trong `.env`; dùng dòng chú thích riêng.
+
+Sau khi dừng tiến trình cũ và chạy lại `python run.py`, kiểm tra:
+
+```powershell
+Invoke-RestMethod http://127.0.0.1:8765/api/health
+```
+
+Kỳ vọng `provider=openai`, `retriever=bm25`, `model=gpt-4.1-mini`, `demo_only=true`
+và `scope=K37 — CNTT-2024`. Nhãn “LLM đã bật” và health chỉ xác nhận cấu hình;
+chưa chứng minh khóa/quota hoặc kết nối API hoạt động. Hỏi `IT320 tên gì, mấy tín chỉ?`,
+mở tab Hành động để kiểm tra bước LLM, token sinh và đối chiếu từng câu với nguồn.
+Thiếu khóa làm server không khởi động; lỗi API trong yêu cầu được trả rõ với HTTP 502.
+
+Trong phiên kiểm tra ban đầu ngày 27/10/2026 chưa có `.env` hoặc API key thật: kiểm thử LLM/embedding
+dùng provider giả lập, chưa xác nhận REST adapter với dịch vụ thật.
 Lỗi API được báo rõ, không ngầm chuyển sang câu trả lời giả.
+Các biến đơn giá trong `.env.example` là tùy chọn cho ước tính chi phí; không cần để bật LLM.
+Hybrid tạo cache vector trong `.runtime/vectors`, không sửa dữ liệu nguồn; chưa chạy hybrid
+với API thật trong phiên này.
+
+Mã hiện dùng Chat Completions và Structured Outputs. Model mặc định được giữ theo dự án;
+[OpenAI Docs về GPT-4.1 mini](https://developers.openai.com/api/docs/models/gpt-4.1-mini)
+liệt kê hai khả năng này. Quyền truy cập và quota của tài khoản vẫn cần kiểm tra bằng yêu cầu thật.
+
+### Dùng khóa Gemini từ Google AI Studio
+
+Đã có adapter Gemini qua [endpoint tương thích của Google](https://ai.google.dev/gemini-api/docs/openai/).
+Trong `.env`, đặt:
+
+```dotenv
+RAG_PROVIDER=gemini
+RAG_RETRIEVER=bm25
+GEMINI_API_KEY=DIEN_KHOA_GEMINI_TAI_DAY
+GEMINI_MODEL=gemini-3.8-flash
+```
+
+Chỉ dùng khóa thật trong `.env` cục bộ; không gửi khóa qua chat, không commit.
+Gemini đọc `GEMINI_API_KEY` và `GEMINI_MODEL`, không đọc hai biến tương ứng của OpenAI.
+Model mặc định lấy theo [danh mục model của Google](https://ai.google.dev/gemini-api/docs/models);
+quyền model/quota của dự án vẫn phải kiểm tra bằng yêu cầu thật. Có thể đổi `GEMINI_MODEL`
+sang model văn bản tương thích mà tài khoản được phép gọi.
+
+Lưu `.env`, dừng server cũ và chạy lại `python run.py`. Health phải hiện
+`provider=gemini`, `retriever=bm25`, model đã cấu hình và `demo_only=true`.
+Giao diện hiện “LLM đã bật · Gemini · bm25”. Đây chỉ là nhãn cấu hình, không phải
+kiểm tra kết nối. Hỏi IT320, mở Hành động và kiểm tra token/nguồn để xác nhận luồng thật.
+
+Bản Gemini chỉ bật BM25, không tạo embedding hay xây lại dữ liệu. `hybrid` với Gemini
+bị từ chối rõ ràng. Công cụ, phạm vi K37 — CNTT-2024, giới hạn truy xuất và kiểm tra
+ID/quote dùng cùng pipeline hiện tại. Không có fallback sang OpenAI hoặc offline khi API lỗi.
+76 bài kiểm tra đạt, gồm 12 bài Gemini dùng HTTP giả lập và 20 bài về thống kê/ngữ cảnh; xem
+[trạng thái kiểm chứng Gemini](docs/GEMINI.md) trước khi coi là đã gọi API thật.
 
 Router hiện là **quy tắc lập trình**, chọn lookup_course / lookup_conditions hoặc
 đối chiếu hồ sơ theo loại câu hỏi; không phải planner học được hay LLM tự chọn tool.
@@ -76,6 +136,22 @@ Chuỗi mã giới hạn hai cạnh tham chiếu, tối đa 25 nút, có kiểm 
 thiếu. Tối đa hai lần gọi retriever tổng cộng. Nếu vẫn thiếu sau lượt bổ sung thì
 nêu giới hạn, không đệ quy thêm. Các chức năng dùng cùng Engine với runner kiểm tra.
 
+## Thống kê và liệt kê toàn bộ học phần
+
+Câu hỏi “ngành CNTT cần học những môn bắt buộc nào”, “có mấy môn”, “là những môn gì”
+được xử lý bằng công cụ đọc toàn bộ danh mục đúng khóa, không nhờ LLM đếm vài đoạn top-k.
+Trong bảng K37 — CNTT-2024 có **99 mã học phần phân biệt**, trong đó **45 mã** ghi đúng
+quy tắc “Bắt buộc theo mục khung”: 21 Đại cương, 13 Cơ sở khối ngành, 10 Bắt buộc ngành,
+1 Tốt nghiệp. Đây không phải số môn mà mọi sinh viên phải học để tốt nghiệp.
+CS223/CS224 là chọn 1 trong 2; ngoại ngữ, nhóm lựa chọn và nhánh KLTN/IT486 được ghi riêng.
+
+Câu hỏi tiếp nối giữ cùng bộ lọc trong 6 câu hỏi gần nhất; đổi chủ đề hoặc thiếu ngữ cảnh
+thì yêu cầu làm rõ. Câu hỏi này có trạng thái `catalog_summary`, ghi rõ hành động thống kê,
+0 lượt retriever và 0 token LLM; mỗi môn liệt kê có dẫn chứng riêng. Cả hai chế độ trên UI
+đều dùng báo cáo danh mục cho loại câu hỏi này, nên không coi chúng là ca đối chứng RAG
+thuần không dùng công cụ. Các câu hỏi khác giữ pipeline RAG/Agent hiện có.
+Chi tiết và bằng chứng tại [docs/CATALOG_REPORTS.md](docs/CATALOG_REPORTS.md).
+
 ## Kiểm tra
 
 Trong môi trường đã cài Flask, chạy:
@@ -85,7 +161,7 @@ python test.py
 python scripts/run_demo_checks.py
 ```
 
-Bản bàn giao đạt **44 bài kiểm tra** và **15/15 câu demo** qua Flask test client.
+Bản bàn giao đạt **76 bài kiểm tra** và **15/15 câu demo** qua Flask test client.
 `scripts/run_demo_checks.py` xuất cả đầu vào, kỳ vọng, câu trả lời, nguồn và trace
 vào `docs/demo_results.jsonl`. Đây là kiểm tra demo ban đầu, **không phải thực nghiệm
 NCKH chính thức**. Mô tả chi tiết tại [docs/TESTING.md](docs/TESTING.md).
@@ -118,5 +194,8 @@ K37 hiện tại; không dùng để suy ra phạm vi cho workbook khóa khác.
 | `web/` | HTML/CSS/JS phục vụ qua Flask |
 | `docs/` | Thiết kế, provenance, kiểm thử và kết quả 15 câu |
 
-Repository Git giữ lịch sử, chưa gắn remote. Chưa kiểm tra bố cục/thao tác trong
-trình duyệt thật và chưa gọi API LLM thật; xem [docs/VERIFICATION.md](docs/VERIFICATION.md).
+Repository Git giữ lịch sử tại [NammBinz/agentic-rag](https://github.com/NammBinz/agentic-rag). Đã kiểm tra Chrome headless với bố cục
+desktop/mobile và thao tác cảm ứng mô phỏng; còn khác biệt D08 giữa hồ sơ trống trên UI
+và payload API bỏ trường hồ sơ. Đã gọi Gemini thật thành công cho IT320; hai lần thử
+UI sau đó gặp HTTP 503 từ Google. Xem [kiểm chứng ban đầu](docs/VERIFICATION.md) và
+[kiểm chứng Gemini](docs/GEMINI.md).

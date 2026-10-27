@@ -1,10 +1,16 @@
 """Inspectable routing decisions, not hidden model reasoning."""
 from .catalog import course_codes, normalize
+from .catalog_queries import catalog_query
 
 
 def plan(question, catalog, intent=None, target_course=None, history=None):
     if intent not in (None, "lookup", "prerequisites", "conditions"):
         raise ValueError("intent phải là lookup, conditions hoặc prerequisites")
+    inventory = catalog_query(question, catalog, history) if intent is None and not target_course else None
+    if inventory:
+        return {'intent': 'catalog_summary', 'targets': [], 'resolved_question': question,
+                'source_ids': None, 'missing_topic': None, 'trace_depth': 0,
+                'needs_target': False, 'catalog_query': inventory, 'router': 'deterministic-v1'}
     resolved = question
     if history and not course_codes(question) and any(p in normalize(question) for p in ("mon do", "hoc phan do")):
         for entry in reversed(history[-6:]):

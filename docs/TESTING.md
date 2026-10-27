@@ -32,8 +32,10 @@ Không dùng kết quả này làm độ chính xác học vụ hay kết quả 
 5. Hỏi D09/D11/D12/D13; phải giữ trạng thái thiếu/ngoài phạm vi.
 6. Bật API trong `.env`, khởi động lại. Nhãn engine phải báo LLM đã bật; lỗi API
    hiển thị rõ. Lặp lại D01/D03/D05 và kiểm tra từng claim bằng nguồn, không chỉ ID.
-7. Kiểm tra desktop/mobile, nguồn/hành động/cuộn hội thoại. Kiểm tra trình duyệt
-   thật và API mạng thật chưa được thực hiện trong phiên xây dựng.
+7. Kiểm tra desktop/mobile, nguồn/hành động/cuộn hội thoại. Đã kiểm tra Chrome
+   headless và mobile giả lập ngày 27/10/2026. Gemini thật đã thử câu IT320; xem
+   [GEMINI.md](GEMINI.md) về lần thành công và lỗi upstream 503 trên UI.
+   Xem [VERIFICATION.md](VERIFICATION.md) về khác biệt hồ sơ trống D08 và bằng chứng.
 
 ## API đang phục vụ (chỉ K37)
 
@@ -58,3 +60,14 @@ chỉ dùng cho kiểm thử engine nghiên cứu; không có nút mở phạm v
 Các kiểm thử mock LLM kiểm tra rằng chỉ đoạn được chọn đi tới adapter, tool thực
 sự đã chạy, quote/ID phải hợp lệ và token được ghi. Không chứng minh chất lượng
 câu trả lời bằng API thật. Fixture hồi quy sample không phải dữ liệu TLU.
+
+
+## Hồi quy thống kê và ngữ cảnh
+
+Bộ hiện tại có 76 bài; `tests/test_catalog_summary.py` thêm 20 bài cho thống kê và ngữ cảnh.
+Trên UI thử liên tiếp: “ngành công nghệ thông tin cần học những môn bắt buộc nào” →
+“có mấy môn” → “là những môn gì”. Cả ba phải dùng cùng bộ lọc 45 mã theo quy tắc
+“Bắt buộc theo mục khung”; câu cuối liệt kê theo nhóm, không chỉ nêu EC102.
+Hỏi “ngành CNTT có tất cả bao nhiêu môn” phải đổi sang 99 mã danh mục, không phải
+số môn mọi sinh viên bắt buộc phải học. Các trường hợp này không gọi Gemini.
+Xem [CATALOG_REPORTS.md](CATALOG_REPORTS.md) về phạm vi và bằng chứng.

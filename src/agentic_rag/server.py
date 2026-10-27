@@ -102,7 +102,7 @@ def create_app(settings=None, demo_only=True, provider=None):
     @app.get('/api/health')
     def health():
         return jsonify(ok=True, framework='Flask', provider=settings.provider, retriever=settings.retriever,
-                       model=settings.model if settings.provider == 'openai' else None,
+                       model=settings.model if settings.provider != 'offline' else None,
                        scope='K37 — CNTT-2024' if demo_only else 'Research test mode', demo_only=demo_only)
 
     @app.get('/api/catalog')

@@ -1,6 +1,6 @@
 """Deterministic academic tools with explicit unknowns and snapshot-only results."""
 import math
-from .catalog import SUPPORTED_COHORTS, course_codes
+from .catalog import SUPPORTED_COHORTS, course_codes, normalize
 
 
 def validate_profile(profile):
@@ -46,6 +46,38 @@ class AcademicTools:
                 "courses": found, "message": f"Tìm được {len(found)} học phần trong snapshot.",
                 "context": self.catalog.context,
                 "citations": [self.catalog.citation(by_id[self.catalog.course_chunk_id(c)]) for c in found]}
+
+    def catalog_summary(self, cohort, subset='all', group=None):
+        """Count distinct scoped catalog codes, using the source selection rule exactly."""
+        if cohort != self.catalog.cohort:
+            return AcademicTools(self.catalog.for_cohort(cohort)).catalog_summary(cohort, subset, group)
+        if subset not in ('all', 'mandatory', 'choices'):
+            raise ValueError('Tập học phần không hợp lệ')
+        result = {'tool': 'catalog_summary', 'status': 'insufficient_data', 'courses': [],
+                  'count': 0, 'catalog_count': len(self.catalog.courses), 'groups': [],
+                  'choice_groups': [], 'citations': [], 'context': self.catalog.context,
+                  'subset': subset, 'group': group}
+        if self.catalog.context['status'] != 'verified_snapshot':
+            return {**result, 'message': self.catalog.context['message']}
+        records = [c for c in self.catalog.courses.values() if group is None or c['group'] == group]
+        fixed = lambda c: normalize(c.get('selection_rule') or '').strip() == 'bat buoc theo muc khung'
+        selected = [c for c in records if subset == 'all' or (fixed(c) if subset == 'mandatory' else not fixed(c))]
+        selected.sort(key=lambda c: (c.get('workbook_row') or 0, c['code']))
+        by_id = {c['id']: c for c in self.catalog.chunks if c['kind'] == 'course'}
+        def summarize(rows, keys):
+            grouped = {}
+            for c in rows:
+                key = tuple(c[k] for k in keys)
+                grouped.setdefault(key, []).append(c)
+            return [{**dict(zip(keys, key)), 'count': len(values), 'codes': [c['code'] for c in values]}
+                    for key, values in grouped.items()]
+        result.update(status='catalog_summary', count=len(selected), courses=selected,
+                      groups=summarize(selected, ['group']),
+                      choice_groups=summarize([c for c in records if not fixed(c)], ['group', 'selection_rule']),
+                      # All records used in computing this scoped report remain inspectable.
+                      citations=[self.catalog.citation(by_id[self.catalog.course_chunk_id(c)]) for c in records],
+                      message='Thống kê theo mã học phần trong toàn bộ danh mục đúng khóa/phiên bản; không theo số đoạn truy xuất.')
+        return result
 
     def conditions(self, code, cohort, depth=0, profile=None):
         """Read recorded conditions; at most two reference edges, never infer eligibility."""
