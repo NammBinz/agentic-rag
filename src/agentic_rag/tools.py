@@ -1,6 +1,6 @@
 """Deterministic academic tools with explicit unknowns and snapshot-only results."""
 import math
-from .catalog import SUPPORTED_COHORTS
+from .catalog import SUPPORTED_COHORTS, course_codes
 
 
 def validate_profile(profile):
@@ -46,6 +46,57 @@ class AcademicTools:
                 "courses": found, "message": f"Tìm được {len(found)} học phần trong snapshot.",
                 "context": self.catalog.context,
                 "citations": [self.catalog.citation(by_id[self.catalog.course_chunk_id(c)]) for c in found]}
+
+    def conditions(self, code, cohort, depth=0, profile=None):
+        """Read recorded conditions; at most two reference edges, never infer eligibility."""
+        if not isinstance(depth, int) or isinstance(depth, bool) or not 0 <= depth <= 2:
+            raise ValueError('depth phải từ 0 đến 2')
+        lookup = self.lookup(code, cohort)
+        result = {'tool': 'lookup_conditions', 'status': 'insufficient_data',
+                  'course_code': code.strip().upper(), 'nodes': [], 'edges': [],
+                  'missing_references': [], 'citations': [], 'max_depth': depth,
+                  'scope': 'Chuỗi mã được ghi trong bảng; không suy ra học trước/đạt môn hoặc quyền đăng ký.'}
+        if lookup['status'] != 'found' or len(lookup['courses']) != 1:
+            return {**result, 'message': lookup['message'],
+                    'status': lookup['status'] if lookup['status'] != 'found' else 'needs_input'}
+        catalog = self.catalog.for_cohort(cohort)
+        root = lookup['courses'][0]['code']
+        result['course_code'] = root
+        queue, visited = [(root, 0, ())], set()
+        chunks = {c.get('course_code'): c for c in catalog.chunks if c['kind'] == 'course'}
+        while queue and len(visited) < 25:
+            current, level, path = queue.pop(0)
+            if current in visited:
+                continue
+            visited.add(current)
+            course = catalog.courses.get(current)
+            if not course:
+                result['missing_references'].append(current)
+                continue
+            components = [c for c in catalog.conditions if c['course'] == current]
+            result['nodes'].append({'course_code': current, 'depth': level,
+                'prerequisite_raw': course['prerequisite_raw'], 'prerequisite_status': course['prerequisite_status'],
+                'components': components, 'workbook_sheet': course.get('workbook_sheet'),
+                'workbook_row': course.get('workbook_row')})
+            result['citations'].append(catalog.citation(chunks[current]))
+            for reference in course_codes(course['prerequisite_raw'] or ''):
+                cyclic = reference in (*path, current)
+                result['edges'].append({'from': current, 'to': reference, 'cycle': cyclic,
+                                       'reference_found': reference in catalog.courses})
+                if reference not in catalog.courses:
+                    if reference not in result['missing_references']:
+                        result['missing_references'].append(reference)
+                elif level < depth and not cyclic:
+                    queue.append((reference, level + 1, (*path, current)))
+        blank = lookup['courses'][0]['prerequisite_status'] == 'SOURCE_BLANK'
+        result.update(status='insufficient_data' if blank or result['missing_references'] else 'recorded_conditions',
+            message=('Ô tiên quyết trống: chưa đủ căn cứ kết luận không có điều kiện.' if blank else
+                     'Thuật lại điều kiện và chuỗi tham chiếu đúng như bảng, không tự thêm ngưỡng điểm.'))
+        if result['missing_references']:
+            result['message'] += ' Thiếu bản ghi: ' + ', '.join(result['missing_references']) + '.'
+        if profile is not None:
+            result['evaluation'] = self.prerequisites(root, cohort, profile)
+        return result
 
     def _leaf(self, condition, profile):
         kind, reference = condition["kind"], condition["reference"]

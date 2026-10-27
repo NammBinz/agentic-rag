@@ -2,19 +2,19 @@
 const $ = id => document.getElementById(id);
 const sessionKey = () => `${state.dataset}:${$("cohort").value || "unknown"}`;
 const state = {dataset: "project", sessions: {}, current: null, catalog: null, busy: false};
-const labels = {evidence_found: "Đã tìm thấy dẫn chứng", answered: "Đã trả lời có nguồn", insufficient_data: "Chưa đủ căn cứ", needs_input: "Cần bổ sung thông tin", out_of_scope: "Ngoài phạm vi dữ liệu", unavailable: "Chưa bật API", satisfied_in_snapshot: "Thỏa điều kiện trong snapshot", not_met_in_snapshot: "Chưa thỏa điều kiện trong snapshot", mixed_results: "Xem kết quả từng môn", not_found: "Chưa có mã môn"};
-const actionLabels = {route: "Chọn cách xử lý", retrieve: "Truy xuất tài liệu", lookup_course: "Tra học phần", check_prerequisites: "Kiểm tra tiên quyết", check_evidence: "Kiểm tra bằng chứng còn thiếu", stop: "Kết thúc theo giới hạn"};
+const labels = {recorded_conditions: "Điều kiện được ghi trong bảng", evidence_found: "Đã tìm thấy dẫn chứng", answered: "Đã trả lời có nguồn", insufficient_data: "Chưa đủ căn cứ", needs_input: "Cần bổ sung thông tin", out_of_scope: "Ngoài phạm vi dữ liệu", unavailable: "Chưa bật API", satisfied_in_snapshot: "Thỏa điều kiện trong snapshot", not_met_in_snapshot: "Chưa thỏa điều kiện trong snapshot", mixed_results: "Xem kết quả từng môn", not_found: "Chưa có mã môn"};
+const actionLabels = {lookup_conditions: "Tra điều kiện và chuỗi mã", generate: "LLM diễn đạt theo nguồn", route: "Chọn cách xử lý", retrieve: "Truy xuất tài liệu", lookup_course: "Tra học phần", check_prerequisites: "Kiểm tra tiên quyết", check_evidence: "Kiểm tra bằng chứng còn thiếu", stop: "Kết thúc theo giới hạn"};
 function el(tag, className, text) { const n = document.createElement(tag); if (className) n.className = className; if (text !== undefined) n.textContent = text; return n; }
 function mode() { return document.querySelector('input[name="mode"]:checked').value; }
-function save() { try { localStorage.setItem("agentic-rag-history-v2", JSON.stringify(state.sessions)); } catch { $("history-label").textContent = "Không lưu được lịch sử; hội thoại vẫn dùng được"; } }
-function load() { try { const s = JSON.parse(localStorage.getItem("agentic-rag-history-v2") || "null"); if (s && typeof s === "object" && Object.values(s).every(Array.isArray)) state.sessions = s; } catch { /* A broken storage entry is not needed for a new conversation. */ } }
+function save() { try { localStorage.setItem("agentic-rag-k37-flask-v3", JSON.stringify(state.sessions)); } catch { $("history-label").textContent = "Không lưu được lịch sử; hội thoại vẫn dùng được"; } }
+function load() { try { const s = JSON.parse(localStorage.getItem("agentic-rag-k37-flask-v3") || "null"); if (s && typeof s === "object" && Object.values(s).every(Array.isArray)) state.sessions = s; } catch { /* A broken storage entry is not needed for a new conversation. */ } }
 async function fetchJSON(url, options) { const r = await fetch(url, options); const data = await r.json(); if (!r.ok) throw new Error(data.error || `Lỗi HTTP ${r.status}`); return data; }
 function examples() {
-  const qs = state.dataset === "sample" ? ["PY201 có bao nhiêu tín chỉ?", "Kiểm tra tiên quyết PY201", "So sánh PY201 và CS101", "Đăng ký tối đa bao nhiêu tín chỉ mỗi kỳ?"] : ["IT320 có bao nhiêu tín chỉ và tiên quyết gì?", "Kiểm tra tiên quyết IT499", "So sánh IT320 và IS330", "Học phí kỳ này là bao nhiêu?"];
+  const qs = state.dataset === "sample" ? ["PY201 có bao nhiêu tín chỉ?", "Kiểm tra tiên quyết PY201", "So sánh PY201 và CS101", "Đăng ký tối đa bao nhiêu tín chỉ mỗi kỳ?"] : ["IT320 có bao nhiêu tín chỉ và tiên quyết gì?", "Kiểm tra tiên quyết IT499", "IT320 yêu cầu môn nào? Môn đó yêu cầu gì?", "Điều kiện được ghi cho IT499 là gì?", "Học phí kỳ này là bao nhiêu?"];
   $("examples").replaceChildren();
   for (const q of qs) { const b = el("button", "example", q); b.type = "button"; b.append(el("span", "", "↗")); b.addEventListener("click", () => { $("question").value = q; $("question").focus(); }); $("examples").append(b); }
 }
-function updateNotice() { $("scope-badge").textContent = `CNTT · ${$("cohort").value || "Chọn khóa"}`; const sample = state.dataset === "sample"; $("data-notice").classList.toggle("sample", sample); $("data-notice").lastElementChild.textContent = sample ? "DỮ LIỆU GIẢ LẬP — điều kiện và quy định chỉ dùng kiểm thử, không phải quy định TLU." : ($("cohort").value === "K37" ? "K37: khung gốc 2024; chưa xác minh đầy đủ sửa đổi. Chưa nhập toàn văn." : "Chưa đủ dữ liệu học phần đúng khóa. Chỉ tra được văn bản chung đã xác minh phạm vi; không dùng khung K37 thay thế."); }
+function updateNotice() { $("scope-badge").textContent = "K37 — CNTT-2024"; const sample = state.dataset === "sample"; $("data-notice").classList.toggle("sample", sample); $("data-notice").lastElementChild.textContent = sample ? "DỮ LIỆU GIẢ LẬP — điều kiện và quy định chỉ dùng kiểm thử, không phải quy định TLU." : ($("cohort").value === "K37" ? "K37 — CNTT-2024 · Bảng 5 tab/12 nguồn; chưa nhập toàn văn PDF và đủ sửa đổi sau 2024." : "Chưa đủ dữ liệu học phần đúng khóa. Chỉ tra được văn bản chung đã xác minh phạm vi; không dùng khung K37 thay thế."); }
 function appendAnswerText(container, answer, citations) {
   const known = new Map(citations.map(c => [c.id, c]));
   const parts = answer.split(/(\[[A-Z0-9_-]+\])/g);
@@ -49,7 +49,7 @@ function showEvidence(r) {
 }
 function openSource(c) {
   $("dialog-title").textContent = c.source_title; const container = $("dialog-content"); container.replaceChildren();
-  const dl = el("dl", "dialog-meta"); for (const [name, value] of [["Mã đoạn", c.id], ["Khóa / phiên bản", `${c.cohort} / ${c.curriculum_version || "Chưa xác minh"}; văn bản ${c.document_version}`], ["Các khóa áp dụng", (c.applicable_cohorts || []).join(", ")], ["Vị trí", c.page ? `Trang PDF ${c.page}; dòng ${c.section}` : c.section], ["Hiệu lực", c.effective_at || "Chưa xác minh"], ["Mức chứng cứ", c.content_level], ["Trạng thái", c.verification]]) { dl.append(el("dt", "", name), el("dd", "", value)); } container.append(dl, el("blockquote", "", c.text), el("p", "source-note", c.evidence_note));
+  const dl = el("dl", "dialog-meta"); for (const [name, value] of [["Mã đoạn", c.id], ["Khóa / phiên bản", `${c.cohort} / ${c.curriculum_version || "Chưa xác minh"}; văn bản ${c.document_version}`], ["Các khóa áp dụng", (c.applicable_cohorts || []).join(", ")], ["Vị trí", c.page ? `Trang PDF ${c.page}; dòng ${c.section}` : c.section], ["Hiệu lực", c.effective_at || "Chưa xác minh"], ["Bản ghi Excel", `${c.workbook_sheet || "Danh mục nguồn"}${c.workbook_row ? "!" + c.workbook_row : ""}`], ["Mức chứng cứ", c.content_level], ["Trạng thái", c.verification]]) { dl.append(el("dt", "", name), el("dd", "", value)); } container.append(dl, el("blockquote", "", c.text), el("p", "source-note", c.evidence_note));
   const links = el("div", "source-links"); for (const [url, label] of [[c.url, "Trang công bố chính thức ↗"], [c.file_url, "Mở tài liệu tham chiếu ↗"]]) { if (url && /^https?:\/\//i.test(url)) { const a = el("a", "", label); a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer"; links.append(a); } } container.append(links); $("source-dialog").showModal();
 }
 function profile() {
@@ -57,7 +57,7 @@ function profile() {
   const grades = {}; for (const part of $("grades").value.split(/[,;]+/).filter(x => x.trim())) { const pair = part.trim().match(/^([A-Za-z]{2}\d{3})\s*:\s*(\d+(?:\.\d+)?)$/); if (!pair) throw new Error("Điểm có dạng GE111: 6.5; dùng dấu chấm cho phần thập phân."); grades[pair[1].toUpperCase()] = Number(pair[2]); }
   return {completed, grades, credits: $("credits").value === "" ? null : Number($("credits").value), average: $("average").value === "" ? null : Number($("average").value)};
 }
-function setBusy(value) { state.busy = value; $("send").disabled = value; $("dataset").disabled = value; $("cohort").disabled = value; $("clear").disabled = value; renderMessages(); }
+function setBusy(value) { state.busy = value; $("send").disabled = value; $("dataset").disabled = true; $("cohort").disabled = true; $("clear").disabled = value; renderMessages(); }
 $("chat-form").addEventListener("submit", async e => {
   e.preventDefault(); if (state.busy) return; const question = $("question").value.trim(); if (!question) return; $("error").textContent = "";
   const controller = new AbortController(); const timeout = setTimeout(() => controller.abort(), 150000);

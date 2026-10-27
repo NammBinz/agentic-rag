@@ -127,7 +127,8 @@ class Catalog:
             chunks.append(self._metadata(course['source_id'], 'course', id=self.course_chunk_id(course),
                           course_code=course['code'], text=text, page=course['page'],
                           section=course.get('source_rows', course['code']), version=course['version'],
-                          verification=course['verification'], content_level='transcribed_row'))
+                          verification=course['verification'], content_level='transcribed_row',
+                          workbook_sheet=course.get('workbook_sheet'), workbook_row=course.get('workbook_row')))
         for source in self.sources.values():
             if not self.source_applies(source):
                 continue

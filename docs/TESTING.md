@@ -1,101 +1,60 @@
-# Kiểm tra từng chức năng
+# Kiểm tra demo K37
 
-`python test.py` chạy kiểm tra catalog, tiên quyết, Agent, adapter API giả lập và
-HTTP server. `python scripts/run_smoke.py` chạy 20 tình huống có kỳ vọng cụ thể,
-lưu cả trích dẫn, trace, metrics vào `.runtime/smoke_results.jsonl`. Không gọi API.
+Chạy `python test.py`, sau đó `python scripts/run_demo_checks.py`.
+Lệnh thứ hai chạy 15 câu qua **Flask test client**, ghi đầy đủ đầu vào/đầu ra, nguồn,
+hành động, kỳ vọng và passed vào `docs/demo_results.jsonl`.
+Không dùng kết quả này làm độ chính xác học vụ hay kết quả NCKH chính thức.
 
-## Demo thủ công
-
-Chạy `python run.py`, mở http://127.0.0.1:8765. Chọn dữ liệu **giả lập** trước
-và chọn K37 khi dùng các môn PY/CS trong bảng dưới. Bấm “Điền hồ sơ mẫu” để có PY101 đã đạt,
-12 tín chỉ, PY101=6, CS101=7, TBTL=7. Nhấn một mã trích dẫn hoặc thẻ nguồn để
-xem excerpt, trang, phiên bản. Tab Hành động hiển thị thao tác, không phải suy luận nội bộ.
-
-| Chức năng | Thao tác/đầu vào | Kỳ vọng |
+| Case | Đầu vào | Kỳ vọng |
 |---|---|---|
-| RAG 1 lượt | RAG một lượt; `PY201 có bao nhiêu tín chỉ?` | 1 lượt; nguồn COURSE-PY201; 3 tín chỉ |
-| Tra môn | Agentic; `Tra học phần PY201` | lookup_course; tên, tín chỉ, nguồn |
-| AND đạt | Agentic; `Kiểm tra tiên quyết PY201`; PY101, 12 TC | satisfied_in_snapshot |
-| AND thiếu môn | Xóa PY101; giữ “đã cung cấp đủ danh sách” | not_met_in_snapshot; chỉ rõ PY101 |
-| Chưa cung cấp danh sách | Bỏ chọn “đã cung cấp đủ danh sách” | insufficient_data, không coi null là [] |
-| OR đạt | `Kiểm tra tiên quyết PY202`; completed=[]; CS101:7 | satisfied_in_snapshot; không bắt buộc cả hai nhánh |
-| Điểm/TBTL | `Kiểm tra tiên quyết PY203`; PY101:5, TBTL=6 | đạt đúng ngưỡng; 4.9 không đạt |
-| Thiếu khóa | Khóa “chưa cung cấp”; hỏi PY201 | needs_input; không truy xuất |
-| Thiếu dữ liệu | K38, kho project | insufficient_data; không mượn dữ liệu K37 |
-| Ngoài phạm vi triển khai | K40 | out_of_scope |
-| Truy xuất bổ sung | `python scripts/run_smoke.py` → extra-retrieval | top_k=1, tắt tools; thiếu CS101 → tổng 2 lượt |
-| Giới hạn vòng | extra-disabled trong smoke; các test Agent | tắt bổ sung → 1; không có trường hợp >2 |
-| Lịch sử | Hỏi, tải lại trang; chọn lại cùng dataset | lịch sử còn; “Xóa hội thoại” xóa kho đang xem |
-| Hội thoại tham chiếu | Hỏi IT320 rồi `Kiểm tra tiên quyết môn đó` | resolve IT320 trong tối đa 6 câu gần nhất |
-| Nhãn dữ liệu | Đổi project ↔ sample | cảnh báo đổi đúng; hai lịch sử tách riêng |
+| D01 | IT320 tên gì, mấy tín chỉ? | Python, 3 TC; S01/trang 21 |
+| D02 | Hỏi bằng tên đầy đủ không có mã | Chọn đúng IT320 |
+| D03 | IT320 yêu cầu môn nào? Môn đó yêu cầu gì? | CS122 → CS121; hai lượt truy xuất tổng cộng |
+| D04 | IS330 mấy tín chỉ và điều kiện gì? | 2 TC; IS224; CNTT-2024 |
+| D05 | Điều kiện được ghi cho IT499 | 100 TC, IP406≥4,0, TBTL≥7,0; không phải toàn bộ tốt nghiệp |
+| D06 | Kiểm tra IT499, 100 TC, IP406=4, TBTL=7 | satisfied_in_snapshot |
+| D07 | Như D06 nhưng 99 TC | not_met_in_snapshot |
+| D08 | Kiểm tra IT499, chưa cung cấp hồ sơ | needs_input |
+| D09 | CS121 ô trống, đăng ký ngay? | insufficient_data; không coi là miễn tiên quyết |
+| D10 | IT320, người dùng khai đã đạt CS122 | Chưa rõ nghĩa mã trần; insufficient_data |
+| D11 | Chuỗi AD219 | Giữ AD213 là thiếu, không đổi mã |
+| D12 | K38 dùng bảng K37 được không? | out_of_scope, không truy xuất/LLM |
+| D13 | Lớp, chỗ trống, học phí hiện tại | Chưa có dữ liệu thời điểm |
+| D14 | ZZ999 | Chưa có mã trong snapshot |
+| D15 | Đủ điều kiện tốt nghiệp chưa? | Chưa có bộ điều kiện đầy đủ |
 
-## Các rào chắn dữ liệu project
+## Thử trên giao diện
 
-Đổi về “CNTT K35–K39 · Nguồn dự án; chọn K37”. IT320=3 TC, tiên quyết nguồn CS122. Kể cả đã nhập
-CS122 đạt 10 điểm, tool vẫn chưa xác nhận đủ điều kiện: nguồn chưa xác minh nghĩa
-của mã đơn thuần. CS121 có ô tiên quyết trống: trả unknown, không chuyển thành
-“không có tiên quyết”. IT499 với 100 TC, IP406=4, TBTL=7 thỏa điều kiện **trong
-snapshot**; với 99 TC không thỏa điều kiện tín chỉ. Không xác nhận quyền đăng ký.
+1. `python run.py`, mở http://127.0.0.1:8765; xác nhận nhãn K37 — CNTT-2024.
+2. Hỏi D01/D03/D05; mở nguồn, đối chiếu mã S01, trang PDF ghi trong bảng và dòng Excel.
+3. Chọn tab Hành động: có route/retrieve/lookup/stop; truy xuất tối đa 2 lần.
+4. Nhập hồ sơ giả lập cho D06/D07; danh sách chưa cung cấp khác với danh sách rỗng.
+5. Hỏi D09/D11/D12/D13; phải giữ trạng thái thiếu/ngoài phạm vi.
+6. Bật API trong `.env`, khởi động lại. Nhãn engine phải báo LLM đã bật; lỗi API
+   hiển thị rõ. Lặp lại D01/D03/D05 và kiểm tra từng claim bằng nguồn, không chỉ ID.
+7. Kiểm tra desktop/mobile, nguồn/hành động/cuộn hội thoại. Kiểm tra trình duyệt
+   thật và API mạng thật chưa được thực hiện trong phiên xây dựng.
 
-Hỏi học phí/lịch học/ngưỡng TOEIC/đủ điều kiện tốt nghiệp: từ chối kết luận khi
-thiếu nguồn. S05–S07/S12 không được đưa vào truy xuất áp dụng K37.
+## API đang phục vụ (chỉ K37)
 
-## HTTP API
-
-| Endpoint | Dữ liệu |
-|---|---|
-| GET `/api/health` | provider, retriever, model đang chạy |
-| GET `/api/catalog?dataset=project&cohort=K37` | manifest, học phần, nguồn, phần cần xác minh |
-| GET `/api/courses?q=IT320&cohort=K37&dataset=project` | lookup theo mã/tên |
-| GET `/api/chunks/COURSE-IT320?dataset=project&cohort=K37` | excerpt và metadata |
-| POST `/api/chat` | question, mode, dataset, cohort, profile |
-| POST `/api/prerequisites` | course_code, dataset, cohort, profile |
-
-Ví dụ JSON cho `/api/chat`:
+- `GET /api/health`: Flask, provider/retriever, phạm vi.
+- `GET /api/catalog`: 99 môn, nguồn áp dụng, context và manifest.
+- `GET /api/courses?q=IT320`: tra môn theo mã/tên.
+- `GET /api/conditions?q=IT320&depth=2`: điều kiện và chuỗi, không cần hồ sơ.
+- `GET /api/chunks/COURSE-IT320`: đoạn được tạo từ bảng, trang PDF và dòng Excel.
+- `POST /api/chat`: `question`, `mode` (agent/rag), `profile`, `history` tùy chọn;
+  `cohort=K37`, `curriculum_id=CNTT-2024` nếu truyền tường minh.
+- `POST /api/prerequisites`: `course_code`, `profile` tùy chọn; đối chiếu điều kiện.
 
 ```json
-{"question":"Kiểm tra tiên quyết PY201","mode":"agent","dataset":"sample",
- "cohort":"K37","profile":{"completed":["PY101"],"grades":{},"credits":12,"average":7}}
+{"question":"Kiểm tra tiên quyết IT499","mode":"agent","cohort":"K37",
+ "curriculum_id":"CNTT-2024","profile":{"credits":100,"grades":{"IP406":4},"average":7}}
 ```
 
-`enable_tools:false` và `enable_extra_retrieval:false` là tùy chọn ablation của
-Agent. `intent:"prerequisites", target_course:"PY201"` cho phép gọi rõ tác vụ.
-Không suy ra bảng điểm từ câu chat. Điểm dùng thang 10; tín chỉ/TBTL là đầu vào
-khai báo, không tự tính hoặc quy đổi nếu thiếu quy tắc nguồn.
+Mọi endpoint dữ liệu từ chối sample/khóa/phiên bản khác. Câu hỏi nhắc K38/K40,
+khóa 38 hoặc CNTT-2025 bị chặn trước retriever/LLM. `create_app(demo_only=False)`
+chỉ dùng cho kiểm thử engine nghiên cứu; không có nút mở phạm vi này trên giao diện.
 
-## Thực nghiệm A/B/C
-
-`data/dev_smoke.jsonl` chỉ có 5 câu phát triển minh họa, không phải bộ 100–120 câu
-đã chốt trong đề cương. Chạy trên cùng cấu hình LLM/dữ liệu:
-
-```bash
-python scripts/run_experiment.py --input data/dev_smoke.jsonl --output .runtime/dev_abc.jsonl
-```
-
-Chế độ offline bỏ qua A (status=unavailable) và B/C là trích xuất. Để thực nghiệm
-LLM, cấu hình `.env` như README. Output lưu cấu hình, fingerprint, gold, token,
-chi phí nếu đã nhập giá, thời gian, trace và chỗ chấm tay. Không tự chấm semantic
-correctness chỉ vì trích dẫn tồn tại. Giá cần cấu hình theo thời điểm chạy; không
-dùng số đo mock làm kết quả nghiên cứu. Token lập chỉ mục được báo riêng, nên
-lập chỉ mục trước hoặc phân bổ chi phí này rõ ràng để so sánh công bằng.
-
-Tập kiểm tra cuối cần được kiểm tra nguồn/đáp án và đóng băng; câu cần công cụ
-có gold_status, ý bắt buộc và nguồn. Hai thành viên chấm chéo theo đề cương,
-báo độ đúng/trích dẫn/từ chối, Cohen's kappa và CI ghép cặp. Repo hiện chưa tạo
-giả bộ câu hỏi nghiên cứu hoặc số liệu này.
-
-## Kiểm tra nhiều khóa (v0.2)
-
-1. Chưa chọn khóa, hỏi `PY201`: yêu cầu chọn K35–K39, không truy xuất.
-2. Chọn kho Sample, K37; hỏi `PY201 có bao nhiêu tín chỉ?`: 3 TC, sample-v1.
-3. Chọn K38; hỏi lại: 4 TC, sample-v2, dẫn chứng COURSE-PY201-V2.
-4. Nhập đã đạt PY101, 12 TC; kiểm tra tiên quyết PY201: K37 thỏa, K38 chưa thỏa.
-5. Chọn K39: tra PY201 báo thiếu chương trình; hỏi tối đa tín chỉ/kỳ vẫn thấy quy
-   định giả lập chung 18 TC và TEST-REGISTRATION. Không dùng đây làm quy định TLU.
-6. Kho Project, K35/K36/K38/K39; hỏi IT320: thiếu dữ liệu, không xuất hiện môn K37.
-7. Chọn K38 nhưng hỏi PY201 của K37: yêu cầu làm rõ khóa, chưa truy xuất.
-8. Đổi khóa: lịch sử không lẫn; hồ sơ và danh mục làm mới. Mở nguồn: xem phiên bản,
-   khóa áp dụng, ngày hiệu lực. API lấy chunk phải truyền cohort, không mặc định K37.
-
-Tái tạo mẫu: `python scripts/create_sample.py`. Tái nhập workbook K37 sẽ tự chạy
-migrate_scope để xuất schema v2. Không dùng script này nhập workbook khóa khác.
+Các kiểm thử mock LLM kiểm tra rằng chỉ đoạn được chọn đi tới adapter, tool thực
+sự đã chạy, quote/ID phải hợp lệ và token được ghi. Không chứng minh chất lượng
+câu trả lời bằng API thật. Fixture hồi quy sample không phải dữ liệu TLU.

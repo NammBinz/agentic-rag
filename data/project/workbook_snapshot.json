@@ -1,0 +1,4921 @@
+{
+  "Hoc phan": {
+    "header_row": 4,
+    "headers": [
+      "Mã",
+      "Tên học phần",
+      "TC",
+      "Nhóm",
+      "Quy tắc lựa chọn",
+      "Tiên quyết trong khung",
+      "Trạng thái tiên quyết",
+      "Trang PDF S01",
+      "Số giờ trong nguồn",
+      "Hệ số",
+      "Số dòng nguồn",
+      "Dòng nguồn",
+      "Điểm cần xác minh"
+    ],
+    "records": [
+      {
+        "excel_row": 5,
+        "values": [
+          "ML113",
+          "Triết học Mác - Lênin",
+          3,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "45",
+          1,
+          1,
+          "R001",
+          null
+        ]
+      },
+      {
+        "excel_row": 6,
+        "values": [
+          "ML114",
+          "Kinh tế chính trị Mác - Lênin",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "ML113",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "30",
+          1,
+          1,
+          "R002",
+          null
+        ]
+      },
+      {
+        "excel_row": 7,
+        "values": [
+          "ML115",
+          "Chủ nghĩa xã hội khoa học",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "ML114",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "30",
+          1,
+          1,
+          "R003",
+          null
+        ]
+      },
+      {
+        "excel_row": 8,
+        "values": [
+          "ML202",
+          "Tư tưởng Hồ Chí Minh",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "ML114",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "30",
+          1,
+          1,
+          "R004",
+          null
+        ]
+      },
+      {
+        "excel_row": 9,
+        "values": [
+          "ML204",
+          "Lịch sử Đảng Cộng sản Việt Nam",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "ML114",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "30",
+          1,
+          1,
+          "R005",
+          null
+        ]
+      },
+      {
+        "excel_row": 10,
+        "values": [
+          "CS102",
+          "Tin học văn phòng",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "30",
+          1.3,
+          1,
+          "R006",
+          null
+        ]
+      },
+      {
+        "excel_row": 11,
+        "values": [
+          "MA101",
+          "Logic, suy luận toán học và kỹ thuật đếm",
+          3,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "27LT+36BT",
+          1.5,
+          1,
+          "R007",
+          null
+        ]
+      },
+      {
+        "excel_row": 12,
+        "values": [
+          "CS100",
+          "Tin đại cương",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "18LT+24TH",
+          1.5,
+          1,
+          "R008",
+          null
+        ]
+      },
+      {
+        "excel_row": 13,
+        "values": [
+          "NA151",
+          "Khoa học môi trường",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "30",
+          1,
+          1,
+          "R009",
+          null
+        ]
+      },
+      {
+        "excel_row": 14,
+        "values": [
+          "EC102",
+          "Nhập môn kinh tế học",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "30",
+          1.3,
+          1,
+          "R010",
+          null
+        ]
+      },
+      {
+        "excel_row": 15,
+        "values": [
+          "VL101",
+          "Tiếng Việt thực hành",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "30",
+          1.2,
+          1,
+          "R011",
+          null
+        ]
+      },
+      {
+        "excel_row": 16,
+        "values": [
+          "SH131",
+          "Pháp luật đại cương",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "30",
+          1.2,
+          1,
+          "R012",
+          null
+        ]
+      },
+      {
+        "excel_row": 17,
+        "values": [
+          "GE111",
+          "Tiếng Anh sơ cấp 1",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "54",
+          1.6,
+          1,
+          "R013",
+          null
+        ]
+      },
+      {
+        "excel_row": 18,
+        "values": [
+          "GE112",
+          "Tiếng Anh sơ cấp 2",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "GE111",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "54",
+          1.6,
+          1,
+          "R014",
+          null
+        ]
+      },
+      {
+        "excel_row": 19,
+        "values": [
+          "GE121",
+          "Tiếng Anh sơ trung cấp 1",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "GE112, GE111≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "54",
+          1.6,
+          1,
+          "R015",
+          null
+        ]
+      },
+      {
+        "excel_row": 20,
+        "values": [
+          "GE222",
+          "Tiếng Anh sơ trung cấp 2",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "GE121, GE112≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "54",
+          1.6,
+          1,
+          "R016",
+          null
+        ]
+      },
+      {
+        "excel_row": 21,
+        "values": [
+          "GE231",
+          "Tiếng Anh trung cấp 1",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "GE222, GE121≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "54",
+          1.6,
+          1,
+          "R017",
+          null
+        ]
+      },
+      {
+        "excel_row": 22,
+        "values": [
+          "GE232",
+          "Tiếng Anh trung cấp 2",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "GE231, GE222≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "54",
+          1.6,
+          1,
+          "R018",
+          null
+        ]
+      },
+      {
+        "excel_row": 23,
+        "values": [
+          "GE333",
+          "Tiếng Anh trung cấp 3",
+          2,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "GE232, GE231≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "54",
+          1.6,
+          1,
+          "R019",
+          null
+        ]
+      },
+      {
+        "excel_row": 24,
+        "values": [
+          "GF101",
+          "Tiếng Pháp 1",
+          2,
+          "Đại cương",
+          "Chọn một cặp ngoại ngữ 1+2 trong năm cặp",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "54",
+          1.6,
+          1,
+          "R020",
+          null
+        ]
+      },
+      {
+        "excel_row": 25,
+        "values": [
+          "GF102",
+          "Tiếng Pháp 2",
+          2,
+          "Đại cương",
+          "Chọn một cặp ngoại ngữ 1+2 trong năm cặp",
+          "GF101",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "54",
+          1.6,
+          1,
+          "R021",
+          null
+        ]
+      },
+      {
+        "excel_row": 26,
+        "values": [
+          "GJ101",
+          "Tiếng Nhật 1",
+          2,
+          "Đại cương",
+          "Chọn một cặp ngoại ngữ 1+2 trong năm cặp",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "54",
+          1.6,
+          1,
+          "R022",
+          null
+        ]
+      },
+      {
+        "excel_row": 27,
+        "values": [
+          "GJ102",
+          "Tiếng Nhật 2",
+          2,
+          "Đại cương",
+          "Chọn một cặp ngoại ngữ 1+2 trong năm cặp",
+          "GJ101",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "54",
+          1.6,
+          1,
+          "R023",
+          null
+        ]
+      },
+      {
+        "excel_row": 28,
+        "values": [
+          "GZ101",
+          "Tiếng Trung 1",
+          2,
+          "Đại cương",
+          "Chọn một cặp ngoại ngữ 1+2 trong năm cặp",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "54",
+          1.6,
+          1,
+          "R024",
+          null
+        ]
+      },
+      {
+        "excel_row": 29,
+        "values": [
+          "GZ102",
+          "Tiếng Trung 2",
+          2,
+          "Đại cương",
+          "Chọn một cặp ngoại ngữ 1+2 trong năm cặp",
+          "GZ101",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "54",
+          1.6,
+          1,
+          "R025",
+          null
+        ]
+      },
+      {
+        "excel_row": 30,
+        "values": [
+          "GI101",
+          "Tiếng Ý 1",
+          2,
+          "Đại cương",
+          "Chọn một cặp ngoại ngữ 1+2 trong năm cặp",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "54",
+          0.75,
+          1,
+          "R026",
+          null
+        ]
+      },
+      {
+        "excel_row": 31,
+        "values": [
+          "GI102",
+          "Tiếng Ý 2",
+          2,
+          "Đại cương",
+          "Chọn một cặp ngoại ngữ 1+2 trong năm cặp",
+          "GI101",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "54",
+          0.75,
+          1,
+          "R027",
+          null
+        ]
+      },
+      {
+        "excel_row": 32,
+        "values": [
+          "GK101",
+          "Tiếng Hàn 1",
+          2,
+          "Đại cương",
+          "Chọn một cặp ngoại ngữ 1+2 trong năm cặp",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "54",
+          1.6,
+          1,
+          "R028",
+          null
+        ]
+      },
+      {
+        "excel_row": 33,
+        "values": [
+          "GK102",
+          "Tiếng Hàn 2",
+          2,
+          "Đại cương",
+          "Chọn một cặp ngoại ngữ 1+2 trong năm cặp",
+          "GK101",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "54",
+          1.6,
+          1,
+          "R029",
+          null
+        ]
+      },
+      {
+        "excel_row": 34,
+        "values": [
+          "PG100",
+          "Giáo dục thể chất",
+          4,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "100",
+          1.4,
+          1,
+          "R030",
+          "Chưa xác minh cách phân rã/đối chiếu với mã lớp học thực tế (ví dụ PG102, PG118)."
+        ]
+      },
+      {
+        "excel_row": 35,
+        "values": [
+          "PG121",
+          "Giáo dục quốc phòng và An ninh",
+          4,
+          "Đại cương",
+          "Bắt buộc theo mục khung",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "77LT+16TL+72TH",
+          1.4,
+          1,
+          "R031",
+          "Chưa xác minh cách phân rã/đối chiếu với mã lớp học thực tế (ví dụ PG102, PG118)."
+        ]
+      },
+      {
+        "excel_row": 36,
+        "values": [
+          "MA110",
+          "Giải tích 1",
+          3,
+          "Cơ sở khối ngành",
+          "Bắt buộc theo mục khung",
+          "MA101",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "27LT+36BT",
+          1.6,
+          1,
+          "R032",
+          null
+        ]
+      },
+      {
+        "excel_row": 37,
+        "values": [
+          "MA111",
+          "Giải tích 2",
+          3,
+          "Cơ sở khối ngành",
+          "Bắt buộc theo mục khung",
+          "MA110, MA120",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "27LT+36BT",
+          1.6,
+          1,
+          "R033",
+          null
+        ]
+      },
+      {
+        "excel_row": 38,
+        "values": [
+          "MA120",
+          "Đại số tuyến tính",
+          3,
+          "Cơ sở khối ngành",
+          "Bắt buộc theo mục khung",
+          "MA101",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "27LT+36BT",
+          1.6,
+          1,
+          "R034",
+          null
+        ]
+      },
+      {
+        "excel_row": 39,
+        "values": [
+          "MA239",
+          "Xác suất thống kê",
+          4,
+          "Cơ sở khối ngành",
+          "Bắt buộc theo mục khung",
+          "MA110",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "45LT+27TH",
+          1.6,
+          1,
+          "R035",
+          null
+        ]
+      },
+      {
+        "excel_row": 40,
+        "values": [
+          "MI201",
+          "Toán rời rạc",
+          3,
+          "Cơ sở khối ngành",
+          "Bắt buộc theo mục khung",
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "45",
+          1.6,
+          1,
+          "R036",
+          null
+        ]
+      },
+      {
+        "excel_row": 41,
+        "values": [
+          "CF213",
+          "Cấu trúc dữ liệu và giải thuật",
+          4,
+          "Cơ sở khối ngành",
+          "Bắt buộc theo mục khung",
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "45LT+36TH",
+          1.8,
+          1,
+          "R037",
+          null
+        ]
+      },
+      {
+        "excel_row": 42,
+        "values": [
+          "CS121",
+          "Lập trình cơ sở 1",
+          3,
+          "Cơ sở khối ngành",
+          "Bắt buộc theo mục khung",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "27LT+36TH",
+          1.6,
+          1,
+          "R038",
+          null
+        ]
+      },
+      {
+        "excel_row": 43,
+        "values": [
+          "CS123",
+          "Lập trình cơ sở 2",
+          2,
+          "Cơ sở khối ngành",
+          "Bắt buộc theo mục khung",
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "18LT+24TH",
+          1.6,
+          1,
+          "R039",
+          null
+        ]
+      },
+      {
+        "excel_row": 44,
+        "values": [
+          "CS122",
+          "Lập trình hướng đối tượng",
+          3,
+          "Cơ sở khối ngành",
+          "Bắt buộc theo mục khung",
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "27LT+36TH",
+          1.6,
+          1,
+          "R040",
+          null
+        ]
+      },
+      {
+        "excel_row": 45,
+        "values": [
+          "CS212",
+          "Kiến trúc máy tính",
+          3,
+          "Cơ sở khối ngành",
+          "Bắt buộc theo mục khung",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "45",
+          1.6,
+          1,
+          "R041",
+          null
+        ]
+      },
+      {
+        "excel_row": 46,
+        "values": [
+          "CS315",
+          "Nguyên lý hệ điều hành",
+          3,
+          "Cơ sở khối ngành",
+          "Bắt buộc theo mục khung",
+          "CS212",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "45",
+          1.6,
+          1,
+          "R042",
+          null
+        ]
+      },
+      {
+        "excel_row": 47,
+        "values": [
+          "IS222",
+          "Cơ sở dữ liệu",
+          3,
+          "Cơ sở khối ngành",
+          "Bắt buộc theo mục khung",
+          "CS100",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "45",
+          1.6,
+          1,
+          "R043",
+          null
+        ]
+      },
+      {
+        "excel_row": 48,
+        "values": [
+          "NW212",
+          "Mạng máy tính",
+          2,
+          "Cơ sở khối ngành",
+          "Bắt buộc theo mục khung",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          20,
+          "18LT+24BT",
+          1.6,
+          1,
+          "R044",
+          null
+        ]
+      },
+      {
+        "excel_row": 49,
+        "values": [
+          "IS322",
+          "Hệ quản trị cơ sở dữ liệu",
+          3,
+          "Bắt buộc ngành",
+          "Bắt buộc theo mục khung",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R045",
+          null
+        ]
+      },
+      {
+        "excel_row": 50,
+        "values": [
+          "IS332",
+          "Phân tích thiết kế hướng đối tượng",
+          3,
+          "Bắt buộc ngành",
+          "Bắt buộc theo mục khung",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R046",
+          null
+        ]
+      },
+      {
+        "excel_row": 51,
+        "values": [
+          "SE302",
+          "Công nghệ phần mềm",
+          2,
+          "Bắt buộc ngành",
+          "Bắt buộc theo mục khung",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "18LT+24BT",
+          1.6,
+          1,
+          "R047",
+          null
+        ]
+      },
+      {
+        "excel_row": 52,
+        "values": [
+          "SE422",
+          "Phát triển dự án",
+          3,
+          "Bắt buộc ngành",
+          "Bắt buộc theo mục khung",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R048",
+          null
+        ]
+      },
+      {
+        "excel_row": 53,
+        "values": [
+          "SE312",
+          "Kiểm thử và đảm bảo chất lượng phần mềm",
+          3,
+          "Bắt buộc ngành",
+          "Bắt buộc theo mục khung",
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R049",
+          null
+        ]
+      },
+      {
+        "excel_row": 54,
+        "values": [
+          "AI130",
+          "Trí tuệ nhân tạo",
+          3,
+          "Bắt buộc ngành",
+          "Bắt buộc theo mục khung",
+          "CS100",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          2.5,
+          1,
+          "R050",
+          null
+        ]
+      },
+      {
+        "excel_row": 55,
+        "values": [
+          "IS326",
+          "Khai phá dữ liệu",
+          3,
+          "Bắt buộc ngành",
+          "Bắt buộc theo mục khung",
+          "IS224",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.8,
+          1,
+          "R051",
+          null
+        ]
+      },
+      {
+        "excel_row": 56,
+        "values": [
+          "IT333",
+          "Công nghệ Web",
+          3,
+          "Bắt buộc ngành",
+          "Bắt buộc theo mục khung",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.8,
+          1,
+          "R052",
+          null
+        ]
+      },
+      {
+        "excel_row": 57,
+        "values": [
+          "IS224",
+          "Lập trình khoa học dữ liệu",
+          3,
+          "Bắt buộc ngành",
+          "Bắt buộc theo mục khung",
+          "CS100",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R053",
+          null
+        ]
+      },
+      {
+        "excel_row": 58,
+        "values": [
+          "CS318",
+          "Lập trình ứng dụng di động",
+          3,
+          "Bắt buộc ngành",
+          "Bắt buộc theo mục khung",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.8,
+          1,
+          "R054",
+          null
+        ]
+      },
+      {
+        "excel_row": 59,
+        "values": [
+          "CS223",
+          "Lập trình Java",
+          3,
+          "Bắt buộc ngành",
+          "Chọn 1 trong 2: CS223 hoặc CS224",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R055",
+          null
+        ]
+      },
+      {
+        "excel_row": 60,
+        "values": [
+          "CS224",
+          "Lập trình .Net",
+          3,
+          "Bắt buộc ngành",
+          "Chọn 1 trong 2: CS223 hoặc CS224",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R056",
+          null
+        ]
+      },
+      {
+        "excel_row": 61,
+        "values": [
+          "IT334",
+          "Internet of Things",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.8,
+          2,
+          "R057, R074",
+          "DUPLICATE_IN_SOURCE: IT334 xuất hiện hai lần trong lựa chọn ngành; chỉ giữ một mã ở bảng chuẩn hóa."
+        ]
+      },
+      {
+        "excel_row": 62,
+        "values": [
+          "IS345",
+          "An toàn thông tin",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R058",
+          null
+        ]
+      },
+      {
+        "excel_row": 63,
+        "values": [
+          "CF231",
+          "Lý thuyết thông tin và mã hóa",
+          2,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "MA239",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "18LT+24BT",
+          1.6,
+          1,
+          "R059",
+          null
+        ]
+      },
+      {
+        "excel_row": 64,
+        "values": [
+          "IS430",
+          "Công nghệ blockchain",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "CF231",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.8,
+          1,
+          "R060",
+          null
+        ]
+      },
+      {
+        "excel_row": 65,
+        "values": [
+          "MI312",
+          "Đồ họa",
+          2,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "MA120",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "18LT+24TH",
+          1.6,
+          1,
+          "R061",
+          null
+        ]
+      },
+      {
+        "excel_row": 66,
+        "values": [
+          "IT335",
+          "Công nghệ web nâng cao",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "IT333",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.8,
+          1,
+          "R062",
+          null
+        ]
+      },
+      {
+        "excel_row": 67,
+        "values": [
+          "CS323",
+          "Lập trình JavaScript",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R063",
+          null
+        ]
+      },
+      {
+        "excel_row": 68,
+        "values": [
+          "IT320",
+          "Phát triển ứng dụng với Python",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R064",
+          null
+        ]
+      },
+      {
+        "excel_row": 69,
+        "values": [
+          "CS320",
+          "Học máy",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "MA239",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "36LT+18TH",
+          1.8,
+          1,
+          "R065",
+          null
+        ]
+      },
+      {
+        "excel_row": 70,
+        "values": [
+          "CS321",
+          "Tiền xử lý dữ liệu",
+          2,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "18LT+24TH",
+          1.6,
+          1,
+          "R066",
+          null
+        ]
+      },
+      {
+        "excel_row": 71,
+        "values": [
+          "IS324",
+          "Phân tích dữ liệu",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R067",
+          null
+        ]
+      },
+      {
+        "excel_row": 72,
+        "values": [
+          "IS325",
+          "Cơ sở dữ liệu phân tán",
+          2,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "18LT+24BT",
+          1.6,
+          1,
+          "R068",
+          null
+        ]
+      },
+      {
+        "excel_row": 73,
+        "values": [
+          "IS327",
+          "Kho dữ liệu",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R069",
+          null
+        ]
+      },
+      {
+        "excel_row": 74,
+        "values": [
+          "IS330",
+          "Dữ liệu lớn",
+          2,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "IS224",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "18LT+24TH",
+          1.6,
+          1,
+          "R070",
+          null
+        ]
+      },
+      {
+        "excel_row": 75,
+        "values": [
+          "CS425",
+          "Một số vấn đề hiện đại trong công nghệ thông tin",
+          2,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "18LT+24BT",
+          1.8,
+          1,
+          "R071",
+          null
+        ]
+      },
+      {
+        "excel_row": 76,
+        "values": [
+          "CS325",
+          "Lập trình PHP",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R072",
+          null
+        ]
+      },
+      {
+        "excel_row": 77,
+        "values": [
+          "CF214",
+          "Lập trình thi đấu",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "27LT+36TH",
+          1.8,
+          1,
+          "R073",
+          null
+        ]
+      },
+      {
+        "excel_row": 78,
+        "values": [
+          "NW312",
+          "Thiết kế và quản trị mạng",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "NW212",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "27LT+36TH",
+          1.8,
+          1,
+          "R075",
+          null
+        ]
+      },
+      {
+        "excel_row": 79,
+        "values": [
+          "NW332",
+          "An toàn mạng",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "NW212",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R076",
+          null
+        ]
+      },
+      {
+        "excel_row": 80,
+        "values": [
+          "IS314",
+          "Hệ thống thông tin",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R077",
+          null
+        ]
+      },
+      {
+        "excel_row": 81,
+        "values": [
+          "IS347",
+          "Lập trình an toàn",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R078",
+          null
+        ]
+      },
+      {
+        "excel_row": 82,
+        "values": [
+          "IS348",
+          "Phân tích mã độc",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "IS345",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R079",
+          null
+        ]
+      },
+      {
+        "excel_row": 83,
+        "values": [
+          "IS349",
+          "Quản lý an toàn thông tin",
+          3,
+          "Lựa chọn ngành",
+          "Chọn tổng ≥11 tín chỉ",
+          "IS345",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "45",
+          1.6,
+          1,
+          "R080",
+          null
+        ]
+      },
+      {
+        "excel_row": 84,
+        "values": [
+          "IP406",
+          "TTTN ngành Công nghệ thông tin",
+          3,
+          "Tốt nghiệp",
+          "Bắt buộc theo mục khung",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "90TH",
+          1.8,
+          1,
+          "R081",
+          null
+        ]
+      },
+      {
+        "excel_row": 85,
+        "values": [
+          "IT499",
+          "KLTN ngành Công nghệ thông tin",
+          6,
+          "Tốt nghiệp",
+          "KLTN; nhánh thay thế là IT486",
+          "100 tín chỉ, IP406≥4,0, TBTL≥7,0",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "30LT+120TH",
+          3.5,
+          1,
+          "R082",
+          null
+        ]
+      },
+      {
+        "excel_row": 86,
+        "values": [
+          "IT486",
+          "CĐTN ngành Công nghệ thông tin",
+          6,
+          "Tốt nghiệp",
+          "Học nếu không làm KLTN",
+          "90 tín chỉ",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "30LT+120TH",
+          3.5,
+          1,
+          "R083",
+          null
+        ]
+      },
+      {
+        "excel_row": 87,
+        "values": [
+          "AD205",
+          "Kỹ năng soạn thảo văn bản (MS Office)",
+          3,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          49,
+          "45",
+          1.6,
+          1,
+          "R084",
+          null
+        ]
+      },
+      {
+        "excel_row": 88,
+        "values": [
+          "AD206",
+          "Ẩm thực Việt Nam",
+          3,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          49,
+          "30LT+30TH",
+          1.8,
+          1,
+          "R085",
+          null
+        ]
+      },
+      {
+        "excel_row": 89,
+        "values": [
+          "AD207",
+          "Kỹ năng soạn thảo văn bản (MS Open)",
+          3,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          49,
+          "45",
+          1.6,
+          1,
+          "R086",
+          null
+        ]
+      },
+      {
+        "excel_row": 90,
+        "values": [
+          "AD212",
+          "Phương pháp hùng biện và các thủ thuật tranh biện",
+          3,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "36 tín chỉ",
+          "VERIFIED_TRANSCRIPTION",
+          49,
+          "45",
+          1.4,
+          1,
+          "R087",
+          null
+        ]
+      },
+      {
+        "excel_row": 91,
+        "values": [
+          "AD215",
+          "Ứng dụng Power Point",
+          3,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          49,
+          "45",
+          1.6,
+          1,
+          "R088",
+          null
+        ]
+      },
+      {
+        "excel_row": 92,
+        "values": [
+          "AD216",
+          "Kỹ năng sống",
+          3,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          49,
+          "45",
+          1.4,
+          1,
+          "R089",
+          null
+        ]
+      },
+      {
+        "excel_row": 93,
+        "values": [
+          "AD218",
+          "Hát - Nhạc",
+          4,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "36 tín chỉ",
+          "VERIFIED_TRANSCRIPTION",
+          49,
+          "60",
+          1.6,
+          1,
+          "R090",
+          null
+        ]
+      },
+      {
+        "excel_row": 94,
+        "values": [
+          "AD219",
+          "Nâng cao chất lượng giọng hát",
+          4,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "AD213",
+          "VERIFIED_TRANSCRIPTION",
+          49,
+          "60",
+          1.8,
+          1,
+          "R091",
+          "Mã tiên quyết AD213 được ghi trong nguồn nhưng chưa có bản ghi/đề cương xác minh AD213."
+        ]
+      },
+      {
+        "excel_row": 95,
+        "values": [
+          "AD240",
+          "Nhiếp ảnh cơ bản",
+          3,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          49,
+          "30LT+30TH",
+          2,
+          1,
+          "R092",
+          null
+        ]
+      },
+      {
+        "excel_row": 96,
+        "values": [
+          "AD241",
+          "Dẫn chương trình (MC)",
+          3,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          49,
+          "30LT+30TH",
+          1.8,
+          1,
+          "R093",
+          null
+        ]
+      },
+      {
+        "excel_row": 97,
+        "values": [
+          "AD242",
+          "Thiết kế mỹ thuật",
+          3,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          49,
+          "30LT+30TH",
+          2,
+          1,
+          "R094",
+          null
+        ]
+      },
+      {
+        "excel_row": 98,
+        "values": [
+          "AD243",
+          "Hội họa cơ bản",
+          3,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          49,
+          "30LT+30TH",
+          2,
+          1,
+          "R095",
+          null
+        ]
+      },
+      {
+        "excel_row": 99,
+        "values": [
+          "AD250",
+          "Dinh dưỡng và tiết chế",
+          3,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          49,
+          "45",
+          1.5,
+          1,
+          "R096",
+          null
+        ]
+      },
+      {
+        "excel_row": 100,
+        "values": [
+          "AD312",
+          "Bóng đá",
+          4,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          49,
+          "60",
+          1.5,
+          1,
+          "R097",
+          null
+        ]
+      },
+      {
+        "excel_row": 101,
+        "values": [
+          "AD313",
+          "Bóng đá nâng cao",
+          4,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "AD312",
+          "VERIFIED_TRANSCRIPTION",
+          49,
+          "60",
+          1.5,
+          1,
+          "R098",
+          null
+        ]
+      },
+      {
+        "excel_row": 102,
+        "values": [
+          "AD314",
+          "Nhảy hiện đại",
+          4,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          49,
+          "60",
+          1.5,
+          1,
+          "R099",
+          null
+        ]
+      },
+      {
+        "excel_row": 103,
+        "values": [
+          "AD315",
+          "Nhảy hiện đại nâng cao",
+          4,
+          "Lựa chọn tự do AD",
+          "Chọn tổng ≥6 tín chỉ mã AD",
+          "AD314",
+          "VERIFIED_TRANSCRIPTION",
+          49,
+          "60",
+          1.5,
+          1,
+          "R100",
+          null
+        ]
+      }
+    ]
+  },
+  "Dieu kien": {
+    "header_row": 4,
+    "headers": [
+      "ID",
+      "Mã học phần",
+      "Loại điều kiện",
+      "Mã tham chiếu",
+      "Toán tử",
+      "Ngưỡng",
+      "Trích đoạn nguồn",
+      "Trạng thái",
+      "Trang PDF S01",
+      "Cách hiểu và hạn chế"
+    ],
+    "records": [
+      {
+        "excel_row": 5,
+        "values": [
+          "C001",
+          "ML114",
+          "COURSE_CODE",
+          "ML113",
+          "Không ghi ngưỡng",
+          null,
+          "ML113",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 6,
+        "values": [
+          "C002",
+          "ML115",
+          "COURSE_CODE",
+          "ML114",
+          "Không ghi ngưỡng",
+          null,
+          "ML114",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 7,
+        "values": [
+          "C003",
+          "ML202",
+          "COURSE_CODE",
+          "ML114",
+          "Không ghi ngưỡng",
+          null,
+          "ML114",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 8,
+        "values": [
+          "C004",
+          "ML204",
+          "COURSE_CODE",
+          "ML114",
+          "Không ghi ngưỡng",
+          null,
+          "ML114",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 9,
+        "values": [
+          "C005",
+          "GE112",
+          "COURSE_CODE",
+          "GE111",
+          "Không ghi ngưỡng",
+          null,
+          "GE111",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 10,
+        "values": [
+          "C006",
+          "GE121",
+          "COURSE_CODE",
+          "GE112",
+          "Không ghi ngưỡng",
+          null,
+          "GE112",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 11,
+        "values": [
+          "C007",
+          "GE121",
+          "COURSE_SCORE_MIN",
+          "GE111",
+          ">=",
+          4,
+          "GE111≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+        ]
+      },
+      {
+        "excel_row": 12,
+        "values": [
+          "C008",
+          "GE222",
+          "COURSE_CODE",
+          "GE121",
+          "Không ghi ngưỡng",
+          null,
+          "GE121",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 13,
+        "values": [
+          "C009",
+          "GE222",
+          "COURSE_SCORE_MIN",
+          "GE112",
+          ">=",
+          4,
+          "GE112≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+        ]
+      },
+      {
+        "excel_row": 14,
+        "values": [
+          "C010",
+          "GE231",
+          "COURSE_CODE",
+          "GE222",
+          "Không ghi ngưỡng",
+          null,
+          "GE222",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 15,
+        "values": [
+          "C011",
+          "GE231",
+          "COURSE_SCORE_MIN",
+          "GE121",
+          ">=",
+          4,
+          "GE121≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+        ]
+      },
+      {
+        "excel_row": 16,
+        "values": [
+          "C012",
+          "GE232",
+          "COURSE_CODE",
+          "GE231",
+          "Không ghi ngưỡng",
+          null,
+          "GE231",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 17,
+        "values": [
+          "C013",
+          "GE232",
+          "COURSE_SCORE_MIN",
+          "GE222",
+          ">=",
+          4,
+          "GE222≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+        ]
+      },
+      {
+        "excel_row": 18,
+        "values": [
+          "C014",
+          "GE333",
+          "COURSE_CODE",
+          "GE232",
+          "Không ghi ngưỡng",
+          null,
+          "GE232",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 19,
+        "values": [
+          "C015",
+          "GE333",
+          "COURSE_SCORE_MIN",
+          "GE231",
+          ">=",
+          4,
+          "GE231≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+        ]
+      },
+      {
+        "excel_row": 20,
+        "values": [
+          "C016",
+          "GF102",
+          "COURSE_CODE",
+          "GF101",
+          "Không ghi ngưỡng",
+          null,
+          "GF101",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 21,
+        "values": [
+          "C017",
+          "GJ102",
+          "COURSE_CODE",
+          "GJ101",
+          "Không ghi ngưỡng",
+          null,
+          "GJ101",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 22,
+        "values": [
+          "C018",
+          "GZ102",
+          "COURSE_CODE",
+          "GZ101",
+          "Không ghi ngưỡng",
+          null,
+          "GZ101",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 23,
+        "values": [
+          "C019",
+          "GI102",
+          "COURSE_CODE",
+          "GI101",
+          "Không ghi ngưỡng",
+          null,
+          "GI101",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 24,
+        "values": [
+          "C020",
+          "GK102",
+          "COURSE_CODE",
+          "GK101",
+          "Không ghi ngưỡng",
+          null,
+          "GK101",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 25,
+        "values": [
+          "C021",
+          "MA110",
+          "COURSE_CODE",
+          "MA101",
+          "Không ghi ngưỡng",
+          null,
+          "MA101",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 26,
+        "values": [
+          "C022",
+          "MA111",
+          "COURSE_CODE",
+          "MA110",
+          "Không ghi ngưỡng",
+          null,
+          "MA110",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 27,
+        "values": [
+          "C023",
+          "MA111",
+          "COURSE_CODE",
+          "MA120",
+          "Không ghi ngưỡng",
+          null,
+          "MA120",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 28,
+        "values": [
+          "C024",
+          "MA120",
+          "COURSE_CODE",
+          "MA101",
+          "Không ghi ngưỡng",
+          null,
+          "MA101",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 29,
+        "values": [
+          "C025",
+          "MA239",
+          "COURSE_CODE",
+          "MA110",
+          "Không ghi ngưỡng",
+          null,
+          "MA110",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 30,
+        "values": [
+          "C026",
+          "MI201",
+          "COURSE_CODE",
+          "CS121",
+          "Không ghi ngưỡng",
+          null,
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 31,
+        "values": [
+          "C027",
+          "CF213",
+          "COURSE_CODE",
+          "CS121",
+          "Không ghi ngưỡng",
+          null,
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 32,
+        "values": [
+          "C028",
+          "CS123",
+          "COURSE_CODE",
+          "CS121",
+          "Không ghi ngưỡng",
+          null,
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 33,
+        "values": [
+          "C029",
+          "CS122",
+          "COURSE_CODE",
+          "CS121",
+          "Không ghi ngưỡng",
+          null,
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 34,
+        "values": [
+          "C030",
+          "CS315",
+          "COURSE_CODE",
+          "CS212",
+          "Không ghi ngưỡng",
+          null,
+          "CS212",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 35,
+        "values": [
+          "C031",
+          "IS222",
+          "COURSE_CODE",
+          "CS100",
+          "Không ghi ngưỡng",
+          null,
+          "CS100",
+          "VERIFIED_TRANSCRIPTION",
+          20,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 36,
+        "values": [
+          "C032",
+          "IS322",
+          "COURSE_CODE",
+          "IS222",
+          "Không ghi ngưỡng",
+          null,
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 37,
+        "values": [
+          "C033",
+          "IS332",
+          "COURSE_CODE",
+          "IS222",
+          "Không ghi ngưỡng",
+          null,
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 38,
+        "values": [
+          "C034",
+          "SE302",
+          "COURSE_CODE",
+          "IS222",
+          "Không ghi ngưỡng",
+          null,
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 39,
+        "values": [
+          "C035",
+          "SE422",
+          "COURSE_CODE",
+          "IS222",
+          "Không ghi ngưỡng",
+          null,
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 40,
+        "values": [
+          "C036",
+          "SE312",
+          "COURSE_CODE",
+          "CS121",
+          "Không ghi ngưỡng",
+          null,
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 41,
+        "values": [
+          "C037",
+          "AI130",
+          "COURSE_CODE",
+          "CS100",
+          "Không ghi ngưỡng",
+          null,
+          "CS100",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 42,
+        "values": [
+          "C038",
+          "IS326",
+          "COURSE_CODE",
+          "IS224",
+          "Không ghi ngưỡng",
+          null,
+          "IS224",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 43,
+        "values": [
+          "C039",
+          "IT333",
+          "COURSE_CODE",
+          "CS122",
+          "Không ghi ngưỡng",
+          null,
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 44,
+        "values": [
+          "C040",
+          "IS224",
+          "COURSE_CODE",
+          "CS100",
+          "Không ghi ngưỡng",
+          null,
+          "CS100",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 45,
+        "values": [
+          "C041",
+          "CS318",
+          "COURSE_CODE",
+          "CS122",
+          "Không ghi ngưỡng",
+          null,
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 46,
+        "values": [
+          "C042",
+          "CS223",
+          "COURSE_CODE",
+          "CS122",
+          "Không ghi ngưỡng",
+          null,
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 47,
+        "values": [
+          "C043",
+          "CS224",
+          "COURSE_CODE",
+          "IS222",
+          "Không ghi ngưỡng",
+          null,
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 48,
+        "values": [
+          "C044",
+          "IT334",
+          "COURSE_CODE",
+          "CS121",
+          "Không ghi ngưỡng",
+          null,
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 49,
+        "values": [
+          "C045",
+          "IS345",
+          "COURSE_CODE",
+          "CS122",
+          "Không ghi ngưỡng",
+          null,
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 50,
+        "values": [
+          "C046",
+          "CF231",
+          "COURSE_CODE",
+          "MA239",
+          "Không ghi ngưỡng",
+          null,
+          "MA239",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 51,
+        "values": [
+          "C047",
+          "IS430",
+          "COURSE_CODE",
+          "CF231",
+          "Không ghi ngưỡng",
+          null,
+          "CF231",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 52,
+        "values": [
+          "C048",
+          "MI312",
+          "COURSE_CODE",
+          "MA120",
+          "Không ghi ngưỡng",
+          null,
+          "MA120",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 53,
+        "values": [
+          "C049",
+          "IT335",
+          "COURSE_CODE",
+          "IT333",
+          "Không ghi ngưỡng",
+          null,
+          "IT333",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 54,
+        "values": [
+          "C050",
+          "CS323",
+          "COURSE_CODE",
+          "IS222",
+          "Không ghi ngưỡng",
+          null,
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 55,
+        "values": [
+          "C051",
+          "IT320",
+          "COURSE_CODE",
+          "CS122",
+          "Không ghi ngưỡng",
+          null,
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 56,
+        "values": [
+          "C052",
+          "CS320",
+          "COURSE_CODE",
+          "MA239",
+          "Không ghi ngưỡng",
+          null,
+          "MA239",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 57,
+        "values": [
+          "C053",
+          "CS321",
+          "COURSE_CODE",
+          "IS222",
+          "Không ghi ngưỡng",
+          null,
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 58,
+        "values": [
+          "C054",
+          "IS324",
+          "COURSE_CODE",
+          "IS222",
+          "Không ghi ngưỡng",
+          null,
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 59,
+        "values": [
+          "C055",
+          "IS325",
+          "COURSE_CODE",
+          "IS222",
+          "Không ghi ngưỡng",
+          null,
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 60,
+        "values": [
+          "C056",
+          "IS327",
+          "COURSE_CODE",
+          "IS222",
+          "Không ghi ngưỡng",
+          null,
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 61,
+        "values": [
+          "C057",
+          "IS330",
+          "COURSE_CODE",
+          "IS224",
+          "Không ghi ngưỡng",
+          null,
+          "IS224",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 62,
+        "values": [
+          "C058",
+          "CS425",
+          "COURSE_CODE",
+          "CS122",
+          "Không ghi ngưỡng",
+          null,
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 63,
+        "values": [
+          "C059",
+          "CS325",
+          "COURSE_CODE",
+          "IS222",
+          "Không ghi ngưỡng",
+          null,
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 64,
+        "values": [
+          "C060",
+          "CF214",
+          "COURSE_CODE",
+          "CS121",
+          "Không ghi ngưỡng",
+          null,
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 65,
+        "values": [
+          "C061",
+          "NW312",
+          "COURSE_CODE",
+          "NW212",
+          "Không ghi ngưỡng",
+          null,
+          "NW212",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 66,
+        "values": [
+          "C062",
+          "NW332",
+          "COURSE_CODE",
+          "NW212",
+          "Không ghi ngưỡng",
+          null,
+          "NW212",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 67,
+        "values": [
+          "C063",
+          "IS314",
+          "COURSE_CODE",
+          "IS222",
+          "Không ghi ngưỡng",
+          null,
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 68,
+        "values": [
+          "C064",
+          "IS347",
+          "COURSE_CODE",
+          "CS122",
+          "Không ghi ngưỡng",
+          null,
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 69,
+        "values": [
+          "C065",
+          "IS348",
+          "COURSE_CODE",
+          "IS345",
+          "Không ghi ngưỡng",
+          null,
+          "IS345",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 70,
+        "values": [
+          "C066",
+          "IS349",
+          "COURSE_CODE",
+          "IS345",
+          "Không ghi ngưỡng",
+          null,
+          "IS345",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 71,
+        "values": [
+          "C067",
+          "IP406",
+          "COURSE_CODE",
+          "CS122",
+          "Không ghi ngưỡng",
+          null,
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 72,
+        "values": [
+          "C068",
+          "IT499",
+          "ACCUMULATED_CREDITS_MIN",
+          "Không áp dụng",
+          ">=",
+          100,
+          "100 tín chỉ",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+        ]
+      },
+      {
+        "excel_row": 73,
+        "values": [
+          "C069",
+          "IT499",
+          "COURSE_SCORE_MIN",
+          "IP406",
+          ">=",
+          4,
+          "IP406≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+        ]
+      },
+      {
+        "excel_row": 74,
+        "values": [
+          "C070",
+          "IT499",
+          "ACCUMULATED_AVERAGE_MIN",
+          "Không áp dụng",
+          ">=",
+          7,
+          "TBTL≥7,0",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+        ]
+      },
+      {
+        "excel_row": 75,
+        "values": [
+          "C071",
+          "IT486",
+          "ACCUMULATED_CREDITS_MIN",
+          "Không áp dụng",
+          ">=",
+          90,
+          "90 tín chỉ",
+          "VERIFIED_TRANSCRIPTION",
+          21,
+          "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+        ]
+      },
+      {
+        "excel_row": 76,
+        "values": [
+          "C072",
+          "AD212",
+          "ACCUMULATED_CREDITS_MIN",
+          "Không áp dụng",
+          ">=",
+          36,
+          "36 tín chỉ",
+          "VERIFIED_TRANSCRIPTION",
+          49,
+          "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+        ]
+      },
+      {
+        "excel_row": 77,
+        "values": [
+          "C073",
+          "AD218",
+          "ACCUMULATED_CREDITS_MIN",
+          "Không áp dụng",
+          ">=",
+          36,
+          "36 tín chỉ",
+          "VERIFIED_TRANSCRIPTION",
+          49,
+          "Giữ đúng ngưỡng ghi trong khung; chưa tính điều kiện của một sinh viên cụ thể."
+        ]
+      },
+      {
+        "excel_row": 78,
+        "values": [
+          "C074",
+          "AD219",
+          "COURSE_CODE",
+          "AD213",
+          "Không ghi ngưỡng",
+          null,
+          "AD213",
+          "REFERENCE_UNVERIFIED",
+          49,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 79,
+        "values": [
+          "C075",
+          "AD313",
+          "COURSE_CODE",
+          "AD312",
+          "Không ghi ngưỡng",
+          null,
+          "AD312",
+          "VERIFIED_TRANSCRIPTION",
+          49,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      },
+      {
+        "excel_row": 80,
+        "values": [
+          "C076",
+          "AD315",
+          "COURSE_CODE",
+          "AD314",
+          "Không ghi ngưỡng",
+          null,
+          "AD314",
+          "VERIFIED_TRANSCRIPTION",
+          49,
+          "Mã học phần được ghi trong cột tiên quyết; không tự diễn giải thành điều kiện điểm ≥4 khi nguồn không ghi."
+        ]
+      }
+    ]
+  },
+  "Nguon": {
+    "header_row": 4,
+    "headers": [
+      "ID",
+      "Tên văn bản",
+      "Ban hành",
+      "Hiệu lực",
+      "Ngày đăng",
+      "Khóa/phạm vi áp dụng",
+      "Mức dùng được",
+      "Vị trí bằng chứng",
+      "URL trang",
+      "URL tệp/thư mục",
+      "Hạn chế"
+    ],
+    "records": [
+      {
+        "excel_row": 5,
+        "values": [
+          "S01",
+          "Khung chương trình đào tạo đại học các ngành – QĐ 24081902/QĐ-ĐHTL",
+          "2024-08-19",
+          "2024-08-19",
+          "2024-08-29",
+          "Từ năm học 2024–2025; K≤36 được chọn chương trình theo khóa hoặc học phần mới; khung gốc K37",
+          "DÙNG ĐƯỢC CHO K37",
+          "PDF trang 1, Điều 1–3; trang 20–21 CNTT; trang 49 các mã AD",
+          "https://thanglong.edu.vn/quyet-dinh-ban-hanh-khung-chuong-trinh-dao-tao-dai-hoc-cac-nganh-cua-truong-dai-hoc-thang-long-nam-2024-20942.html",
+          "https://drive.google.com/file/d/17ALNSt37-HO-NgV3cMygvmVuK0nB0psL/view",
+          "Đã đọc trực tiếp ảnh quét. Số trang là thứ tự trang PDF, bắt đầu từ 1. Chưa xác minh đầy đủ các sửa đổi nội bộ sau ban hành."
+        ]
+      },
+      {
+        "excel_row": 6,
+        "values": [
+          "S02",
+          "Thông báo danh sách học phần học kỳ I nhóm 3 – áp dụng cho K37 theo từng ngành",
+          "2024-09-11",
+          "Chưa xác minh",
+          "2024-09-11",
+          "K37; học kỳ I năm đầu, bắt đầu học tuần 16/09/2024",
+          "DÙNG ĐỂ XÁC MINH KHÓA",
+          "PDF trang 1 và trang 5, mục CNTT (TT) và Trí tuệ nhân tạo (TA)",
+          "https://thanglong.edu.vn/thong-bao-danh-sach-hoc-phan-hoc-ky-i-nhom-3-ap-dung-cho-k37-theo-tung-nganh-20964.html",
+          "https://drive.google.com/file/d/1Zhrf-y7xmnGy3Jsq7QrzGO4HWyc2IhWW/view",
+          "Không phải danh mục toàn khóa; GE là ký hiệu nhóm trong thông báo, không tự đổi thành mã cụ thể."
+        ]
+      },
+      {
+        "excel_row": 7,
+        "values": [
+          "S03",
+          "Quy chế đào tạo trình độ đại học năm 2024 – QĐ 24081901/QĐ-ĐHTL",
+          "2024-08-19",
+          "2024-08-19",
+          "2024-08-29",
+          "Sinh viên trình độ đại học theo phạm vi Điều 1, gồm K37",
+          "DÙNG ĐƯỢC CÓ PHẠM VI",
+          "PDF trang 1, Điều 2; trang 2, Điều 1–2; trang 18, Điều 30",
+          "https://thanglong.edu.vn/quyet-dinh-ban-hanh-quy-che-dao-tao-trinh-do-dai-hoc-cua-truong-dai-hoc-thang-long-nam-2024-20941.html",
+          "https://drive.google.com/file/d/13k1p5GWL6r021YkWJYY87nhTmKjrK6rB/view",
+          "Đã kiểm tra phạm vi/hiệu lực và các trang nêu trên. Chưa chuẩn hóa toàn bộ quy chế và các văn bản sửa đổi riêng."
+        ]
+      },
+      {
+        "excel_row": 8,
+        "values": [
+          "S04",
+          "Quy định TOEIC quốc tế cho K36–K37 – QĐ 26072807/QĐ-ĐHTL",
+          "2026-07-28",
+          "2026-07-28",
+          "2026-09-10",
+          "K36 và K37, trừ ngành Ngôn ngữ Anh; có CNTT",
+          "DÙNG ĐƯỢC CHO K37",
+          "PDF trang 1 số/ngày; trang 2, Điều 1–3",
+          "https://thanglong.edu.vn/quyet-dinh-ban-hanh-quy-dinh-ve-viec-su-dung-chung-chi-toeic-quoc-te-de-xet-cong-nhan-chuan-dau-ra-ngoai-ngu-trinh-do-dai-hoc-doi-voi-sinh-vien-khoa-36-va-khoa-37-tru-nganh-ngon-ngu-anh-cua-truong-dai-hoc-thang-long-21987.html",
+          "https://drive.google.com/file/d/1XvMTYrSrzLd8ZERPjlvuajytYgOFZ_t_/view",
+          "Ngày đăng 10/09/2026 khác ngày hiệu lực 28/07/2026. Đây là chuẩn đầu ra, không phải điều kiện tiên quyết học phần."
+        ]
+      },
+      {
+        "excel_row": 9,
+        "values": [
+          "S05",
+          "Quy chế đào tạo năm 2025 – QĐ 25091102/QĐ-ĐHTL",
+          "2025-09-11",
+          "2025-09-11",
+          "2025-09-11",
+          "Các khóa tuyển sinh từ năm học 2025–2026",
+          "KHÔNG ÁP DỤNG TRỰC TIẾP K37",
+          "PDF trang 1, Điều 1–2",
+          "https://thanglong.edu.vn/quyet-dinh-ban-hanh-quy-che-dao-tao-trinh-do-dai-hoc-cua-truong-dai-hoc-thang-long-21487.html",
+          "https://drive.google.com/file/d/1gYObSE-JoCLLr0huk80J_SrylGCx1YeF/view",
+          "Điều 1 thay thế QĐ 25081504 ngày 15/08/2025. Không suy ra thay thế quy chế dành cho K37."
+        ]
+      },
+      {
+        "excel_row": 10,
+        "values": [
+          "S06",
+          "Quy chế đào tạo năm 2026 – QĐ 26082003/QĐ-ĐHTL",
+          "2026-08-20",
+          "2026-08-20",
+          "2026-08-20",
+          "Các khóa tuyển sinh từ năm học 2026–2027",
+          "KHÔNG ÁP DỤNG TRỰC TIẾP K37",
+          "PDF trang 1, Điều 2; đối chiếu phụ lục S07 trang 1–2",
+          "https://thanglong.edu.vn/quyet-dinh-ban-hanh-quy-che-dao-tao-trinh-do-dai-hoc-cua-truong-dai-hoc-thang-long-21988.html",
+          "https://drive.google.com/file/d/1Q0FM6LZT2K29545yQl2yoXT4V-PgA2UA/view",
+          "Tên tệp Drive ghi 26062003 nhưng số trên văn bản và phụ lục ghi 26082003. Lấy số trong văn bản; lưu mâu thuẫn tên tệp."
+        ]
+      },
+      {
+        "excel_row": 11,
+        "values": [
+          "S07",
+          "Phụ lục ban hành kèm theo quy chế đào tạo 2026",
+          "2026-08-20",
+          "2026-08-20",
+          "Chưa xác minh",
+          "Theo QĐ 26082003; các khóa tuyển sinh từ năm học 2026–2027",
+          "KHÔNG ÁP DỤNG TRỰC TIẾP K37",
+          "PDF trang 1–2",
+          "https://thanglong.edu.vn/quyet-dinh-ban-hanh-quy-che-dao-tao-trinh-do-dai-hoc-cua-truong-dai-hoc-thang-long-21988.html",
+          "https://thanglong.edu.vn/sites/default/files/2026-09/phu_luc_ban_hanh_kem_theo_qcdt.pdf",
+          "Đã kiểm tra danh mục và liên hệ với QĐ. Không dùng bảng quy đổi/đăng ký của phụ lục này thay dữ liệu K37."
+        ]
+      },
+      {
+        "excel_row": 12,
+        "values": [
+          "S08",
+          "Bản mô tả chương trình đào tạo và đề cương CNTT năm 2022",
+          "Chưa xác minh",
+          "Chưa xác minh",
+          "2022-04-30",
+          "Trang ghi phiên bản 2022; chưa xác minh khóa áp dụng",
+          "CHỈ THAM KHẢO PHIÊN BẢN CŨ",
+          "Trang chính thức; tệp nhúng và liên kết đề cương",
+          "https://thanglong.edu.vn/ban-mo-ta-chuong-trinh-dao-tao-va-de-cuong-nganh-cong-nghe-thong-tin-nam-2022-21158.html",
+          "https://drive.google.com/file/d/10Z1Jk_d2jjvR21oaYDVpfkABFwkvdgBS/view",
+          "Chỉ kiểm tra trang/link; chưa đọc tệp. Không dùng để tự bổ sung mã/tín chỉ/tiên quyết vào khung K37."
+        ]
+      },
+      {
+        "excel_row": 13,
+        "values": [
+          "S09",
+          "Đề cương chi tiết ngành CNTT 2022",
+          "Chưa xác minh",
+          "Chưa xác minh",
+          "Chưa xác minh",
+          "Phiên bản 2022 theo trang dẫn S08; chưa xác minh K37",
+          "CHƯA XÁC MINH",
+          "Liên kết “Đề cương chi tiết học phần” từ S08",
+          "Không có trang riêng đã xác minh",
+          "https://drive.google.com/drive/folders/1Iil9nMLW33qKyRUfxaTjKRyXN2TcXxbp",
+          "Chưa đọc từng đề cương. Chính thức về chuỗi liên kết, chưa đủ căn cứ áp dụng K37."
+        ]
+      },
+      {
+        "excel_row": 14,
+        "values": [
+          "S10",
+          "Trang giới thiệu ngành Công nghệ thông tin, mã ngành 7480201",
+          "Chưa xác minh",
+          "Chưa xác minh",
+          "Chưa xác minh",
+          "Không ghi khóa/phiên bản chương trình",
+          "CHỈ THAM KHẢO",
+          "Mục Chương trình đào tạo trên trang",
+          "https://thanglong.edu.vn/khoa-toan-tin-hoc/nganh-cong-nghe-thong-tin",
+          "Không có tệp đã tìm",
+          "Có các môn như ứng dụng AI tạo sinh, UI/UX; không ghi mã/tín chỉ/tiên quyết. Phần mục tiêu còn ghi “Khoa học máy tính”. Không trộn vào khung K37."
+        ]
+      },
+      {
+        "excel_row": 15,
+        "values": [
+          "S11",
+          "Sổ tay sinh viên (liên kết chung trên website)",
+          "Chưa xác minh",
+          "Chưa xác minh",
+          "Chưa xác minh",
+          "Chưa xác minh phiên bản và khóa áp dụng",
+          "CHƯA XÁC MINH",
+          "Liên kết Sổ tay sinh viên từ website chính thức",
+          "Không có trang riêng đã xác minh",
+          "https://drive.google.com/file/d/1Tqsw8oUCCFbUQ7BRnlrTAy8AXeDxKIBb/view",
+          "Đã tìm URL, chưa đọc tệp. Không đồng nhất với Sổ tay K37."
+        ]
+      },
+      {
+        "excel_row": 16,
+        "values": [
+          "S12",
+          "Đề cương chi tiết của 24 chương trình đào tạo năm 2025 – QĐ 25090503/QĐ-ĐHTL",
+          "2025-09-05",
+          "2025-09-05",
+          "2025-09-24",
+          "Từ khóa tuyển sinh 2025–2026 (khóa 38)",
+          "KHÔNG ÁP DỤNG TRỰC TIẾP K37",
+          "PDF trang 1: số/ngày, Điều 1; trang 2, Điều 2–3",
+          "https://thanglong.edu.vn/quyet-dinh-vv-ban-hanh-de-cuong-chi-tiet-hoc-phan-trinh-do-dai-hoc-cua-24-chuong-trinh-dao-tao-ban-hanh-nam-2025-21497.html",
+          "https://drive.google.com/file/d/1gIfh3_bnI6_Cu-IIIo9-ugDp5v-K3CsM/view",
+          "Đã đọc toàn bộ quyết định 2 trang. Điều 2 ghi rõ từ K38. Chưa đọc các đề cương kèm theo; không dùng để bù dữ liệu học phần K37."
+        ]
+      }
+    ]
+  },
+  "Can xac minh": {
+    "header_row": 4,
+    "headers": [
+      "ID",
+      "Nội dung",
+      "Trạng thái",
+      "Dữ liệu còn thiếu hoặc mâu thuẫn",
+      "Bằng chứng cần bổ sung"
+    ],
+    "records": [
+      {
+        "excel_row": 5,
+        "values": [
+          "G01",
+          "Sửa đổi khung K37 sau năm 2024",
+          "CHƯA XÁC MINH",
+          "Chưa có chuỗi đầy đủ các quyết định sửa đổi/bảng quy đổi áp cho K37. Không hiểu là không tồn tại.",
+          "Xin Phòng Đào tạo bản hiện hành gắn với K37 và lịch sử sửa đổi."
+        ]
+      },
+      {
+        "excel_row": 6,
+        "values": [
+          "G02",
+          "Đề cương chi tiết đúng phiên bản K37",
+          "CHƯA TÌM ĐỦ",
+          "Thư mục 2022 chưa xác minh K37; quyết định đề cương 2025 ghi áp dụng từ K38. Chưa tìm đủ đề cương từng học phần K37.",
+          "Thu thập đề cương đúng khóa; đối chiếu học trước, song hành và tiên quyết."
+        ]
+      },
+      {
+        "excel_row": 7,
+        "values": [
+          "G03",
+          "AD213 – mã tiên quyết của AD219",
+          "CHƯA XÁC MINH",
+          "Nguồn trang 49 ghi AD213; chưa tìm bản ghi phù hợp. Không đổi sang mã khác.",
+          "Xác nhận với trường tên, tín chỉ, điều kiện và khả năng còn mở AD213."
+        ]
+      },
+      {
+        "excel_row": 8,
+        "values": [
+          "G04",
+          "IT334 ghi hai lần",
+          "TRÙNG TRONG NGUỒN",
+          "Trang 21 mục 2.3 ghi 2 dòng cùng mã/tên/tín chỉ/tiên quyết. Bảng raw giữ cả 2; bảng chuẩn hóa giữ 1 mã.",
+          "Xác nhận lỗi biên tập nếu cần hồ sơ chính thức."
+        ]
+      },
+      {
+        "excel_row": 9,
+        "values": [
+          "G05",
+          "Ô tiên quyết trống",
+          "TRỐNG TRONG NGUỒN",
+          "Giữ null và SOURCE_BLANK; không chuyển thành “không có tiên quyết”.",
+          "Đọc đề cương đúng phiên bản hoặc xác nhận dữ liệu quản lý đào tạo."
+        ]
+      },
+      {
+        "excel_row": 10,
+        "values": [
+          "G06",
+          "PG100/PG121 và mã học thực tế",
+          "CHƯA XÁC MINH",
+          "Khung ghi PG100/PG121; thông báo đầu khóa có PG118. Chưa có bảng phân rã/đối chiếu đầy đủ.",
+          "Thu thập danh mục GDTC/GDQP và quy tắc tích lũy áp dụng K37."
+        ]
+      },
+      {
+        "excel_row": 11,
+        "values": [
+          "G07",
+          "Các lớp mở, hạn đăng ký, học phí, sĩ số",
+          "CHƯA THU THẬP",
+          "Không có trong khung chương trình; không suy ra tình trạng đăng ký từ bảng này.",
+          "Bổ sung thông báo học kỳ và nguồn chính thức theo thời điểm."
+        ]
+      },
+      {
+        "excel_row": 12,
+        "values": [
+          "G08",
+          "Quy đổi/miễn học ngoại ngữ cho K37",
+          "CHƯA TÌM ĐỦ",
+          "S04 xác minh chuẩn đầu ra TOEIC; không đồng nghĩa miễn học hoặc quy đổi điểm GE.",
+          "Thu thập quyết định quy đổi chứng chỉ riêng cho khóa K37."
+        ]
+      },
+      {
+        "excel_row": 13,
+        "values": [
+          "G09",
+          "Ngày hiệu lực S08–S11",
+          "CHƯA XÁC MINH",
+          "Ngày đăng website và tên phiên bản không chứng minh ngày hiệu lực.",
+          "Đọc điều khoản trong văn bản gốc."
+        ]
+      },
+      {
+        "excel_row": 14,
+        "values": [
+          "G10",
+          "Tổng tín chỉ và điều kiện xét tốt nghiệp đầy đủ",
+          "CHƯA XÁC MINH ĐẦY ĐỦ",
+          "Khung có nhiều lựa chọn/nhánh; không cộng toàn bộ danh mục thành số tín chỉ phải học.",
+          "Kiểm tra quy chế, chuẩn đầu ra, khối GDTC/GDQP và hồ sơ chương trình."
+        ]
+      },
+      {
+        "excel_row": 15,
+        "values": [
+          "G11",
+          "Tên tệp quy chế 2026 khác số văn bản",
+          "MÂU THUẪN TÊN TỆP",
+          "Tệp Drive ghi 26062003; văn bản và phụ lục ghi 26082003. Chuẩn hóa theo văn bản.",
+          "Giữ dấu vết này khi lưu nguồn; không áp quy chế 2026 cho K37."
+        ]
+      },
+      {
+        "excel_row": 16,
+        "values": [
+          "G12",
+          "Điều kiện cụ thể của người học",
+          "CHƯA CÓ DỮ LIỆU",
+          "Chưa có bảng điểm, tín chỉ tích lũy, tình trạng dự thi và quyết định chuyển chương trình.",
+          "Không kết luận người học đủ điều kiện đăng ký chỉ từ khung."
+        ]
+      }
+    ]
+  },
+  "Dong nguon": {
+    "header_row": 4,
+    "headers": [
+      "ID dòng",
+      "Mã",
+      "Tên học phần",
+      "TC",
+      "Nhóm",
+      "Tiên quyết nguồn",
+      "Trạng thái",
+      "Số giờ",
+      "Hệ số",
+      "Trang PDF",
+      "Vị trí trong nhóm"
+    ],
+    "records": [
+      {
+        "excel_row": 5,
+        "values": [
+          "R001",
+          "ML113",
+          "Triết học Mác - Lênin",
+          3,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "45",
+          1,
+          20,
+          1
+        ]
+      },
+      {
+        "excel_row": 6,
+        "values": [
+          "R002",
+          "ML114",
+          "Kinh tế chính trị Mác - Lênin",
+          2,
+          "Đại cương",
+          "ML113",
+          "VERIFIED_TRANSCRIPTION",
+          "30",
+          1,
+          20,
+          2
+        ]
+      },
+      {
+        "excel_row": 7,
+        "values": [
+          "R003",
+          "ML115",
+          "Chủ nghĩa xã hội khoa học",
+          2,
+          "Đại cương",
+          "ML114",
+          "VERIFIED_TRANSCRIPTION",
+          "30",
+          1,
+          20,
+          3
+        ]
+      },
+      {
+        "excel_row": 8,
+        "values": [
+          "R004",
+          "ML202",
+          "Tư tưởng Hồ Chí Minh",
+          2,
+          "Đại cương",
+          "ML114",
+          "VERIFIED_TRANSCRIPTION",
+          "30",
+          1,
+          20,
+          4
+        ]
+      },
+      {
+        "excel_row": 9,
+        "values": [
+          "R005",
+          "ML204",
+          "Lịch sử Đảng Cộng sản Việt Nam",
+          2,
+          "Đại cương",
+          "ML114",
+          "VERIFIED_TRANSCRIPTION",
+          "30",
+          1,
+          20,
+          5
+        ]
+      },
+      {
+        "excel_row": 10,
+        "values": [
+          "R006",
+          "CS102",
+          "Tin học văn phòng",
+          2,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "30",
+          1.3,
+          20,
+          6
+        ]
+      },
+      {
+        "excel_row": 11,
+        "values": [
+          "R007",
+          "MA101",
+          "Logic, suy luận toán học và kỹ thuật đếm",
+          3,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "27LT+36BT",
+          1.5,
+          20,
+          7
+        ]
+      },
+      {
+        "excel_row": 12,
+        "values": [
+          "R008",
+          "CS100",
+          "Tin đại cương",
+          2,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "18LT+24TH",
+          1.5,
+          20,
+          8
+        ]
+      },
+      {
+        "excel_row": 13,
+        "values": [
+          "R009",
+          "NA151",
+          "Khoa học môi trường",
+          2,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "30",
+          1,
+          20,
+          9
+        ]
+      },
+      {
+        "excel_row": 14,
+        "values": [
+          "R010",
+          "EC102",
+          "Nhập môn kinh tế học",
+          2,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "30",
+          1.3,
+          20,
+          10
+        ]
+      },
+      {
+        "excel_row": 15,
+        "values": [
+          "R011",
+          "VL101",
+          "Tiếng Việt thực hành",
+          2,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "30",
+          1.2,
+          20,
+          11
+        ]
+      },
+      {
+        "excel_row": 16,
+        "values": [
+          "R012",
+          "SH131",
+          "Pháp luật đại cương",
+          2,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "30",
+          1.2,
+          20,
+          12
+        ]
+      },
+      {
+        "excel_row": 17,
+        "values": [
+          "R013",
+          "GE111",
+          "Tiếng Anh sơ cấp 1",
+          2,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "54",
+          1.6,
+          20,
+          13
+        ]
+      },
+      {
+        "excel_row": 18,
+        "values": [
+          "R014",
+          "GE112",
+          "Tiếng Anh sơ cấp 2",
+          2,
+          "Đại cương",
+          "GE111",
+          "VERIFIED_TRANSCRIPTION",
+          "54",
+          1.6,
+          20,
+          14
+        ]
+      },
+      {
+        "excel_row": 19,
+        "values": [
+          "R015",
+          "GE121",
+          "Tiếng Anh sơ trung cấp 1",
+          2,
+          "Đại cương",
+          "GE112, GE111≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          "54",
+          1.6,
+          20,
+          15
+        ]
+      },
+      {
+        "excel_row": 20,
+        "values": [
+          "R016",
+          "GE222",
+          "Tiếng Anh sơ trung cấp 2",
+          2,
+          "Đại cương",
+          "GE121, GE112≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          "54",
+          1.6,
+          20,
+          16
+        ]
+      },
+      {
+        "excel_row": 21,
+        "values": [
+          "R017",
+          "GE231",
+          "Tiếng Anh trung cấp 1",
+          2,
+          "Đại cương",
+          "GE222, GE121≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          "54",
+          1.6,
+          20,
+          17
+        ]
+      },
+      {
+        "excel_row": 22,
+        "values": [
+          "R018",
+          "GE232",
+          "Tiếng Anh trung cấp 2",
+          2,
+          "Đại cương",
+          "GE231, GE222≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          "54",
+          1.6,
+          20,
+          18
+        ]
+      },
+      {
+        "excel_row": 23,
+        "values": [
+          "R019",
+          "GE333",
+          "Tiếng Anh trung cấp 3",
+          2,
+          "Đại cương",
+          "GE232, GE231≥4,0",
+          "VERIFIED_TRANSCRIPTION",
+          "54",
+          1.6,
+          20,
+          19
+        ]
+      },
+      {
+        "excel_row": 24,
+        "values": [
+          "R020",
+          "GF101",
+          "Tiếng Pháp 1",
+          2,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "54",
+          1.6,
+          20,
+          20
+        ]
+      },
+      {
+        "excel_row": 25,
+        "values": [
+          "R021",
+          "GF102",
+          "Tiếng Pháp 2",
+          2,
+          "Đại cương",
+          "GF101",
+          "VERIFIED_TRANSCRIPTION",
+          "54",
+          1.6,
+          20,
+          21
+        ]
+      },
+      {
+        "excel_row": 26,
+        "values": [
+          "R022",
+          "GJ101",
+          "Tiếng Nhật 1",
+          2,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "54",
+          1.6,
+          20,
+          22
+        ]
+      },
+      {
+        "excel_row": 27,
+        "values": [
+          "R023",
+          "GJ102",
+          "Tiếng Nhật 2",
+          2,
+          "Đại cương",
+          "GJ101",
+          "VERIFIED_TRANSCRIPTION",
+          "54",
+          1.6,
+          20,
+          23
+        ]
+      },
+      {
+        "excel_row": 28,
+        "values": [
+          "R024",
+          "GZ101",
+          "Tiếng Trung 1",
+          2,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "54",
+          1.6,
+          20,
+          24
+        ]
+      },
+      {
+        "excel_row": 29,
+        "values": [
+          "R025",
+          "GZ102",
+          "Tiếng Trung 2",
+          2,
+          "Đại cương",
+          "GZ101",
+          "VERIFIED_TRANSCRIPTION",
+          "54",
+          1.6,
+          20,
+          25
+        ]
+      },
+      {
+        "excel_row": 30,
+        "values": [
+          "R026",
+          "GI101",
+          "Tiếng Ý 1",
+          2,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "54",
+          0.75,
+          20,
+          26
+        ]
+      },
+      {
+        "excel_row": 31,
+        "values": [
+          "R027",
+          "GI102",
+          "Tiếng Ý 2",
+          2,
+          "Đại cương",
+          "GI101",
+          "VERIFIED_TRANSCRIPTION",
+          "54",
+          0.75,
+          20,
+          27
+        ]
+      },
+      {
+        "excel_row": 32,
+        "values": [
+          "R028",
+          "GK101",
+          "Tiếng Hàn 1",
+          2,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "54",
+          1.6,
+          20,
+          28
+        ]
+      },
+      {
+        "excel_row": 33,
+        "values": [
+          "R029",
+          "GK102",
+          "Tiếng Hàn 2",
+          2,
+          "Đại cương",
+          "GK101",
+          "VERIFIED_TRANSCRIPTION",
+          "54",
+          1.6,
+          20,
+          29
+        ]
+      },
+      {
+        "excel_row": 34,
+        "values": [
+          "R030",
+          "PG100",
+          "Giáo dục thể chất",
+          4,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "100",
+          1.4,
+          20,
+          30
+        ]
+      },
+      {
+        "excel_row": 35,
+        "values": [
+          "R031",
+          "PG121",
+          "Giáo dục quốc phòng và An ninh",
+          4,
+          "Đại cương",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "77LT+16TL+72TH",
+          1.4,
+          20,
+          31
+        ]
+      },
+      {
+        "excel_row": 36,
+        "values": [
+          "R032",
+          "MA110",
+          "Giải tích 1",
+          3,
+          "Cơ sở khối ngành",
+          "MA101",
+          "VERIFIED_TRANSCRIPTION",
+          "27LT+36BT",
+          1.6,
+          20,
+          1
+        ]
+      },
+      {
+        "excel_row": 37,
+        "values": [
+          "R033",
+          "MA111",
+          "Giải tích 2",
+          3,
+          "Cơ sở khối ngành",
+          "MA110, MA120",
+          "VERIFIED_TRANSCRIPTION",
+          "27LT+36BT",
+          1.6,
+          20,
+          2
+        ]
+      },
+      {
+        "excel_row": 38,
+        "values": [
+          "R034",
+          "MA120",
+          "Đại số tuyến tính",
+          3,
+          "Cơ sở khối ngành",
+          "MA101",
+          "VERIFIED_TRANSCRIPTION",
+          "27LT+36BT",
+          1.6,
+          20,
+          3
+        ]
+      },
+      {
+        "excel_row": 39,
+        "values": [
+          "R035",
+          "MA239",
+          "Xác suất thống kê",
+          4,
+          "Cơ sở khối ngành",
+          "MA110",
+          "VERIFIED_TRANSCRIPTION",
+          "45LT+27TH",
+          1.6,
+          20,
+          4
+        ]
+      },
+      {
+        "excel_row": 40,
+        "values": [
+          "R036",
+          "MI201",
+          "Toán rời rạc",
+          3,
+          "Cơ sở khối ngành",
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          20,
+          5
+        ]
+      },
+      {
+        "excel_row": 41,
+        "values": [
+          "R037",
+          "CF213",
+          "Cấu trúc dữ liệu và giải thuật",
+          4,
+          "Cơ sở khối ngành",
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          "45LT+36TH",
+          1.8,
+          20,
+          6
+        ]
+      },
+      {
+        "excel_row": 42,
+        "values": [
+          "R038",
+          "CS121",
+          "Lập trình cơ sở 1",
+          3,
+          "Cơ sở khối ngành",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "27LT+36TH",
+          1.6,
+          20,
+          7
+        ]
+      },
+      {
+        "excel_row": 43,
+        "values": [
+          "R039",
+          "CS123",
+          "Lập trình cơ sở 2",
+          2,
+          "Cơ sở khối ngành",
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          "18LT+24TH",
+          1.6,
+          20,
+          8
+        ]
+      },
+      {
+        "excel_row": 44,
+        "values": [
+          "R040",
+          "CS122",
+          "Lập trình hướng đối tượng",
+          3,
+          "Cơ sở khối ngành",
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          "27LT+36TH",
+          1.6,
+          20,
+          9
+        ]
+      },
+      {
+        "excel_row": 45,
+        "values": [
+          "R041",
+          "CS212",
+          "Kiến trúc máy tính",
+          3,
+          "Cơ sở khối ngành",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "45",
+          1.6,
+          20,
+          10
+        ]
+      },
+      {
+        "excel_row": 46,
+        "values": [
+          "R042",
+          "CS315",
+          "Nguyên lý hệ điều hành",
+          3,
+          "Cơ sở khối ngành",
+          "CS212",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          20,
+          11
+        ]
+      },
+      {
+        "excel_row": 47,
+        "values": [
+          "R043",
+          "IS222",
+          "Cơ sở dữ liệu",
+          3,
+          "Cơ sở khối ngành",
+          "CS100",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          20,
+          12
+        ]
+      },
+      {
+        "excel_row": 48,
+        "values": [
+          "R044",
+          "NW212",
+          "Mạng máy tính",
+          2,
+          "Cơ sở khối ngành",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "18LT+24BT",
+          1.6,
+          20,
+          13
+        ]
+      },
+      {
+        "excel_row": 49,
+        "values": [
+          "R045",
+          "IS322",
+          "Hệ quản trị cơ sở dữ liệu",
+          3,
+          "Bắt buộc ngành",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          1
+        ]
+      },
+      {
+        "excel_row": 50,
+        "values": [
+          "R046",
+          "IS332",
+          "Phân tích thiết kế hướng đối tượng",
+          3,
+          "Bắt buộc ngành",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          2
+        ]
+      },
+      {
+        "excel_row": 51,
+        "values": [
+          "R047",
+          "SE302",
+          "Công nghệ phần mềm",
+          2,
+          "Bắt buộc ngành",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          "18LT+24BT",
+          1.6,
+          21,
+          3
+        ]
+      },
+      {
+        "excel_row": 52,
+        "values": [
+          "R048",
+          "SE422",
+          "Phát triển dự án",
+          3,
+          "Bắt buộc ngành",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          4
+        ]
+      },
+      {
+        "excel_row": 53,
+        "values": [
+          "R049",
+          "SE312",
+          "Kiểm thử và đảm bảo chất lượng phần mềm",
+          3,
+          "Bắt buộc ngành",
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          5
+        ]
+      },
+      {
+        "excel_row": 54,
+        "values": [
+          "R050",
+          "AI130",
+          "Trí tuệ nhân tạo",
+          3,
+          "Bắt buộc ngành",
+          "CS100",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          2.5,
+          21,
+          6
+        ]
+      },
+      {
+        "excel_row": 55,
+        "values": [
+          "R051",
+          "IS326",
+          "Khai phá dữ liệu",
+          3,
+          "Bắt buộc ngành",
+          "IS224",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.8,
+          21,
+          7
+        ]
+      },
+      {
+        "excel_row": 56,
+        "values": [
+          "R052",
+          "IT333",
+          "Công nghệ Web",
+          3,
+          "Bắt buộc ngành",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.8,
+          21,
+          8
+        ]
+      },
+      {
+        "excel_row": 57,
+        "values": [
+          "R053",
+          "IS224",
+          "Lập trình khoa học dữ liệu",
+          3,
+          "Bắt buộc ngành",
+          "CS100",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          9
+        ]
+      },
+      {
+        "excel_row": 58,
+        "values": [
+          "R054",
+          "CS318",
+          "Lập trình ứng dụng di động",
+          3,
+          "Bắt buộc ngành",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.8,
+          21,
+          10
+        ]
+      },
+      {
+        "excel_row": 59,
+        "values": [
+          "R055",
+          "CS223",
+          "Lập trình Java",
+          3,
+          "Bắt buộc ngành",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          11
+        ]
+      },
+      {
+        "excel_row": 60,
+        "values": [
+          "R056",
+          "CS224",
+          "Lập trình .Net",
+          3,
+          "Bắt buộc ngành",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          12
+        ]
+      },
+      {
+        "excel_row": 61,
+        "values": [
+          "R057",
+          "IT334",
+          "Internet of Things",
+          3,
+          "Lựa chọn ngành",
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.8,
+          21,
+          1
+        ]
+      },
+      {
+        "excel_row": 62,
+        "values": [
+          "R058",
+          "IS345",
+          "An toàn thông tin",
+          3,
+          "Lựa chọn ngành",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          2
+        ]
+      },
+      {
+        "excel_row": 63,
+        "values": [
+          "R059",
+          "CF231",
+          "Lý thuyết thông tin và mã hóa",
+          2,
+          "Lựa chọn ngành",
+          "MA239",
+          "VERIFIED_TRANSCRIPTION",
+          "18LT+24BT",
+          1.6,
+          21,
+          3
+        ]
+      },
+      {
+        "excel_row": 64,
+        "values": [
+          "R060",
+          "IS430",
+          "Công nghệ blockchain",
+          3,
+          "Lựa chọn ngành",
+          "CF231",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.8,
+          21,
+          4
+        ]
+      },
+      {
+        "excel_row": 65,
+        "values": [
+          "R061",
+          "MI312",
+          "Đồ họa",
+          2,
+          "Lựa chọn ngành",
+          "MA120",
+          "VERIFIED_TRANSCRIPTION",
+          "18LT+24TH",
+          1.6,
+          21,
+          5
+        ]
+      },
+      {
+        "excel_row": 66,
+        "values": [
+          "R062",
+          "IT335",
+          "Công nghệ web nâng cao",
+          3,
+          "Lựa chọn ngành",
+          "IT333",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.8,
+          21,
+          6
+        ]
+      },
+      {
+        "excel_row": 67,
+        "values": [
+          "R063",
+          "CS323",
+          "Lập trình JavaScript",
+          3,
+          "Lựa chọn ngành",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          7
+        ]
+      },
+      {
+        "excel_row": 68,
+        "values": [
+          "R064",
+          "IT320",
+          "Phát triển ứng dụng với Python",
+          3,
+          "Lựa chọn ngành",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          8
+        ]
+      },
+      {
+        "excel_row": 69,
+        "values": [
+          "R065",
+          "CS320",
+          "Học máy",
+          3,
+          "Lựa chọn ngành",
+          "MA239",
+          "VERIFIED_TRANSCRIPTION",
+          "36LT+18TH",
+          1.8,
+          21,
+          9
+        ]
+      },
+      {
+        "excel_row": 70,
+        "values": [
+          "R066",
+          "CS321",
+          "Tiền xử lý dữ liệu",
+          2,
+          "Lựa chọn ngành",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          "18LT+24TH",
+          1.6,
+          21,
+          10
+        ]
+      },
+      {
+        "excel_row": 71,
+        "values": [
+          "R067",
+          "IS324",
+          "Phân tích dữ liệu",
+          3,
+          "Lựa chọn ngành",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          11
+        ]
+      },
+      {
+        "excel_row": 72,
+        "values": [
+          "R068",
+          "IS325",
+          "Cơ sở dữ liệu phân tán",
+          2,
+          "Lựa chọn ngành",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          "18LT+24BT",
+          1.6,
+          21,
+          12
+        ]
+      },
+      {
+        "excel_row": 73,
+        "values": [
+          "R069",
+          "IS327",
+          "Kho dữ liệu",
+          3,
+          "Lựa chọn ngành",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          13
+        ]
+      },
+      {
+        "excel_row": 74,
+        "values": [
+          "R070",
+          "IS330",
+          "Dữ liệu lớn",
+          2,
+          "Lựa chọn ngành",
+          "IS224",
+          "VERIFIED_TRANSCRIPTION",
+          "18LT+24TH",
+          1.6,
+          21,
+          14
+        ]
+      },
+      {
+        "excel_row": 75,
+        "values": [
+          "R071",
+          "CS425",
+          "Một số vấn đề hiện đại trong công nghệ thông tin",
+          2,
+          "Lựa chọn ngành",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          "18LT+24BT",
+          1.8,
+          21,
+          15
+        ]
+      },
+      {
+        "excel_row": 76,
+        "values": [
+          "R072",
+          "CS325",
+          "Lập trình PHP",
+          3,
+          "Lựa chọn ngành",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          16
+        ]
+      },
+      {
+        "excel_row": 77,
+        "values": [
+          "R073",
+          "CF214",
+          "Lập trình thi đấu",
+          3,
+          "Lựa chọn ngành",
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          "27LT+36TH",
+          1.8,
+          21,
+          17
+        ]
+      },
+      {
+        "excel_row": 78,
+        "values": [
+          "R074",
+          "IT334",
+          "Internet of Things",
+          3,
+          "Lựa chọn ngành",
+          "CS121",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.8,
+          21,
+          18
+        ]
+      },
+      {
+        "excel_row": 79,
+        "values": [
+          "R075",
+          "NW312",
+          "Thiết kế và quản trị mạng",
+          3,
+          "Lựa chọn ngành",
+          "NW212",
+          "VERIFIED_TRANSCRIPTION",
+          "27LT+36TH",
+          1.8,
+          21,
+          19
+        ]
+      },
+      {
+        "excel_row": 80,
+        "values": [
+          "R076",
+          "NW332",
+          "An toàn mạng",
+          3,
+          "Lựa chọn ngành",
+          "NW212",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          20
+        ]
+      },
+      {
+        "excel_row": 81,
+        "values": [
+          "R077",
+          "IS314",
+          "Hệ thống thông tin",
+          3,
+          "Lựa chọn ngành",
+          "IS222",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          21
+        ]
+      },
+      {
+        "excel_row": 82,
+        "values": [
+          "R078",
+          "IS347",
+          "Lập trình an toàn",
+          3,
+          "Lựa chọn ngành",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          22
+        ]
+      },
+      {
+        "excel_row": 83,
+        "values": [
+          "R079",
+          "IS348",
+          "Phân tích mã độc",
+          3,
+          "Lựa chọn ngành",
+          "IS345",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          23
+        ]
+      },
+      {
+        "excel_row": 84,
+        "values": [
+          "R080",
+          "IS349",
+          "Quản lý an toàn thông tin",
+          3,
+          "Lựa chọn ngành",
+          "IS345",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.6,
+          21,
+          24
+        ]
+      },
+      {
+        "excel_row": 85,
+        "values": [
+          "R081",
+          "IP406",
+          "TTTN ngành Công nghệ thông tin",
+          3,
+          "Tốt nghiệp",
+          "CS122",
+          "VERIFIED_TRANSCRIPTION",
+          "90TH",
+          1.8,
+          21,
+          1
+        ]
+      },
+      {
+        "excel_row": 86,
+        "values": [
+          "R082",
+          "IT499",
+          "KLTN ngành Công nghệ thông tin",
+          6,
+          "Tốt nghiệp",
+          "100 tín chỉ, IP406≥4,0, TBTL≥7,0",
+          "VERIFIED_TRANSCRIPTION",
+          "30LT+120TH",
+          3.5,
+          21,
+          2
+        ]
+      },
+      {
+        "excel_row": 87,
+        "values": [
+          "R083",
+          "IT486",
+          "CĐTN ngành Công nghệ thông tin",
+          6,
+          "Tốt nghiệp",
+          "90 tín chỉ",
+          "VERIFIED_TRANSCRIPTION",
+          "30LT+120TH",
+          3.5,
+          21,
+          3
+        ]
+      },
+      {
+        "excel_row": 88,
+        "values": [
+          "R084",
+          "AD205",
+          "Kỹ năng soạn thảo văn bản (MS Office)",
+          3,
+          "Lựa chọn tự do AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "45",
+          1.6,
+          49,
+          1
+        ]
+      },
+      {
+        "excel_row": 89,
+        "values": [
+          "R085",
+          "AD206",
+          "Ẩm thực Việt Nam",
+          3,
+          "Lựa chọn tự do AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "30LT+30TH",
+          1.8,
+          49,
+          2
+        ]
+      },
+      {
+        "excel_row": 90,
+        "values": [
+          "R086",
+          "AD207",
+          "Kỹ năng soạn thảo văn bản (MS Open)",
+          3,
+          "Lựa chọn tự do AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "45",
+          1.6,
+          49,
+          3
+        ]
+      },
+      {
+        "excel_row": 91,
+        "values": [
+          "R087",
+          "AD212",
+          "Phương pháp hùng biện và các thủ thuật tranh biện",
+          3,
+          "Lựa chọn tự do AD",
+          "36 tín chỉ",
+          "VERIFIED_TRANSCRIPTION",
+          "45",
+          1.4,
+          49,
+          4
+        ]
+      },
+      {
+        "excel_row": 92,
+        "values": [
+          "R088",
+          "AD215",
+          "Ứng dụng Power Point",
+          3,
+          "Lựa chọn tự do AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "45",
+          1.6,
+          49,
+          5
+        ]
+      },
+      {
+        "excel_row": 93,
+        "values": [
+          "R089",
+          "AD216",
+          "Kỹ năng sống",
+          3,
+          "Lựa chọn tự do AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "45",
+          1.4,
+          49,
+          6
+        ]
+      },
+      {
+        "excel_row": 94,
+        "values": [
+          "R090",
+          "AD218",
+          "Hát - Nhạc",
+          4,
+          "Lựa chọn tự do AD",
+          "36 tín chỉ",
+          "VERIFIED_TRANSCRIPTION",
+          "60",
+          1.6,
+          49,
+          7
+        ]
+      },
+      {
+        "excel_row": 95,
+        "values": [
+          "R091",
+          "AD219",
+          "Nâng cao chất lượng giọng hát",
+          4,
+          "Lựa chọn tự do AD",
+          "AD213",
+          "VERIFIED_TRANSCRIPTION",
+          "60",
+          1.8,
+          49,
+          8
+        ]
+      },
+      {
+        "excel_row": 96,
+        "values": [
+          "R092",
+          "AD240",
+          "Nhiếp ảnh cơ bản",
+          3,
+          "Lựa chọn tự do AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "30LT+30TH",
+          2,
+          49,
+          9
+        ]
+      },
+      {
+        "excel_row": 97,
+        "values": [
+          "R093",
+          "AD241",
+          "Dẫn chương trình (MC)",
+          3,
+          "Lựa chọn tự do AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "30LT+30TH",
+          1.8,
+          49,
+          10
+        ]
+      },
+      {
+        "excel_row": 98,
+        "values": [
+          "R094",
+          "AD242",
+          "Thiết kế mỹ thuật",
+          3,
+          "Lựa chọn tự do AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "30LT+30TH",
+          2,
+          49,
+          11
+        ]
+      },
+      {
+        "excel_row": 99,
+        "values": [
+          "R095",
+          "AD243",
+          "Hội họa cơ bản",
+          3,
+          "Lựa chọn tự do AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "30LT+30TH",
+          2,
+          49,
+          12
+        ]
+      },
+      {
+        "excel_row": 100,
+        "values": [
+          "R096",
+          "AD250",
+          "Dinh dưỡng và tiết chế",
+          3,
+          "Lựa chọn tự do AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "45",
+          1.5,
+          49,
+          13
+        ]
+      },
+      {
+        "excel_row": 101,
+        "values": [
+          "R097",
+          "AD312",
+          "Bóng đá",
+          4,
+          "Lựa chọn tự do AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "60",
+          1.5,
+          49,
+          14
+        ]
+      },
+      {
+        "excel_row": 102,
+        "values": [
+          "R098",
+          "AD313",
+          "Bóng đá nâng cao",
+          4,
+          "Lựa chọn tự do AD",
+          "AD312",
+          "VERIFIED_TRANSCRIPTION",
+          "60",
+          1.5,
+          49,
+          15
+        ]
+      },
+      {
+        "excel_row": 103,
+        "values": [
+          "R099",
+          "AD314",
+          "Nhảy hiện đại",
+          4,
+          "Lựa chọn tự do AD",
+          "Trống trong nguồn",
+          "SOURCE_BLANK",
+          "60",
+          1.5,
+          49,
+          16
+        ]
+      },
+      {
+        "excel_row": 104,
+        "values": [
+          "R100",
+          "AD315",
+          "Nhảy hiện đại nâng cao",
+          4,
+          "Lựa chọn tự do AD",
+          "AD314",
+          "VERIFIED_TRANSCRIPTION",
+          "60",
+          1.5,
+          49,
+          17
+        ]
+      }
+    ]
+  }
+}

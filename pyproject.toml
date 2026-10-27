@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tlu-agentic-rag-prototype"
-version = "0.1.0"
+version = "0.3.0"
 description = "Bounded Agentic RAG prototype for a versioned K37 curriculum snapshot"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = ["Flask>=3.1,<4"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

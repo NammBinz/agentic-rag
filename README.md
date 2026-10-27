@@ -1,135 +1,122 @@
-# Trợ lý Agentic RAG · CNTT K35–K39
+# Demo Flask · K37 — CNTT-2024
 
-Prototype v0.2 theo phạm vi CNTT toàn khóa; triển khai lựa chọn K35–K39.
-Giữ dữ liệu K37 có nguồn từ danh mục ngày 07/10/2026.
-Một repository chứa RAG một lượt có dẫn nguồn, công cụ học phần/tiên quyết,
-Agent bổ sung tối đa một lượt, API và giao diện demo.
+Bản v0.3: tra học phần, đọc điều kiện/chuỗi mã, RAG có dẫn chứng và Agent truy xuất
+bổ sung tối đa **một lượt**. Chỉ mở dữ liệu K37 trong giao diện và API mặc định.
+Phạm vi nghiên cứu CNTT toàn khóa, giai đoạn đầu K35–K39, vẫn giữ nguyên.
 
-## Chạy nhanh (Windows / macOS / Linux)
+## Chạy trên Windows / VS Code
 
-Cần **Python 3.10+**. Giải nén, mở terminal ở thư mục `agentic-rag`:
+Cần Python 3.10+. Mở terminal tại thư mục `agentic-rag` vừa giải nén:
 
-```bash
-python run.py
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe run.py
 ```
 
-Mở **http://127.0.0.1:8765**. Linux có thể dùng `python3`. Không cần pip, Node,
-GPU hoặc API key để chạy bản trích xuất offline. Nhấn Ctrl+C để dừng. Đổi cổng:
-`python run.py --port 8888`. Máy chủ mặc định chỉ phục vụ trên máy cá nhân.
+Mở **http://127.0.0.1:8765**. Dừng bằng Ctrl+C. Đổi cổng: `python run.py --port 8888`.
+Nếu đã có môi trường Python chứa Flask: `python run.py`.
+Trên macOS/Linux: `python3 -m venv .venv`, `.venv/bin/python -m pip install -r requirements.txt`,
+`.venv/bin/python run.py`. Máy chủ chạy cục bộ, debug tắt.
 
-## Kiểm tra
+## Bật LLM để diễn đạt câu trả lời
 
-```bash
-python test.py
-python scripts/run_smoke.py
-```
-
-Các kịch bản nhập trên UI, đầu vào/kết quả và endpoint được ghi trong
-[docs/TESTING.md](docs/TESTING.md). Mô tả thiết kế và quyết định dữ liệu nằm ở
-[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
-
-## Chọn khóa và phiên bản
-
-Mở web, chọn **K35–K39** trước khi hỏi. Mặc định chưa chọn khóa để tránh áp dụng nhầm.
-Retrieval, API tra môn, kiểm tra tiên quyết và xem trích dẫn cùng dùng phạm vi đã chọn.
-Đổi khóa sẽ chuyển lịch sử, xóa hồ sơ đang nhập và danh mục đang xem.
-
-| Kho | Khóa | Trạng thái |
-|---|---|---|
-| Project | K37 | 99 mã môn / 76 điều kiện của khung gốc 2024; chưa đủ sửa đổi và toàn văn |
-| Project | K36 | Có phạm vi nguồn chung S04 (TOEIC K36–K37); chưa có danh mục môn |
-| Project | K38 | Có danh mục nguồn S12 ghi từ K38; chưa nhập đề cương chi tiết và ánh xạ chương trình |
-| Project | K35, K39 | Chưa đủ ánh xạ chương trình và dữ liệu môn; không lấy K37 thay thế |
-| Sample | K35–K37 | Chương trình giả lập sample-v1, PY201=3 TC, tối thiểu 12 TC |
-| Sample | K38 | sample-v2, PY201=4 TC, tối thiểu 24 TC |
-| Sample | K39 | Thiếu chương trình; vẫn tra được quy định giả lập dùng chung |
-
-Văn bản dùng chung lưu **một bản**, khai báo danh sách khóa áp dụng. Trích dẫn có
-khóa được chọn, mã chương trình, phiên bản chương trình, phiên bản văn bản và các
-khóa áp dụng. Nguồn chưa xác minh phạm vi, hết hiệu lực hoặc không khớp chương
-trình bị loại trước truy xuất. Chi tiết thêm dữ liệu: [docs/DATA_SCHEMA.md](docs/DATA_SCHEMA.md).
-
-## Bật LLM và embedding
-
-Sao chép `.env.example` thành `.env` (Windows: `Copy-Item .env.example .env`;
-macOS/Linux: `cp .env.example .env`), rồi nhập:
+Mặc định **offline = trích đoạn + công cụ**, chưa sinh câu trả lời bằng LLM.
+Để chạy RAG + LLM, sao chép `.env.example` thành `.env` và điền khóa API:
 
 ```dotenv
 RAG_PROVIDER=openai
-RAG_RETRIEVER=hybrid
+RAG_RETRIEVER=bm25
 OPENAI_API_KEY=YOUR_KEY
 OPENAI_MODEL=gpt-4.1-mini
-OPENAI_EMBEDDING_MODEL=text-embedding-3-small
 ```
 
-Khởi động lại server. Khóa chỉ được đọc ở backend và bị Git bỏ qua. ChatGPT Plus
-không cung cấp khóa API cho repo này. `hybrid` dùng BM25 + embedding cosine và
-RRF; vector cache gắn với fingerprint dữ liệu/mô hình. `bm25` vẫn dùng LLM nếu
-provider=openai. Giao diện cho biết engine đang dùng; lỗi API được báo rõ, không
-chuyển chế độ âm thầm. Cần có Internet/quyền mô hình/quota. Không có khóa API
-trong phiên xây dựng nên tích hợp mạng thật chưa được xác minh; adapter được
-kiểm thử với phản hồi giả lập.
+Khởi động lại server. Model cấu hình được; BM25 không cần embedding/API embedding.
+Muốn hybrid thì đặt `RAG_RETRIEVER=hybrid` và `OPENAI_EMBEDDING_MODEL` trong `.env`.
+API key chỉ đọc ở backend, không commit. Cần quyền mô hình/quota tương ứng.
+Không có khóa API thật trong phiên xây dựng: chỉ kiểm tra adapter bằng mock.
+Lỗi API được báo rõ, không ngầm chuyển sang câu trả lời giả.
 
-Offline là demo **trích đoạn**, chưa phải kết quả sinh câu trả lời bằng LLM. Agent
-hiện dùng router theo quy tắc và công cụ lập trình; không huấn luyện planner.
-Kết quả tiên quyết được định dạng trực tiếp từ tool để giữ nguyên phép kiểm tra.
+Router hiện là **quy tắc lập trình**, chọn lookup_course / lookup_conditions hoặc
+đối chiếu hồ sơ theo loại câu hỏi; không phải planner học được hay LLM tự chọn tool.
+Các câu tương tự đi cùng pipeline, không có bảng câu trả lời viết sẵn theo demo.
+LLM nhận những đoạn được chọn, không nhận toàn bộ Excel. ID và quote phải hợp lệ;
+kiểm tra này không chứng minh mọi kết luận của LLM đều được nguồn hỗ trợ.
+Kết quả kiểm tra điều kiện bằng chương trình được giữ riêng, không nhờ LLM tự tính.
 
-Tài liệu API tham chiếu: [Chat Completions](https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create),
-[Embeddings](https://developers.openai.com/api/reference/resources/embeddings/methods/create).
-Quote được kiểm tra có trong excerpt, nhưng kiểm tra tự động này không chứng
-minh kết luận của LLM được nguồn hỗ trợ; phần đó cần chấm theo đáp án chuẩn.
+## Nguồn dữ liệu dùng trong bản này
 
-## Dữ liệu và phạm vi trả lời
+Đọc trực tiếp file `Danh_muc_nguon_va_hoc_phan_CNTT_K37.xlsx` người dùng đính kèm.
+SHA-256: `0a8d80f0d04634f1335fd80aa29b6a3756a914b10cb5a195b681e0ee19a5db5c`.
 
-- `data/project`: 99 mã học phần, 100 dòng nguồn, 76 điều kiện; giữ nguồn/trang,
-  phiên bản, khóa, hiệu lực và phần thiếu. IT334 trùng vẫn có hai dòng raw.
-- `data/sample`: 12 bản ghi thuộc 2 phiên bản chương trình + một quy định chung **hoàn toàn giả lập**; có AND/OR,
-  điểm/tín chỉ/TBTL và trường hợp thiếu dữ liệu để kiểm tra.
-- Hiện trích dẫn tới bản chép/bảng chuẩn hóa và danh mục, kèm liên kết PDF gốc;
-  **chưa nhập toàn văn** các quy chế, thông báo và quyết định.
-- Ô tiên quyết trống giữ null; mã môn đơn thuần không được tự diễn giải thành
-  đạt môn/điểm >=4. Trả “chưa đủ căn cứ” nếu chưa xác minh quy tắc.
-- Dữ liệu thật hiện chỉ đủ danh mục học phần snapshot khung gốc K37; chưa xác minh đầy đủ sửa đổi sau
-  2024. Không xác nhận quyền đăng ký, miễn học hoặc đủ điều kiện tốt nghiệp.
-- Không nối tài khoản, đăng ký học hay bảng điểm thật. Lịch sử lưu ở trình duyệt;
-  chỉ dùng hồ sơ giả lập. Có nút xóa; lịch sử tách theo kho dữ liệu và khóa.
+- **99 mã học phần, 100 dòng gốc, 76 thành phần điều kiện, 31 SOURCE_BLANK**.
+- File này có **5 tab, 12 nguồn**, không phải bản 9 tab/25 nguồn có SHA-256
+  `ff3f55329e47175d8c842dd23c77169d85a0805ae3acb5d6cd4cf52002d4587a` ở mốc 24/10.
+- Giữ nguyên bảng nguồn; không truy cập lại website/PDF hay mở rộng tìm nguồn.
+- JSON có nguồn S01, trang PDF *được ghi trong bảng*, vị trí `Hoc phan!row` hoặc
+  `Dieu kien!row`, phiên bản và nhãn thiếu. Không gọi đây là đọc trực tiếp PDF.
+- `data/project/workbook_snapshot.json` giữ các bản ghi và vị trí của cả 5 tab;
+  `raw_rows.json` giữ cả hai dòng IT334. Không có tab `Can bo sung` trong file này.
+- SOURCE_BLANK không phải “không có tiên quyết”. Mã trần không tự chuyển thành
+  đạt môn/điểm ≥4. Thiếu AD213, sửa đổi sau 2024, đối chiếu PG100/PG121, quy đổi GE,
+  tổng tín chỉ và điều kiện tốt nghiệp vẫn được giữ là thiếu/chưa rõ.
+- Không có lịch mở lớp, sĩ số/học phí hiện thời hoặc hồ sơ thật của người học.
 
-Để tái nhập bảng nguồn (chỉ bước này cần `openpyxl`):
+## Công cụ và demo
+
+1. Tra mã/tên: `IT320 tên gì, mấy tín chỉ?`.
+2. Đọc điều kiện: `IS330 mấy tín chỉ và điều kiện gì?`.
+3. Chuỗi mã: `IT320 yêu cầu môn nào? Môn đó yêu cầu gì?` → IT320 → CS122 → CS121.
+4. Nhiều thành phần: `Điều kiện được ghi cho IT499 là gì?`.
+5. Đối chiếu hồ sơ giả lập: `Kiểm tra tiên quyết IT499`; nhập tín chỉ/điểm/TBTL ở bên trái.
+6. Mở thẻ nguồn để xem trang PDF ghi trong bảng, dòng Excel và phiên bản.
+   Tab **Hành động** hiển thị công cụ, truy xuất và điểm dừng; không có suy luận nội bộ.
+
+Chuỗi mã giới hạn hai cạnh tham chiếu, tối đa 25 nút, có kiểm tra chu trình và mã
+thiếu. Tối đa hai lần gọi retriever tổng cộng. Nếu vẫn thiếu sau lượt bổ sung thì
+nêu giới hạn, không đệ quy thêm. Các chức năng dùng cùng Engine với runner kiểm tra.
+
+## Kiểm tra
+
+Trong môi trường đã cài Flask, chạy:
 
 ```bash
-python -m pip install openpyxl
-python scripts/import_catalog.py PATH_TO_WORKBOOK.xlsx --output data/project
+python test.py
+python scripts/run_demo_checks.py
 ```
 
-Không đưa đề cương có thông tin cá nhân vào repo. Manifest giữ tên/hash bản nguồn;
-JSON giữ cả nội dung chuẩn hóa và dấu vết các trường chưa xác minh. Sau khi dữ
-liệu thay đổi phải đối chiếu nguồn, chạy kiểm tra và cập nhật số lượng kỳ vọng.
+Bản bàn giao đạt **44 bài kiểm tra** và **15/15 câu demo** qua Flask test client.
+`scripts/run_demo_checks.py` xuất cả đầu vào, kỳ vọng, câu trả lời, nguồn và trace
+vào `docs/demo_results.jsonl`. Đây là kiểm tra demo ban đầu, **không phải thực nghiệm
+NCKH chính thức**. Mô tả chi tiết tại [docs/TESTING.md](docs/TESTING.md).
 
-## Cấu trúc mã
+Fixture đa khóa được giữ trong `data/sample` chỉ cho kiểm thử hồi quy; API demo
+không cho chọn hoặc nạp fixture đó. `python scripts/run_smoke.py` là 20 case hồi
+quy của engine nghiên cứu, tách biệt với 15 câu demo K37.
 
-| File/thư mục | Vai trò |
+## Tái nhập đúng workbook này (không bắt buộc khi chạy demo)
+
+```bash
+python -m pip install -r requirements-import.txt
+python scripts/import_catalog.py data/input/Danh_muc_nguon_va_hoc_phan_CNTT_K37.xlsx --output .runtime/imported-project
+```
+
+Importer kiểm tra 99/100/76/31 trước khi xuất; không sửa workbook. Thử nhập ra
+thư mục riêng trước khi thay `data/project`. Importer chỉ hỗ trợ schema snapshot
+K37 hiện tại; không dùng để suy ra phạm vi cho workbook khóa khác.
+
+## Mã nguồn
+
+| Vị trí | Chức năng |
 |---|---|
-| `src/agentic_rag/catalog.py` | Kho dữ liệu, chunk và trích dẫn |
-| `retrieval.py` | BM25, vector cosine, hợp nhất RRF |
-| `tools.py` | Tra môn; tiên quyết ba trạng thái AND/OR |
-| `planner.py` | Định tuyến, nhận diện chứng cứ thiếu |
-| `engine.py` | A/B/C; kiểm soát 1 hoặc 2 lượt; câu trả lời/metrics |
-| `provider.py` | REST API LLM/embedding, usage |
-| `server.py` | API + phục vụ giao diện local |
-| `web/` | Hội thoại, hồ sơ mẫu, lịch sử, nguồn, nhật ký |
-| `scripts/` | Nhập dữ liệu, fixture, smoke, xuất thực nghiệm |
-| `tests/` | Kiểm tra đơn vị và end-to-end HTTP |
+| `src/agentic_rag/server.py` | Flask factory `create_app`, API, chạy cục bộ |
+| `demo.py` | Giới hạn tạm thời K37 — CNTT-2024; chặn khóa/phiên bản khác |
+| `catalog.py` | Kho dữ liệu, lọc phạm vi/phiên bản, chunk, trích dẫn |
+| `tools.py` | Tra môn; điều kiện và chuỗi; đối chiếu hồ sơ ba trạng thái |
+| `planner.py`, `engine.py` | Chọn công cụ, RAG, tối đa một lượt bổ sung |
+| `retrieval.py`, `provider.py` | BM25/hybrid; REST LLM và kiểm tra trích dẫn |
+| `web/` | HTML/CSS/JS phục vụ qua Flask |
+| `docs/` | Thiết kế, provenance, kiểm thử và kết quả 15 câu |
 
-## Repository
-
-Bản bàn giao kèm repository Git nhánh `main`, có các commit theo thứ tự chức
-năng. Chưa gắn remote GitHub; có thể tạo repo trống và đưa lên sau khi nhận:
-
-```bash
-git remote add origin YOUR_REPOSITORY_URL
-git push -u origin main
-```
-
-Không commit `.env`, vector cache hoặc log thực nghiệm. Bản này là prototype
-nghiên cứu; công việc tiếp theo là nhập toàn văn đã kiểm chứng và xây bộ đánh giá
-100–120 câu thật, không dùng smoke tests để công bố tỷ lệ đúng của hệ thống.
+Repository Git giữ lịch sử, chưa gắn remote. Chưa kiểm tra bố cục/thao tác trong
+trình duyệt thật và chưa gọi API LLM thật; xem [docs/VERIFICATION.md](docs/VERIFICATION.md).

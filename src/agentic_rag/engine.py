@@ -111,11 +111,11 @@ class Engine:
         route = plan(question, self.catalog, intent=options.get("intent"),
                      target_course=options.get("target_course"), history=options.get("history"))
         if self.catalog.context['status'] != 'verified_snapshot' and (
-                route['intent'] in ('lookup', 'prerequisites') or course_codes(question)):
+                route['intent'] in ('lookup', 'prerequisites', 'conditions') or course_codes(question)):
             return finish("insufficient_data", self.catalog.context['message'])
         if mode == "agent":
             result["actions"].append({"action": "route", **route})
-            if route["needs_target"] or len(route["targets"]) > 4:
+            if (route["needs_target"] and not route["missing_topic"]) or len(route["targets"]) > 4:
                 return finish("needs_input", "Hãy chọn 1–4 mã học phần cần tra/kiểm tra.")
             question = route["resolved_question"]
         chunks, usage = self.retriever.search(question, cohort,
@@ -125,17 +125,29 @@ class Engine:
         result["actions"].append({"action": "retrieve", "round": 1, "query": question,
                                   "chunk_ids": [c["id"] for c in chunks]})
         if mode == "agent":
-            if options.get("enable_tools", True) and route["intent"] in ("lookup", "prerequisites"):
+            if options.get("enable_tools", True) and route["intent"] in ("lookup", "prerequisites", "conditions"):
                 for target in route["targets"]:
-                    tool = (self.tools.prerequisites(target, cohort, profile) if route["intent"] == "prerequisites"
-                            else self.tools.lookup(target, cohort))
+                    if route['intent'] == 'conditions':
+                        tool = self.tools.conditions(target, cohort, depth=route['trace_depth'])
+                    elif route['intent'] == 'prerequisites':
+                        tool = self.tools.prerequisites(target, cohort, profile)
+                    else:
+                        tool = self.tools.lookup(target, cohort)
                     metrics["tool_calls"] += 1
                     result["tool_results"].append(tool)
                     result["actions"].append({"action": tool["tool"], "target": target, "status": tool["status"]})
                     present = {c["id"] for c in chunks}
-                    chunks += [c for c in tool["citations"] if c["id"] not in present]
+                    # First pass adds the target record; related records use one extra retrieval.
+                    chunks += [c for c in tool['citations'] if c['id'] not in present
+                               and (route['intent'] != 'conditions' or c.get('course_code') == target)]
             missing = missing_evidence(question, route["targets"], chunks, self.catalog,
-                                       include_dependencies=route["intent"] == "prerequisites")
+                                       include_dependencies=(route['intent'] == 'prerequisites' or (route['intent'] == 'conditions' and route['trace_depth'] > 0)))
+            # A chain request can need a grandparent record as well as an immediate reference.
+            for tool in result['tool_results']:
+                for node in tool.get('nodes', []):
+                    code = node['course_code']
+                    if code in self.catalog.courses and self.catalog.course_chunk_id(self.catalog.courses[code]) not in {c['id'] for c in chunks} and code not in missing:
+                        missing.append(code)
             result["actions"].append({"action": "check_evidence", "missing_course_records": missing,
                                       "missing_topic": route["missing_topic"]})
             if missing and options.get("enable_extra_retrieval", True):
@@ -152,6 +164,38 @@ class Engine:
             if route["missing_topic"]:
                 gaps = [c for c in chunks if c["kind"] in ("gap", "scope")]
                 return finish("insufficient_data", route["missing_topic"] + " Cần bổ sung văn bản đúng khóa và còn hiệu lực.", gaps)
+            if route['intent'] == 'conditions' and result['tool_results']:
+                parts, used = [], []
+                present = {c['id'] for c in chunks}
+                incomplete = False
+                statuses = []
+                for tool in result['tool_results']:
+                    statuses.append(tool['status'])
+                    lines = [tool['message']]
+                    for node in tool.get('nodes', []):
+                        course = self.catalog.courses[node['course_code']]
+                        cid = self.catalog.course_chunk_id(course)
+                        if cid not in present:
+                            incomplete = True
+                            continue
+                        raw = node['prerequisite_raw']
+                        lines.append(f"{node['course_code']} — {course['name']} ({course['credits']} tín chỉ). Điều kiện ghi trong nguồn: {raw if raw is not None else 'SOURCE_BLANK — ô trống, chưa đủ căn cứ kết luận'} [{cid}]")
+                        for component in node['components']:
+                            lines.append(f"• {component['quote']} ({component['kind']}; {component['status']})")
+                        used.extend(c for c in chunks if c['id'] == cid)
+                    lines.append(tool['scope'])
+                    parts.append('\n'.join(lines))
+                answer = '\n\n'.join(parts)
+                status = 'insufficient_data' if incomplete or any(s != 'recorded_conditions' for s in statuses) else 'recorded_conditions'
+                if incomplete:
+                    answer += '\nChưa truy xuất đủ chuỗi trong giới hạn một lượt bổ sung; cần thu hẹp câu hỏi.'
+                if self.provider and used:
+                    generated_status, generated, citations = self._compose(question, used, cohort, metrics)
+                    if generated_status == 'insufficient_data':
+                        status = 'insufficient_data'
+                    answer = generated + '\n\n' + answer
+                    result['actions'].append({'action': 'generate', 'provider': self.settings.provider})
+                return finish(status, answer, list({c['id']: c for c in used}.values()))
             if route["intent"] == "prerequisites" and result["tool_results"]:
                 statuses = [t["status"] for t in result["tool_results"]]
                 status = statuses[0] if len(set(statuses)) == 1 else "mixed_results"
@@ -170,7 +214,12 @@ class Engine:
                         if citation["id"] not in seen:
                             seen.add(citation["id"]); citations.append(citation)
                     parts.append(part)
-                return finish(status, "\n\n".join(parts), citations)
+                answer = '\n\n'.join(parts)
+                if self.provider and citations:
+                    _, generated, _ = self._compose(question, citations, cohort, metrics)
+                    answer = generated + '\n\nKết quả đối chiếu bằng công cụ (không xác nhận quyền đăng ký):\n' + answer
+                    result['actions'].append({'action': 'generate', 'provider': self.settings.provider})
+                return finish(status, answer, citations)
         # This data-availability gate also applies to the one-pass baseline.
         if route["missing_topic"]:
             return finish("insufficient_data", route["missing_topic"] + " Cần bổ sung nguồn đúng phạm vi.",

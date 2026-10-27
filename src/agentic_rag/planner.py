@@ -3,8 +3,8 @@ from .catalog import course_codes, normalize
 
 
 def plan(question, catalog, intent=None, target_course=None, history=None):
-    if intent not in (None, "lookup", "prerequisites"):
-        raise ValueError("intent phải là lookup hoặc prerequisites")
+    if intent not in (None, "lookup", "prerequisites", "conditions"):
+        raise ValueError("intent phải là lookup, conditions hoặc prerequisites")
     resolved = question
     if history and not course_codes(question) and any(p in normalize(question) for p in ("mon do", "hoc phan do")):
         for entry in reversed(history[-6:]):
@@ -20,7 +20,11 @@ def plan(question, catalog, intent=None, target_course=None, history=None):
     text = normalize(resolved)
     needs_check = intent == "prerequisites" or (bool(targets) and any(w in text for w in
                   ("kiem tra tien quyet", "dang ky", "du dieu kien", "co the hoc", "da dat", "da hoc")))
-    selected_intent = "prerequisites" if needs_check else ("lookup" if targets or intent == "lookup" else "qa")
+    inspect = intent == 'conditions' or (any(w in text for w in
+        ('tien quyet', 'yeu cau mon', 'mon nao', 'chuoi', 'yeu cau gi')) or (bool(targets) and 'dieu kien' in text))
+    selected_intent = ('prerequisites' if needs_check else 'conditions' if inspect else
+                       'lookup' if targets or intent == 'lookup' else 'qa')
+    trace_depth = 2 if any(w in text for w in ('chuoi', 'mon do', 'mon nay yeu cau', 'lien quan')) else 0
     # "Can I take X after Y?" has one target; other IDs remain evidence requirements.
     if needs_check and not target_course and len(targets) > 1:
         markers = ("dang ky", "tien quyet", "co the hoc")
@@ -58,7 +62,8 @@ def plan(question, catalog, intent=None, target_course=None, history=None):
             missing_topic = "Danh mục xác minh phạm vi TOEIC K36–K37, nhưng chưa nhập ngưỡng điểm từ toàn văn."
     return {"intent": selected_intent, "targets": targets, "resolved_question": resolved,
             "source_ids": source_ids, "missing_topic": missing_topic,
-            "needs_target": selected_intent in ("lookup", "prerequisites") and not targets,
+            "trace_depth": trace_depth,
+            "needs_target": selected_intent in ("lookup", "prerequisites", "conditions") and not targets,
             "router": "deterministic-v1"}
 
 

@@ -78,7 +78,7 @@ class ScopeTests(unittest.TestCase):
 
     def test_api_catalog_and_chunks_require_scope(self):
         # Reuse HTTP test helpers without inheriting/rerunning their tests.
-        server = __import__('agentic_rag.server', fromlist=['create_server']).create_server(port=0, settings=Settings())
+        server = __import__('agentic_rag.server', fromlist=['create_server']).create_server(port=0, settings=Settings(), demo_only=False)
         import threading, urllib.request, urllib.error
         thread = threading.Thread(target=server.serve_forever, daemon=True); thread.start()
         base = 'http://127.0.0.1:' + str(server.server_port)

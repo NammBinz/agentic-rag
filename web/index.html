@@ -12,28 +12,27 @@
       <a class="brand" href="/" aria-label="Trang đầu"><span class="brand-mark">a<span>r</span></span><span>Học vụ<span class="brand-sub">AGENTIC RAG LAB</span></span></a>
       <div class="sidebar-heading">KHÔNG GIAN THỬ NGHIỆM</div>
       <label class="field-label" for="dataset">Kho dữ liệu</label>
-      <select id="dataset"><option value="project">CNTT K35–K39 · Nguồn dự án</option><option value="sample">Dữ liệu giả lập · Kiểm thử</option></select>
+      <select id="dataset" disabled><option value="project">Bảng học phần K37 · Có nguồn</option></select>
       <label class="field-label" for="cohort">Khóa áp dụng</label>
-      <select id="cohort"><option value="">Chọn khóa</option><option value="K35">K35</option><option value="K36">K36</option><option value="K37">K37</option><option value="K38">K38</option><option value="K39">K39</option></select>
+      <select id="cohort" disabled><option value="K37">K37 — CNTT-2024</option></select>
       <fieldset class="modes"><legend>Cách xử lý</legend>
         <label class="mode-option"><input type="radio" name="mode" value="agent" checked><span><strong>Agentic RAG</strong><small>Tra nguồn + công cụ + bổ sung</small></span><span class="mode-dot"></span></label>
         <label class="mode-option"><input type="radio" name="mode" value="rag"><span><strong>RAG một lượt</strong><small>Tra nguồn và dẫn chứng</small></span><span class="mode-dot"></span></label>
-        <label class="mode-option"><input type="radio" name="mode" value="llm"><span><strong>LLM không RAG</strong><small>Đối chứng · Cần API</small></span><span class="mode-dot"></span></label>
       </fieldset>
       <details class="profile-panel" open><summary>Hồ sơ giả lập <span>＋</span></summary>
         <p>Nhập dữ liệu mẫu để kiểm tra tiên quyết.</p>
         <label class="field-label" for="completed">Môn đã đạt</label><input id="completed" placeholder="CS122, IS224">
-        <label class="check-line"><input type="checkbox" id="completed-known" checked> Đã cung cấp đủ danh sách</label>
+        <label class="check-line"><input type="checkbox" id="completed-known"> Đã cung cấp đủ danh sách</label>
         <label class="field-label" for="grades">Điểm từng môn (thang 10)</label><input id="grades" placeholder="GE111: 6.5, IP406: 7">
         <div class="profile-grid"><div><label class="field-label" for="credits">Tín chỉ tích lũy</label><input type="number" id="credits" min="0" max="1000" placeholder="Chưa biết"></div><div><label class="field-label" for="average">Điểm TBTL</label><input type="number" id="average" min="0" max="10" step="0.1" placeholder="Chưa biết"></div></div>
         <button id="sample-profile" class="subtle-button" type="button">Điền hồ sơ mẫu</button>
       </details>
-      <div class="sidebar-bottom"><span class="live-dot"></span><span id="engine-status">Đang kết nối…</span><small>Prototype nghiên cứu · v0.1</small></div>
+      <div class="sidebar-bottom"><span class="live-dot"></span><span id="engine-status">Đang kết nối…</span><small>Demo Flask · v0.3</small></div>
     </aside>
 
     <main class="main-panel">
-      <header class="topbar"><div><span class="eyebrow">TRƯỜNG ĐẠI HỌC THĂNG LONG</span><h1>Trợ lý thông tin đào tạo</h1></div><span class="scope-badge" id="scope-badge">CNTT · Chọn khóa</span></header>
-      <div id="data-notice" class="data-notice"><span class="notice-icon">i</span><span>Khung gốc 2024; chưa xác minh đầy đủ sửa đổi. Chỉ tư vấn tham khảo.</span></div>
+      <header class="topbar"><div><span class="eyebrow">TRƯỜNG ĐẠI HỌC THĂNG LONG</span><h1>Trợ lý thông tin đào tạo</h1></div><span class="scope-badge" id="scope-badge">K37 — CNTT-2024</span></header>
+      <div id="data-notice" class="data-notice"><span class="notice-icon">i</span><span>K37 — CNTT-2024 · Trích từ bảng học phần, chưa nhập toàn văn PDF hoặc đủ sửa đổi sau 2024.</span></div>
       <section id="conversation" class="conversation" aria-live="polite" aria-label="Hội thoại">
         <div id="welcome" class="welcome"><div class="welcome-mark">↗</div><span class="eyebrow">TỪ CÂU HỎI ĐẾN BẰNG CHỨNG</span><h2>Hiểu chương trình.<br>Lập kế hoạch học tập.</h2><p>Tra học phần, xem nguồn và kiểm tra điều kiện với hồ sơ bạn cung cấp.</p><div id="examples" class="examples"></div></div>
         <div id="messages"></div>

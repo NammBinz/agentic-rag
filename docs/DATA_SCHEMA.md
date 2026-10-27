@@ -1,5 +1,8 @@
 # Dữ liệu nhiều khóa · schema v2
 
+Bản triển khai v0.3 tạm chỉ phục vụ K37/CNTT-2024 qua Flask. Các cấu trúc dưới
+đây được giữ để mở rộng sau; không mở chọn khóa khác trong demo.
+
 Ngành mục tiêu CNTT toàn khóa; phiên bản demo nhận lựa chọn K35–K39. Khả năng
 lựa chọn khóa khác với mức đầy đủ dữ liệu. Không suy ra năm tuyển sinh hay phiên
 bản chương trình bằng cách cộng/trừ số khóa. Không gán chương trình 2024 cho tất cả.
