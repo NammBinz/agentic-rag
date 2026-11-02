@@ -28,7 +28,7 @@ def load_env(path):
 
 def validate_request(body):
     allowed = {'question', 'mode', 'dataset', 'cohort', 'curriculum_id', 'profile', 'intent',
-               'target_course', 'history', 'enable_tools', 'enable_extra_retrieval'}
+               'target_course', 'history', 'enable_tools', 'enable_extra_retrieval', 'planner'}
     if not isinstance(body, dict) or set(body) - allowed:
         raise ValueError('Body phải là object JSON đúng schema')
     if body.get('dataset', 'project') not in ('project', 'sample'):

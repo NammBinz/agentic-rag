@@ -30,3 +30,20 @@ Không có lookup câu hỏi → đáp án mẫu. Bộ 15 câu nằm ở runner 
 Thiếu: toàn văn/sửa đổi sau 2024, đề cương đúng phiên bản, AD213, đối chiếu PG,
 quy đổi/miễn học GE, dữ liệu cá nhân và quy định tốt nghiệp đầy đủ. Không mở lại
 các đầu việc thu thập trong lần triển khai này.
+
+## Hai bộ lập kế hoạch cho chế độ agent
+
+| | `planner=rules` (`deterministic-v1`) | `planner=llm` (`llm_agent.py`) |
+|---|---|---|
+| Ai chọn công cụ | Quy tắc từ khóa trong `planner.py` | LLM qua function calling (`provider.chat`) |
+| Công cụ | lookup, conditions, prerequisites, catalog_summary + truy xuất | Cùng bộ công cụ, khai báo thành 5 function |
+| Giới hạn | 2 lượt truy xuất | 4 lượt lập kế hoạch, 6 lần gọi công cụ, 2 lần tìm kiếm |
+| Hàng rào Python | Như nhau | Chặn khóa/ngành/chủ đề thiếu dữ liệu **trước** khi gọi LLM; cohort và hồ sơ không do LLM cung cấp; tool lạ hoặc tham số sai bị từ chối và ghi vào log |
+| Kết luận | Trích dẫn được kiểm tra | Như nhau; đếm danh mục và trạng thái đối chiếu tiên quyết vẫn do code tính |
+
+Kết quả công cụ (ví dụ đối chiếu tiên quyết) được đưa vào bằng chứng dưới dạng đoạn `TOOL-n`,
+nên kết luận dựa trên công cụ vẫn phải trích nguyên văn. Nhật ký `actions` ghi lượt, công cụ và
+tham số do LLM chọn; đó là nhật ký hành động, không phải chuỗi suy luận.
+
+Chạy so sánh: `run_experiment.py --mode agent --planner llm` so với `--planner rules`.
+Giao diện có thêm lựa chọn "Agentic RAG · LLM lập kế hoạch".

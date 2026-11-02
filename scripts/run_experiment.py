@@ -19,6 +19,7 @@ def main():
     parser.add_argument("--output", default=".runtime/experiment.jsonl")
     parser.add_argument("--dataset", choices=["project", "sample"], default="project")
     parser.add_argument("--mode", choices=["all", "llm", "rag", "agent"], default="all")
+    parser.add_argument("--planner", choices=["rules", "llm"], default="rules", help="Bộ lập kế hoạch cho chế độ agent")
     parser.add_argument("--no-tools", action="store_true")
     parser.add_argument("--no-extra-retrieval", action="store_true")
     parser.add_argument("--top-k", type=int, default=4)
@@ -46,11 +47,11 @@ def main():
                 run = {"id": q["id"], "group": q.get("group"), "split": q.get("split", "dev"), "mode": mode,
                        "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat(), "gold": {
                        k: v for k, v in q.items() if k.startswith("gold_")}, "human_grading": None,
-                       "settings": {"no_tools": args.no_tools, "no_extra_retrieval": args.no_extra_retrieval,
+                       "settings": {"planner": args.planner, "no_tools": args.no_tools, "no_extra_retrieval": args.no_extra_retrieval,
                                     "top_k": args.top_k}}
                 try:
                     result = engine.answer(q["question"], mode=mode, cohort=q.get("cohort"), profile=q.get("profile"),
-                                           history=q.get("history"), enable_tools=not args.no_tools, enable_extra_retrieval=not args.no_extra_retrieval)
+                                           history=q.get("history"), planner=args.planner if mode == "agent" else None, enable_tools=not args.no_tools, enable_extra_retrieval=not args.no_extra_retrieval)
                     run.update(result=result, run_status="skipped" if result["status"] == "unavailable" else "completed")
                 except ProviderError as error:
                     run.update(run_status="error", error=str(error))

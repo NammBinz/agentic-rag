@@ -8,6 +8,7 @@ from .provider import Settings, create_provider
 from .retrieval import Retriever
 from .planner import plan, missing_evidence
 from .tools import AcademicTools, validate_profile
+from . import llm_agent
 
 
 def validate_generation(output, chunks):
@@ -58,20 +59,24 @@ class Engine:
         if mode not in ("rag", "agent", "llm"):
             raise ValueError("mode phải là rag, agent hoặc llm")
         profile = validate_profile(profile)
-        if set(options) - {"intent", "target_course", "history", "enable_tools", "enable_extra_retrieval"}:
+        if set(options) - {"intent", "target_course", "history", "enable_tools", "enable_extra_retrieval", "planner"}:
             raise ValueError("Tùy chọn không được hỗ trợ")
+        planner = options.pop("planner", None) or "rules"
+        if planner not in ("rules", "llm"):
+            raise ValueError("planner phải là rules hoặc llm")
         for flag in ("enable_tools", "enable_extra_retrieval"):
             if flag in options and not isinstance(options[flag], bool):
                 raise ValueError(flag + " phải là boolean")
         metrics = {"retrieval_rounds": 0, "extra_retrieval_rounds": 0, "tool_calls": 0,
                    "prompt_tokens": 0, "completion_tokens": 0, "embedding_tokens": 0,
-                   "index_embedding_tokens": 0, "api_retries": 0, "estimated_cost_usd": None}
+                   "index_embedding_tokens": 0, "api_retries": 0, "planner_calls": 0, "estimated_cost_usd": None}
         result = {"question": question, "mode": mode, "dataset": self.catalog.dataset,
                   "cohort": cohort, "context": self.catalog.context,
                   "citations": [], "actions": [], "tool_results": [], "metrics": metrics,
                   "config": {"provider": self.settings.provider, "retriever": self.settings.retriever,
                              "model": self.settings.model if self.provider else None, "top_k": self.settings.top_k,
-                             "catalog_fingerprint": self.catalog.fingerprint, "max_extra_retrievals": 1},
+                             "catalog_fingerprint": self.catalog.fingerprint, "max_extra_retrievals": 1,
+                             "planner": planner if mode == "agent" else None},
                   "notice": ("DỮ LIỆU GIẢ LẬP — chỉ dùng kiểm thử." if self.catalog.dataset == "sample" else
                              self.catalog.context["message"] + " Chưa nhập toàn văn quy chế.")}
 
@@ -115,6 +120,17 @@ class Engine:
         if self.catalog.context['status'] != 'verified_snapshot' and (
                 route['intent'] in ('lookup', 'prerequisites', 'conditions', 'catalog_summary') or course_codes(question)):
             return finish("insufficient_data", self.catalog.context['message'])
+        if mode == "agent" and planner == "llm":
+            if not self.provider:
+                return finish("unavailable", "Planner LLM cần RAG_PROVIDER=gemini hoặc openai và khóa API ở máy chủ.")
+            if self.catalog.context['status'] != 'verified_snapshot':
+                return finish("insufficient_data", self.catalog.context['message'])
+            # The same data-availability gate as the other modes keeps the comparison fair.
+            if route["missing_topic"]:
+                result["actions"].append({"action": "stop", "reason": "Chủ đề chưa có dữ liệu; không gọi LLM lập kế hoạch."})
+                return finish("insufficient_data", route["missing_topic"] + " Cần bổ sung nguồn đúng phạm vi.")
+            return finish(*llm_agent.run(self, question, cohort, profile, options.get("history"),
+                                         metrics, result["actions"]))
         if route['intent'] == 'catalog_summary':
             result['actions'].append({'action': 'route', **route})
             query = route['catalog_query']

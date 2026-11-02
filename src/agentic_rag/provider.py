@@ -166,6 +166,23 @@ class OpenAIProvider:
             raise ProviderError("LLM không trả câu trả lời JSON hợp lệ.") from None
         return output, self._usage(response)
 
+    def chat(self, messages, tools):
+        """One planning turn with function calling; the caller owns the loop and its limits."""
+        payload = {"model": self.settings.model, "temperature": 0, self.token_parameter: 1024,
+                   "messages": messages, "tools": tools, "tool_choice": "auto"}
+        response = self._post("chat/completions", payload)
+        try:
+            message = response["choices"][0]["message"]
+            if not isinstance(message, dict):
+                raise TypeError()
+            for call in message.get("tool_calls") or []:
+                if not isinstance(call["id"], str) or not isinstance(call["function"]["name"], str):
+                    raise TypeError()
+        except (KeyError, IndexError, TypeError):
+            raise ProviderError("LLM lập kế hoạch trả phản hồi không đúng cấu trúc.") from None
+        # The raw message is echoed back as-is; Gemini needs its thought signatures preserved.
+        return {k: v for k, v in message.items() if v is not None}, self._usage(response)
+
 
 class GeminiProvider(OpenAIProvider):
     """Google's OpenAI-compatible API; grounded JSON contract stays the same."""
