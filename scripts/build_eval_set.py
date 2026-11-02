@@ -17,7 +17,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from agentic_rag.catalog import Catalog, course_codes
 
 COHORT = "K37"
-CREDIT_TERMS = lambda n: [f"{n} tín chỉ", f"tín chỉ: {n}", f"{n} TC"]
+CREDIT_TERMS = lambda n: [f"{n} tín chỉ", f"tín chỉ: {n}", f"tín chỉ là {n}", f"{n} TC"]
 
 
 def split_for(item_id, dev_ratio):
@@ -164,6 +164,79 @@ PROFILE = [
 ]
 
 
+# Natural phrasing written like real student questions: abbreviations, no diacritics, no course code,
+# several intents at once, chains without the word "chuỗi", follow-ups whose history has no code.
+# Gold values were checked against the K37 catalog rows by hand.
+BLANK = [["trống", "chưa xác định", "SOURCE_BLANK", "chưa đủ căn cứ"]]
+NO_PREREQ = ["không có tiên quyết", "không có môn tiên quyết", "không yêu cầu tiên quyết"]
+ANY = ["answer", "abstain"]
+NATURAL = [
+    # Lookup without exact code or name.
+    ("natural_lookup", "Môn Python học mấy tín vậy ạ?", "answer", [CREDIT_TERMS(3)], ["COURSE-IT320"]),
+    ("natural_lookup", "mon cau truc du lieu va giai thuat bao nhieu tin chi", "answer", [CREDIT_TERMS(4)], ["COURSE-CF213"]),
+    ("natural_lookup", "Học máy là môn bắt buộc hay tự chọn?", "answer",
+     [["Chọn tổng ≥11 tín chỉ", "lựa chọn ngành", "tự chọn", "nhóm lựa chọn"]], ["COURSE-CS320"]),
+    ("natural_lookup", "Môn CSDL bao nhiêu tín chỉ?", "answer", [CREDIT_TERMS(3)], ["COURSE-IS222"]),
+    ("natural_lookup", "Thực tập tốt nghiệp ngành mình mấy tín?", "answer", [CREDIT_TERMS(3)], ["COURSE-IP406"]),
+    ("natural_lookup", "Khóa luận tốt nghiệp được mấy tín chỉ?", "answer", [CREDIT_TERMS(6)], ["COURSE-IT499"]),
+    ("natural_lookup", "Môn OOP trong chương trình là môn nào?", "answer",
+     [["CS122"], ["Lập trình hướng đối tượng"]], ["COURSE-CS122"]),
+    ("natural_lookup", "Xác suất thống kê mấy tín vậy?", "answer", [CREDIT_TERMS(4)], ["COURSE-MA239"]),
+    ("natural_lookup", "Môn mạng máy tính thuộc khối kiến thức nào?", "answer", [["Cơ sở khối ngành"]], ["COURSE-NW212"]),
+    ("natural_lookup", "Chương trình có môn nào học về blockchain không?", "answer", [["IS430"]], ["COURSE-IS430"]),
+    # Prerequisites asked indirectly.
+    ("natural_prereq", "Muốn học Học máy thì phải qua môn gì trước?", "answer", [["MA239"]], ["COURSE-CS320"]),
+    ("natural_prereq", "em chua hoc Co so du lieu thi co hoc duoc Kho du lieu khong", ANY, [["IS222"]], ["COURSE-IS327"]),
+    ("natural_prereq", "Lập trình Java cần học trước môn nào?", "answer", [["CS122"]], ["COURSE-CS223"]),
+    ("natural_prereq", "Học An toàn mạng cần có nền tảng môn nào?", "answer", [["NW212"]], ["COURSE-NW332"]),
+    ("natural_prereq", "Tiếng Anh trung cấp 1 cần điều kiện gì?", "answer",
+     [["GE222"], ["GE121"], ["4,0", "4.0"]], ["COURSE-GE231"]),
+    ("natural_prereq", "Kiến trúc máy tính có bắt học môn nào trước không?", ANY, BLANK, ["COURSE-CS212"], NO_PREREQ),
+    ("natural_prereq", "Rớt Giải tích 1 thì có học được Giải tích 2 không?", ANY, [["MA110"]], ["COURSE-MA111"]),
+    # Chains without the keyword "chuỗi".
+    ("natural_chain", "Để học được Phân tích mã độc thì em phải học lần lượt những môn nào?", ANY,
+     [["IS345"], ["CS122"]], ["COURSE-IS348", "COURSE-IS345", "COURSE-CS122"]),
+    ("natural_chain", "Trước Học máy phải học gì, và môn đó lại cần gì nữa?", "answer",
+     [["MA239"], ["MA110"]], ["COURSE-CS320", "COURSE-MA239", "COURSE-MA110"]),
+    ("natural_chain", "Công nghệ blockchain đòi hỏi những môn nào trước, tính cả môn tiền đề của môn tiền đề?", "answer",
+     [["CF231"], ["MA239"]], ["COURSE-IS430", "COURSE-CF231", "COURSE-MA239"]),
+    ("natural_chain", "Muốn học Công nghệ web nâng cao thì lộ trình các môn trước đó là gì?", "answer",
+     [["IT333"], ["CS122"]], ["COURSE-IT335", "COURSE-IT333", "COURSE-CS122"]),
+    # Several intents in one question.
+    ("natural_multi", "Cho em hỏi Khai phá dữ liệu mấy tín, học trước môn gì và là môn bắt buộc hay tự chọn?", "answer",
+     [CREDIT_TERMS(3), ["IS224"], ["bắt buộc"]], ["COURSE-IS326"]),
+    ("natural_multi", "Java với .Net em phải học cả hai hay chọn một?", "answer",
+     [["1 trong 2", "một trong hai", "chọn 1", "chọn một"]], ["COURSE-CS223", "COURSE-CS224"]),
+    ("natural_multi", "Python với Java môn nào nhiều tín hơn?", "answer",
+     [CREDIT_TERMS(3), ["bằng nhau", "như nhau", "đều"]], ["COURSE-IT320", "COURSE-CS223"]),
+    ("natural_multi", "Học máy với Tiền xử lý dữ liệu, mỗi môn bao nhiêu tín và cần học gì trước?", "answer",
+     [CREDIT_TERMS(3), CREDIT_TERMS(2), ["MA239"], ["IS222"]], ["COURSE-CS320", "COURSE-CS321"]),
+    # Catalog statistics in casual wording.
+    ("natural_count", "Tổng cộng chương trình mình có bao nhiêu học phần?", "answer", [["99"]], []),
+    ("natural_count", "Phần đại cương gồm mấy môn?", "answer", [["31"]], []),
+    ("natural_count", "Nhóm lựa chọn ngành có bao nhiêu môn để chọn?", "answer", [["23"]], []),
+    ("natural_count", "Em phải chọn tối thiểu bao nhiêu tín chỉ ở nhóm lựa chọn ngành?", "answer", [["11"]], []),
+    ("natural_count", "Môn tự do mã AD phải học tối thiểu mấy tín?", "answer", [["6"]], []),
+    # Unanswerable from current data, phrased without the gate keywords.
+    ("natural_missing", "Bao giờ thì đóng tiền học kỳ 2 ạ?", "abstain", [], []),
+    ("natural_missing", "Thầy nào dạy môn Python vậy?", "abstain", [], []),
+    ("natural_missing", "Môn Học máy thi giữa kỳ hay làm đồ án?", "abstain", [], ["GAP-G02"]),
+    ("natural_missing", "Có TOEIC 600 thì em có phải học GE333 nữa không?", "abstain", [], ["GAP-G08"]),
+    ("natural_missing", "Học kỳ này em nên đăng ký những môn nào?", ["abstain", "needs_input"], [], []),
+    # Scope phrased casually.
+    ("natural_scope", "Bên ngành Kế toán thì Nhập môn kinh tế học mấy tín?", "refuse", [], []),
+    ("natural_scope", "Khóa 38 thì môn Python mấy tín?", "refuse", [], []),
+]
+
+NATURAL_FOLLOWUPS = [
+    ([{"question": "Môn Học máy mấy tín chỉ?"}], "Thế còn môn tiên quyết của nó?", "answer", [["MA239"]], ["COURSE-CS320"]),
+    ([{"question": "Lập trình hướng đối tượng là môn gì?"}], "Học xong môn đó thì học tiếp được những môn nào?", ANY,
+     [["CS223", "IT333", "CS318", "IT320", "IS345", "IS347", "CS425", "IP406"]], []),
+    ([{"question": "Công nghệ Web là môn gì?"}], "Nó có môn nâng cao không?", ANY, [["IT335"]], []),
+    ([{"question": "Môn Bóng đá mấy tín?"}], "Còn bóng đá nâng cao thì cần học gì trước?", "answer", [["AD312"]], ["COURSE-AD313"]),
+]
+
+
 def build(dev_ratio, seed):
     catalog = Catalog("project", None, COHORT)
     items = generated(catalog, random.Random(seed))
@@ -183,6 +256,14 @@ def build(dev_ratio, seed):
                       "abstain" if status == "insufficient_data" else "answer",
                       "gold_status": status, "gold_required_terms": [], "gold_forbidden_terms": [],
                       "gold_sources": sources, "origin": "manual"})
+    for group, question, outcome, terms, sources, *forbidden in NATURAL:
+        items.append({"group": group, "question": question, "cohort": COHORT, "gold_outcome": outcome,
+                      "gold_required_terms": terms, "gold_forbidden_terms": forbidden[0] if forbidden else [],
+                      "gold_sources": sources, "origin": "manual_natural"})
+    for history, question, outcome, terms, sources in NATURAL_FOLLOWUPS:
+        items.append({"group": "natural_followup", "question": question, "cohort": COHORT, "history": history,
+                      "gold_outcome": outcome, "gold_required_terms": terms, "gold_forbidden_terms": [],
+                      "gold_sources": sources, "origin": "manual_natural"})
     counters = Counter()
     for item in items:
         counters[item["group"]] += 1

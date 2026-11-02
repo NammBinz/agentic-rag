@@ -1,6 +1,6 @@
 # Bộ đánh giá K37 — CNTT-2024 (bản nháp)
 
-`eval_k37_draft.jsonl` gồm 136 câu, chia ổn định theo hash ID: khoảng 30% dev, 70% test.
+`eval_k37_draft.jsonl` gồm 177 câu, chia ổn định theo hash ID: khoảng 30% dev, 70% test.
 Tạo lại bằng `python scripts/build_eval_set.py --force` (lệnh này ghi đè nhãn đã duyệt; chỉ dùng trước khi duyệt).
 
 | Nhóm | Nguồn nhãn | Mục đích |
@@ -12,6 +12,7 @@ Tạo lại bằng `python scripts/build_eval_set.py --force` (lệnh này ghi �
 | missing_data, out_of_scope | Viết tay | Khả năng nhận biết thiếu dữ liệu và ngoài phạm vi |
 | regulation_pending | Viết tay | Hiện phải từ chối; **đổi nhãn thành `answer`** khi đã nhập toàn văn quy chế S03 |
 | followup, profile_check | Viết tay | Ngữ cảnh hội thoại và đối chiếu hồ sơ |
+| natural_* (41 câu) | Viết tay, đối chiếu bảng | Cách hỏi tự nhiên: viết tắt, không dấu, không mã môn, nhiều ý, chuỗi không dùng chữ "chuỗi", câu tiếp nối mà câu trước không có mã; dùng để phân biệt planner quy tắc và planner LLM |
 
 Nhãn lấy từ dữ liệu hoặc được viết tay, **không lấy từ đầu ra của công cụ hệ thống**.
 
@@ -37,6 +38,8 @@ python scripts/run_experiment.py --input data/eval/eval_k37_draft.jsonl --split 
 python scripts/run_experiment.py --input data/eval/eval_k37_draft.jsonl --split dev --mode agent --no-tools --output .runtime/dev_agent_notools.jsonl
 python scripts/score_experiment.py .runtime/dev_all.jsonl --output .runtime/dev_all_score.md
 ```
+
+Lần chạy bị lỗi 429 thì chạy lại riêng bằng `--rerun-errors <file cũ> --pause 6`; khi nhãn thay đổi, chấm lại bằng `score_experiment.py <file> --gold data/eval/eval_k37_draft.jsonl` mà không gọi API.
 
 `score_experiment.py` chỉ cho điểm proxy (nhóm kết quả, từ khóa, ID nguồn). Độ đúng và tính hỗ trợ của
 từng kết luận vẫn phải chấm tay vào trường `human_grading`.

@@ -22,9 +22,24 @@ OUTCOMES = {
 }
 
 
-def contains(text, phrase):
+def _matches(text, phrase):
     # Word boundaries keep "12" from matching inside "112" or "3 TC" inside "13 TC".
-    return re.search(r"(?<![a-z0-9])" + re.escape(normalize(phrase)) + r"(?![a-z0-9])", normalize(text)) is not None
+    return re.finditer(r"(?<![a-z0-9])" + re.escape(normalize(phrase)) + r"(?![a-z0-9])", normalize(text))
+
+
+def contains(text, phrase):
+    return next(_matches(text, phrase), None) is not None
+
+
+# "không thể kết luận là không có tiên quyết" rejects the forbidden claim instead of making it.
+NEGATION_CUES = ("khong the ket luan", "chua the ket luan", "khong duoc chuyen thanh", "khong chuyen thanh",
+                 "khong co nghia la", "khong phai la", "khong dong nghia", "khong duoc hieu la", "khong hieu la")
+
+
+def asserts(text, phrase):
+    normalized = normalize(text)
+    return any(not any(cue in normalized[max(0, m.start() - 40):m.start()] for cue in NEGATION_CUES)
+               for m in _matches(normalized, phrase))
 
 
 def score_run(run):
@@ -46,7 +61,7 @@ def score_run(run):
         hits = sum(any(contains(text, alt) for alt in alternatives) for alternatives in terms)
         row["term_recall"] = hits / len(terms)
         row["all_terms"] = hits == len(terms)
-    row["forbidden_hit"] = any(contains(text, f) for f in gold.get("gold_forbidden_terms") or [])
+    row["forbidden_hit"] = any(asserts(text, f) for f in gold.get("gold_forbidden_terms") or [])
     cited = {c["id"] for c in result.get("citations", [])}
     sources = set(gold.get("gold_sources") or [])
     if sources and "answer" in accepted:
@@ -114,8 +129,15 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("runs", help="JSONL từ run_experiment.py")
     parser.add_argument("--output", help="Ghi báo cáo Markdown (mặc định in ra màn hình)")
+    parser.add_argument("--gold", help="Chấm theo nhãn hiện tại của bộ đánh giá thay vì nhãn lưu lúc chạy")
     args = parser.parse_args()
     runs = [json.loads(line) for line in Path(args.runs).read_text(encoding="utf-8").splitlines() if line.strip()]
+    if args.gold:
+        # Re-scoring after a label revision must not require new API calls.
+        items = {q["id"]: q for q in map(json.loads, Path(args.gold).read_text(encoding="utf-8").splitlines()) if q}
+        for run in runs:
+            if run["id"] in items:
+                run["gold"] = {k: v for k, v in items[run["id"]].items() if k.startswith("gold_")}
     rows = [score_run(r) for r in runs]
     by_mode = defaultdict(list)
     for row in rows:

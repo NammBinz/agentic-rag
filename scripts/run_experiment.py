@@ -4,6 +4,7 @@ import dataclasses
 import datetime
 import json
 import sys
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,6 +27,9 @@ def main():
     parser.add_argument("--split", choices=["dev", "test", "all"], default="dev")
     parser.add_argument("--allow-draft-test", action="store_true",
                         help="Chỉ dùng khi thử quy trình; kết quả test trên nhãn nháp không được báo cáo")
+    parser.add_argument("--pause", type=float, default=0.0, help="Giây nghỉ giữa các lần chạy (tránh 429)")
+    parser.add_argument("--rerun-errors", metavar="PREVIOUS_JSONL",
+                        help="Giữ các lần chạy đã xong trong file cũ, chỉ chạy lại các lần lỗi")
     args = parser.parse_args()
     load_env(ROOT / ".env")
     settings = dataclasses.replace(Settings.from_env(), top_k=args.top_k)
@@ -39,11 +43,22 @@ def main():
     if not args.allow_draft_test and any(q.get("review_status", "reviewed") == "draft" for q in test):
         raise ValueError("Tập test còn nhãn nháp (review_status=draft); duyệt nhãn trước khi chạy test")
     modes = ["llm", "rag", "agent"] if args.mode == "all" else [args.mode]
+    kept = {}
+    if args.rerun_errors:
+        for line in Path(args.rerun_errors).read_text(encoding="utf-8").splitlines():
+            previous = json.loads(line) if line.strip() else None
+            if previous and previous["run_status"] != "error":
+                kept[(previous["id"], previous["mode"])] = previous
     out = Path(args.output); out.parent.mkdir(parents=True, exist_ok=True)
     # 'x' protects earlier experimental outputs from accidental overwrites.
     with out.open("x", encoding="utf-8") as stream:
         for q in questions:
             for mode in modes:
+                if (q["id"], mode) in kept:
+                    stream.write(json.dumps(kept[(q["id"], mode)], ensure_ascii=False) + "\n")
+                    continue
+                if args.pause:
+                    time.sleep(args.pause)
                 run = {"id": q["id"], "group": q.get("group"), "split": q.get("split", "dev"), "mode": mode,
                        "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat(), "gold": {
                        k: v for k, v in q.items() if k.startswith("gold_")}, "human_grading": None,
@@ -56,7 +71,7 @@ def main():
                 except ProviderError as error:
                     run.update(run_status="error", error=str(error))
                 stream.write(json.dumps(run, ensure_ascii=False) + "\n"); stream.flush()
-    print(f"Saved {len(questions) * len(modes)} runs to {out}; automatic answer accuracy is not claimed.")
+    print(f"Saved {len(questions) * len(modes)} runs to {out} ({len(kept)} reused); automatic answer accuracy is not claimed.")
 
 
 if __name__ == "__main__":

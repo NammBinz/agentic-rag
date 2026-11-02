@@ -66,6 +66,10 @@ class ScorerTests(unittest.TestCase):
         self.assertFalse(row["forbidden_hit"])
         self.assertTrue(self.run_row("answered", "Không có tiên quyết", gold)["forbidden_hit"])
 
+    def test_negated_forbidden_phrase_is_not_a_violation(self):
+        self.assertFalse(self.score.asserts("Ô trống, không thể kết luận là không có tiên quyết.", "không có tiên quyết"))
+        self.assertTrue(self.score.asserts("AD242 không có tiên quyết.", "không có tiên quyết"))
+
     def test_refuse_accepts_clarifying_question(self):
         self.assertTrue(self.run_row("needs_input", "Chọn khóa", {"gold_outcome": "refuse"})["outcome_ok"])
         self.assertFalse(self.run_row("catalog_summary", "45 mã", {"gold_outcome": "refuse"})["outcome_ok"])
