@@ -1,7 +1,7 @@
 """Temporary deployment scope; the research engine retains multi-cohort support."""
 import re
 from .engine import Engine
-from .catalog import normalize
+from .catalog import normalize, mentions_other_program
 
 class DemoEngine(Engine):
     def answer(self, question, mode='agent', cohort='K37', profile=None, **options):
@@ -10,7 +10,7 @@ class DemoEngine(Engine):
         mentioned = set(re.findall(r'\bK\s*(\d{2,3})\b', question.upper()))
         mentioned.update(re.findall(r'khoa\s+(\d{2,3})\b', normalize(question)))
         versions = set(re.findall(r'CNTT[- ]?(20\d{2})', question.upper()))
-        wrong_program = any(p in normalize(question) for p in ('nganh tri tue nhan tao', 'nganh khoa hoc may tinh', 'nganh ngon ngu anh'))
+        wrong_program = mentions_other_program(question)
         if cohort != 'K37' or mentioned - {'37'} or versions - {'2024'} or wrong_program or mode == 'llm':
             result = super().answer(question, mode='rag', cohort=None)
             result.update(status='out_of_scope', mode=mode, cohort='K37', context=self.catalog.context,

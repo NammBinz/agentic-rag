@@ -94,3 +94,21 @@ class ScopeTests(unittest.TestCase):
             self.assertEqual(get('/api/chunks/COURSE-PY201-V2?dataset=sample&cohort=K38')['curriculum_version'], 'sample-v2')
         finally:
             server.shutdown(); server.server_close(); thread.join(2)
+
+
+class ProgramScopeTests(unittest.TestCase):
+    def test_other_program_is_refused_before_retrieval(self):
+        engine = Engine('project', Settings(), cohort='K37')
+        for question in ['Ngành Ngôn ngữ Anh K37 có bao nhiêu môn bắt buộc?',
+                         'Ngành Kế toán có học IT320 không?', 'ngành trí tuệ nhân tạo có những môn nào?']:
+            with self.subTest(question=question):
+                result = engine.answer(question, mode='agent', cohort='K37')
+                self.assertEqual(result['status'], 'out_of_scope')
+                self.assertEqual(result['metrics']['retrieval_rounds'], 0)
+
+    def test_cntt_and_group_labels_are_not_other_programs(self):
+        engine = Engine('project', Settings(), cohort='K37')
+        for question in ['Ngành CNTT K37 có bao nhiêu môn bắt buộc?', 'Nhóm bắt buộc ngành có bao nhiêu học phần?',
+                         'Ngành công nghệ thông tin có môn IT320 không?']:
+            with self.subTest(question=question):
+                self.assertNotEqual(engine.answer(question, mode='agent', cohort='K37')['status'], 'out_of_scope')

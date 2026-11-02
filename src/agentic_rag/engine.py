@@ -2,7 +2,7 @@
 import json
 import os
 import time
-from .catalog import Catalog, course_codes, SUPPORTED_COHORTS, normalize
+from .catalog import Catalog, course_codes, SUPPORTED_COHORTS, normalize, mentions_other_program
 import re
 from .provider import Settings, create_provider
 from .retrieval import Retriever
@@ -99,6 +99,8 @@ class Engine:
         mentioned = set(re.findall(r"\bK(?:35|36|37|38|39)\b", question.upper()))
         if mentioned and mentioned != {cohort}:
             return finish("needs_input", f"Bạn đang chọn {cohort} nhưng câu hỏi nhắc khóa khác. Hãy chọn đúng khóa; so sánh nhiều khóa cần hỏi riêng từng khóa.")
+        if mentions_other_program(question):
+            return finish("out_of_scope", "Trợ lý chỉ phục vụ ngành Công nghệ thông tin; không dùng bảng CNTT để trả lời cho ngành khác.")
         if mode == "llm":
             if not self.provider:
                 return finish("unavailable", "Đối chứng LLM không RAG cần RAG_PROVIDER=openai và khóa API ở máy chủ.")

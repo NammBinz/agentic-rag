@@ -1,6 +1,6 @@
 """Resolve scoped catalog reporting queries without treating top-k hits as a census."""
 import re
-from .catalog import course_codes, normalize
+from .catalog import course_codes, normalize, mentions_other_program
 
 GROUPS = {
     'dai cuong': 'Đại cương',
@@ -63,7 +63,7 @@ def catalog_query(question, catalog, history=None):
         current = catalog.context.get('curriculum_id') or ''
         if (cohorts - {str(catalog.cohort or '').lstrip('K')} or
                 (versions and any('CNTT-' + v != current for v in versions)) or
-                any(p in prev for p in ('nganh tri tue nhan tao', 'nganh khoa hoc may tinh', 'nganh ngon ngu anh'))):
+                mentions_other_program(previous)):
             break
         resolved = _explicit(previous, catalog)
         if resolved:

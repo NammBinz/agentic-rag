@@ -14,6 +14,18 @@ def normalize(text):
     return ''.join(c for c in text if unicodedata.category(c) != 'Mn')
 
 
+# Other programs named after "ngành"; group labels such as "bắt buộc ngành" never match.
+OTHER_PROGRAMS = ('tri tue nhan tao', 'khoa hoc may tinh', 'he thong thong tin', 'mang may tinh',
+                  'an toan thong tin', 'ky thuat phan mem', 'khoa hoc du lieu', 'ngon ngu', 'ke toan',
+                  'quan tri', 'tai chinh', 'marketing', 'kinh te', 'luat', 'dieu duong', 'dinh duong',
+                  'y te cong cong', 'cong tac xa hoi', 'viet nam hoc', 'du lich', 'logistics',
+                  'thiet ke do hoa', 'truyen thong', 'toan ung dung', 'am nhac', 'thanh nhac')
+
+
+def mentions_other_program(text):
+    return any(re.search(r'\bnganh ' + program + r'\b', normalize(text)) for program in OTHER_PROGRAMS)
+
+
 def course_codes(text):
     return list(dict.fromkeys(re.findall(r'\b[A-Z]{2}\d{3}\b', text.upper())))
 
