@@ -1,4 +1,4 @@
-"""Flask application factory for the K37 curriculum demo."""
+"""Flask application factory for the CNTT K35–K39 demo; the user picks a cohort before chatting."""
 import argparse
 import json
 import os
@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 from flask import Flask, jsonify, request, send_from_directory
 from werkzeug.exceptions import HTTPException
 from werkzeug.serving import make_server
-from .catalog import ROOT
+from .catalog import ROOT, SUPPORTED_COHORTS
 from .engine import Engine
 from .demo import DemoEngine
 from .provider import ProviderError, Settings
@@ -59,13 +59,17 @@ def create_app(settings=None, demo_only=True, provider=None):
         dataset = values.get('dataset', 'project')
         if dataset not in engines:
             raise ValueError('Demo chỉ bật dữ liệu K37 thật; sample và khóa khác không được mở' if demo_only else 'dataset không hợp lệ')
-        cohort = values.get('cohort', 'K37' if demo_only else None)
+        cohort = values.get('cohort')
         if cohort is not None and (not isinstance(cohort, str) or len(cohort) > 20):
             raise ValueError('cohort không hợp lệ')
-        if demo_only and (cohort != 'K37' or values.get('curriculum_id', 'CNTT-2024') != 'CNTT-2024'):
-            raise ValueError('Bản demo chỉ phục vụ K37 — CNTT-2024')
+        if demo_only and cohort not in SUPPORTED_COHORTS:
+            raise ValueError('Hãy chọn khóa K35–K39 ngành Công nghệ thông tin')
         with locks[dataset]:
-            return engines[dataset].for_cohort(cohort)
+            engine = engines[dataset].for_cohort(cohort)
+        # A curriculum named by the client must be the one resolved for that cohort.
+        if values.get('curriculum_id') not in (None, engine.catalog.context.get('curriculum_id')):
+            raise ValueError('curriculum_id không khớp chương trình của khóa đã chọn')
+        return engine
 
     @app.before_request
     def validate_origin():
@@ -103,7 +107,20 @@ def create_app(settings=None, demo_only=True, provider=None):
     def health():
         return jsonify(ok=True, framework='Flask', provider=settings.provider, retriever=settings.retriever,
                        model=settings.model if settings.provider != 'offline' else None,
-                       scope='K37 — CNTT-2024' if demo_only else 'Research test mode', demo_only=demo_only)
+                       scope='CNTT K35–K39' if demo_only else 'Research test mode', demo_only=demo_only)
+
+    @app.get('/api/cohorts')
+    def cohorts():
+        # What each cohort can be asked about, so the picker states coverage before the first question.
+        items = []
+        for cohort in SUPPORTED_COHORTS:
+            with locks['project']:
+                c = engines['project'].for_cohort(cohort).catalog
+            binding = next((b for b in c.bindings if b.get('cohort') == cohort), {})
+            items.append({'cohort': cohort, 'status': c.context['status'], 'admission_year': binding.get('admission_year'),
+                          'curriculum_id': c.context.get('curriculum_id'), 'frame_version': binding.get('frame_version'),
+                          'course_count': len(c.courses), 'message': c.context['message']})
+        return jsonify(cohorts=items)
 
     @app.get('/api/catalog')
     def catalog():
@@ -132,14 +149,16 @@ def create_app(settings=None, demo_only=True, provider=None):
         data = validate_request(body())
         # Explicitly rejected scopes never reach retrieval or LLM.
         dataset = data.get('dataset', 'project')
-        if demo_only and data.get('cohort', 'K37') != 'K37':
-            e = select({'dataset': dataset})
-        else:
+        # Without a valid cohort the engine asks for one (or refuses) before any retrieval.
+        if data.get('cohort') in SUPPORTED_COHORTS or not demo_only:
             e = select(data)
+        elif dataset in engines:
+            e = engines[dataset]
+        else:
+            raise ValueError('dataset không hợp lệ')
         data.pop('dataset', None)
         data.pop('curriculum_id', None)
-        if demo_only:
-            data.setdefault('cohort', 'K37')
+        data.setdefault('cohort', None)
         with locks[dataset]:
             return jsonify(e.answer(**data))
 
@@ -179,7 +198,7 @@ def main():
     args = parser.parse_args()
     load_env(ROOT / '.env')
     app = create_app()
-    print(f'K37 — CNTT-2024 · Flask: http://{args.host}:{args.port}', flush=True)
+    print(f'CNTT K35–K39 · Flask: http://{args.host}:{args.port}', flush=True)
     app.run(host=args.host, port=args.port, debug=False, use_reloader=False)
 
 if __name__ == '__main__':

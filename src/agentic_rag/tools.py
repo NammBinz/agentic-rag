@@ -37,7 +37,7 @@ class AcademicTools:
         if cohort not in SUPPORTED_COHORTS:
             return {"tool": "lookup_course", "status": "needs_input" if not cohort else "out_of_scope",
                     "message": "Cần chọn khóa K35–K39; không suy rộng dữ liệu cho khóa khác.", "courses": [], "citations": []}
-        if self.catalog.context['status'] != 'verified_snapshot':
+        if not self.catalog.usable:
             return {"tool": "lookup_course", "status": "insufficient_data", "courses": [], "citations": [],
                     "context": self.catalog.context, "message": self.catalog.context['message']}
         found = self.catalog.select_courses(query)
@@ -57,7 +57,7 @@ class AcademicTools:
                   'count': 0, 'catalog_count': len(self.catalog.courses), 'groups': [],
                   'choice_groups': [], 'citations': [], 'context': self.catalog.context,
                   'subset': subset, 'group': group}
-        if self.catalog.context['status'] != 'verified_snapshot':
+        if not self.catalog.usable:
             return {**result, 'message': self.catalog.context['message']}
         records = [c for c in self.catalog.courses.values() if group is None or c['group'] == group]
         fixed = lambda c: normalize(c.get('selection_rule') or '').strip() == 'bat buoc theo muc khung'

@@ -1,4 +1,5 @@
 """Regression for complete catalog counts and contextual follow-ups, without LLM calls."""
+import functools
 import unittest
 from unittest.mock import patch
 from agentic_rag.catalog import Catalog
@@ -19,7 +20,10 @@ class NoGeneration:
 class CatalogSummaryTests(unittest.TestCase):
     def setUp(self):
         self.catalog = Catalog()
-        self.engine = DemoEngine(settings=Settings(provider='gemini'), provider=NoGeneration())
+        engine = DemoEngine(settings=Settings(provider='gemini'), provider=NoGeneration())
+        # The demo now requires a chosen cohort; these regressions are about K37.
+        self.engine = engine
+        self.engine.answer = functools.partial(engine.answer, cohort='K37')
 
     def test_mandatory_uses_exact_rule_not_group_name(self):
         r = AcademicTools(self.catalog).catalog_summary('K37', 'mandatory')
@@ -145,7 +149,7 @@ class CatalogSummaryTests(unittest.TestCase):
         h=[]
         with patch('agentic_rag.provider.urllib.request.urlopen',side_effect=AssertionError('No Google request expected')):
             for q in [QUESTION,'có mấy môn','là những môn gì']:
-                response=client.post('/api/chat',json={'question':q,'history':h})
+                response=client.post('/api/chat',json={'question':q,'history':h,'cohort':'K37'})
                 self.assertEqual(response.status_code,200)
                 self.assertEqual(response.json['tool_results'][0]['count'],45)
                 h.append({'question':q})

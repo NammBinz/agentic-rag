@@ -37,7 +37,7 @@ class ScopeTests(unittest.TestCase):
         self.assertEqual(citation['document_version'], 'common-v1')
 
     def test_missing_curriculum_never_borrows_project_courses(self):
-        for cohort in ('K35', 'K36', 'K38', 'K39'):
+        for cohort in ('K35', 'K38', 'K39'):
             e = Engine(cohort=cohort)
             self.assertEqual(e.catalog.courses, {})
             for mode in ('rag', 'agent'):

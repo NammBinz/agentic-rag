@@ -44,7 +44,7 @@ class Engine:
         if cohort == self.catalog.cohort:
             return self
         if cohort not in self.scoped_engines:
-            self.scoped_engines[cohort] = Engine(self.catalog.dataset, self.settings, self.provider,
+            self.scoped_engines[cohort] = type(self)(self.catalog.dataset, self.settings, self.provider,
                                                self.cache_dir, cohort, self.catalog.data_root)
         return self.scoped_engines[cohort]
 
@@ -117,13 +117,13 @@ class Engine:
 
         route = plan(question, self.catalog, intent=options.get("intent"),
                      target_course=options.get("target_course"), history=options.get("history"))
-        if self.catalog.context['status'] != 'verified_snapshot' and (
+        if not self.catalog.usable and (
                 route['intent'] in ('lookup', 'prerequisites', 'conditions', 'catalog_summary') or course_codes(question)):
             return finish("insufficient_data", self.catalog.context['message'])
         if mode == "agent" and planner == "llm":
             if not self.provider:
                 return finish("unavailable", "Planner LLM cần RAG_PROVIDER=gemini hoặc openai và khóa API ở máy chủ.")
-            if self.catalog.context['status'] != 'verified_snapshot':
+            if not self.catalog.usable:
                 return finish("insufficient_data", self.catalog.context['message'])
             # The same data-availability gate as the other modes keeps the comparison fair.
             if route["missing_topic"]:

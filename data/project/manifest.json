@@ -1,29 +1,23 @@
 {
   "dataset": "project",
-  "cohort": "K37",
   "program": "CNTT",
-  "snapshot_date": "2026-10-07",
-  "workbook": "Danh_muc_nguon_va_hoc_phan_CNTT_K37.xlsx",
-  "workbook_sha256": "0a8d80f0d04634f1335fd80aa29b6a3756a914b10cb5a195b681e0ee19a5db5c",
-  "source_library_id": "libfile_4a9f47a2605c8191aa0d099e55081b22",
+  "schema_version": 3,
+  "snapshot_date": "2026-11-02",
+  "workbook": "CNTT_K35-K39_nguon_phien_ban.xlsx",
+  "workbook_sha256": "2799cf5938f8a3b73eaa09903ba3f1274fc9d518cc7b91a8207ab058483d0396",
+  "source_library_id": null,
   "tabs_present": [
     "Hoc phan",
     "Dieu kien",
     "Nguon",
     "Can xac minh",
-    "Dong nguon"
+    "Dong nguon",
+    "Khoa va phien ban",
+    "Do day du",
+    "Can bo sung",
+    "Quy tac du lieu"
   ],
-  "source_count": 12,
-  "source_blank_count": 31,
-  "expected_checkpoint_sha256": "ff3f55329e47175d8c842dd23c77169d85a0805ae3acb5d6cd4cf52002d4587a",
-  "checkpoint_workbook_matches": false,
-  "provenance_note": "Bản nhập có 5 tab/12 nguồn. Đối chiếu workbook_sha256; không coi là bản 9 tab/25 nguồn nếu hash khác mốc 24/10. Không tái xác minh website/PDF.",
-  "course_count": 99,
-  "raw_row_count": 100,
-  "condition_count": 76,
-  "original_documents_ingested": false,
-  "amendments_verified": false,
-  "schema_version": 2,
+  "source_count": 26,
   "supported_cohorts": [
     "K35",
     "K36",
@@ -33,5 +27,97 @@
   ],
   "verified_course_cohorts": [
     "K37"
+  ],
+  "provisional_course_cohorts": [
+    "K36"
+  ],
+  "counts": {
+    "K37": {
+      "courses": 99,
+      "codes": 99,
+      "conditions": 76,
+      "raw_rows": 100,
+      "source_blank": 31
+    },
+    "K36": {
+      "courses": 72,
+      "codes": 72,
+      "conditions": 82,
+      "raw_rows": 72,
+      "source_blank": 17
+    }
+  },
+  "course_count": 171,
+  "raw_row_count": 172,
+  "condition_count": 158,
+  "original_documents_ingested": false,
+  "amendments_verified": false,
+  "provenance_note": "Workbook CNTT K35–K39 cập nhật 02/11/2026. K37 giữ nguyên khung gốc S01; K36 trích từ ảnh S26 chưa đối chiếu QĐ gốc; K35/K38/K39 chưa có bảng học phần.",
+  "paragraphs": [
+    {
+      "id": "VERSION-K35",
+      "source_id": "S13",
+      "kind": "scope",
+      "text": "Chương trình CNTT K35: tuyển sinh năm 2022 (năm học 2022–2023). Phiên bản CNTT-2022 — Khung gốc 2022–2023; quyết định 22092702/QĐHT-ĐHTL; hiệu lực 2022-09-27; trạng thái: ĐÃ XÁC MINH KHUNG GỐC. Tổng tín chỉ (không gồm GDQP/GDTC): Chưa xác minh; thời gian đào tạo: Chưa xác minh năm. Giới hạn: S15/S01 cho phép chọn học phần mới; không tự đổi khung gốc. Mức đầy đủ — khung/CTĐT: Đã đọc QĐ S13; bảng học phần: Chưa chuẩn hóa; tiên quyết/đề cương: Chưa xác minh bộ đúng khóa; quy chế: Quy chế chung S03; quy chế gốc 2022 chưa đọc; chuẩn đầu ra/quy đổi: Chưa đủ; S04 không áp K35; sửa đổi/chuyển tiếp: Chưa đủ. Mức dùng thực tế: Tra nguồn/phiên bản; chưa kết luận tiên quyết/tốt nghiệp",
+      "page": null,
+      "section": "Khoa va phien ban!2",
+      "version": "CNTT-2022",
+      "verification": "INVENTORY_CHECKED",
+      "content_level": "inventory_summary",
+      "workbook_sheet": "Khoa va phien ban",
+      "workbook_row": 2
+    },
+    {
+      "id": "VERSION-K36",
+      "source_id": "S15",
+      "kind": "scope",
+      "text": "Chương trình CNTT K36: tuyển sinh năm 2023 (năm học 2023–2024). Phiên bản CNTT-2023 — Khung gốc 2023–2024; quyết định 23082903/QĐ-ĐHTL; hiệu lực 2023-08-29; trạng thái: ĐÃ XÁC MINH KHUNG GỐC. Tổng tín chỉ (không gồm GDQP/GDTC): Chưa xác minh; thời gian đào tạo: Chưa xác minh năm. Giới hạn: Khung gốc CNTT-2023 vẫn theo S15. Thêm bộ ảnh riêng 72 mã, 82 điều kiện. K36 do người dùng xác nhận; thiếu đối chiếu ảnh–QĐ, AD và 7 mã tham chiếu. Không tự thay khung gốc.. Mức đầy đủ — khung/CTĐT: Khung gốc S15 đã đọc. Ảnh S26 trang 48–49 ghi ngành CNTT, chưa đối chiếu được số QĐ/năm.; bảng học phần: 72 mã/72 dòng từ ảnh S26: 31 đại cương, 13 cơ sở, 13 bắt buộc ngành, 12 lựa chọn ngành, 3 tốt nghiệp. Chưa có danh mục AD.; tiên quyết/đề cương: 82 thành phần; giữ nhóm AND/OR. 17 ô tiên quyết trống. 7 mã tham chiếu chưa có bản ghi; thiếu đề cương.; quy chế: Quy chế chung S03; quy chế gốc 2023 chưa đọc; chuẩn đầu ra/quy đổi: TOEIC quốc tế S04; các quy đổi khác chưa đủ; sửa đổi/chuyển tiếp: Chưa đủ. Mức dùng thực tế: Tra bản trích K36 kèm nguồn ảnh và nhãn chờ đối chiếu phiên bản. Chưa kết luận đủ điều kiện cá nhân hoặc đủ toàn bộ khung hiện hành.",
+      "page": null,
+      "section": "Khoa va phien ban!3",
+      "version": "CNTT-2023",
+      "verification": "INVENTORY_CHECKED",
+      "content_level": "inventory_summary",
+      "workbook_sheet": "Khoa va phien ban",
+      "workbook_row": 3
+    },
+    {
+      "id": "VERSION-K37",
+      "source_id": "S01",
+      "kind": "scope",
+      "text": "Chương trình CNTT K37: tuyển sinh năm 2024 (năm học 2024–2025). Phiên bản CNTT-2024 — Khung gốc 2024; quyết định 24081902/QĐ-ĐHTL; hiệu lực 2024-08-19; trạng thái: ĐÃ XÁC MINH KHUNG GỐC. Tổng tín chỉ (không gồm GDQP/GDTC): Chưa xác minh đầy đủ; thời gian đào tạo: Chưa xác minh năm. Giới hạn: 99 mã, 100 dòng gốc, 76 thành phần điều kiện giữ nguyên; 31 ô tiên quyết trống. Mức đầy đủ — khung/CTĐT: Đã đọc QĐ S01; bảng học phần: 99 mã; 100 dòng gốc giữ nguyên; tiên quyết/đề cương: 76 thành phần; 31 mã trống tiên quyết; thiếu đề cương; quy chế: S03 đã kiểm tra phạm vi; chưa chuẩn hóa toàn văn; chuẩn đầu ra/quy đổi: TOEIC S04; chưa đủ miễn học/quy đổi GE; sửa đổi/chuyển tiếp: Chưa đủ. Mức dùng thực tế: Tra học phần và điều kiện đã có; không kết luận đủ điều kiện khi thiếu",
+      "page": null,
+      "section": "Khoa va phien ban!4",
+      "version": "CNTT-2024",
+      "verification": "INVENTORY_CHECKED",
+      "content_level": "inventory_summary",
+      "workbook_sheet": "Khoa va phien ban",
+      "workbook_row": 4
+    },
+    {
+      "id": "VERSION-K38",
+      "source_id": "S17",
+      "kind": "scope",
+      "text": "Chương trình CNTT K38: tuyển sinh năm 2025 (năm học 2025–2026). Phiên bản CNTT-2025 — Bản mô tả CTĐT 2025; quyết định 25090504/QĐ-ĐHTL; CTĐT gốc 25042105 được dẫn; hiệu lực 2025-09-05; trạng thái: ĐÃ XÁC MINH BẢN MÔ TẢ; THIẾU QĐ CTĐT GỐC. Tổng tín chỉ (không gồm GDQP/GDTC): 137; thời gian đào tạo: 4 năm. Giới hạn: 137 TC không gồm GDQP–AN/GDTC; chưa dùng làm danh mục/tiên quyết chuẩn. Mức đầy đủ — khung/CTĐT: S17/S18 bản mô tả; S25 QĐ CTĐT gốc chưa đọc; bảng học phần: Chưa chuẩn hóa; tiên quyết/đề cương: S12 quyết định đã đọc; bộ CNTT chưa đọc; quy chế: S05 đã đọc điều khoản áp dụng; chưa chuẩn hóa toàn văn; chuẩn đầu ra/quy đổi: Chưa xác minh đầy đủ; sửa đổi/chuyển tiếp: Chưa đủ. Mức dùng thực tế: Tra bản mô tả; chưa dùng công cụ tiên quyết",
+      "page": null,
+      "section": "Khoa va phien ban!5",
+      "version": "CNTT-2025",
+      "verification": "INVENTORY_CHECKED",
+      "content_level": "inventory_summary",
+      "workbook_sheet": "Khoa va phien ban",
+      "workbook_row": 5
+    },
+    {
+      "id": "VERSION-K39",
+      "source_id": "S20",
+      "kind": "scope",
+      "text": "Chương trình CNTT K39: tuyển sinh năm 2026 (năm học 2026–2027). Phiên bản CNTT-2026 — CTĐT CNTT K39 năm 2026; quyết định 26062608/QĐ-ĐHTL; hiệu lực 2026-06-26; trạng thái: ĐÃ XÁC MINH CHƯƠNG TRÌNH. Tổng tín chỉ (không gồm GDQP/GDTC): 129; thời gian đào tạo: 3.5 năm. Giới hạn: 129 TC không gồm GDQP–AN/GDTC; chưa tìm bản mô tả CNTT và Phụ lục II đề cương. Mức đầy đủ — khung/CTĐT: S20/S21 đã đọc; 129 TC, 3,5 năm; bảng học phần: Tệp danh mục trang 7–10 đã tìm; chưa chuẩn hóa; tiên quyết/đề cương: S22 đã đọc; S23 chưa thấy Phụ lục II CNTT; quy chế: S06/S07 đã đọc điều khoản áp dụng; chưa chuẩn hóa toàn văn; chuẩn đầu ra/quy đổi: Chưa xác minh đầy đủ; sửa đổi/chuyển tiếp: Chưa đủ. Mức dùng thực tế: Tra chương trình tổng quát; chưa dùng công cụ tiên quyết",
+      "page": null,
+      "section": "Khoa va phien ban!6",
+      "version": "CNTT-2026",
+      "verification": "INVENTORY_CHECKED",
+      "content_level": "inventory_summary",
+      "workbook_sheet": "Khoa va phien ban",
+      "workbook_row": 6
+    }
   ]
 }

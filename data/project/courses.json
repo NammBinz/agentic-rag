@@ -8,6 +8,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "45",
     "factor": 1,
     "source_row_count": 1,
@@ -15,13 +16,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 5,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 5
   },
   {
     "code": "ML114",
@@ -32,6 +33,7 @@
     "prerequisite_raw": "ML113",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "30",
     "factor": 1,
     "source_row_count": 1,
@@ -39,13 +41,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 6,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 6
   },
   {
     "code": "ML115",
@@ -56,6 +58,7 @@
     "prerequisite_raw": "ML114",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "30",
     "factor": 1,
     "source_row_count": 1,
@@ -63,13 +66,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 7,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 7
   },
   {
     "code": "ML202",
@@ -80,6 +83,7 @@
     "prerequisite_raw": "ML114",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "30",
     "factor": 1,
     "source_row_count": 1,
@@ -87,13 +91,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 8,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 8
   },
   {
     "code": "ML204",
@@ -104,6 +108,7 @@
     "prerequisite_raw": "ML114",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "30",
     "factor": 1,
     "source_row_count": 1,
@@ -111,13 +116,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 9,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 9
   },
   {
     "code": "CS102",
@@ -128,6 +133,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "30",
     "factor": 1.3,
     "source_row_count": 1,
@@ -135,13 +141,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 10,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 10
   },
   {
     "code": "MA101",
@@ -152,6 +158,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "27LT+36BT",
     "factor": 1.5,
     "source_row_count": 1,
@@ -159,13 +166,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 11,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 11
   },
   {
     "code": "CS100",
@@ -176,6 +183,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "18LT+24TH",
     "factor": 1.5,
     "source_row_count": 1,
@@ -183,13 +191,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 12,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 12
   },
   {
     "code": "NA151",
@@ -200,6 +208,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "30",
     "factor": 1,
     "source_row_count": 1,
@@ -207,13 +216,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 13,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 13
   },
   {
     "code": "EC102",
@@ -224,6 +233,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "30",
     "factor": 1.3,
     "source_row_count": 1,
@@ -231,13 +241,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 14,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 14
   },
   {
     "code": "VL101",
@@ -248,6 +258,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "30",
     "factor": 1.2,
     "source_row_count": 1,
@@ -255,13 +266,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 15,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 15
   },
   {
     "code": "SH131",
@@ -272,6 +283,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "30",
     "factor": 1.2,
     "source_row_count": 1,
@@ -279,13 +291,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 16,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 16
   },
   {
     "code": "GE111",
@@ -296,6 +308,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 1.6,
     "source_row_count": 1,
@@ -303,13 +316,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 17,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 17
   },
   {
     "code": "GE112",
@@ -320,6 +333,7 @@
     "prerequisite_raw": "GE111",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 1.6,
     "source_row_count": 1,
@@ -327,13 +341,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 18,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 18
   },
   {
     "code": "GE121",
@@ -344,6 +358,7 @@
     "prerequisite_raw": "GE112, GE111≥4,0",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 1.6,
     "source_row_count": 1,
@@ -351,13 +366,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 19,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 19
   },
   {
     "code": "GE222",
@@ -368,6 +383,7 @@
     "prerequisite_raw": "GE121, GE112≥4,0",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 1.6,
     "source_row_count": 1,
@@ -375,13 +391,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 20,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 20
   },
   {
     "code": "GE231",
@@ -392,6 +408,7 @@
     "prerequisite_raw": "GE222, GE121≥4,0",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 1.6,
     "source_row_count": 1,
@@ -399,13 +416,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 21,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 21
   },
   {
     "code": "GE232",
@@ -416,6 +433,7 @@
     "prerequisite_raw": "GE231, GE222≥4,0",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 1.6,
     "source_row_count": 1,
@@ -423,13 +441,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 22,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 22
   },
   {
     "code": "GE333",
@@ -440,6 +458,7 @@
     "prerequisite_raw": "GE232, GE231≥4,0",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 1.6,
     "source_row_count": 1,
@@ -447,13 +466,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 23,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 23
   },
   {
     "code": "GF101",
@@ -464,6 +483,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 1.6,
     "source_row_count": 1,
@@ -471,13 +491,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 24,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 24
   },
   {
     "code": "GF102",
@@ -488,6 +508,7 @@
     "prerequisite_raw": "GF101",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 1.6,
     "source_row_count": 1,
@@ -495,13 +516,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 25,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 25
   },
   {
     "code": "GJ101",
@@ -512,6 +533,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 1.6,
     "source_row_count": 1,
@@ -519,13 +541,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 26,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 26
   },
   {
     "code": "GJ102",
@@ -536,6 +558,7 @@
     "prerequisite_raw": "GJ101",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 1.6,
     "source_row_count": 1,
@@ -543,13 +566,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 27,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 27
   },
   {
     "code": "GZ101",
@@ -560,6 +583,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 1.6,
     "source_row_count": 1,
@@ -567,13 +591,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 28,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 28
   },
   {
     "code": "GZ102",
@@ -584,6 +608,7 @@
     "prerequisite_raw": "GZ101",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 1.6,
     "source_row_count": 1,
@@ -591,13 +616,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 29,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 29
   },
   {
     "code": "GI101",
@@ -608,6 +633,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 0.75,
     "source_row_count": 1,
@@ -615,13 +641,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 30,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 30
   },
   {
     "code": "GI102",
@@ -632,6 +658,7 @@
     "prerequisite_raw": "GI101",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 0.75,
     "source_row_count": 1,
@@ -639,13 +666,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 31,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 31
   },
   {
     "code": "GK101",
@@ -656,6 +683,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 1.6,
     "source_row_count": 1,
@@ -663,13 +691,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 32,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 32
   },
   {
     "code": "GK102",
@@ -680,6 +708,7 @@
     "prerequisite_raw": "GK101",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "54",
     "factor": 1.6,
     "source_row_count": 1,
@@ -687,13 +716,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 33,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 33
   },
   {
     "code": "PG100",
@@ -704,6 +733,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "100",
     "factor": 1.4,
     "source_row_count": 1,
@@ -711,13 +741,13 @@
     "limitations": "Chưa xác minh cách phân rã/đối chiếu với mã lớp học thực tế (ví dụ PG102, PG118).",
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 34,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 34
   },
   {
     "code": "PG121",
@@ -728,6 +758,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "77LT+16TL+72TH",
     "factor": 1.4,
     "source_row_count": 1,
@@ -735,13 +766,13 @@
     "limitations": "Chưa xác minh cách phân rã/đối chiếu với mã lớp học thực tế (ví dụ PG102, PG118).",
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 35,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 35
   },
   {
     "code": "MA110",
@@ -752,6 +783,7 @@
     "prerequisite_raw": "MA101",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "27LT+36BT",
     "factor": 1.6,
     "source_row_count": 1,
@@ -759,13 +791,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 36,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 36
   },
   {
     "code": "MA111",
@@ -776,6 +808,7 @@
     "prerequisite_raw": "MA110, MA120",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "27LT+36BT",
     "factor": 1.6,
     "source_row_count": 1,
@@ -783,13 +816,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 37,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 37
   },
   {
     "code": "MA120",
@@ -800,6 +833,7 @@
     "prerequisite_raw": "MA101",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "27LT+36BT",
     "factor": 1.6,
     "source_row_count": 1,
@@ -807,13 +841,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 38,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 38
   },
   {
     "code": "MA239",
@@ -824,6 +858,7 @@
     "prerequisite_raw": "MA110",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "45LT+27TH",
     "factor": 1.6,
     "source_row_count": 1,
@@ -831,13 +866,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 39,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 39
   },
   {
     "code": "MI201",
@@ -848,6 +883,7 @@
     "prerequisite_raw": "CS121",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -855,13 +891,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 40,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 40
   },
   {
     "code": "CF213",
@@ -872,6 +908,7 @@
     "prerequisite_raw": "CS121",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "45LT+36TH",
     "factor": 1.8,
     "source_row_count": 1,
@@ -879,13 +916,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 41,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 41
   },
   {
     "code": "CS121",
@@ -896,6 +933,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "27LT+36TH",
     "factor": 1.6,
     "source_row_count": 1,
@@ -903,13 +941,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 42,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 42
   },
   {
     "code": "CS123",
@@ -920,6 +958,7 @@
     "prerequisite_raw": "CS121",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "18LT+24TH",
     "factor": 1.6,
     "source_row_count": 1,
@@ -927,13 +966,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 43,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 43
   },
   {
     "code": "CS122",
@@ -944,6 +983,7 @@
     "prerequisite_raw": "CS121",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "27LT+36TH",
     "factor": 1.6,
     "source_row_count": 1,
@@ -951,13 +991,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 44,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 44
   },
   {
     "code": "CS212",
@@ -968,6 +1008,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -975,13 +1016,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 45,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 45
   },
   {
     "code": "CS315",
@@ -992,6 +1033,7 @@
     "prerequisite_raw": "CS212",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -999,13 +1041,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 46,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 46
   },
   {
     "code": "IS222",
@@ -1016,6 +1058,7 @@
     "prerequisite_raw": "CS100",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 20,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1023,13 +1066,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 47,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 47
   },
   {
     "code": "NW212",
@@ -1040,6 +1083,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 20,
+    "image_page": null,
     "hours": "18LT+24BT",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1047,13 +1091,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 48,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 48
   },
   {
     "code": "IS322",
@@ -1064,6 +1108,7 @@
     "prerequisite_raw": "IS222",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1071,13 +1116,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 49,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 49
   },
   {
     "code": "IS332",
@@ -1088,6 +1133,7 @@
     "prerequisite_raw": "IS222",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1095,13 +1141,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 50,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 50
   },
   {
     "code": "SE302",
@@ -1112,6 +1158,7 @@
     "prerequisite_raw": "IS222",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "18LT+24BT",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1119,13 +1166,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 51,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 51
   },
   {
     "code": "SE422",
@@ -1136,6 +1183,7 @@
     "prerequisite_raw": "IS222",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1143,13 +1191,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 52,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 52
   },
   {
     "code": "SE312",
@@ -1160,6 +1208,7 @@
     "prerequisite_raw": "CS121",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1167,13 +1216,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 53,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 53
   },
   {
     "code": "AI130",
@@ -1184,6 +1233,7 @@
     "prerequisite_raw": "CS100",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 2.5,
     "source_row_count": 1,
@@ -1191,13 +1241,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 54,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 54
   },
   {
     "code": "IS326",
@@ -1208,6 +1258,7 @@
     "prerequisite_raw": "IS224",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.8,
     "source_row_count": 1,
@@ -1215,13 +1266,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 55,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 55
   },
   {
     "code": "IT333",
@@ -1232,6 +1283,7 @@
     "prerequisite_raw": "CS122",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.8,
     "source_row_count": 1,
@@ -1239,13 +1291,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 56,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 56
   },
   {
     "code": "IS224",
@@ -1256,6 +1308,7 @@
     "prerequisite_raw": "CS100",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1263,13 +1316,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 57,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 57
   },
   {
     "code": "CS318",
@@ -1280,6 +1333,7 @@
     "prerequisite_raw": "CS122",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.8,
     "source_row_count": 1,
@@ -1287,13 +1341,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 58,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 58
   },
   {
     "code": "CS223",
@@ -1304,6 +1358,7 @@
     "prerequisite_raw": "CS122",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1311,13 +1366,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 59,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 59
   },
   {
     "code": "CS224",
@@ -1328,6 +1383,7 @@
     "prerequisite_raw": "IS222",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1335,13 +1391,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 60,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 60
   },
   {
     "code": "IT334",
@@ -1352,6 +1408,7 @@
     "prerequisite_raw": "CS121",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.8,
     "source_row_count": 2,
@@ -1359,13 +1416,13 @@
     "limitations": "DUPLICATE_IN_SOURCE: IT334 xuất hiện hai lần trong lựa chọn ngành; chỉ giữ một mã ở bảng chuẩn hóa.",
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 61,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 61
   },
   {
     "code": "IS345",
@@ -1376,6 +1433,7 @@
     "prerequisite_raw": "CS122",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1383,13 +1441,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 62,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 62
   },
   {
     "code": "CF231",
@@ -1400,6 +1458,7 @@
     "prerequisite_raw": "MA239",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "18LT+24BT",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1407,13 +1466,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 63,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 63
   },
   {
     "code": "IS430",
@@ -1424,6 +1483,7 @@
     "prerequisite_raw": "CF231",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.8,
     "source_row_count": 1,
@@ -1431,13 +1491,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 64,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 64
   },
   {
     "code": "MI312",
@@ -1448,6 +1508,7 @@
     "prerequisite_raw": "MA120",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "18LT+24TH",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1455,13 +1516,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 65,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 65
   },
   {
     "code": "IT335",
@@ -1472,6 +1533,7 @@
     "prerequisite_raw": "IT333",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.8,
     "source_row_count": 1,
@@ -1479,13 +1541,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 66,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 66
   },
   {
     "code": "CS323",
@@ -1496,6 +1558,7 @@
     "prerequisite_raw": "IS222",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1503,13 +1566,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 67,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 67
   },
   {
     "code": "IT320",
@@ -1520,6 +1583,7 @@
     "prerequisite_raw": "CS122",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1527,13 +1591,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 68,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 68
   },
   {
     "code": "CS320",
@@ -1544,6 +1608,7 @@
     "prerequisite_raw": "MA239",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "36LT+18TH",
     "factor": 1.8,
     "source_row_count": 1,
@@ -1551,13 +1616,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 69,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 69
   },
   {
     "code": "CS321",
@@ -1568,6 +1633,7 @@
     "prerequisite_raw": "IS222",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "18LT+24TH",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1575,13 +1641,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 70,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 70
   },
   {
     "code": "IS324",
@@ -1592,6 +1658,7 @@
     "prerequisite_raw": "IS222",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1599,13 +1666,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 71,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 71
   },
   {
     "code": "IS325",
@@ -1616,6 +1683,7 @@
     "prerequisite_raw": "IS222",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "18LT+24BT",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1623,13 +1691,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 72,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 72
   },
   {
     "code": "IS327",
@@ -1640,6 +1708,7 @@
     "prerequisite_raw": "IS222",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1647,13 +1716,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 73,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 73
   },
   {
     "code": "IS330",
@@ -1664,6 +1733,7 @@
     "prerequisite_raw": "IS224",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "18LT+24TH",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1671,13 +1741,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 74,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 74
   },
   {
     "code": "CS425",
@@ -1688,6 +1758,7 @@
     "prerequisite_raw": "CS122",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "18LT+24BT",
     "factor": 1.8,
     "source_row_count": 1,
@@ -1695,13 +1766,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 75,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 75
   },
   {
     "code": "CS325",
@@ -1712,6 +1783,7 @@
     "prerequisite_raw": "IS222",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1719,13 +1791,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 76,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 76
   },
   {
     "code": "CF214",
@@ -1736,6 +1808,7 @@
     "prerequisite_raw": "CS121",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "27LT+36TH",
     "factor": 1.8,
     "source_row_count": 1,
@@ -1743,13 +1816,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 77,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 77
   },
   {
     "code": "NW312",
@@ -1760,6 +1833,7 @@
     "prerequisite_raw": "NW212",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "27LT+36TH",
     "factor": 1.8,
     "source_row_count": 1,
@@ -1767,13 +1841,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 78,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 78
   },
   {
     "code": "NW332",
@@ -1784,6 +1858,7 @@
     "prerequisite_raw": "NW212",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1791,13 +1866,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 79,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 79
   },
   {
     "code": "IS314",
@@ -1808,6 +1883,7 @@
     "prerequisite_raw": "IS222",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1815,13 +1891,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 80,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 80
   },
   {
     "code": "IS347",
@@ -1832,6 +1908,7 @@
     "prerequisite_raw": "CS122",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1839,13 +1916,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 81,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 81
   },
   {
     "code": "IS348",
@@ -1856,6 +1933,7 @@
     "prerequisite_raw": "IS345",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1863,13 +1941,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 82,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 82
   },
   {
     "code": "IS349",
@@ -1880,6 +1958,7 @@
     "prerequisite_raw": "IS345",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1887,13 +1966,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 83,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 83
   },
   {
     "code": "IP406",
@@ -1904,6 +1983,7 @@
     "prerequisite_raw": "CS122",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "90TH",
     "factor": 1.8,
     "source_row_count": 1,
@@ -1911,13 +1991,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 84,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 84
   },
   {
     "code": "IT499",
@@ -1928,6 +2008,7 @@
     "prerequisite_raw": "100 tín chỉ, IP406≥4,0, TBTL≥7,0",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "30LT+120TH",
     "factor": 3.5,
     "source_row_count": 1,
@@ -1935,13 +2016,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 85,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 85
   },
   {
     "code": "IT486",
@@ -1952,6 +2033,7 @@
     "prerequisite_raw": "90 tín chỉ",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 21,
+    "image_page": null,
     "hours": "30LT+120TH",
     "factor": 3.5,
     "source_row_count": 1,
@@ -1959,13 +2041,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 86,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 86
   },
   {
     "code": "AD205",
@@ -1976,6 +2058,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 49,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -1983,13 +2066,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 87,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 87
   },
   {
     "code": "AD206",
@@ -2000,6 +2083,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 49,
+    "image_page": null,
     "hours": "30LT+30TH",
     "factor": 1.8,
     "source_row_count": 1,
@@ -2007,13 +2091,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 88,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 88
   },
   {
     "code": "AD207",
@@ -2024,6 +2108,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 49,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -2031,13 +2116,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 89,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 89
   },
   {
     "code": "AD212",
@@ -2048,6 +2133,7 @@
     "prerequisite_raw": "36 tín chỉ",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 49,
+    "image_page": null,
     "hours": "45",
     "factor": 1.4,
     "source_row_count": 1,
@@ -2055,13 +2141,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 90,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 90
   },
   {
     "code": "AD215",
@@ -2072,6 +2158,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 49,
+    "image_page": null,
     "hours": "45",
     "factor": 1.6,
     "source_row_count": 1,
@@ -2079,13 +2166,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 91,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 91
   },
   {
     "code": "AD216",
@@ -2096,6 +2183,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 49,
+    "image_page": null,
     "hours": "45",
     "factor": 1.4,
     "source_row_count": 1,
@@ -2103,13 +2191,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 92,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 92
   },
   {
     "code": "AD218",
@@ -2120,6 +2208,7 @@
     "prerequisite_raw": "36 tín chỉ",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 49,
+    "image_page": null,
     "hours": "60",
     "factor": 1.6,
     "source_row_count": 1,
@@ -2127,13 +2216,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 93,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 93
   },
   {
     "code": "AD219",
@@ -2144,6 +2233,7 @@
     "prerequisite_raw": "AD213",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 49,
+    "image_page": null,
     "hours": "60",
     "factor": 1.8,
     "source_row_count": 1,
@@ -2151,13 +2241,13 @@
     "limitations": "Mã tiên quyết AD213 được ghi trong nguồn nhưng chưa có bản ghi/đề cương xác minh AD213.",
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 94,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 94
   },
   {
     "code": "AD240",
@@ -2168,6 +2258,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 49,
+    "image_page": null,
     "hours": "30LT+30TH",
     "factor": 2,
     "source_row_count": 1,
@@ -2175,13 +2266,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 95,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 95
   },
   {
     "code": "AD241",
@@ -2192,6 +2283,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 49,
+    "image_page": null,
     "hours": "30LT+30TH",
     "factor": 1.8,
     "source_row_count": 1,
@@ -2199,13 +2291,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 96,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 96
   },
   {
     "code": "AD242",
@@ -2216,6 +2308,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 49,
+    "image_page": null,
     "hours": "30LT+30TH",
     "factor": 2,
     "source_row_count": 1,
@@ -2223,13 +2316,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 97,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 97
   },
   {
     "code": "AD243",
@@ -2240,6 +2333,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 49,
+    "image_page": null,
     "hours": "30LT+30TH",
     "factor": 2,
     "source_row_count": 1,
@@ -2247,13 +2341,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 98,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 98
   },
   {
     "code": "AD250",
@@ -2264,6 +2358,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 49,
+    "image_page": null,
     "hours": "45",
     "factor": 1.5,
     "source_row_count": 1,
@@ -2271,13 +2366,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 99,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 99
   },
   {
     "code": "AD312",
@@ -2288,6 +2383,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 49,
+    "image_page": null,
     "hours": "60",
     "factor": 1.5,
     "source_row_count": 1,
@@ -2295,13 +2391,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 100,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 100
   },
   {
     "code": "AD313",
@@ -2312,6 +2408,7 @@
     "prerequisite_raw": "AD312",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 49,
+    "image_page": null,
     "hours": "60",
     "factor": 1.5,
     "source_row_count": 1,
@@ -2319,13 +2416,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 101,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 101
   },
   {
     "code": "AD314",
@@ -2336,6 +2433,7 @@
     "prerequisite_raw": null,
     "prerequisite_status": "SOURCE_BLANK",
     "page": 49,
+    "image_page": null,
     "hours": "60",
     "factor": 1.5,
     "source_row_count": 1,
@@ -2343,13 +2441,13 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 102,
-    "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "workbook_row": 102
   },
   {
     "code": "AD315",
@@ -2360,6 +2458,7 @@
     "prerequisite_raw": "AD314",
     "prerequisite_status": "VERIFIED_TRANSCRIPTION",
     "page": 49,
+    "image_page": null,
     "hours": "60",
     "factor": 1.5,
     "source_row_count": 1,
@@ -2367,12 +2466,2678 @@
     "limitations": null,
     "source_id": "S01",
     "cohort": "K37",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-2024",
     "version": "24081902/2024",
     "verification": "VERIFIED_TRANSCRIPTION",
     "current_amendments_verified": false,
     "workbook_sheet": "Hoc phan",
-    "workbook_row": 103,
+    "workbook_row": 103
+  },
+  {
+    "code": "ML113",
+    "name": "Triết học Mác - Lênin",
+    "credits": 3,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "45",
+    "factor": 1,
+    "source_row_count": 1,
+    "source_rows": "K36-R001",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
     "program_id": "CNTT",
-    "curriculum_id": "CNTT-2024"
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 104
+  },
+  {
+    "code": "ML114",
+    "name": "Kinh tế chính trị Mác - Lênin",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "ML113",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "30",
+    "factor": 1,
+    "source_row_count": 1,
+    "source_rows": "K36-R002",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 105,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C001"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "ML115",
+    "name": "Chủ nghĩa xã hội khoa học",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "ML114",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "30",
+    "factor": 1,
+    "source_row_count": 1,
+    "source_rows": "K36-R003",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 106,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C002"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "ML202",
+    "name": "Tư tưởng Hồ Chí Minh",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "ML114",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "30",
+    "factor": 1,
+    "source_row_count": 1,
+    "source_rows": "K36-R004",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 107,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C003"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "ML204",
+    "name": "Lịch sử Đảng Cộng sản Việt Nam",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "ML114",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "30",
+    "factor": 1,
+    "source_row_count": 1,
+    "source_rows": "K36-R005",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 108,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C004"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "CS102",
+    "name": "Công dân số",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "30",
+    "factor": 1.3,
+    "source_row_count": 1,
+    "source_rows": "K36-R006",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 109
+  },
+  {
+    "code": "MA101",
+    "name": "Logic, suy luận toán học và kỹ thuật đếm",
+    "credits": 3,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "27LT+36BT",
+    "factor": 1.5,
+    "source_row_count": 1,
+    "source_rows": "K36-R007",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 110
+  },
+  {
+    "code": "CS100",
+    "name": "Tin đại cương",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "18LT+24TH",
+    "factor": 1.5,
+    "source_row_count": 1,
+    "source_rows": "K36-R008",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 111
+  },
+  {
+    "code": "NA151",
+    "name": "Khoa học môi trường",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "30",
+    "factor": 1,
+    "source_row_count": 1,
+    "source_rows": "K36-R009",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 112
+  },
+  {
+    "code": "EC102",
+    "name": "Nhập môn kinh tế học",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "30",
+    "factor": 1.3,
+    "source_row_count": 1,
+    "source_rows": "K36-R010",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 113
+  },
+  {
+    "code": "VL101",
+    "name": "Tiếng Việt thực hành",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "30",
+    "factor": 1.2,
+    "source_row_count": 1,
+    "source_rows": "K36-R011",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 114
+  },
+  {
+    "code": "SH131",
+    "name": "Pháp luật đại cương",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "30",
+    "factor": 1.2,
+    "source_row_count": 1,
+    "source_rows": "K36-R012",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 115
+  },
+  {
+    "code": "GE111",
+    "name": "Tiếng Anh sơ cấp 1",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R013",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 116
+  },
+  {
+    "code": "GE112",
+    "name": "Tiếng Anh sơ cấp 2",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "GE111",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R014",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 117,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C005"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "GE121",
+    "name": "Tiếng Anh sơ trung cấp 1",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "GE112, GE111≥4",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R015",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 118,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C006"
+            }
+          ]
+        },
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C007"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "GE222",
+    "name": "Tiếng Anh sơ trung cấp 2",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "GE121, GE112≥4",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R016",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 119,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C008"
+            }
+          ]
+        },
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C009"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "GE231",
+    "name": "Tiếng Anh trung cấp 1",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "GE222, GE121≥4",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R017",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 120,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C010"
+            }
+          ]
+        },
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C011"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "GE232",
+    "name": "Tiếng Anh trung cấp 2",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "GE231, GE222≥4",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R018",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 121,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C012"
+            }
+          ]
+        },
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C013"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "GE333",
+    "name": "Tiếng Anh trung cấp 3",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "GE232, GE231≥4",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R019",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 122,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C014"
+            }
+          ]
+        },
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C015"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "GF101",
+    "name": "Tiếng Pháp 1",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chọn một cặp ngoại ngữ 1+2 trong Pháp/Nhật/Trung/Ý/Hàn theo chú thích trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R020",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 123
+  },
+  {
+    "code": "GF102",
+    "name": "Tiếng Pháp 2",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chọn một cặp ngoại ngữ 1+2 trong Pháp/Nhật/Trung/Ý/Hàn theo chú thích trang 48",
+    "prerequisite_raw": "GF101",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R021",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 124,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C016"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "GJ101",
+    "name": "Tiếng Nhật 1",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chọn một cặp ngoại ngữ 1+2 trong Pháp/Nhật/Trung/Ý/Hàn theo chú thích trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R022",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 125
+  },
+  {
+    "code": "GJ102",
+    "name": "Tiếng Nhật 2",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chọn một cặp ngoại ngữ 1+2 trong Pháp/Nhật/Trung/Ý/Hàn theo chú thích trang 48",
+    "prerequisite_raw": "GJ101",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R023",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 126,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C017"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "GZ101",
+    "name": "Tiếng Trung 1",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chọn một cặp ngoại ngữ 1+2 trong Pháp/Nhật/Trung/Ý/Hàn theo chú thích trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R024",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 127
+  },
+  {
+    "code": "GZ102",
+    "name": "Tiếng Trung 2",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chọn một cặp ngoại ngữ 1+2 trong Pháp/Nhật/Trung/Ý/Hàn theo chú thích trang 48",
+    "prerequisite_raw": "GZ101",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R025",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 128,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C018"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "GI101",
+    "name": "Tiếng Ý 1",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chọn một cặp ngoại ngữ 1+2 trong Pháp/Nhật/Trung/Ý/Hàn theo chú thích trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 0.75,
+    "source_row_count": 1,
+    "source_rows": "K36-R026",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 129
+  },
+  {
+    "code": "GI102",
+    "name": "Tiếng Ý 2",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chọn một cặp ngoại ngữ 1+2 trong Pháp/Nhật/Trung/Ý/Hàn theo chú thích trang 48",
+    "prerequisite_raw": "GI101",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 0.75,
+    "source_row_count": 1,
+    "source_rows": "K36-R027",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 130,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C019"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "GK101",
+    "name": "Tiếng Hàn 1",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chọn một cặp ngoại ngữ 1+2 trong Pháp/Nhật/Trung/Ý/Hàn theo chú thích trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R028",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 131
+  },
+  {
+    "code": "GK102",
+    "name": "Tiếng Hàn 2",
+    "credits": 2,
+    "group": "Đại cương",
+    "selection_rule": "Chọn một cặp ngoại ngữ 1+2 trong Pháp/Nhật/Trung/Ý/Hàn theo chú thích trang 48",
+    "prerequisite_raw": "GK101",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "54",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R029",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 132,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C020"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "PG100",
+    "name": "Giáo dục thể chất",
+    "credits": 4,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "100",
+    "factor": 1.4,
+    "source_row_count": 1,
+    "source_rows": "K36-R030",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 133
+  },
+  {
+    "code": "PG121",
+    "name": "Giáo dục quốc phòng",
+    "credits": 4,
+    "group": "Đại cương",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "36LT+60TH",
+    "factor": 1.4,
+    "source_row_count": 1,
+    "source_rows": "K36-R031",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 134
+  },
+  {
+    "code": "MA110",
+    "name": "Giải tích 1",
+    "credits": 3,
+    "group": "Cơ sở khối ngành",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "MA120",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "27LT+36BT",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R032",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 135,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C021"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "MA111",
+    "name": "Giải tích 2",
+    "credits": 3,
+    "group": "Cơ sở khối ngành",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "MA110",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "27LT+36BT",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R033",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 136,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C022"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "MA120",
+    "name": "Đại số tuyến tính",
+    "credits": 3,
+    "group": "Cơ sở khối ngành",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "MA101",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "27LT+36BT",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R034",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 137,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C023"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "MA239",
+    "name": "Xác suất thống kê",
+    "credits": 4,
+    "group": "Cơ sở khối ngành",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "MA120",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "45LT+27TH",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R035",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 138,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C024"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "MI201",
+    "name": "Toán rời rạc",
+    "credits": 3,
+    "group": "Cơ sở khối ngành",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "CS122",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R036",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 139,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C025"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "CF213",
+    "name": "Cấu trúc dữ liệu và giải thuật",
+    "credits": 4,
+    "group": "Cơ sở khối ngành",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "CS122",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "45LT+36TH",
+    "factor": 1.8,
+    "source_row_count": 1,
+    "source_rows": "K36-R037",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 140,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C026"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "CS110",
+    "name": "Kỹ thuật số",
+    "credits": 2,
+    "group": "Cơ sở khối ngành",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "MA101",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "18LT+24BT",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R038",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 141,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C027"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "CS121",
+    "name": "Ngôn ngữ lập trình",
+    "credits": 3,
+    "group": "Cơ sở khối ngành",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "CS100",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "27LT+36TH",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R039",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 142,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C028"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "CS122",
+    "name": "Lập trình hướng đối tượng",
+    "credits": 3,
+    "group": "Cơ sở khối ngành",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": "CS121",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "48",
+    "hours": "27LT+36TH",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R040",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 143,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C029"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "CS212",
+    "name": "Kiến trúc máy tính",
+    "credits": 3,
+    "group": "Cơ sở khối ngành",
+    "selection_rule": "Chưa ghi quy tắc lựa chọn riêng trên trang 48",
+    "prerequisite_raw": null,
+    "prerequisite_status": "SOURCE_BLANK",
+    "page": null,
+    "image_page": "48",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R041",
+    "limitations": "Ô trống trong nguồn; không khẳng định không có tiên quyết. K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 144
+  },
+  {
+    "code": "CS315",
+    "name": "Nguyên lý hệ điều hành",
+    "credits": 3,
+    "group": "Cơ sở khối ngành",
+    "selection_rule": "Theo mục 2.1 của khung",
+    "prerequisite_raw": "CS100",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R042",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 145,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C030"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IS222",
+    "name": "Cơ sở dữ liệu",
+    "credits": 3,
+    "group": "Cơ sở khối ngành",
+    "selection_rule": "Theo mục 2.1 của khung",
+    "prerequisite_raw": "CS100",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R043",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 146,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C031"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "NW212",
+    "name": "Mạng máy tính",
+    "credits": 2,
+    "group": "Cơ sở khối ngành",
+    "selection_rule": "Theo mục 2.1 của khung",
+    "prerequisite_raw": "CS212",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "18LT+24BT",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R044",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 147,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C032"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "CF231",
+    "name": "Lý thuyết thông tin và mã hóa",
+    "credits": 2,
+    "group": "Bắt buộc ngành",
+    "selection_rule": "Bắt buộc theo mục 2.2",
+    "prerequisite_raw": "MA231 hoặc MA239 hoặc MA230",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "18LT+24BT",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R045",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc. Mã tham chiếu chưa có bản ghi: MA231, MA230",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 148,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "any",
+          "children": [
+            {
+              "condition": "K36-C033"
+            },
+            {
+              "condition": "K36-C034"
+            },
+            {
+              "condition": "K36-C035"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IS314",
+    "name": "Hệ thống thông tin",
+    "credits": 3,
+    "group": "Bắt buộc ngành",
+    "selection_rule": "Bắt buộc theo mục 2.2",
+    "prerequisite_raw": "IS222",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R046",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 149,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C036"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IS322",
+    "name": "Hệ quản trị cơ sở dữ liệu",
+    "credits": 3,
+    "group": "Bắt buộc ngành",
+    "selection_rule": "Bắt buộc theo mục 2.2",
+    "prerequisite_raw": "IS222",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R047",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 150,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C037"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IS330",
+    "name": "Dữ liệu lớn",
+    "credits": 2,
+    "group": "Bắt buộc ngành",
+    "selection_rule": "Bắt buộc theo mục 2.2",
+    "prerequisite_raw": "IS222 hoặc IS223",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "18LT+24TH",
+    "factor": 1.8,
+    "source_row_count": 1,
+    "source_rows": "K36-R048",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc. Mã tham chiếu chưa có bản ghi: IS223",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 151,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "any",
+          "children": [
+            {
+              "condition": "K36-C038"
+            },
+            {
+              "condition": "K36-C039"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IS332",
+    "name": "Phân tích thiết kế hướng đối tượng",
+    "credits": 3,
+    "group": "Bắt buộc ngành",
+    "selection_rule": "Bắt buộc theo mục 2.2",
+    "prerequisite_raw": "CS122, IS222",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R049",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 152,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C040"
+            }
+          ]
+        },
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C041"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IS334",
+    "name": "Quản lý dự án hệ thống thông tin",
+    "credits": 3,
+    "group": "Bắt buộc ngành",
+    "selection_rule": "Bắt buộc theo mục 2.2",
+    "prerequisite_raw": "SE302",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R050",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 153,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C042"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "SE302",
+    "name": "Công nghệ phần mềm",
+    "credits": 2,
+    "group": "Bắt buộc ngành",
+    "selection_rule": "Bắt buộc theo mục 2.2",
+    "prerequisite_raw": "IS332",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "18LT+24BT",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R051",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 154,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C043"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "CS318",
+    "name": "Lập trình ứng dụng di động",
+    "credits": 3,
+    "group": "Bắt buộc ngành",
+    "selection_rule": "Bắt buộc theo mục 2.2",
+    "prerequisite_raw": "CS122",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.8,
+    "source_row_count": 1,
+    "source_rows": "K36-R052",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 155,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C044"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IS430",
+    "name": "Công nghệ blockchain",
+    "credits": 3,
+    "group": "Bắt buộc ngành",
+    "selection_rule": "Bắt buộc theo mục 2.2",
+    "prerequisite_raw": "CF213, CF231",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.8,
+    "source_row_count": 1,
+    "source_rows": "K36-R053",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 156,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C045"
+            }
+          ]
+        },
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C046"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "MI322",
+    "name": "Trí tuệ nhân tạo và công nghệ tri thức",
+    "credits": 3,
+    "group": "Bắt buộc ngành",
+    "selection_rule": "Bắt buộc theo mục 2.2",
+    "prerequisite_raw": "MI201, CF213",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R054",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 157,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C047"
+            }
+          ]
+        },
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C048"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IT334",
+    "name": "Internet of Things",
+    "credits": 3,
+    "group": "Bắt buộc ngành",
+    "selection_rule": "Bắt buộc theo mục 2.2",
+    "prerequisite_raw": "CS122, CS212",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.8,
+    "source_row_count": 1,
+    "source_rows": "K36-R055",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 158,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C049"
+            }
+          ]
+        },
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C050"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IT333",
+    "name": "Công nghệ Web",
+    "credits": 3,
+    "group": "Bắt buộc ngành",
+    "selection_rule": "Bắt buộc theo mục 2.2",
+    "prerequisite_raw": "CS122",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.8,
+    "source_row_count": 1,
+    "source_rows": "K36-R056",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 159,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C051"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IT380",
+    "name": "Dự án Công nghệ thông tin",
+    "credits": 2,
+    "group": "Bắt buộc ngành",
+    "selection_rule": "Bắt buộc theo mục 2.2",
+    "prerequisite_raw": "IS314",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "18LT+24TH",
+    "factor": 1.8,
+    "source_row_count": 1,
+    "source_rows": "K36-R057",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 160,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C052"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IS326",
+    "name": "Khai phá dữ liệu",
+    "credits": 3,
+    "group": "Lựa chọn ngành",
+    "selection_rule": "Chọn ≥8 tín chỉ trong danh mục mục 2.3",
+    "prerequisite_raw": "IS322 hoặc IS222",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.8,
+    "source_row_count": 1,
+    "source_rows": "K36-R058",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 161,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "any",
+          "children": [
+            {
+              "condition": "K36-C053"
+            },
+            {
+              "condition": "K36-C054"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "CS223",
+    "name": "Lập trình Java",
+    "credits": 3,
+    "group": "Lựa chọn ngành",
+    "selection_rule": "Chọn ≥8 tín chỉ trong danh mục mục 2.3",
+    "prerequisite_raw": "CS122",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R059",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 162,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C055"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "CS224",
+    "name": "Lập trình .Net",
+    "credits": 3,
+    "group": "Lựa chọn ngành",
+    "selection_rule": "Chọn ≥8 tín chỉ trong danh mục mục 2.3",
+    "prerequisite_raw": "IS222",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R060",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 163,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C056"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "CS320",
+    "name": "Học máy",
+    "credits": 3,
+    "group": "Lựa chọn ngành",
+    "selection_rule": "Chọn ≥8 tín chỉ trong danh mục mục 2.3",
+    "prerequisite_raw": "MA231 hoặc MA230 hoặc MA239, MI322 hoặc AI130",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "36LT+18TH",
+    "factor": 1.8,
+    "source_row_count": 1,
+    "source_rows": "K36-R061",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc. Mã tham chiếu chưa có bản ghi: MA231, MA230, AI130",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 164,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "any",
+          "children": [
+            {
+              "condition": "K36-C057"
+            },
+            {
+              "condition": "K36-C058"
+            },
+            {
+              "condition": "K36-C059"
+            }
+          ]
+        },
+        {
+          "op": "any",
+          "children": [
+            {
+              "condition": "K36-C060"
+            },
+            {
+              "condition": "K36-C061"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "CS323",
+    "name": "Lập trình JavaScript",
+    "credits": 3,
+    "group": "Lựa chọn ngành",
+    "selection_rule": "Chọn ≥8 tín chỉ trong danh mục mục 2.3",
+    "prerequisite_raw": "IS222",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R062",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 165,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C062"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IT320",
+    "name": "Phát triển ứng dụng với Python",
+    "credits": 3,
+    "group": "Lựa chọn ngành",
+    "selection_rule": "Chọn ≥8 tín chỉ trong danh mục mục 2.3",
+    "prerequisite_raw": "CS122≥4, 45 tín chỉ",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R063",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 166,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C063"
+            }
+          ]
+        },
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C064"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IS324",
+    "name": "Phân tích dữ liệu",
+    "credits": 3,
+    "group": "Lựa chọn ngành",
+    "selection_rule": "Chọn ≥8 tín chỉ trong danh mục mục 2.3",
+    "prerequisite_raw": "IS322",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R064",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 167,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C065"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IS345",
+    "name": "An toàn thông tin",
+    "credits": 3,
+    "group": "Lựa chọn ngành",
+    "selection_rule": "Chọn ≥8 tín chỉ trong danh mục mục 2.3",
+    "prerequisite_raw": "CF231 hoặc CF212 hoặc NW212 hoặc CF213",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R065",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc. Mã tham chiếu chưa có bản ghi: CF212",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 168,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "any",
+          "children": [
+            {
+              "condition": "K36-C066"
+            },
+            {
+              "condition": "K36-C067"
+            },
+            {
+              "condition": "K36-C068"
+            },
+            {
+              "condition": "K36-C069"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IT335",
+    "name": "Công nghệ web nâng cao",
+    "credits": 3,
+    "group": "Lựa chọn ngành",
+    "selection_rule": "Chọn ≥8 tín chỉ trong danh mục mục 2.3",
+    "prerequisite_raw": "IT333",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.8,
+    "source_row_count": 1,
+    "source_rows": "K36-R066",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 169,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C070"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "SE312",
+    "name": "Kiểm thử và đảm bảo chất lượng phần mềm",
+    "credits": 3,
+    "group": "Lựa chọn ngành",
+    "selection_rule": "Chọn ≥8 tín chỉ trong danh mục mục 2.3",
+    "prerequisite_raw": "SE302",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "45",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R067",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 170,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C071"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "MA238",
+    "name": "Thống kê nâng cao",
+    "credits": 3,
+    "group": "Lựa chọn ngành",
+    "selection_rule": "Chọn ≥8 tín chỉ trong danh mục mục 2.3",
+    "prerequisite_raw": "MA231 hoặc MA234 hoặc MA239",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "27LT+36TH",
+    "factor": 1.8,
+    "source_row_count": 1,
+    "source_rows": "K36-R068",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc. Mã tham chiếu chưa có bản ghi: MA231, MA234",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 171,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "any",
+          "children": [
+            {
+              "condition": "K36-C072"
+            },
+            {
+              "condition": "K36-C073"
+            },
+            {
+              "condition": "K36-C074"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "MI312",
+    "name": "Đồ họa",
+    "credits": 2,
+    "group": "Lựa chọn ngành",
+    "selection_rule": "Chọn ≥8 tín chỉ trong danh mục mục 2.3",
+    "prerequisite_raw": "CS122, MA120",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "18LT+24TH",
+    "factor": 1.6,
+    "source_row_count": 1,
+    "source_rows": "K36-R069",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 172,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C075"
+            }
+          ]
+        },
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C076"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IP406",
+    "name": "TTTN ngành Công nghệ thông tin",
+    "credits": 3,
+    "group": "Tốt nghiệp",
+    "selection_rule": "IT486 thay KLTN nếu sinh viên không làm KLTN; IP406 và IT499 thuộc mục 2.4",
+    "prerequisite_raw": "100 tín chỉ",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "90TH",
+    "factor": 1.8,
+    "source_row_count": 1,
+    "source_rows": "K36-R070",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 173,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C077"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IT499",
+    "name": "KLTN ngành Công nghệ thông tin",
+    "credits": 6,
+    "group": "Tốt nghiệp",
+    "selection_rule": "IT486 thay KLTN nếu sinh viên không làm KLTN; IP406 và IT499 thuộc mục 2.4",
+    "prerequisite_raw": "120 tín chỉ, IP406 hoặc IP404, TBTL≥7.0",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "30LT+120TH",
+    "factor": 3.5,
+    "source_row_count": 1,
+    "source_rows": "K36-R071",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc. Mã tham chiếu chưa có bản ghi: IP404",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 174,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C078"
+            }
+          ]
+        },
+        {
+          "op": "any",
+          "children": [
+            {
+              "condition": "K36-C079"
+            },
+            {
+              "condition": "K36-C080"
+            }
+          ]
+        },
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C081"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "code": "IT486",
+    "name": "CĐTN ngành Công nghệ thông tin",
+    "credits": 6,
+    "group": "Tốt nghiệp",
+    "selection_rule": "IT486 thay KLTN nếu sinh viên không làm KLTN; IP406 và IT499 thuộc mục 2.4",
+    "prerequisite_raw": "110 tín chỉ",
+    "prerequisite_status": "VERIFIED_TRANSCRIPTION",
+    "page": null,
+    "image_page": "49",
+    "hours": "30LT+120TH",
+    "factor": 3,
+    "source_row_count": 1,
+    "source_rows": "K36-R072",
+    "limitations": "K36 theo người dùng; ảnh chưa đối chiếu QĐ gốc.",
+    "source_id": "S26",
+    "cohort": "K36",
+    "program_id": "CNTT",
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "verification": "IMAGE_TRANSCRIPTION_UNMATCHED",
+    "current_amendments_verified": false,
+    "workbook_sheet": "Hoc phan",
+    "workbook_row": 175,
+    "rule": {
+      "op": "all",
+      "children": [
+        {
+          "op": "all",
+          "children": [
+            {
+              "condition": "K36-C082"
+            }
+          ]
+        }
+      ]
+    }
   }
 ]

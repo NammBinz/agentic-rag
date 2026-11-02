@@ -87,7 +87,7 @@ class GeminiTests(unittest.TestCase):
     def test_gemini_flask_grounded_output_and_usage(self):
         app = create_app(Settings(provider='gemini'))
         with patch('agentic_rag.provider.urllib.request.urlopen', return_value=self.response()) as send:
-            response = app.test_client().post('/api/chat', json={'question': 'IT320 tên gì, mấy tín chỉ?', 'mode': 'agent'})
+            response = app.test_client().post('/api/chat', json={'cohort': 'K37', 'question': 'IT320 tên gì, mấy tín chỉ?', 'mode': 'agent'})
         self.assertEqual(response.status_code, 200)
         body = response.json
         self.assertEqual(body['status'], 'answered')
@@ -107,7 +107,7 @@ class GeminiTests(unittest.TestCase):
         self.output['claims'][0]['evidence_id'] = 'FAKE-ID'
         app = create_app(Settings(provider='gemini'))
         with patch('agentic_rag.provider.urllib.request.urlopen', return_value=self.response()):
-            body = app.test_client().post('/api/chat', json={'question': 'IT320'}).json
+            body = app.test_client().post('/api/chat', json={'cohort': 'K37', 'question': 'IT320'}).json
         self.assertEqual(body['status'], 'insufficient_data')
         self.assertEqual(body['citations'], [])
         self.assertEqual(body['metrics']['completion_tokens'], 12)
@@ -116,10 +116,10 @@ class GeminiTests(unittest.TestCase):
         client = create_app(Settings(provider='gemini')).test_client()
         with patch('agentic_rag.provider.urllib.request.urlopen') as send:
             for question in ['K38 tra IT320', 'IT320 phiên bản CNTT-2025']:
-                body = client.post('/api/chat', json={'question': question}).json
+                body = client.post('/api/chat', json={'cohort': 'K37', 'question': question}).json
                 self.assertEqual(body['status'], 'out_of_scope')
                 self.assertEqual(body['metrics']['retrieval_rounds'], 0)
-            for path in ['/api/catalog?dataset=sample', '/api/catalog?cohort=K38']:
+            for path in ['/api/catalog?dataset=sample&cohort=K37', '/api/catalog?cohort=K40']:
                 self.assertEqual(client.get(path).status_code, 400)
             send.assert_not_called()
 
@@ -127,7 +127,7 @@ class GeminiTests(unittest.TestCase):
         client = create_app(Settings(provider='gemini')).test_client()
         error = urllib.error.HTTPError('https://generativelanguage.googleapis.com/', 429, 'test-google-key', {}, io.BytesIO(b'test-google-key'))
         with patch('agentic_rag.provider.urllib.request.urlopen', side_effect=error),                 patch('agentic_rag.provider.time.sleep'):
-            response = client.post('/api/chat', json={'question': 'IT320'})
+            response = client.post('/api/chat', json={'cohort': 'K37', 'question': 'IT320'})
         self.assertEqual(response.status_code, 502)
         self.assertEqual(response.json['code'], 'provider_error')
         self.assertIn('429', response.json['error'])
@@ -199,5 +199,5 @@ class RetryTests(unittest.TestCase):
     def test_engine_metrics_count_retries(self):
         app = create_app(Settings(provider='gemini'))
         with patch('agentic_rag.provider.urllib.request.urlopen', side_effect=[self.http(503), self.body()]):
-            body = app.test_client().post('/api/chat', json={'question': 'IT320 tên gì?', 'mode': 'rag'}).json
+            body = app.test_client().post('/api/chat', json={'cohort': 'K37', 'question': 'IT320 tên gì?', 'mode': 'rag'}).json
         self.assertEqual(body['metrics']['api_retries'], 1)

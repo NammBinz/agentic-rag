@@ -7,6 +7,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SUPPORTED_COHORTS = ('K35', 'K36', 'K37', 'K38', 'K39')
+# A provisional snapshot (e.g. K36 from user-supplied images) is usable but always carries its caveat.
+SNAPSHOT_STATUS = {'VERIFIED_SNAPSHOT': 'verified_snapshot', 'PROVISIONAL_SNAPSHOT': 'provisional_snapshot'}
+USABLE = set(SNAPSHOT_STATUS.values())
 
 
 def normalize(text):
@@ -83,11 +86,14 @@ class Catalog:
         if self.cohort not in SUPPORTED_COHORTS:
             return {**context, 'status': 'out_of_scope', 'message': 'Prototype hiện hỗ trợ lựa chọn K35–K39 ngành CNTT.'}
         candidates = [b for b in self.bindings if b.get('cohort') == self.cohort and b.get('program_id') == 'CNTT'
-                      and b.get('status') == 'VERIFIED_SNAPSHOT' and self._active(b)]
+                      and b.get('status') in SNAPSHOT_STATUS and self._active(b)]
         if len(candidates) != 1:
+            known = next((b for b in self.bindings if b.get('cohort') == self.cohort and b.get('program_id') == 'CNTT'), {})
             return {**context, 'status': 'ambiguous' if candidates else 'insufficient_data',
+                    'frame_version': known.get('frame_version'),
                     'message': ('Có nhiều phiên bản cùng áp dụng; cần xác minh chương trình của người học.' if candidates else
-                                f'Chưa có ánh xạ chương trình/phiên bản đã xác minh cho CNTT {self.cohort}. Không mượn khung K37.')}
+                                known.get('limitations') or
+                                f'Chưa có ánh xạ chương trình/phiên bản đã xác minh cho CNTT {self.cohort}. Không mượn khung khóa khác.')}
         binding = candidates[0]
         if not binding.get('curriculum_id') or not binding.get('version') or not binding.get('source_id'):
             return {**context, 'status': 'insufficient_data', 'message': 'Ánh xạ thiếu chương trình, phiên bản hoặc căn cứ nguồn.'}
@@ -97,7 +103,7 @@ class Catalog:
                 or not source.get('document_version')
                 or (source.get('curriculum_ids') and binding['curriculum_id'] not in source['curriculum_ids'])):
             return {**context, 'status': 'insufficient_data', 'message': 'Nguồn ánh xạ không đủ căn cứ áp dụng đúng khóa/chương trình.'}
-        return {**context, 'status': 'verified_snapshot', 'curriculum_id': binding['curriculum_id'],
+        return {**context, 'status': SNAPSHOT_STATUS[binding['status']], 'curriculum_id': binding['curriculum_id'],
                 'curriculum_version': binding['version'], 'binding_source_id': binding['source_id'],
                 'message': binding.get('limitations') or 'Dùng đúng chương trình trong snapshot đã kiểm chứng.'}
 
@@ -109,12 +115,16 @@ class Catalog:
         if not source.get('document_version') or not self._active(source):
             return False
         curricula = source.get('curriculum_ids')
-        return not curricula or (self.context['status'] == 'verified_snapshot' and self.context['curriculum_id'] in curricula)
+        return not curricula or (self.usable and self.context['curriculum_id'] in curricula)
 
     def _record_matches(self, record):
-        return (self.context['status'] == 'verified_snapshot' and record.get('program_id') == 'CNTT'
+        return (self.usable and record.get('program_id') == 'CNTT'
                 and record.get('curriculum_id') == self.context['curriculum_id']
                 and record.get('version') == self.context['curriculum_version'])
+
+    @property
+    def usable(self):
+        return self.context['status'] in USABLE
 
     def course_chunk_id(self, course):
         return course.get('chunk_id', 'COURSE-' + course['code'])
@@ -136,6 +146,9 @@ class Catalog:
                     f"Tiên quyết ghi trong nguồn: {raw if raw is not None else 'ô trống; chưa xác định'}.")
             if course.get('limitations'):
                 text += ' ' + course['limitations']
+            if course.get('image_page'):
+                text += f" Vị trí: ảnh trang {course['image_page']}."
+
             chunks.append(self._metadata(course['source_id'], 'course', id=self.course_chunk_id(course),
                           course_code=course['code'], text=text, page=course['page'],
                           section=course.get('source_rows', course['code']), version=course['version'],
@@ -149,7 +162,7 @@ class Catalog:
             chunks.append(self._metadata(source['id'], 'scope', id='SOURCE-' + source['id'], text=text,
                           page=None, section=source['locator'], version=source['document_version'],
                           verification='INVENTORY_CHECKED', content_level='inventory_summary'))
-        if self.cohort in SUPPORTED_COHORTS and self.context['status'] != 'verified_snapshot':
+        if self.cohort in SUPPORTED_COHORTS and not self.usable:
             chunks.append(self._metadata('INVENTORY', 'gap', id='GAP-CONTEXT-' + self.cohort,
                           text=self.context['message'], page=None, section='Ánh xạ khóa–chương trình',
                           version='schema-v2', verification='MISSING_OR_UNVERIFIED', content_level='inventory_summary'))
@@ -172,6 +185,8 @@ class Catalog:
                 'effective_at': source.get('effective_at'), 'source_scope': source.get('scope_text'),
                 'dataset': self.dataset,
                 'evidence_note': ('Dữ liệu giả lập, không phải quy định TLU.' if self.dataset == 'sample' else
+                                  'Trích từ ảnh khung do người dùng cung cấp; chưa đối chiếu với quyết định gốc.'
+                                  if chunk.get('verification') == 'IMAGE_TRANSCRIPTION_UNMATCHED' else
                                   'Trích đoạn bảng chuẩn hóa/danh mục; chưa nhập toàn văn PDF gốc.')}
 
     def select_courses(self, query):

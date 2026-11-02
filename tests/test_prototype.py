@@ -20,7 +20,7 @@ class CatalogTests(unittest.TestCase):
     def test_project_snapshot_preserves_counts_and_duplicate(self):
         c = Catalog()
         self.assertEqual(len(c.courses), 99)
-        self.assertEqual(c.manifest["raw_row_count"], 100)
+        self.assertEqual(c.manifest["counts"]["K37"]["raw_rows"], 100)
         self.assertEqual(len(c.conditions), 76)
         self.assertEqual(c.courses["IT334"]["source_row_count"], 2)
         self.assertIsNone(c.courses["CS121"]["prerequisite_raw"])

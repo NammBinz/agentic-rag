@@ -2,24 +2,28 @@
   {
     "cohort": "K35",
     "program_id": "CNTT",
-    "curriculum_id": null,
+    "curriculum_id": "CNTT-2022",
     "version": null,
     "status": "UNVERIFIED",
     "source_id": null,
     "effective_from": null,
     "effective_to": null,
-    "limitations": "Chưa thu thập/xác minh ánh xạ chương trình, học phần và quy định đúng khóa."
+    "frame_version": "CNTT-2022",
+    "admission_year": 2022,
+    "limitations": "Chưa chuẩn hóa bảng học phần K35; chỉ tra được thông tin chương trình và văn bản đã xác minh phạm vi. Tra nguồn/phiên bản; chưa kết luận tiên quyết/tốt nghiệp"
   },
   {
     "cohort": "K36",
     "program_id": "CNTT",
-    "curriculum_id": null,
-    "version": null,
-    "status": "UNVERIFIED",
-    "source_id": null,
+    "curriculum_id": "CNTT-K36-ANH-20261102",
+    "version": "CNTT-K36-ANH-20261102",
+    "status": "PROVISIONAL_SNAPSHOT",
+    "source_id": "S26",
     "effective_from": null,
     "effective_to": null,
-    "limitations": "Chưa thu thập/xác minh ánh xạ chương trình, học phần và quy định đúng khóa."
+    "frame_version": "CNTT-2023",
+    "admission_year": 2023,
+    "limitations": "Bảng học phần K36 trích từ ảnh khung trang 48–49 (S26) do người dùng cung cấp; chưa đối chiếu với QĐ gốc 23082903 (S15), chưa có danh mục mã AD. Chỉ dùng tham khảo."
   },
   {
     "cohort": "K37",
@@ -30,28 +34,34 @@
     "source_id": "S01",
     "effective_from": "2024-08-19",
     "effective_to": null,
+    "frame_version": "CNTT-2024",
+    "admission_year": 2024,
     "limitations": "Khung gốc 2024; chưa xác minh đầy đủ sửa đổi sau 2024."
   },
   {
     "cohort": "K38",
     "program_id": "CNTT",
-    "curriculum_id": null,
+    "curriculum_id": "CNTT-2025",
     "version": null,
     "status": "UNVERIFIED",
     "source_id": null,
     "effective_from": null,
     "effective_to": null,
-    "limitations": "Chưa thu thập/xác minh ánh xạ chương trình, học phần và quy định đúng khóa."
+    "frame_version": "CNTT-2025",
+    "admission_year": 2025,
+    "limitations": "Chưa chuẩn hóa bảng học phần K38; chỉ tra được thông tin chương trình và văn bản đã xác minh phạm vi. Tra bản mô tả; chưa dùng công cụ tiên quyết"
   },
   {
     "cohort": "K39",
     "program_id": "CNTT",
-    "curriculum_id": null,
+    "curriculum_id": "CNTT-2026",
     "version": null,
     "status": "UNVERIFIED",
     "source_id": null,
     "effective_from": null,
     "effective_to": null,
-    "limitations": "Chưa thu thập/xác minh ánh xạ chương trình, học phần và quy định đúng khóa."
+    "frame_version": "CNTT-2026",
+    "admission_year": 2026,
+    "limitations": "Chưa chuẩn hóa bảng học phần K39; chỉ tra được thông tin chương trình và văn bản đã xác minh phạm vi. Tra chương trình tổng quát; chưa dùng công cụ tiên quyết"
   }
 ]

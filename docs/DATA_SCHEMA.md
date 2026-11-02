@@ -1,7 +1,9 @@
-# Dữ liệu nhiều khóa · schema v2
+# Dữ liệu nhiều khóa · schema v3
 
-Bản triển khai v0.3 tạm chỉ phục vụ K37/CNTT-2024 qua Flask. Các cấu trúc dưới
-đây được giữ để mở rộng sau; không mở chọn khóa khác trong demo.
+Bản v0.4 cho người dùng chọn K35–K39 trước khi chat (`/api/cohorts` mô tả mức dữ
+liệu từng khóa). `programs.json` có thêm `frame_version`, `admission_year`; điều kiện
+có `group`, `within_group`, `between_groups`; học phần có nhóm điều kiện được lưu
+thành cây `rule` (AND giữa nhóm, OR trong nhóm khi nguồn ghi "hoặc").
 
 Ngành mục tiêu CNTT toàn khóa; phiên bản demo nhận lựa chọn K35–K39. Khả năng
 lựa chọn khóa khác với mức đầy đủ dữ liệu. Không suy ra năm tuyển sinh hay phiên
@@ -11,7 +13,9 @@ bản chương trình bằng cách cộng/trừ số khóa. Không gán chương
 
 - `programs.json`: mỗi ánh xạ có `cohort`, `program_id`, `curriculum_id`, `version`,
   `source_id`, `status`, `effective_from`, `effective_to`, `limitations`.
-- Chỉ `VERIFIED_SNAPSHOT` có căn cứ nguồn đúng phạm vi mới mở danh mục môn.
+- `VERIFIED_SNAPSHOT` (K37) và `PROVISIONAL_SNAPSHOT` (K36, trích từ ảnh chưa đối
+  chiếu QĐ gốc) mới mở danh mục môn; bản tạm thời luôn kèm cảnh báo trong
+  `context.message`, `notice` và `evidence_note` của từng trích dẫn.
   Không có ánh xạ hoặc nhiều ánh xạ còn hiệu lực: yêu cầu bổ sung/xác minh; không
   chọn âm thầm. Demo chưa hỗ trợ người dùng chọn nhánh chương trình chuyển đổi.
 - `sources.json`: một bản cho mỗi văn bản/phiên bản; `cohorts` là danh sách khóa,
@@ -41,13 +45,14 @@ và phiên bản gốc. Quy định chung không cần danh mục môn, nhưng p
 
 | Khóa | Danh mục môn | Nguồn có phạm vi đã đối chiếu | Cần bổ sung |
 |---|---|---|---|
-| K35 | Chưa có | Chưa đủ | Ánh xạ năm tuyển sinh/chương trình, danh mục, quy chế |
-| K36 | Chưa có | S04 chung K36–K37 | Ánh xạ chương trình, danh mục, quy chế, toàn văn S04 |
+| K35 | Chưa có (khung CNTT-2022, S13) | S03, S13, S14 | Chuẩn hóa danh mục S13, đề cương, quy chế gốc 2022 |
+| K36 | 72 mã/82 điều kiện từ ảnh S26 (tạm thời) | S03, S04, S15, S16, S26 | Đối chiếu ảnh với QĐ S15, mã AD, 7 mã tham chiếu thiếu |
 | K37 | 99 mã/76 điều kiện, khung 2024 | S01–S04 | Sửa đổi, toàn văn quy định, nghĩa điều kiện mã môn |
-| K38 | Chưa có | S12 quyết định ghi từ K38 | Chương trình tương ứng, phụ lục/đề cương, quy chế |
-| K39 | Chưa có | Chưa đủ ánh xạ | Xác minh chương trình, năm tuyển sinh, danh mục, quy chế |
+| K38 | Chưa có (bản mô tả CNTT-2025) | S05, S12, S17–S19 | QĐ CTĐT gốc 25042105, đề cương, danh mục |
+| K39 | Chưa có (CTĐT CNTT-2026) | S06, S07, S20–S22, S24 | Phụ lục II đề cương, danh mục chuẩn hóa |
 
-Chưa suy rộng S12 sang K39 hoặc ánh xạ S05/S06 chỉ từ năm tuyển sinh. S04 chỉ có
+Mỗi khóa có một đoạn `VERSION-Kxx` (từ tab "Khoa va phien ban" và "Do day du")
+để trả lời câu hỏi tổng quát về phiên bản, tổng tín chỉ và mức đầy đủ dữ liệu. S04 chỉ có
 metadata, không có ngưỡng điểm TOEIC đã nhập. Giữ thông tin hạn chế của từng nguồn.
 
 ## Bổ sung một khóa
@@ -60,6 +65,6 @@ metadata, không có ngưỡng điểm TOEIC đã nhập. Giữ thông tin hạn
    nhưng khác tín chỉ/tiên quyết để kiểm tra cả retrieval và tool.
 6. Khởi động lại máy chủ để nạp snapshot mới; cache gắn fingerprint đầy đủ phạm vi.
 
-`scripts/import_catalog.py` chỉ dành cho workbook K37 đã có; bước upgrade tự tạo
-schema v2 và giữ các khóa còn thiếu. Không chạy lại importer trên kho đã bổ sung
-nhiều khóa vì đây là lệnh tái xây dựng snapshot, có thể ghi đè phần đã thêm.
+`scripts/import_catalog.py` đọc workbook CNTT K35–K39 và dựng lại toàn bộ
+`data/project` (schema v3); dữ liệu được sửa trong workbook rồi nhập lại, không sửa
+tay JSON.

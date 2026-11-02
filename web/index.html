@@ -12,9 +12,9 @@
       <a class="brand" href="/" aria-label="Trang đầu"><span class="brand-mark">a<span>r</span></span><span>Học vụ<span class="brand-sub">AGENTIC RAG LAB</span></span></a>
       <div class="sidebar-heading">KHÔNG GIAN THỬ NGHIỆM</div>
       <label class="field-label" for="dataset">Kho dữ liệu</label>
-      <select id="dataset" disabled><option value="project">Bảng học phần K37 · Có nguồn</option></select>
-      <label class="field-label" for="cohort">Khóa áp dụng</label>
-      <select id="cohort" disabled><option value="K37">K37 — CNTT-2024</option></select>
+      <select id="dataset" disabled><option value="project">Dữ liệu CNTT K35–K39 · Có nguồn</option></select>
+      <label class="field-label" for="cohort">Khóa của bạn</label>
+      <select id="cohort"><option value="">Chọn khóa…</option></select>
       <fieldset class="modes"><legend>Cách xử lý</legend>
         <label class="mode-option"><input type="radio" name="mode" value="agent" checked><span><strong>Agentic RAG</strong><small>Tra nguồn + công cụ + bổ sung</small></span><span class="mode-dot"></span></label>
         <label class="mode-option"><input type="radio" name="mode" value="agent-llm"><span><strong>Agentic RAG · LLM lập kế hoạch</strong><small>Gemini tự chọn công cụ, có giới hạn</small></span><span class="mode-dot"></span></label>
@@ -32,14 +32,15 @@
     </aside>
 
     <main class="main-panel">
-      <header class="topbar"><div><span class="eyebrow">TRƯỜNG ĐẠI HỌC THĂNG LONG</span><h1>Trợ lý thông tin đào tạo</h1></div><span class="scope-badge" id="scope-badge">K37 — CNTT-2024</span></header>
-      <div id="data-notice" class="data-notice"><span class="notice-icon">i</span><span>K37 — CNTT-2024 · Trích từ bảng học phần, chưa nhập toàn văn PDF hoặc đủ sửa đổi sau 2024.</span></div>
+      <header class="topbar"><div><span class="eyebrow">TRƯỜNG ĐẠI HỌC THĂNG LONG</span><h1>Trợ lý thông tin đào tạo</h1></div><button type="button" class="scope-badge" id="scope-badge" hidden>Chọn khóa</button></header>
+      <div id="data-notice" class="data-notice" hidden><span class="notice-icon">i</span><span></span></div>
       <section id="conversation" class="conversation" aria-live="polite" aria-label="Hội thoại">
-        <div id="welcome" class="welcome"><div class="welcome-mark">↗</div><span class="eyebrow">TỪ CÂU HỎI ĐẾN BẰNG CHỨNG</span><h2>Hiểu chương trình.<br>Lập kế hoạch học tập.</h2><p>Tra học phần, xem nguồn và kiểm tra điều kiện với hồ sơ bạn cung cấp.</p><div id="examples" class="examples"></div></div>
+        <div id="cohort-picker" class="cohort-picker" hidden><span class="eyebrow">BƯỚC 1 · CHỌN KHÓA</span><h2>Bạn là sinh viên khóa nào?</h2><p>Mỗi khóa có chương trình và phiên bản riêng. Chọn đúng khóa để câu trả lời chỉ dùng nguồn của khóa đó; có thể đổi lại ở đầu trang.</p><div id="cohort-options" class="cohort-options" role="list"><p class="cohort-loading">Đang tải danh sách khóa…</p></div></div>
+        <div id="welcome" class="welcome" hidden><div class="welcome-mark">↗</div><span class="eyebrow">TỪ CÂU HỎI ĐẾN BẰNG CHỨNG</span><h2>Hiểu chương trình.<br>Lập kế hoạch học tập.</h2><p>Tra học phần, xem nguồn và kiểm tra điều kiện với hồ sơ bạn cung cấp.</p><div id="examples" class="examples"></div></div>
         <div id="messages"></div>
       </section>
       <footer class="composer-area"><div class="composer-meta"><span id="history-label">Lịch sử lưu trên trình duyệt này</span><button id="clear" type="button">Xóa hội thoại</button></div>
-        <form id="chat-form" class="composer"><label class="sr-only" for="question">Câu hỏi học vụ</label><textarea id="question" maxlength="3000" rows="2" placeholder="Ví dụ: IT320 có bao nhiêu tín chỉ và tiên quyết gì?" required></textarea><button id="send" type="submit" aria-label="Gửi câu hỏi"><span>↑</span></button></form>
+        <form id="chat-form" class="composer"><label class="sr-only" for="question">Câu hỏi học vụ</label><textarea id="question" maxlength="3000" rows="2" placeholder="Chọn khóa của bạn để bắt đầu" required disabled></textarea><button id="send" type="submit" aria-label="Gửi câu hỏi" disabled><span>↑</span></button></form>
         <div id="error" class="error" role="alert"></div><p class="composer-note">Chỉ dùng hồ sơ giả lập. Kết quả không thay thế xác nhận của Phòng Đào tạo.</p>
       </footer>
     </main>

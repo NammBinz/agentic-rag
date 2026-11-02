@@ -1,8 +1,14 @@
-# Demo Flask · K37 — CNTT-2024
+# Demo Flask · CNTT K35–K39
 
-Bản v0.3: tra học phần, đọc điều kiện/chuỗi mã, RAG có dẫn chứng và Agent truy xuất
-bổ sung tối đa **một lượt**. Chỉ mở dữ liệu K37 trong giao diện và API mặc định.
-Phạm vi nghiên cứu CNTT toàn khóa, giai đoạn đầu K35–K39, vẫn giữ nguyên.
+Bản v0.4: tra học phần, đọc điều kiện/chuỗi mã, RAG có dẫn chứng và Agent truy xuất
+bổ sung tối đa **một lượt**. Người dùng **chọn khóa trước khi chat**; mỗi khóa chỉ dùng
+chương trình và nguồn của khóa đó:
+
+| Khóa | Dữ liệu trong demo |
+|---|---|
+| K37 — CNTT-2024 | 99 mã, 76 điều kiện; khung gốc S01 đã xác minh |
+| K36 — CNTT-2023 | 72 mã, 82 điều kiện (có nhóm OR) trích từ ảnh S26; **tạm thời**, chưa đối chiếu QĐ gốc S15 |
+| K35, K38, K39 | Chưa có bảng học phần; chỉ tra thông tin phiên bản chương trình và văn bản đúng khóa |
 
 ## Chạy trên Windows / VS Code
 
@@ -52,7 +58,7 @@ Invoke-RestMethod http://127.0.0.1:8765/api/health
 ```
 
 Kỳ vọng `provider=openai`, `retriever=bm25`, `model=gpt-4.1-mini`, `demo_only=true`
-và `scope=K37 — CNTT-2024`. Nhãn “LLM đã bật” và health chỉ xác nhận cấu hình;
+và `scope=CNTT K35–K39`. Nhãn “LLM đã bật” và health chỉ xác nhận cấu hình;
 chưa chứng minh khóa/quota hoặc kết nối API hoạt động. Hỏi `IT320 tên gì, mấy tín chỉ?`,
 mở tab Hành động để kiểm tra bước LLM, token sinh và đối chiếu từng câu với nguồn.
 Thiếu khóa làm server không khởi động; lỗi API trong yêu cầu được trả rõ với HTTP 502.
@@ -106,8 +112,10 @@ Kết quả kiểm tra điều kiện bằng chương trình được giữ riê
 
 ## Nguồn dữ liệu dùng trong bản này
 
-Đọc trực tiếp file `Danh_muc_nguon_va_hoc_phan_CNTT_K37.xlsx` người dùng đính kèm.
-SHA-256: `0a8d80f0d04634f1335fd80aa29b6a3756a914b10cb5a195b681e0ee19a5db5c`.
+Đọc trực tiếp file `data/input/CNTT_K35-K39_nguon_phien_ban.xlsx` (bản 02/11/2026, 26 nguồn).
+SHA-256: `2799cf5938f8a3b73eaa09903ba3f1274fc9d518cc7b91a8207ab058483d0396`.
+Dữ liệu K37 nhập từ workbook này trùng khớp từng trường với bản K37 trước đó
+(`Danh_muc_nguon_va_hoc_phan_CNTT_K37.xlsx` vẫn giữ trong `data/input` để đối chiếu).
 
 - **99 mã học phần, 100 dòng gốc, 76 thành phần điều kiện, 31 SOURCE_BLANK**.
 - File này có **5 tab, 12 nguồn**, không phải bản 9 tab/25 nguồn có SHA-256
@@ -174,19 +182,19 @@ quy của engine nghiên cứu, tách biệt với 15 câu demo K37.
 
 ```bash
 python -m pip install -r requirements-import.txt
-python scripts/import_catalog.py data/input/Danh_muc_nguon_va_hoc_phan_CNTT_K37.xlsx --output .runtime/imported-project
+python scripts/import_catalog.py data/input/CNTT_K35-K39_nguon_phien_ban.xlsx --output .runtime/imported-project
 ```
 
-Importer kiểm tra 99/100/76/31 trước khi xuất; không sửa workbook. Thử nhập ra
-thư mục riêng trước khi thay `data/project`. Importer chỉ hỗ trợ schema snapshot
-K37 hiện tại; không dùng để suy ra phạm vi cho workbook khóa khác.
+Importer kiểm tra mốc từng khóa trước khi xuất (K37: 99/99/76/100/31; K36: 72/72/82/72/17);
+không sửa workbook. Thử nhập ra thư mục riêng trước khi thay `data/project`; test
+`test_cohorts` xác nhận nhập lại cho ra đúng dữ liệu đã commit.
 
 ## Mã nguồn
 
 | Vị trí | Chức năng |
 |---|---|
 | `src/agentic_rag/server.py` | Flask factory `create_app`, API, chạy cục bộ |
-| `demo.py` | Giới hạn tạm thời K37 — CNTT-2024; chặn khóa/phiên bản khác |
+| `demo.py` | Bắt buộc chọn khóa K35–K39; chặn câu hỏi nhắc khóa/ngành/phiên bản khác |
 | `catalog.py` | Kho dữ liệu, lọc phạm vi/phiên bản, chunk, trích dẫn |
 | `tools.py` | Tra môn; điều kiện và chuỗi; đối chiếu hồ sơ ba trạng thái |
 | `planner.py`, `engine.py` | Chọn công cụ, RAG, tối đa một lượt bổ sung |

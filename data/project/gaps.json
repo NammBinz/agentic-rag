@@ -10,7 +10,9 @@
     ],
     "programs": [
       "CNTT"
-    ]
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 5
   },
   {
     "id": "G02",
@@ -23,7 +25,9 @@
     ],
     "programs": [
       "CNTT"
-    ]
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 6
   },
   {
     "id": "G03",
@@ -36,7 +40,9 @@
     ],
     "programs": [
       "CNTT"
-    ]
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 7
   },
   {
     "id": "G04",
@@ -49,7 +55,9 @@
     ],
     "programs": [
       "CNTT"
-    ]
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 8
   },
   {
     "id": "G05",
@@ -62,7 +70,9 @@
     ],
     "programs": [
       "CNTT"
-    ]
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 9
   },
   {
     "id": "G06",
@@ -75,7 +85,9 @@
     ],
     "programs": [
       "CNTT"
-    ]
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 10
   },
   {
     "id": "G07",
@@ -88,7 +100,9 @@
     ],
     "programs": [
       "CNTT"
-    ]
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 11
   },
   {
     "id": "G08",
@@ -101,7 +115,9 @@
     ],
     "programs": [
       "CNTT"
-    ]
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 12
   },
   {
     "id": "G09",
@@ -114,7 +130,9 @@
     ],
     "programs": [
       "CNTT"
-    ]
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 13
   },
   {
     "id": "G10",
@@ -127,7 +145,9 @@
     ],
     "programs": [
       "CNTT"
-    ]
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 14
   },
   {
     "id": "G11",
@@ -140,7 +160,9 @@
     ],
     "programs": [
       "CNTT"
-    ]
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 15
   },
   {
     "id": "G12",
@@ -153,6 +175,293 @@
     ],
     "programs": [
       "CNTT"
-    ]
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 16
+  },
+  {
+    "id": "K36-G01",
+    "topic": "Đối chiếu phiên bản bộ ảnh với khung gốc K36",
+    "status": "CHƯA XÁC MINH ĐỐI CHIẾU",
+    "details": "K36 do người dùng xác nhận. Hai ảnh ghi ngành CNTT, trang 48–49, nhưng không có số quyết định/năm ban hành. Mã bộ ảnh là mã quản lý tạm, chưa gán vào CNTT-2023.",
+    "needed_evidence": "Bìa/sổ tay, quyết định ban hành hoặc xác nhận của trường để liên hệ S26 với S15.",
+    "cohorts": [
+      "K36"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 17
+  },
+  {
+    "id": "K36-G02",
+    "topic": "Mã tiên quyết ngoài danh mục trích",
+    "status": "CHƯA CÓ BẢN GHI THAM CHIẾU",
+    "details": "AI130; CF212; IP404; IS223; MA230; MA231; MA234",
+    "needed_evidence": "Danh mục học phần và bảng quy đổi của đúng phiên bản; không tự tạo tên hay tín chỉ cho mã còn thiếu.",
+    "cohorts": [
+      "K36"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 18
+  },
+  {
+    "id": "K36-G03",
+    "topic": "Ô tiên quyết trống",
+    "status": "TRỐNG TRONG NGUỒN",
+    "details": "17 mã có ô trống, lưu null/SOURCE_BLANK; không kết luận không có tiên quyết.",
+    "needed_evidence": "Đề cương đúng phiên bản nếu cần xác nhận các ô trống.",
+    "cohorts": [
+      "K36"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 19
+  },
+  {
+    "id": "K36-G04",
+    "topic": "Danh mục mã AD",
+    "status": "CHƯA THU THẬP",
+    "details": "Trang 49 chỉ yêu cầu chọn thêm ≥6 tín chỉ mã AD, dẫn sang Hệ thống mã các học phần; chưa có danh mục AD trong ảnh.",
+    "needed_evidence": "Các trang Hệ thống mã học phần áp dụng đúng K36.",
+    "cohorts": [
+      "K36"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 20
+  },
+  {
+    "id": "K36-G05",
+    "topic": "Quy tắc tốt nghiệp và thang điểm",
+    "status": "CHƯA XÁC MINH ĐẦY ĐỦ",
+    "details": "Có điều kiện IP406, IT499, IT486 theo ảnh; chưa đủ toàn bộ điều kiện xét tốt nghiệp/ngoại ngữ/GDTC/GDQP. Ngưỡng ≥4 và TBTL≥7.0 chưa có bằng chứng thang điểm.",
+    "needed_evidence": "Quy chế và chuẩn đầu ra đúng khóa, không quy đổi ngưỡng tùy ý.",
+    "cohorts": [
+      "K36"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 21
+  },
+  {
+    "id": "K36-G06",
+    "topic": "Sửa đổi sau ban hành và tình trạng cá nhân",
+    "status": "CHƯA XÁC MINH",
+    "details": "Chưa xác nhận đầy đủ lịch sử sửa đổi; chưa có bảng điểm, tín chỉ tích lũy và điều kiện dự thi của sinh viên.",
+    "needed_evidence": "Văn bản sửa đổi hiện hành và dữ liệu học tập để kiểm tra điều kiện cá nhân.",
+    "cohorts": [
+      "K36"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can xac minh",
+    "workbook_row": 22
+  },
+  {
+    "id": "B01",
+    "topic": "Danh mục học phần trong S13/S15",
+    "status": "K36 ĐÃ TRÍCH ẢNH; K35 CHƯA CHUẨN HÓA",
+    "details": "K36 lưu mã bộ ảnh riêng, chưa gắn S15; không lấy K37 bổ sung dữ liệu K36. (ưu tiên Cao; Tự xử lý từ nguồn đã tìm)",
+    "needed_evidence": "K35 còn cần chuẩn hóa S13. K36 đã trích 72 mã/82 điều kiện từ ảnh S26; phần đối chiếu khung gốc S15 còn thiếu.",
+    "cohorts": [
+      "K35",
+      "K36"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can bo sung",
+    "workbook_row": 2
+  },
+  {
+    "id": "B02",
+    "topic": "Bộ đề cương đúng khóa và lịch sử sửa đổi/đối chiếu",
+    "status": "CHƯA TÌM ĐỦ",
+    "details": "S08/S09 chỉ là 2022; chưa đủ gán khóa (ưu tiên Cao; Bạn bổ sung nếu có)",
+    "needed_evidence": "Xin Phòng Đào tạo/Khoa CNTT bản có QĐ, ngày và khóa áp dụng",
+    "cohorts": [
+      "K35",
+      "K36"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can bo sung",
+    "workbook_row": 3
+  },
+  {
+    "id": "B03",
+    "topic": "Đề cương đúng phiên bản, sửa đổi sau 2024",
+    "status": "CHƯA TÌM ĐỦ",
+    "details": "Giữ toàn bộ G01–G11 (ưu tiên Cao; Bạn bổ sung; cần xác nhận của trường)",
+    "needed_evidence": "Bản hiện hành gắn K37; xác nhận AD213, IT334, 31 ô trống và PG100/PG121",
+    "cohorts": [
+      "K37"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can bo sung",
+    "workbook_row": 4
+  },
+  {
+    "id": "B04",
+    "topic": "QĐ CTĐT 25042105 và phụ lục CNTT",
+    "status": "CHƯA TÌM TỆP GỐC",
+    "details": "Hiện chỉ được dẫn trong S17; không tự điền hiệu lực (ưu tiên Cao; Bạn bổ sung nếu có)",
+    "needed_evidence": "Bản gốc đủ điều khoản áp dụng/hiệu lực và các sửa đổi",
+    "cohorts": [
+      "K38"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can bo sung",
+    "workbook_row": 5
+  },
+  {
+    "id": "B05",
+    "topic": "Đề cương CNTT kèm QĐ 25090503; danh mục trong S18",
+    "status": "CHƯA ĐỌC/CHƯA CHUẨN HÓA",
+    "details": "Không bù vào K37 hoặc K39 (ưu tiên Cao; Tự tìm thêm; bạn bổ sung bộ đúng khóa nếu có)",
+    "needed_evidence": "Đọc/chuẩn hóa bộ từng học phần đúng K38",
+    "cohorts": [
+      "K38"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can bo sung",
+    "workbook_row": 6
+  },
+  {
+    "id": "B06",
+    "topic": "Phụ lục II QĐ 26062609 — bộ đề cương CNTT",
+    "status": "CHƯA TÌM",
+    "details": "Thư mục S23 chưa thấy; danh mục S21 không có cột tiên quyết (ưu tiên Cao; Bạn bổ sung hoặc xin đường dẫn chính thức)",
+    "needed_evidence": "Xin trường tệp Phụ lục II và đề cương CNTT K39 có điều kiện học",
+    "cohorts": [
+      "K39"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can bo sung",
+    "workbook_row": 7
+  },
+  {
+    "id": "B07",
+    "topic": "Bản mô tả CTĐT CNTT K39",
+    "status": "CHƯA TÌM",
+    "details": "Thư mục công khai đã liệt kê 20 bản, chưa thấy CNTT; không suy ra không tồn tại (ưu tiên Vừa; Bạn bổ sung nếu có)",
+    "needed_evidence": "Bản mô tả riêng ban hành kèm QĐ 26062608",
+    "cohorts": [
+      "K39"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can bo sung",
+    "workbook_row": 8
+  },
+  {
+    "id": "B08",
+    "topic": "Sửa đổi, bảng quy đổi mã/chuyển tiếp",
+    "status": "CHƯA TÌM ĐỦ",
+    "details": "INT/CSE/AIS/NWS của K39 không tự ghép với IT/CS/IS của K37 (ưu tiên Cao; Bạn bổ sung nếu có; tiếp tục tra nguồn)",
+    "needed_evidence": "Mỗi bảng phải ghi phiên bản nguồn/đích, hiệu lực và khóa",
+    "cohorts": [
+      "K35",
+      "K36",
+      "K37",
+      "K38",
+      "K39"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can bo sung",
+    "workbook_row": 9
+  },
+  {
+    "id": "B09",
+    "topic": "Chuẩn đầu ra, miễn học/quy đổi ngoại ngữ, GDTC/GDQP",
+    "status": "CHƯA TÌM ĐỦ",
+    "details": "S04 mới xác minh TOEIC quốc tế K36–K37 (ưu tiên Vừa; Bạn bổ sung nếu có; tự tra tiếp)",
+    "needed_evidence": "Quy định có khóa/ngành áp dụng và lịch sử thay thế",
+    "cohorts": [
+      "K35",
+      "K36",
+      "K37",
+      "K38",
+      "K39"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can bo sung",
+    "workbook_row": 10
+  },
+  {
+    "id": "B10",
+    "topic": "Thông báo theo học kỳ/đợt",
+    "status": "CHƯA THU THẬP ĐẦY ĐỦ",
+    "details": "Lưu điều kiện đối tượng, kỳ/đợt và thời hạn; không tự gán mọi khóa (ưu tiên Vừa; Tự thu thập nguồn chính thức; bạn bổ sung nguồn nội bộ nếu có)",
+    "needed_evidence": "Đăng ký, lịch học/thi, học phí, hồ sơ tốt nghiệp và cập nhật",
+    "cohorts": [
+      "K35",
+      "K36",
+      "K37",
+      "K38",
+      "K39"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can bo sung",
+    "workbook_row": 11
+  },
+  {
+    "id": "B11",
+    "topic": "Quy chế gốc 2022/2023 và điều khoản chuyển tiếp",
+    "status": "CHƯA ĐỌC BẢN GỐC",
+    "details": "Đã xác minh S03 chung từ 2024; chưa đủ xác nhận các ngoại lệ của khóa cũ (ưu tiên Vừa; Bạn bổ sung nếu có)",
+    "needed_evidence": "QĐ 22092602 được dẫn ở S13; QĐ 23082902 được dẫn ở S15",
+    "cohorts": [
+      "K35",
+      "K36"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can bo sung",
+    "workbook_row": 12
+  },
+  {
+    "id": "B12",
+    "topic": "Đối chiếu ảnh S26 với QĐ khung gốc; AD và mã tham chiếu",
+    "status": "CHƯA ĐỐI CHIẾU PHIÊN BẢN",
+    "details": "Đã có 72 mã và 82 điều kiện; chưa đủ chứng minh phiên bản hiện hành. PDF ghép sai đã loại khỏi nguồn đang dùng. (ưu tiên Cao; Bạn bổ sung nguồn gốc; nhóm đối chiếu dữ liệu)",
+    "needed_evidence": "Bìa/sổ tay, QĐ/năm áp dụng; danh mục AD; bản ghi AI130, CF212, IP404, IS223, MA230, MA231, MA234",
+    "cohorts": [
+      "K36"
+    ],
+    "programs": [
+      "CNTT"
+    ],
+    "workbook_sheet": "Can bo sung",
+    "workbook_row": 13
   }
 ]
