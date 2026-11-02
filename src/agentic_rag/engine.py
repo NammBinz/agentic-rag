@@ -65,7 +65,7 @@ class Engine:
                 raise ValueError(flag + " phải là boolean")
         metrics = {"retrieval_rounds": 0, "extra_retrieval_rounds": 0, "tool_calls": 0,
                    "prompt_tokens": 0, "completion_tokens": 0, "embedding_tokens": 0,
-                   "index_embedding_tokens": 0, "estimated_cost_usd": None}
+                   "index_embedding_tokens": 0, "api_retries": 0, "estimated_cost_usd": None}
         result = {"question": question, "mode": mode, "dataset": self.catalog.dataset,
                   "cohort": cohort, "context": self.catalog.context,
                   "citations": [], "actions": [], "tool_results": [], "metrics": metrics,
@@ -271,7 +271,7 @@ class Engine:
 
     @staticmethod
     def _usage(metrics, usage):
-        for key in ("prompt_tokens", "completion_tokens", "embedding_tokens", "index_embedding_tokens"):
+        for key in ("prompt_tokens", "completion_tokens", "embedding_tokens", "index_embedding_tokens", "api_retries"):
             metrics[key] += int(usage.get(key, 0))
 
     def _compose(self, question, chunks, cohort, metrics, actions=None):

@@ -126,9 +126,78 @@ class GeminiTests(unittest.TestCase):
     def test_google_error_returns_502_without_secret_or_offline_fallback(self):
         client = create_app(Settings(provider='gemini')).test_client()
         error = urllib.error.HTTPError('https://generativelanguage.googleapis.com/', 429, 'test-google-key', {}, io.BytesIO(b'test-google-key'))
-        with patch('agentic_rag.provider.urllib.request.urlopen', side_effect=error):
+        with patch('agentic_rag.provider.urllib.request.urlopen', side_effect=error),                 patch('agentic_rag.provider.time.sleep'):
             response = client.post('/api/chat', json={'question': 'IT320'})
         self.assertEqual(response.status_code, 502)
         self.assertEqual(response.json['code'], 'provider_error')
         self.assertIn('429', response.json['error'])
         self.assertNotIn('test-google-key', response.get_data(as_text=True))
+
+
+class RetryTests(unittest.TestCase):
+    def setUp(self):
+        self.env = patch.dict(os.environ, {"GEMINI_API_KEY": "test-google-key"}, clear=True)
+        self.env.start()
+        self.addCleanup(self.env.stop)
+        self.sleep = patch('agentic_rag.provider.time.sleep')
+        self.slept = self.sleep.start()
+        self.addCleanup(self.sleep.stop)
+        self.chunk = next(c for c in Catalog().chunks if c['id'] == 'COURSE-IT320')
+        self.ok = {'status': 'answered', 'claims': [{'text': 'IT320', 'evidence_id': 'COURSE-IT320', 'quote': self.chunk['text']}], 'clarification': ''}
+
+    def body(self):
+        return io.BytesIO(json.dumps({'choices': [{'message': {'content': json.dumps(self.ok, ensure_ascii=False)}}],
+                                      'usage': {'prompt_tokens': 5, 'completion_tokens': 2}}).encode())
+
+    @staticmethod
+    def http(code, headers=None):
+        return urllib.error.HTTPError('https://example.invalid/', code, 'error', headers or {}, io.BytesIO(b''))
+
+    def test_transient_503_then_success_records_retry(self):
+        with patch('agentic_rag.provider.urllib.request.urlopen', side_effect=[self.http(503), self.body()]) as send:
+            output, usage = GeminiProvider(Settings(provider='gemini')).generate('IT320?', [self.chunk], 'K37')
+        self.assertEqual(send.call_count, 2)
+        self.assertEqual(output['status'], 'answered')
+        self.assertEqual(usage['api_retries'], 1)
+        self.assertEqual(self.slept.call_count, 1)
+
+    def test_network_timeout_is_retried(self):
+        with patch('agentic_rag.provider.urllib.request.urlopen', side_effect=[TimeoutError(), self.body()]):
+            _, usage = GeminiProvider(Settings(provider='gemini')).generate('IT320?', [self.chunk], 'K37')
+        self.assertEqual(usage['api_retries'], 1)
+
+    def test_retries_are_bounded(self):
+        with patch('agentic_rag.provider.urllib.request.urlopen', side_effect=self.http(503)) as send:
+            with self.assertRaisesRegex(ProviderError, '503.*3 lần'):
+                GeminiProvider(Settings(provider='gemini', max_retries=2)).generate('IT320?', [self.chunk], 'K37')
+        self.assertEqual(send.call_count, 3)
+
+    def test_auth_errors_are_not_retried(self):
+        for code in (400, 401, 403, 404):
+            with self.subTest(code=code), patch('agentic_rag.provider.urllib.request.urlopen', side_effect=self.http(code)) as send:
+                with self.assertRaises(ProviderError):
+                    GeminiProvider(Settings(provider='gemini')).generate('IT320?', [self.chunk], 'K37')
+                self.assertEqual(send.call_count, 1)
+        self.slept.assert_not_called()
+
+    def test_retry_after_header_is_capped(self):
+        with patch('agentic_rag.provider.urllib.request.urlopen', side_effect=[self.http(429, {'Retry-After': '999'}), self.body()]):
+            GeminiProvider(Settings(provider='gemini')).generate('IT320?', [self.chunk], 'K37')
+        self.assertLessEqual(self.slept.call_args.args[0], 20.5)
+
+    def test_zero_retries_and_env_settings(self):
+        with patch('agentic_rag.provider.urllib.request.urlopen', side_effect=self.http(503)) as send:
+            with self.assertRaises(ProviderError):
+                GeminiProvider(Settings(provider='gemini', max_retries=0)).generate('IT320?', [self.chunk], 'K37')
+        self.assertEqual(send.call_count, 1)
+        with patch.dict(os.environ, {'RAG_MAX_RETRIES': '4', 'RAG_TIMEOUT_SECONDS': '10'}):
+            settings = Settings.from_env()
+        self.assertEqual((settings.max_retries, settings.timeout_seconds), (4, 10.0))
+        with self.assertRaises(ValueError):
+            Settings(max_retries=9)
+
+    def test_engine_metrics_count_retries(self):
+        app = create_app(Settings(provider='gemini'))
+        with patch('agentic_rag.provider.urllib.request.urlopen', side_effect=[self.http(503), self.body()]):
+            body = app.test_client().post('/api/chat', json={'question': 'IT320 tên gì?', 'mode': 'rag'}).json
+        self.assertEqual(body['metrics']['api_retries'], 1)

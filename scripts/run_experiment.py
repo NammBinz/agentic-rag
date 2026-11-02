@@ -22,13 +22,21 @@ def main():
     parser.add_argument("--no-tools", action="store_true")
     parser.add_argument("--no-extra-retrieval", action="store_true")
     parser.add_argument("--top-k", type=int, default=4)
+    parser.add_argument("--split", choices=["dev", "test", "all"], default="dev")
+    parser.add_argument("--allow-draft-test", action="store_true",
+                        help="Chỉ dùng khi thử quy trình; kết quả test trên nhãn nháp không được báo cáo")
     args = parser.parse_args()
     load_env(ROOT / ".env")
     settings = dataclasses.replace(Settings.from_env(), top_k=args.top_k)
     engine = Engine(args.dataset, settings, cache_dir=ROOT / ".runtime" / "vectors" / args.dataset)
     questions = [json.loads(line) for line in Path(args.input).read_text(encoding="utf-8").splitlines() if line.strip()]
-    if any(q.get("split") == "test" and q.get("gold_status") is None for q in questions):
+    if args.split != "all":
+        questions = [q for q in questions if q.get("split", "dev") == args.split]
+    test = [q for q in questions if q.get("split") == "test"]
+    if any(q.get("gold_status") is None and q.get("gold_outcome") is None for q in test):
         raise ValueError("Tập test cần đáp án/nhãn chuẩn được kiểm tra trước khi chạy")
+    if not args.allow_draft_test and any(q.get("review_status", "reviewed") == "draft" for q in test):
+        raise ValueError("Tập test còn nhãn nháp (review_status=draft); duyệt nhãn trước khi chạy test")
     modes = ["llm", "rag", "agent"] if args.mode == "all" else [args.mode]
     out = Path(args.output); out.parent.mkdir(parents=True, exist_ok=True)
     # 'x' protects earlier experimental outputs from accidental overwrites.
@@ -37,10 +45,12 @@ def main():
             for mode in modes:
                 run = {"id": q["id"], "group": q.get("group"), "split": q.get("split", "dev"), "mode": mode,
                        "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat(), "gold": {
-                       k: v for k, v in q.items() if k.startswith("gold_")}, "human_grading": None}
+                       k: v for k, v in q.items() if k.startswith("gold_")}, "human_grading": None,
+                       "settings": {"no_tools": args.no_tools, "no_extra_retrieval": args.no_extra_retrieval,
+                                    "top_k": args.top_k}}
                 try:
                     result = engine.answer(q["question"], mode=mode, cohort=q.get("cohort"), profile=q.get("profile"),
-                                           enable_tools=not args.no_tools, enable_extra_retrieval=not args.no_extra_retrieval)
+                                           history=q.get("history"), enable_tools=not args.no_tools, enable_extra_retrieval=not args.no_extra_retrieval)
                     run.update(result=result, run_status="skipped" if result["status"] == "unavailable" else "completed")
                 except ProviderError as error:
                     run.update(run_status="error", error=str(error))
