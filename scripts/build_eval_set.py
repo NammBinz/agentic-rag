@@ -125,15 +125,19 @@ MANUAL = [
     ("missing_data", "Đề cương chi tiết môn IT320 gồm những chương nào?", "abstain", ["GAP-G02"]),
     ("missing_data", "Khung chương trình K37 đã được sửa đổi lần nào sau 2024?", "abstain", ["GAP-G01"]),
     ("missing_data", "Thời khóa biểu tuần sau của lớp CNTT K37?", "abstain", ["GAP-G07"]),
-    # Regulation text is not ingested yet; relabel to "answer" once S03 full text is imported.
-    ("regulation_pending", "Theo quy chế đào tạo, điểm học phần dưới bao nhiêu thì phải học lại?", "abstain", ["SOURCE-S03"]),
-    ("regulation_pending", "Sinh viên bị cảnh báo học vụ khi nào?", "abstain", ["SOURCE-S03"]),
-    ("regulation_pending", "Một học kỳ được đăng ký tối đa bao nhiêu tín chỉ?", "abstain", ["SOURCE-S03"]),
-    ("regulation_pending", "Điểm trung bình tích lũy bao nhiêu thì xếp loại giỏi?", "abstain", ["SOURCE-S03"]),
-    ("regulation_pending", "Sinh viên có được học vượt không?", "abstain", ["SOURCE-S03"]),
-    ("regulation_pending", "Quy chế cho phép bảo lưu kết quả học tập bao lâu?", "abstain", ["SOURCE-S03"]),
-    ("regulation_pending", "Thang điểm chữ A, B, C quy đổi sang thang 4 thế nào?", "abstain", ["SOURCE-S03"]),
-    ("regulation_pending", "Điều kiện làm khóa luận tốt nghiệp là gì?", "abstain", ["SOURCE-S03"]),
+    # Answered from the K37 regulation full text (Quy chế 2024, S03; OCR). Group name kept so IDs/splits stay.
+    ("regulation_pending", "Theo quy chế đào tạo, điểm học phần dưới bao nhiêu thì phải học lại?", "answer",
+     ["DOC-S03-VB-D13-1"], [["4,0", "4.0"], ["thi lại"]]),
+    ("regulation_pending", "Sinh viên bị cảnh báo học vụ khi nào?", "answer", ["DOC-S03-VB-D15-1"], [["50%"], ["24"]]),
+    ("regulation_pending", "Một học kỳ được đăng ký tối đa bao nhiêu tín chỉ?", "answer", ["DOC-S03-VB-D10-1"], [["3/2"]]),
+    ("regulation_pending", "Điểm trung bình tích lũy bao nhiêu thì xếp loại giỏi?", "answer", [],
+     [["3,2", "3.2"], ["3,6", "3.6"]]),  # Điều 14 (học lực) và Điều 18 (tốt nghiệp) đều đúng.
+    ("regulation_pending", "Sinh viên có được học vượt không?", ["answer", "abstain"], [], []),  # Chưa thấy điều khoản riêng.
+    ("regulation_pending", "Quy chế cho phép bảo lưu kết quả học tập bao lâu?", ["answer", "abstain"], [], []),
+    ("regulation_pending", "Thang điểm chữ A, B, C quy đổi sang thang 4 thế nào?", "answer", ["DOC-S03-VB-D14-1"],
+     [["4,0", "4.0"], ["3,0", "3.0"], ["2,0", "2.0"]]),
+    ("regulation_pending", "Điều kiện làm khóa luận tốt nghiệp là gì?", "answer", ["DOC-S03-VB-D10-1"],
+     [["7,0", "7.0"], ["thực tập tốt nghiệp"]]),
     # Scope: other cohorts/programs/unknown codes must not borrow K37 data.
     ("out_of_scope", "K38 học IT320 mấy tín chỉ?", "refuse", []),
     ("out_of_scope", "Chương trình CNTT-2025 có những môn nào?", "refuse", []),
@@ -240,9 +244,10 @@ NATURAL_FOLLOWUPS = [
 def build(dev_ratio, seed):
     catalog = Catalog("project", None, COHORT)
     items = generated(catalog, random.Random(seed))
-    for group, question, outcome, sources in MANUAL:
+    for group, question, outcome, sources, *terms in MANUAL:
         items.append({"group": group, "question": question, "cohort": COHORT, "gold_outcome": outcome,
-                      "gold_required_terms": [], "gold_forbidden_terms": ["không cần tiên quyết"] if "Bỏ qua" in question else [],
+                      "gold_required_terms": terms[0] if terms else [],
+                      "gold_forbidden_terms": ["không cần tiên quyết"] if "Bỏ qua" in question else [],
                       "gold_sources": sources, "origin": "manual"})
     for history, question, terms, sources in FOLLOWUPS:
         outcome = terms if terms == "needs_input" else "answer"

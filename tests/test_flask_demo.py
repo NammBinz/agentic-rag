@@ -57,7 +57,8 @@ class FlaskDemoTests(unittest.TestCase):
         self.assertEqual(r['tool_results'][0]['tool'],'lookup_conditions')
     def test_source_labels_and_original_metadata_retained(self):
         c=Catalog()
-        self.assertEqual(len(c.sources),26)
+        self.assertEqual(c.manifest['source_count'],26)
+        self.assertEqual(len(c.sources),30)  # + N01–N04 from full-text documents
         self.assertEqual(c.manifest['workbook_sha256'],'2799cf5938f8a3b73eaa09903ba3f1274fc9d518cc7b91a8207ab058483d0396')
         r=self.client.get('/api/chunks/COURSE-IT320?cohort=K37').json
         self.assertEqual(r['page'],21)

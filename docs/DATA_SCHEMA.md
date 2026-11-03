@@ -68,3 +68,20 @@ metadata, không có ngưỡng điểm TOEIC đã nhập. Giữ thông tin hạn
 `scripts/import_catalog.py` đọc workbook CNTT K35–K39 và dựng lại toàn bộ
 `data/project` (schema v3); dữ liệu được sửa trong workbook rồi nhập lại, không sửa
 tay JSON.
+
+## Toàn văn văn bản (`documents.json`)
+
+`scripts/ingest_documents.py --notices <TLU_Notice_Tool/data>` dựng `data/project/documents.json` từ tệp
+đã tải (chữ PDF hoặc bản OCR của `scripts/ocr_gemini.py`). Mỗi văn bản được gán tay vào một nguồn và
+danh sách khóa đã xác minh từ chính văn bản: quy chế 2024 (S03, K35–K37), 2025 (S05, K38), 2026 (S06, K39),
+TOEIC quốc tế (S04, K36–K37), chuẩn đầu ra ngoại ngữ 2026 (N01, K38) và 2023 (N02, K35–K37), học phí
+2026–2027 (N03, K35–K38), học phí K39 (N04).
+
+- Quy chế chia theo Điều (Điều dài tách theo khoản); văn bản bảng chia theo trang. ID ổn định dạng
+  `DOC-<nguồn>-<QD|VB|PL|TR>-<D số Điều|P số trang>-<phần>` để đáp án chuẩn không đổi khi dựng lại.
+- `verification`: `OCR_UNREVIEWED` (bản chép tự động, phải đối chiếu số liệu) hoặc `TEXT_EXTRACTED`.
+- Trang OCR không đọc được hoặc trùng nội dung trang khác (OCR đọc lẫn trang) không vào kho; được ghi
+  thành mục thiếu `OCR-<nguồn>` cho đúng các khóa.
+- Catalog chỉ nạp đoạn của nguồn áp dụng cho khóa đang chọn; `covered_topics` (hoc_phi, tot_nghiep,
+  toeic…) cho planner biết chủ đề nào đã có toàn văn để không trả "chưa có dữ liệu". Câu hỏi đủ điều
+  kiện tốt nghiệp của cá nhân, lịch học, lớp mở vẫn bị chặn vì không có dữ liệu cá nhân/thời điểm.

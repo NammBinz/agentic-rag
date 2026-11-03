@@ -10,7 +10,7 @@ Tạo lại bằng `python scripts/build_eval_set.py --force` (lệnh này ghi �
 | multi_step_chain | Sinh từ chuỗi X → Y → Z | Truy xuất nhiều bước |
 | catalog_count, catalog_list | Đếm trực tiếp từ bảng | **So sánh riêng**: rag và agent dùng chung công cụ thống kê |
 | missing_data, out_of_scope | Viết tay | Khả năng nhận biết thiếu dữ liệu và ngoài phạm vi |
-| regulation_pending | Viết tay | Hiện phải từ chối; **đổi nhãn thành `answer`** khi đã nhập toàn văn quy chế S03 |
+| regulation_pending | Viết tay, đối chiếu Quy chế 2024 (S03) | Đã có toàn văn: đáp án theo Điều 10, 13, 14, 15, 18; 2 câu (học vượt, bảo lưu) chấp nhận trả lời hoặc từ chối |
 | followup, profile_check | Viết tay | Ngữ cảnh hội thoại và đối chiếu hồ sơ |
 | natural_* (41 câu) | Viết tay, đối chiếu bảng | Cách hỏi tự nhiên: viết tắt, không dấu, không mã môn, nhiều ý, chuỗi không dùng chữ "chuỗi", câu tiếp nối mà câu trước không có mã; dùng để phân biệt planner quy tắc và planner LLM |
 

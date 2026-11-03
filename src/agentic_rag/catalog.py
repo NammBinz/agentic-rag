@@ -45,6 +45,16 @@ class Catalog:
             return json.loads((folder / f'{name}.json').read_text(encoding='utf-8'))
         self.manifest = read('manifest')
         self.sources = {s['id']: s for s in read('sources')}
+        # Full-text documents (scripts/ingest_documents.py) add sources and chunks; workbook sources win.
+        path = folder / 'documents.json'
+        documents = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
+        for source in documents.get('sources', []):
+            if source['id'] in self.sources:
+                self.sources[source['id']].setdefault('file_url', source.get('file_url'))
+                if not self.sources[source['id']].get('file_url'):
+                    self.sources[source['id']]['file_url'] = source.get('file_url')
+            else:
+                self.sources[source['id']] = source
         self.bindings = read('programs')
         self.context = self._resolve()
         self.courses = {}
@@ -61,7 +71,12 @@ class Catalog:
             self.courses = {}
         self.conditions = [r for r in read('conditions') if self._record_matches(r)
                            and self.source_applies(self.sources.get(r.get('source_id'), {}))]
-        self.gaps = [g for g in read('gaps') if cohort in g.get('cohorts', []) and 'CNTT' in g.get('programs', [])]
+        self.gaps = [g for g in read('gaps') + documents.get('gaps', [])
+                     if cohort in g.get('cohorts', []) and 'CNTT' in g.get('programs', [])]
+        self.documents = [c for c in documents.get('chunks', [])
+                          if self.source_applies(self.sources.get(c['source_id'], {}))]
+        # Topics with full text for this cohort; the planner stops reporting them as missing data.
+        self.covered_topics = {t for c in self.documents for t in c.get('topics', [])}
         self.chunks = self._chunks()
         ids = [c['id'] for c in self.chunks]
         if len(ids) != len(set(ids)):
@@ -171,7 +186,7 @@ class Catalog:
                           text=f"{gap['topic']}: {gap['details']} Cần bổ sung: {gap['needed_evidence']}",
                           page=None, section=gap['id'], version='schema-v2',
                           verification='MISSING_OR_UNVERIFIED', content_level='inventory_summary'))
-        for chunk in self.manifest.get('paragraphs', []):
+        for chunk in self.manifest.get('paragraphs', []) + self.documents:
             if self.source_applies(self.sources.get(chunk['source_id'], {})):
                 chunks.append(self._metadata(chunk['source_id'], chunk['kind'], **{k: v for k, v in chunk.items()
                               if k not in ('cohort', 'program_id', 'curriculum_id', 'curriculum_version',
@@ -187,6 +202,10 @@ class Catalog:
                 'evidence_note': ('Dữ liệu giả lập, không phải quy định TLU.' if self.dataset == 'sample' else
                                   'Trích từ ảnh khung do người dùng cung cấp; chưa đối chiếu với quyết định gốc.'
                                   if chunk.get('verification') == 'IMAGE_TRANSCRIPTION_UNMATCHED' else
+                                  'Bản chép OCR tự động từ văn bản quét; đối chiếu số liệu với bản gốc.'
+                                  if chunk.get('verification') == 'OCR_UNREVIEWED' else
+                                  'Toàn văn trích từ tệp PDF đính kèm thông báo.'
+                                  if chunk.get('content_level') == 'full_text' else
                                   'Trích đoạn bảng chuẩn hóa/danh mục; chưa nhập toàn văn PDF gốc.')}
 
     def select_courses(self, query):

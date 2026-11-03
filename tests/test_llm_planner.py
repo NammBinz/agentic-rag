@@ -101,7 +101,7 @@ class LLMPlannerTests(unittest.TestCase):
     def test_scope_and_missing_data_gates_run_before_planning(self):
         provider = ScriptedProvider([])
         for question, status in [("Ngành Ngôn ngữ Anh có bao nhiêu môn?", "out_of_scope"),
-                                 ("Học phí kỳ này bao nhiêu?", "insufficient_data")]:
+                                 ("Lịch học tuần sau thế nào?", "insufficient_data")]:
             with self.subTest(question=question):
                 self.assertEqual(self.ask(provider, question)["status"], status)
         self.assertEqual(provider.chat_calls, [])

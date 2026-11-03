@@ -53,7 +53,7 @@ class CohortSelectionTests(unittest.TestCase):
         self.assertNotEqual(self.chat('IT320 trong CNTT-2023', 'K36')['status'], 'out_of_scope')
 
     def test_version_only_cohorts_answer_from_program_records(self):
-        r = self.chat('Chương trình bao nhiêu tín chỉ, học mấy năm?', 'K38', mode='rag')
+        r = self.chat('Chương trình CNTT K38 có bao nhiêu tín chỉ, học mấy năm?', 'K38', mode='rag')
         self.assertIn('VERSION-K38', [c['id'] for c in r['citations']])
         self.assertTrue(all(c['cohort'] == 'K38' for c in r['citations']))
         self.assertEqual(self.chat('IT320 mấy tín chỉ?', 'K38')['status'], 'insufficient_data')
@@ -97,3 +97,31 @@ class ImportReproducibilityTests(unittest.TestCase):
                     fresh = json.loads((Path(folder) / f'{name}.json').read_text(encoding='utf-8'))
                     stored = json.loads((ROOT / 'data' / 'project' / f'{name}.json').read_text(encoding='utf-8'))
                     self.assertEqual(fresh, stored)
+
+
+class DocumentScopeTests(unittest.TestCase):
+    """Full-text regulations, tuition and language rules reach only the cohorts they apply to."""
+
+    def sources(self, cohort):
+        return {c['source_id'] for c in Catalog('project', None, cohort).chunks if c['kind'] == 'regulation'}
+
+    def test_each_cohort_gets_its_own_regulation(self):
+        if not (ROOT / 'data' / 'project' / 'documents.json').exists():
+            self.skipTest('Chưa tạo documents.json')
+        self.assertTrue({'S03', 'S04', 'N02', 'N03'} <= self.sources('K37'))
+        self.assertTrue({'S05', 'N01', 'N03'} <= self.sources('K38'))
+        self.assertTrue({'S06', 'N04'} <= self.sources('K39'))
+        self.assertFalse(self.sources('K39') & {'S03', 'S05', 'N03'})
+        self.assertFalse(self.sources('K38') & {'S03', 'S04', 'S06'})
+        self.assertNotIn('S04', self.sources('K35'))  # TOEIC international rule covers K36–K37 only.
+
+    def test_ocr_text_is_labelled_and_gaps_reported(self):
+        if not (ROOT / 'data' / 'project' / 'documents.json').exists():
+            self.skipTest('Chưa tạo documents.json')
+        catalog = Catalog('project', None, 'K37')
+        ocr = [c for c in catalog.chunks if c.get('verification') == 'OCR_UNREVIEWED']
+        self.assertTrue(ocr)
+        self.assertIn('OCR', catalog.citation(ocr[0])['evidence_note'])
+        self.assertTrue(any(g['id'].startswith('OCR-') for g in catalog.gaps))
+        self.assertIn('hoc_phi', catalog.covered_topics)
+        self.assertNotIn('hoc_phi', Catalog('sample', None, 'K37').covered_topics)

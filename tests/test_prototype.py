@@ -145,7 +145,7 @@ class AgentTests(unittest.TestCase):
 
     def test_missing_topics_are_not_invented(self):
         e = Engine()
-        for question in ("Học phí kỳ này là bao nhiêu?", "Cần bao nhiêu điểm TOEIC?", "Tôi đủ điều kiện tốt nghiệp chưa?", "Lịch học IT320?"):
+        for question in ("Kỳ này còn lớp IT320 không?", "Tôi đủ điều kiện tốt nghiệp chưa?", "Lịch học IT320?"):
             for mode in ("rag", "agent"):
                 self.assertEqual(e.answer(question, mode=mode, cohort="K37")["status"], "insufficient_data")
 

@@ -44,27 +44,36 @@ def plan(question, catalog, intent=None, target_course=None, history=None):
         if candidates:
             targets = candidates[:1]
     source_ids = None
-    if selected_intent == "qa" and catalog.dataset == "project":
+    covered = getattr(catalog, "covered_topics", set())
+    if selected_intent == "qa" and catalog.dataset == "project" and not covered:
+        # Without full text, steer to the inventory records that exist for this cohort only.
         if "toeic" in text:
             source_ids = ["S04", "INVENTORY"]
         elif "chuong trinh" in text or "khung" in text or "nam tuyen sinh" in text:
             source_ids = ["S01", "S02", "INVENTORY"]
         elif "quy che" in text:
             source_ids = ["S03", "INVENTORY"]
+        applicable = {c["source_id"] for c in catalog.chunks}
+        source_ids = [s for s in source_ids or [] if s in applicable] or None
     missing_topic = None
     if catalog.dataset == "project":
-        checks = (("hoc phi", "Chưa có nguồn học phí theo học kỳ."),
-                  ("si so", "Chưa có dữ liệu sĩ số/lớp mở hiện thời."),
-                  ("lich hoc", "Chưa có dữ liệu lịch học hiện thời."),
-                  ("thoi khoa bieu", "Chưa có dữ liệu thời khóa biểu hiện thời."),
-                  ("han dang ky", "Chưa có thông báo hạn đăng ký theo học kỳ."),
-                  ("mien hoc", "Chưa có quy định miễn học đúng phiên bản đúng khóa."),
-                  ("tot nghiep", "Chưa có bộ điều kiện xét tốt nghiệp đầy đủ."))
-        for marker, message in checks:
-            if marker in text:
+        # (marker, topic that full-text documents can cover, message when not covered)
+        checks = (("du dieu kien tot nghiep", None, "Chưa có dữ liệu cá nhân (bảng điểm, tín chỉ tích lũy, chuẩn đầu ra) "
+                   "để kết luận đủ điều kiện tốt nghiệp; chỉ tra được điều kiện chung trong quy chế."),
+                  ("hoc phi", "hoc_phi", "Chưa có nguồn học phí đúng khóa."),
+                  ("si so", None, "Chưa có dữ liệu sĩ số/lớp mở hiện thời."),
+                  ("con lop", None, "Chưa có dữ liệu sĩ số/lớp mở hiện thời."),
+                  ("mo lop", None, "Chưa có dữ liệu sĩ số/lớp mở hiện thời."),
+                  ("lich hoc", None, "Chưa có dữ liệu lịch học hiện thời."),
+                  ("thoi khoa bieu", None, "Chưa có dữ liệu thời khóa biểu hiện thời."),
+                  ("han dang ky", None, "Chưa có thông báo hạn đăng ký theo học kỳ."),
+                  ("mien hoc", None, "Chưa có quy định miễn học đúng phiên bản đúng khóa."),
+                  ("tot nghiep", "tot_nghiep", "Chưa có bộ điều kiện xét tốt nghiệp đầy đủ."))
+        for marker, topic, message in checks:
+            if marker in text and topic not in covered:
                 missing_topic = message
                 break
-        if "toeic" in text and any(m in text for m in ("diem", "bao nhieu", "nguong")):
+        if "toeic" in text and "toeic" not in covered and any(m in text for m in ("diem", "bao nhieu", "nguong")):
             missing_topic = "Danh mục xác minh phạm vi TOEIC K36–K37, nhưng chưa nhập ngưỡng điểm từ toàn văn."
     return {"intent": selected_intent, "targets": targets, "resolved_question": resolved,
             "source_ids": source_ids, "missing_topic": missing_topic,

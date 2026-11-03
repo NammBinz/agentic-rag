@@ -161,7 +161,8 @@ class CatalogSummaryTests(unittest.TestCase):
         self.assertEqual(r['metrics']['completion_tokens'],0)
 
     def test_inventory_words_do_not_override_known_data_gaps(self):
-        for q in ['có bao nhiêu môn bắt buộc để tốt nghiệp?', 'học phí các môn bắt buộc ngành là bao nhiêu?', 'lịch học các môn bắt buộc ngành?']:
+        # Tuition and graduation rules now have full text; schedules and personal eligibility still do not.
+        for q in ['lịch học các môn bắt buộc ngành?', 'thời khóa biểu các môn bắt buộc ngành?']:
             with self.subTest(q=q):
                 r=self.engine.answer(q)
                 self.assertEqual(r['status'],'insufficient_data')
