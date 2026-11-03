@@ -116,7 +116,7 @@ flowchart LR
 Khóa trở thành **tham số phạm vi** truyền cho mọi agent; Orchestrator quyết định *loại câu hỏi*.
 
 ```mermaid
-flowchart TD
+flowchart LR
     Q(["Câu hỏi + khóa đã chọn"]) --> ORC{"Orchestrator<br/>phân loại ý định<br/>(1 hoặc nhiều chủ đề)"}
 
     ORC --> C1["① Học phần & tín chỉ"]
