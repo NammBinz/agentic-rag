@@ -1,0 +1,27 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "flask-demo",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "run.py",
+        "--port",
+        "8765"
+      ],
+      "port": 8765
+    },
+    {
+      "name": "mermaid-check",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8799",
+        "--directory",
+        "C:/Users/Admin/AppData/Local/Temp/claude/D--Nghi-n-c-u-khoa-h-c-Agentic-RAG-agentic-rag/83491d4c-258d-4f19-8d96-4f3d4bcae547/scratchpad/mermaid_check"
+      ],
+      "port": 8799
+    }
+  ]
+}
